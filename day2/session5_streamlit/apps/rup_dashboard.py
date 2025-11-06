@@ -46,7 +46,15 @@ st.markdown("---")
 @st.cache_data
 def load_data():
     """Load RUP data from parquet file"""
-    df = pd.read_parquet('../../../datasets/rup/RUP-PaketPenyedia-Terumumkan-2025.parquet')
+    import os
+    from pathlib import Path
+
+    # Get the project root directory (3 levels up from this file)
+    current_file = Path(__file__).resolve()
+    project_root = current_file.parent.parent.parent.parent
+    data_path = project_root / 'datasets' / 'rup' / 'RUP-PaketPenyedia-Terumumkan-2025.parquet'
+
+    df = pd.read_parquet(data_path)
 
     # Convert date columns
     date_columns = ['tgl_awal_pemilihan', 'tgl_akhir_pemilihan',
@@ -85,9 +93,9 @@ selected_metode = st.sidebar.selectbox('Metode Pengadaan', metode_options)
 jenis_options = ['Semua'] + sorted(df['jenis_pengadaan'].dropna().unique().tolist())
 selected_jenis = st.sidebar.selectbox('Jenis Pengadaan', jenis_options)
 
-# K/L/PD filter
-klpd_options = ['Semua'] + sorted(df['nama_klpd'].dropna().unique().tolist())
-selected_klpd = st.sidebar.selectbox('K/L/PD', klpd_options, help="Kementerian/Lembaga/Pemerintah Daerah")
+# Satker filter
+satker_options = ['Semua'] + sorted(df['nama_satker'].dropna().unique().tolist())
+selected_satker = st.sidebar.selectbox('Satuan Kerja', satker_options, help="Satuan Kerja")
 
 # Pagu range filter
 min_pagu = float(df['pagu'].min())
@@ -116,19 +124,19 @@ def apply_filters():
     if selected_jenis != 'Semua':
         query += f" AND jenis_pengadaan = '{selected_jenis}'"
 
-    if selected_klpd != 'Semua':
-        query += f" AND nama_klpd = '{selected_klpd}'"
+    if selected_satker != 'Semua':
+        query += f" AND nama_satker = '{selected_satker}'"
 
     query += f" AND pagu >= {pagu_range[0] * 1e9} AND pagu <= {pagu_range[1] * 1e9}"
 
     if show_pdn:
-        query += " AND status_pdn = 'Ya'"
+        query += " AND status_pdn = 'PDN'"
 
     if show_ukm:
-        query += " AND status_ukm = 'Ya'"
+        query += " AND status_ukm = 'UKM'"
 
     if show_pradipa:
-        query += " AND status_pradipa = 'Ya'"
+        query += " AND status_pradipa = 'PraDIPA'"
 
     return conn.execute(query).df()
 
@@ -168,10 +176,10 @@ with col3:
     )
 
 with col4:
-    total_klpd = filtered_df['nama_klpd'].nunique()
+    total_satker = filtered_df['nama_satker'].nunique()
     st.metric(
-        label="Jumlah K/L/PD",
-        value=f"{total_klpd:,}"
+        label="Jumlah Satker",
+        value=f"{total_satker:,}"
     )
 
 st.markdown("---")
@@ -180,7 +188,7 @@ st.markdown("---")
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📊 Overview",
     "💰 Analisis Pagu",
-    "🏛️ K/L/PD",
+    "🏢 Satuan Kerja",
     "📋 Metode & Jenis",
     "📅 Timeline"
 ])
@@ -223,7 +231,7 @@ with tab1:
     with col2:
         # Top 10 paket berdasarkan pagu
         st.subheader("Top 10 Paket Berdasarkan Pagu")
-        top_paket = filtered_df.nlargest(10, 'pagu')[['nama_paket', 'pagu', 'nama_klpd']]
+        top_paket = filtered_df.nlargest(10, 'pagu')[['nama_paket', 'pagu', 'nama_satker']]
         top_paket['pagu_miliar'] = top_paket['pagu'] / 1e9
 
         fig = px.bar(
@@ -233,14 +241,14 @@ with tab1:
             orientation='h',
             title='',
             labels={'pagu_miliar': 'Pagu (Miliar Rp)', 'nama_paket': 'Nama Paket'},
-            hover_data=['nama_klpd']
+            hover_data=['nama_satker']
         )
         fig.update_layout(height=400, showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
 
     # Data table
     st.subheader("📋 Data Tabel")
-    display_cols = ['nama_paket', 'pagu', 'nama_klpd', 'metode_pengadaan',
+    display_cols = ['nama_paket', 'pagu', 'nama_satker', 'metode_pengadaan',
                    'jenis_pengadaan', 'status_pdn', 'status_ukm']
 
     display_df = filtered_df[display_cols].copy()
@@ -295,69 +303,69 @@ with tab2:
         st.metric("Std Dev", f"Rp {filtered_df['pagu'].std()/1e9:.2f} M")
 
 with tab3:
-    st.header("🏛️ Analisis K/L/PD")
+    st.header("🏢 Analisis Satuan Kerja")
 
     # Query using DuckDB for aggregation
     query = """
     SELECT
-        nama_klpd,
+        nama_satker,
         COUNT(*) as jumlah_paket,
         SUM(pagu) as total_pagu,
         AVG(pagu) as rata_pagu,
         SUM(CASE WHEN status_pdn = 'Ya' THEN 1 ELSE 0 END) as paket_pdn,
         SUM(CASE WHEN status_ukm = 'Ya' THEN 1 ELSE 0 END) as paket_ukm
     FROM rup
-    GROUP BY nama_klpd
+    GROUP BY nama_satker
     ORDER BY total_pagu DESC
     LIMIT 15
     """
 
     # Use the filtered query if filters are applied
-    if selected_metode != 'Semua' or selected_jenis != 'Semua' or selected_klpd != 'Semua':
+    if selected_metode != 'Semua' or selected_jenis != 'Semua' or selected_satker != 'Semua':
         conn.register('filtered_rup', filtered_df)
         query = query.replace('FROM rup', 'FROM filtered_rup')
 
-    klpd_stats = conn.execute(query).df()
-    klpd_stats['total_pagu_miliar'] = klpd_stats['total_pagu'] / 1e9
+    satker_stats = conn.execute(query).df()
+    satker_stats['total_pagu_miliar'] = satker_stats['total_pagu'] / 1e9
 
     col1, col2 = st.columns(2)
 
     with col1:
-        # Top K/L/PD by jumlah paket
-        st.subheader("Top 15 K/L/PD - Jumlah Paket")
+        # Top Satker by jumlah paket
+        st.subheader("Top 15 Satker - Jumlah Paket")
         fig = px.bar(
-            klpd_stats,
-            y='nama_klpd',
+            satker_stats,
+            y='nama_satker',
             x='jumlah_paket',
             orientation='h',
             title='',
-            labels={'jumlah_paket': 'Jumlah Paket', 'nama_klpd': 'K/L/PD'}
+            labels={'jumlah_paket': 'Jumlah Paket', 'nama_satker': 'Satuan Kerja'}
         )
         fig.update_layout(height=500)
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
-        # Top K/L/PD by total pagu
-        st.subheader("Top 15 K/L/PD - Total Pagu")
+        # Top Satker by total pagu
+        st.subheader("Top 15 Satker - Total Pagu")
         fig = px.bar(
-            klpd_stats,
-            y='nama_klpd',
+            satker_stats,
+            y='nama_satker',
             x='total_pagu_miliar',
             orientation='h',
             title='',
-            labels={'total_pagu_miliar': 'Total Pagu (Miliar Rp)', 'nama_klpd': 'K/L/PD'}
+            labels={'total_pagu_miliar': 'Total Pagu (Miliar Rp)', 'nama_satker': 'Satuan Kerja'}
         )
         fig.update_layout(height=500)
         st.plotly_chart(fig, use_container_width=True)
 
     # Detailed table
-    st.subheader("📊 Detail Statistik K/L/PD")
-    display_klpd = klpd_stats.copy()
-    display_klpd['total_pagu'] = display_klpd['total_pagu'].apply(lambda x: f"Rp {x/1e12:.2f} T")
-    display_klpd['rata_pagu'] = display_klpd['rata_pagu'].apply(lambda x: f"Rp {x/1e9:.2f} M")
-    display_klpd = display_klpd.drop('total_pagu_miliar', axis=1)
+    st.subheader("📊 Detail Statistik Satuan Kerja")
+    display_satker = satker_stats.copy()
+    display_satker['total_pagu'] = display_satker['total_pagu'].apply(lambda x: f"Rp {x/1e12:.2f} T")
+    display_satker['rata_pagu'] = display_satker['rata_pagu'].apply(lambda x: f"Rp {x/1e9:.2f} M")
+    display_satker = display_satker.drop('total_pagu_miliar', axis=1)
 
-    st.dataframe(display_klpd, use_container_width=True, height=400)
+    st.dataframe(display_satker, use_container_width=True, height=400)
 
 with tab4:
     st.header("📋 Analisis Metode & Jenis Pengadaan")

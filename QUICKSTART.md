@@ -67,7 +67,7 @@ Dashboard akan terbuka di browser: http://localhost:8501
 ### Fitur Dashboard:
 - 📊 Overview Data RUP
 - 💰 Analisis Pagu
-- 🏛️ Analisis K/L/PD
+- 🏢 Analisis Satuan Kerja
 - 📋 Metode & Jenis Pengadaan
 - 📅 Analisis Timeline
 - 🔍 Filter Interaktif
@@ -198,7 +198,7 @@ Setiap kali Anda save file `rup_dashboard.py`, Streamlit akan auto-reload!
 Gunakan sidebar di kiri untuk:
 - Filter metode pengadaan
 - Filter jenis pengadaan
-- Filter K/L/PD
+- Filter Satuan Kerja
 - Range pagu
 - Status PDN/UKM/PRADIPA
 
