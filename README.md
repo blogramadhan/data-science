@@ -2,6 +2,55 @@
 
 **Duration:** 2 Hari (16 Jam Total)
 
+## 🎯 Project Showcase: Analisis RUP 2025
+
+Repository ini mencakup **project lengkap analisis data RUP (Rencana Umum Pengadaan) 2025** sebagai studi kasus praktis bootcamp. Project ini mendemonstrasikan full pipeline data analysis dari eksplorasi hingga dashboard interaktif.
+
+### 📊 Dataset
+- **Topik**: Rencana Umum Pengadaan Barang/Jasa Pemerintah 2025
+- **Records**: 16,430 paket pengadaan
+- **Size**: ~1.3 MB (Parquet format)
+- **Informasi**: [datasets/rup/README.md](datasets/rup/README.md)
+
+### 🚀 Quick Start
+
+```bash
+# Clone repository
+git clone <repository-url>
+cd data-science
+
+# Install dependencies dengan uv
+uv sync
+
+# Jalankan Jupyter Notebook
+uv run jupyter notebook
+
+# Atau jalankan Streamlit Dashboard
+uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
+```
+
+### 📁 Project Structure Aktual
+
+```
+data-science/
+├── day1/
+│   └── session1_python_pandas/
+│       └── notebooks/
+│           └── 01_exploratory_data_analysis_rup.ipynb  ✅
+├── day2/
+│   └── session5_streamlit/
+│       └── apps/
+│           └── rup_dashboard.py  ✅
+├── datasets/
+│   └── rup/
+│       ├── RUP-PaketPenyedia-Terumumkan-2025.parquet  ✅
+│       └── README.md  ✅
+├── pyproject.toml  ✅
+└── README.md
+```
+
+---
+
 ## Overview
 
 Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan praktis dalam analisis data menggunakan Python, DuckDB sebagai database analitik, dan Streamlit untuk membuat dashboard interaktif. Peserta akan belajar dari dasar hingga mampu membuat aplikasi data analysis end-to-end yang profesional.
