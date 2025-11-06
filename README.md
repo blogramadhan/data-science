@@ -25,7 +25,17 @@ uv sync
 # Jalankan Jupyter Notebook
 uv run jupyter notebook
 
-# Atau jalankan Streamlit Dashboard
+# Jalankan Streamlit Apps
+# LAB 10: Hello Streamlit (Basic)
+uv run streamlit run day2/session5_streamlit/apps/01_hello_streamlit.py
+
+# LAB 11: Interactive Components
+uv run streamlit run day2/session5_streamlit/apps/02_components_demo.py
+
+# LAB 12: Data Explorer
+uv run streamlit run day2/session5_streamlit/apps/03_data_explorer.py
+
+# Production Dashboard (RUP Analysis)
 uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
 ```
 
@@ -39,8 +49,13 @@ data-science/
 │           └── 01_exploratory_data_analysis_rup.ipynb  ✅
 ├── day2/
 │   └── session5_streamlit/
-│       └── apps/
-│           └── rup_dashboard.py  ✅
+│       ├── apps/
+│       │   ├── 01_hello_streamlit.py  ✅ (LAB 10)
+│       │   ├── 02_components_demo.py  ✅ (LAB 11)
+│       │   ├── 03_data_explorer.py  ✅ (LAB 12)
+│       │   ├── rup_dashboard.py  ✅ (Production Example)
+│       │   └── README.md  ✅
+│       └── STREAMLIT_QUICKSTART.md  ✅
 ├── datasets/
 │   └── rup/
 │       ├── RUP-PaketPenyedia-Terumumkan-2025.parquet  ✅
@@ -329,50 +344,161 @@ pip install pandas numpy duckdb streamlit plotly matplotlib seaborn jupyter
 ### 5.1 Streamlit Basics (45 menit)
 
 - [ ] Introduction to Streamlit
+  - Apa itu Streamlit?
+  - Keunggulan Streamlit untuk Data Apps
+  - Use cases & aplikasi nyata
 - [ ] Setup & first app
-- [ ] Running Streamlit apps
-- [ ] Basic components
-  - `st.title()`, `st.header()`, `st.subheader()`
-  - `st.write()`, `st.markdown()`, `st.text()`
-- [ ] Displaying data
-  - `st.dataframe()`, `st.table()`
-  - `st.metric()` for KPIs
-  - `st.json()`
+  - Installation: `pip install streamlit`
+  - Struktur dasar aplikasi Streamlit
+  - Running apps: `streamlit run app.py`
+  - Hot reloading & development mode
+- [ ] Basic Text & Display Elements
+  - `st.title()` - Judul utama aplikasi
+  - `st.header()` - Header section
+  - `st.subheader()` - Sub header
+  - `st.text()` - Plain text
+  - `st.markdown()` - Markdown dengan styling
+  - `st.latex()` - Mathematical expressions
+  - `st.code()` - Code block dengan syntax highlighting
+  - `st.divider()` - Horizontal divider
+- [ ] Displaying Data
+  - `st.dataframe()` - Interactive dataframe (sortable, scrollable)
+  - `st.table()` - Static table
+  - `st.metric()` - KPI metrics dengan delta
+  - `st.json()` - Pretty JSON display
+- [ ] Status & Messages
+  - `st.success()` - Success message (hijau)
+  - `st.info()` - Info message (biru)
+  - `st.warning()` - Warning message (kuning)
+  - `st.error()` - Error message (merah)
+  - `st.exception()` - Exception display
+- [ ] Media Elements
+  - `st.image()` - Display images
+  - `st.audio()` - Audio player
+  - `st.video()` - Video player
 - [ ] **LAB 10:** Hello Streamlit app
+  - Create your first Streamlit app
+  - Display text with various formatting
+  - Show data in different formats
+  - Add status messages and media
 
 ### 5.2 Interactive Components (60 menit)
 
-- [ ] Input widgets
-  - `st.button()`, `st.checkbox()`, `st.radio()`
-  - `st.slider()`, `st.select_slider()`
-  - `st.selectbox()`, `st.multiselect()`
-  - `st.text_input()`, `st.number_input()`
-  - `st.date_input()`, `st.time_input()`
-  - `st.file_uploader()`
-- [ ] Layout elements
-  - `st.sidebar()` for navigation
-  - `st.columns()` for grid layouts
-  - `st.expander()` for collapsible sections
-  - `st.tabs()` for multiple views
-  - `st.container()`
-- [ ] Charts & visualizations
-  - Native charts: `st.line_chart()`, `st.bar_chart()`, `st.area_chart()`
-  - `st.plotly_chart()` for Plotly
-  - `st.pyplot()` for Matplotlib
-- [ ] Session state management
-- [ ] Caching with `@st.cache_data`
+- [ ] Button & Selection Widgets
+  - `st.button()` - Clickable button (returns True when clicked)
+  - `st.download_button()` - Download file button
+  - `st.link_button()` - External link button
+  - `st.checkbox()` - Boolean checkbox
+  - `st.toggle()` - Toggle switch (on/off)
+  - `st.radio()` - Single selection dari multiple options
+  - `st.selectbox()` - Dropdown single selection
+  - `st.multiselect()` - Multiple selection dropdown
+- [ ] Slider Widgets
+  - `st.slider()` - Numeric slider (single or range)
+  - `st.select_slider()` - Slider dengan custom options
+- [ ] Text Input Widgets
+  - `st.text_input()` - Single line text input
+  - `st.text_area()` - Multi-line text input
+  - `st.number_input()` - Numeric input dengan increment/decrement
+- [ ] Date & Time Widgets
+  - `st.date_input()` - Date picker
+  - `st.time_input()` - Time picker
+- [ ] File Operations
+  - `st.file_uploader()` - Upload files (CSV, Excel, images, etc.)
+  - `st.camera_input()` - Capture image from camera
+- [ ] Layout Components
+  - `st.sidebar` - Side navigation panel
+  - `st.columns()` - Create columns for side-by-side layout
+  - `st.expander()` - Collapsible sections
+  - `st.tabs()` - Tabbed interface
+  - `st.container()` - Grouping elements
+  - `st.empty()` - Placeholder untuk dynamic content
+- [ ] Advanced Layout
+  - `st.form()` - Form submission
+  - `st.popover()` - Popup content
+  - `st.dialog()` - Modal dialog
+- [ ] Progress & Status
+  - `st.progress()` - Progress bar
+  - `st.spinner()` - Loading spinner
+  - `st.status()` - Status indicator
+  - `st.balloons()` & `st.snow()` - Celebration animations
+- [ ] Charts & Visualizations
+  - Native Streamlit charts:
+    - `st.line_chart()` - Simple line chart
+    - `st.bar_chart()` - Simple bar chart
+    - `st.area_chart()` - Area chart
+    - `st.scatter_chart()` - Scatter plot
+  - External library integration:
+    - `st.plotly_chart()` - Plotly interactive charts
+    - `st.pyplot()` - Matplotlib/Seaborn static plots
+    - `st.altair_chart()` - Altair declarative charts
+    - `st.vega_lite_chart()` - Vega-Lite charts
+  - Maps:
+    - `st.map()` - Simple map visualization
+    - `st.pydeck_chart()` - Advanced 3D maps
+- [ ] Session State Management
+  - Understanding Streamlit's re-run model
+  - `st.session_state` - Persist data across reruns
+  - Callbacks untuk widgets
+  - Managing app state
+- [ ] Caching for Performance
+  - `@st.cache_data` - Cache data (DataFrames, lists, etc.)
+  - `@st.cache_resource` - Cache global resources (DB connections, models)
+  - Time-to-live (TTL) parameters
+  - Cache clearing strategies
 - [ ] **LAB 11:** Interactive data explorer
+  - Build interactive filters
+  - Use session state
+  - Implement caching
+  - Create responsive layouts
 
 ### 5.3 Integration dengan DuckDB (45 menit)
 
-- [ ] Connect Streamlit to DuckDB
-- [ ] Dynamic query execution
-- [ ] Display query results
-- [ ] Interactive filtering with DuckDB
-- [ ] Performance optimization
-- [ ] File upload & analysis
-- [ ] Export results (CSV, Excel)
+- [ ] Setup DuckDB Connection
+  - Initialize DuckDB connection in Streamlit
+  - Using `@st.cache_resource` for connection pooling
+  - In-memory vs persistent database
+- [ ] Data Loading Strategies
+  - Load data dari file (CSV, Parquet, JSON)
+  - Register Pandas DataFrame ke DuckDB
+  - Direct query from files
+- [ ] Dynamic Query Execution
+  - Execute SQL queries based on user input
+  - Parameterized queries
+  - Query builder dengan widgets
+- [ ] Display Query Results
+  - Show results in `st.dataframe()`
+  - Formatting numeric columns
+  - Handling large result sets
+- [ ] Interactive Filtering with DuckDB
+  - Build WHERE clauses from filters
+  - Dynamic aggregations
+  - Real-time query updates
+- [ ] Performance Optimization
+  - Query optimization techniques
+  - Caching query results
+  - Lazy loading data
+  - Pagination for large datasets
+- [ ] File Upload & Analysis
+  - Upload CSV/Excel files
+  - Automatic schema detection
+  - Preview uploaded data
+  - Run analysis on uploaded files
+- [ ] Export Functionality
+  - Export to CSV with `st.download_button()`
+  - Export to Excel
+  - Export filtered/aggregated results
+  - Custom export formats
+- [ ] Best Practices
+  - Error handling & validation
+  - SQL injection prevention
+  - User feedback & loading states
+  - Responsive design
 - [ ] **LAB 12:** Complete analytics dashboard
+  - Full integration: Pandas + DuckDB + Streamlit
+  - Interactive filters & queries
+  - Multiple visualizations
+  - Export functionality
 
 ---
 
