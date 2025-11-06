@@ -1,17 +1,18 @@
-# Bootcamp Data Science - Python, DuckDB & Streamlit
+# Bootcamp Data Analysis - Python, DuckDB & Streamlit
 
 **Duration:** 2 Hari (16 Jam Total)
 
 ## Overview
 
-Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan praktis dalam analisis data menggunakan Python, DuckDB sebagai database analitik, dan Streamlit untuk membuat dashboard interaktif. Peserta akan belajar dari dasar hingga mampu membuat aplikasi data science end-to-end.
+Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan praktis dalam analisis data menggunakan Python, DuckDB sebagai database analitik, dan Streamlit untuk membuat dashboard interaktif. Peserta akan belajar dari dasar hingga mampu membuat aplikasi data analysis end-to-end yang profesional.
 
 ## Target Peserta
 
 - Data Analyst yang ingin upgrade skills
-- Programmer yang ingin masuk ke bidang Data Science
 - Business Analyst yang ingin lebih technical
+- Programmer yang ingin masuk ke bidang Data Analytics
 - Fresh Graduate yang ingin berkarir di bidang data
+- Professional yang perlu mengolah dan visualisasi data
 
 ## Prerequisites
 
@@ -28,14 +29,13 @@ Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan prak
 - DuckDB
 - Streamlit
 - Plotly/Matplotlib/Seaborn
-- Scikit-learn
 - Jupyter Notebook
 
 ---
 
-# HARI 1: Fundamental Data Science & DuckDB
+# HARI 1: Fundamental Data Analysis dengan Python & DuckDB
 
-## Session 1: Python for Data Science (09:00 - 12:00)
+## Session 1: Python for Data Analysis (09:00 - 12:00)
 
 **Duration:** 3 jam
 
@@ -46,7 +46,7 @@ Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan prak
 - [ ] Install required libraries
 
 ```bash
-pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
+pip install pandas numpy duckdb streamlit plotly matplotlib seaborn jupyter
 ```
 
 - [ ] Verify installation
@@ -60,22 +60,27 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 - [ ] Functions dan Lambda
 - [ ] File I/O operations
 - [ ] Error handling (try-except)
+- [ ] Working with dates and times
 - [ ] **LAB 1:** Manipulasi data dengan Python native
 
 ### 1.3 Pandas Essentials (90 menit)
 
 - [ ] Series dan DataFrame
-- [ ] Loading data (CSV, Excel, JSON)
+- [ ] Loading data (CSV, Excel, JSON, Parquet)
 - [ ] Data inspection
   - `.head()`, `.info()`, `.describe()`, `.shape`
+  - `.value_counts()`, `.unique()`, `.nunique()`
 - [ ] Data selection & filtering
   - `.loc[]`, `.iloc[]`, boolean indexing
+  - Query method
 - [ ] Data manipulation
   - Sorting, filtering, grouping
   - Handling missing values
   - Data type conversion
+  - String operations
 - [ ] Aggregation & GroupBy
 - [ ] Merge, Join, Concat
+- [ ] Pivot tables & Cross tabulation
 - [ ] **LAB 2:** Exploratory Data Analysis dengan Pandas
 
 ### 1.4 NumPy Basics (15 menit)
@@ -100,6 +105,9 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 - [ ] Apa itu DuckDB?
 - [ ] DuckDB vs Traditional Databases
 - [ ] Use cases & advantages
+  - OLAP vs OLTP
+  - In-memory analytics
+  - Columnar storage
 - [ ] Installation & setup
 - [ ] Create connection & database
 
@@ -107,32 +115,38 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 
 - [ ] Basic SQL Review
   - SELECT, WHERE, ORDER BY
-  - JOIN operations
+  - LIMIT, OFFSET, DISTINCT
+  - JOIN operations (INNER, LEFT, RIGHT, FULL)
+  - UNION, INTERSECT, EXCEPT
   - GROUP BY & aggregations
 - [ ] DuckDB specific features
-  - Reading CSV/Parquet directly
+  - Reading CSV/Parquet/JSON directly
   - Query result to DataFrame
   - DataFrame to SQL
+  - COPY statement
 - [ ] Advanced queries
-  - Window functions
+  - Window functions (ROW_NUMBER, RANK, LAG, LEAD)
   - CTEs (Common Table Expressions)
   - Subqueries
+  - CASE WHEN statements
 - [ ] **LAB 3:** Complex queries dengan DuckDB
 
 ### 2.3 Integration Pandas & DuckDB (45 menit)
 
-- [ ] Load data ke DuckDB
+- [ ] Load data ke DuckDB dari Pandas
 - [ ] Query DuckDB dari Python
 - [ ] Convert between Pandas & DuckDB
-- [ ] Performance optimization tips
+- [ ] Performance comparison: Pandas vs DuckDB
+- [ ] When to use which tool
 - [ ] **LAB 4:** ETL Pipeline dengan Pandas & DuckDB
 
 ### 2.4 Best Practices (15 menit)
 
 - [ ] When to use Pandas vs DuckDB
-- [ ] Query optimization
+- [ ] Query optimization techniques
 - [ ] Memory management
-- [ ] Data partitioning
+- [ ] Data partitioning strategies
+- [ ] Indexing considerations
 
 ---
 
@@ -146,31 +160,40 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 
 ### 3.1 Matplotlib & Seaborn (45 menit)
 
-- [ ] Basic plotting dengan Matplotlib
+- [ ] Matplotlib basics
+  - Figure and Axes
   - Line plots, Bar charts, Histograms
   - Scatter plots, Pie charts
-  - Customization (colors, labels, legends)
+  - Subplots
+  - Customization (colors, labels, legends, styles)
 - [ ] Seaborn untuk statistical plots
-  - Distribution plots
-  - Categorical plots
+  - Distribution plots (histplot, kdeplot, boxplot, violinplot)
+  - Categorical plots (barplot, countplot, pointplot)
+  - Relationship plots (scatterplot, lineplot, regplot)
   - Heatmaps & correlation matrices
+  - Pair plots
 - [ ] **LAB 5:** Create static visualizations
 
 ### 3.2 Plotly for Interactive Charts (45 menit)
 
 - [ ] Introduction to Plotly
+- [ ] Plotly Express vs Graph Objects
 - [ ] Interactive line & bar charts
 - [ ] Scatter & bubble charts
 - [ ] Box plots & violin plots
-- [ ] 3D visualizations
+- [ ] Sunburst & treemap charts
+- [ ] Time series visualizations
 - [ ] Customization & styling
+- [ ] Adding interactivity (hover, click, zoom)
 - [ ] **LAB 6:** Interactive dashboard prototype
 
 ### 3.3 Data Storytelling (15 menit)
 
 - [ ] Choosing the right visualization
 - [ ] Color theory & accessibility
-- [ ] Best practices for dashboards
+- [ ] Chart best practices
+- [ ] Dashboard design principles
+- [ ] Common visualization mistakes
 
 ---
 
@@ -183,55 +206,66 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 
 ---
 
-# HARI 2: Machine Learning & Streamlit Dashboard
+# HARI 2: Advanced Analytics & Interactive Dashboard
 
-## Session 4: Introduction to Machine Learning (09:00 - 12:00)
+## Session 4: Advanced Data Analysis Techniques (09:00 - 12:00)
 
 **Duration:** 3 jam
 
-### 4.1 Machine Learning Fundamentals (30 menit)
+### 4.1 Data Cleaning & Transformation (60 menit)
 
-- [ ] What is Machine Learning?
-- [ ] Types of ML (Supervised, Unsupervised, Reinforcement)
-- [ ] ML Workflow overview
-- [ ] Common algorithms overview
-- [ ] Introduction to Scikit-learn
-
-### 4.2 Data Preprocessing (60 menit)
-
-- [ ] Feature engineering
-- [ ] Handling missing values
-  - Imputation strategies
-  - Drop vs Fill
+- [ ] Handling missing data
+  - Detection methods
+  - Imputation strategies (mean, median, forward/backward fill)
+  - Dropping vs filling
+- [ ] Handling outliers
+  - Detection (IQR, Z-score, visualization)
+  - Treatment strategies
+- [ ] Data normalization & standardization
 - [ ] Encoding categorical variables
   - Label Encoding
   - One-Hot Encoding
-  - Target Encoding
-- [ ] Feature scaling
-  - StandardScaler
-  - MinMaxScaler
-- [ ] Train-Test split
-- [ ] **LAB 7:** Prepare dataset untuk modeling
+  - Ordinal Encoding
+- [ ] Feature engineering basics
+  - Creating new features
+  - Date/time features extraction
+  - Binning & discretization
+- [ ] **LAB 7:** Data cleaning pipeline
 
-### 4.3 Supervised Learning - Regression (45 menit)
+### 4.2 Time Series Analysis (60 menit)
 
-- [ ] Linear Regression
-- [ ] Multiple Linear Regression
-- [ ] Model training & prediction
-- [ ] Model evaluation metrics
-  - MAE, MSE, RMSE, R-squared
-- [ ] **LAB 8:** Build regression model
+- [ ] Working with datetime data
+  - Parsing dates
+  - DateTime indexing
+  - Resampling & frequency conversion
+- [ ] Time series aggregations
+  - Rolling windows
+  - Moving averages
+  - Cumulative calculations
+- [ ] Trend analysis
+  - Year-over-Year (YoY) growth
+  - Month-over-Month (MoM) growth
+  - Seasonality detection
+- [ ] Time series visualization
+- [ ] **LAB 8:** Time series analysis project
 
-### 4.4 Supervised Learning - Classification (45 menit)
+### 4.3 Statistical Analysis (60 menit)
 
-- [ ] Logistic Regression
-- [ ] Decision Trees
-- [ ] Random Forest
-- [ ] Model evaluation metrics
-  - Accuracy, Precision, Recall, F1-Score
-  - Confusion Matrix
-  - ROC-AUC
-- [ ] **LAB 9:** Build classification model
+- [ ] Descriptive statistics
+  - Central tendency (mean, median, mode)
+  - Dispersion (variance, std dev, range)
+  - Percentiles & quartiles
+- [ ] Correlation analysis
+  - Pearson, Spearman correlation
+  - Correlation matrices
+  - Causation vs correlation
+- [ ] Distribution analysis
+  - Histogram analysis
+  - Normal distribution
+  - Skewness & kurtosis
+- [ ] Basic hypothesis testing concepts
+- [ ] A/B testing fundamentals
+- [ ] **LAB 9:** Statistical analysis on real dataset
 
 ---
 
@@ -249,37 +283,47 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 - [ ] Setup & first app
 - [ ] Running Streamlit apps
 - [ ] Basic components
-  - `st.title()`, `st.header()`, `st.write()`
-  - `st.markdown()`, `st.text()`
+  - `st.title()`, `st.header()`, `st.subheader()`
+  - `st.write()`, `st.markdown()`, `st.text()`
 - [ ] Displaying data
   - `st.dataframe()`, `st.table()`
-  - `st.metric()`
+  - `st.metric()` for KPIs
+  - `st.json()`
 - [ ] **LAB 10:** Hello Streamlit app
 
 ### 5.2 Interactive Components (60 menit)
 
 - [ ] Input widgets
-  - `st.button()`, `st.slider()`
+  - `st.button()`, `st.checkbox()`, `st.radio()`
+  - `st.slider()`, `st.select_slider()`
   - `st.selectbox()`, `st.multiselect()`
   - `st.text_input()`, `st.number_input()`
-  - `st.date_input()`, `st.file_uploader()`
+  - `st.date_input()`, `st.time_input()`
+  - `st.file_uploader()`
 - [ ] Layout elements
-  - `st.sidebar()`
-  - `st.columns()`
-  - `st.expander()`, `st.tabs()`
+  - `st.sidebar()` for navigation
+  - `st.columns()` for grid layouts
+  - `st.expander()` for collapsible sections
+  - `st.tabs()` for multiple views
+  - `st.container()`
 - [ ] Charts & visualizations
-  - `st.line_chart()`, `st.bar_chart()`
-  - `st.plotly_chart()`, `st.pyplot()`
+  - Native charts: `st.line_chart()`, `st.bar_chart()`, `st.area_chart()`
+  - `st.plotly_chart()` for Plotly
+  - `st.pyplot()` for Matplotlib
+- [ ] Session state management
+- [ ] Caching with `@st.cache_data`
 - [ ] **LAB 11:** Interactive data explorer
 
-### 5.3 Integration dengan DuckDB & ML Models (45 menit)
+### 5.3 Integration dengan DuckDB (45 menit)
 
 - [ ] Connect Streamlit to DuckDB
-- [ ] Query data dynamically
+- [ ] Dynamic query execution
 - [ ] Display query results
-- [ ] Load & use ML models
-- [ ] Real-time predictions
-- [ ] **LAB 12:** ML prediction dashboard
+- [ ] Interactive filtering with DuckDB
+- [ ] Performance optimization
+- [ ] File upload & analysis
+- [ ] Export results (CSV, Excel)
+- [ ] **LAB 12:** Complete analytics dashboard
 
 ---
 
@@ -300,35 +344,57 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 
 ### 6.2 Project Development (60 menit)
 
-**Objective:** Build end-to-end Data Science application
+**Objective:** Build end-to-end Data Analytics Dashboard
 
 **Requirements:**
 
 1. Load & explore dataset menggunakan Pandas
 2. Store & query data dengan DuckDB
-3. Perform EDA dengan visualizations
-4. Build ML model (regression atau classification)
-5. Create Streamlit dashboard dengan:
-   - Data overview section
-   - Interactive filters
-   - Visualizations
-   - ML prediction interface
-   - Model performance metrics
+3. Perform comprehensive EDA dengan visualizations
+4. Clean & transform data
+5. Generate insights & statistical analysis
+6. Create Streamlit dashboard dengan:
+   - Data overview section (summary statistics, data quality checks)
+   - Interactive filters (date range, categories, etc)
+   - Multiple visualizations (charts, graphs, tables)
+   - Key Performance Indicators (KPIs)
+   - Export functionality
+   - Professional UI/UX design
 
 **Suggested Project Ideas:**
 
-- Sales forecasting dashboard
-- Customer churn prediction
-- Product recommendation system
-- Financial analysis dashboard
-- Healthcare prediction system
+- **Sales Analysis Dashboard**
+  - Revenue trends, product performance
+  - Customer segmentation
+  - Regional analysis
+
+- **E-commerce Analytics**
+  - Customer behavior analysis
+  - Product recommendations
+  - Conversion funnel analysis
+
+- **HR Analytics Dashboard**
+  - Employee performance metrics
+  - Attrition analysis
+  - Department insights
+
+- **Financial Analysis Dashboard**
+  - Expense tracking & budgeting
+  - Profit & loss analysis
+  - Financial forecasting
+
+- **Marketing Campaign Analysis**
+  - Campaign performance metrics
+  - ROI analysis
+  - Channel effectiveness
 
 ### 6.3 Project Presentation (30 menit)
 
 - [ ] Each team/individual presents (5-7 menit)
 - [ ] Demo aplikasi
-- [ ] Explain technical approach
-- [ ] Discuss challenges & solutions
+- [ ] Explain insights discovered
+- [ ] Discuss technical approach
+- [ ] Challenges & solutions
 - [ ] Q&A
 
 ---
@@ -338,12 +404,14 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 ### Review & Best Practices
 
 - [ ] Key takeaways from 2 days
+- [ ] Data analysis workflow recap
 - [ ] Production deployment tips
-  - Streamlit Cloud
+  - Streamlit Cloud (Community/Enterprise)
   - Docker containerization
-  - Environment variables
-- [ ] Performance optimization
+  - Environment variables & secrets
+- [ ] Performance optimization tips
 - [ ] Security considerations
+- [ ] Data privacy & ethics
 
 ### Resources & Learning Path
 
@@ -351,10 +419,20 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
   - [Python Pandas](https://pandas.pydata.org/docs/)
   - [DuckDB](https://duckdb.org/docs/)
   - [Streamlit](https://docs.streamlit.io/)
-  - [Scikit-learn](https://scikit-learn.org/)
-- [ ] Recommended courses & books
-- [ ] Communities & forums
-- [ ] Career paths in Data Science
+  - [Plotly](https://plotly.com/python/)
+  - [Seaborn](https://seaborn.pydata.org/)
+- [ ] Recommended books
+  - "Python for Data Analysis" by Wes McKinney
+  - "Storytelling with Data" by Cole Nussbaumer Knaflic
+- [ ] Online communities
+  - Stack Overflow
+  - Reddit (r/datascience, r/dataanalysis)
+  - Kaggle
+- [ ] Practice datasets
+  - Kaggle Datasets
+  - UCI Machine Learning Repository
+  - Government open data portals
+- [ ] Career paths in Data Analytics
 
 ### Certificate & Closing
 
@@ -368,57 +446,74 @@ pip install pandas numpy duckdb streamlit plotly scikit-learn jupyter
 ## Project Structure
 
 ```
-bootcamp-data-science/
+bootcamp-data-analysis/
 │
 ├── day1/
 │   ├── session1_python_pandas/
 │   │   ├── notebooks/
 │   │   │   ├── 01_python_review.ipynb
 │   │   │   ├── 02_pandas_basics.ipynb
-│   │   │   └── 03_numpy_intro.ipynb
+│   │   │   ├── 03_pandas_advanced.ipynb
+│   │   │   └── 04_numpy_intro.ipynb
 │   │   └── data/
 │   │
 │   ├── session2_duckdb/
 │   │   ├── notebooks/
 │   │   │   ├── 01_duckdb_intro.ipynb
-│   │   │   ├── 02_sql_queries.ipynb
-│   │   │   └── 03_pandas_duckdb_integration.ipynb
+│   │   │   ├── 02_sql_basics.ipynb
+│   │   │   ├── 03_advanced_queries.ipynb
+│   │   │   └── 04_pandas_duckdb_integration.ipynb
 │   │   └── data/
 │   │
 │   └── session3_visualization/
 │       ├── notebooks/
 │       │   ├── 01_matplotlib_seaborn.ipynb
-│       │   └── 02_plotly_interactive.ipynb
+│       │   ├── 02_plotly_interactive.ipynb
+│       │   └── 03_data_storytelling.ipynb
 │       └── examples/
 │
 ├── day2/
-│   ├── session4_machine_learning/
+│   ├── session4_advanced_analysis/
 │   │   ├── notebooks/
-│   │   │   ├── 01_ml_intro.ipynb
-│   │   │   ├── 02_preprocessing.ipynb
-│   │   │   ├── 03_regression.ipynb
-│   │   │   └── 04_classification.ipynb
-│   │   ├── models/
+│   │   │   ├── 01_data_cleaning.ipynb
+│   │   │   ├── 02_time_series.ipynb
+│   │   │   └── 03_statistical_analysis.ipynb
 │   │   └── data/
 │   │
 │   ├── session5_streamlit/
 │   │   ├── apps/
 │   │   │   ├── 01_hello_streamlit.py
-│   │   │   ├── 02_data_explorer.py
-│   │   │   └── 03_ml_dashboard.py
-│   │   └── components/
+│   │   │   ├── 02_components_demo.py
+│   │   │   ├── 03_data_explorer.py
+│   │   │   └── 04_analytics_dashboard.py
+│   │   ├── components/
+│   │   └── utils/
 │   │
 │   └── capstone_project/
 │       ├── template/
+│       │   ├── app.py
+│       │   ├── utils.py
+│       │   └── config.py
 │       ├── sample_projects/
+│       │   ├── sales_dashboard/
+│       │   ├── hr_analytics/
+│       │   └── financial_dashboard/
 │       └── datasets/
 │
 ├── datasets/
-│   ├── sample_sales.csv
-│   ├── customer_data.csv
-│   └── README.md
+│   ├── sales/
+│   │   ├── sales_data.csv
+│   │   └── README.md
+│   ├── ecommerce/
+│   │   ├── orders.csv
+│   │   ├── customers.csv
+│   │   └── README.md
+│   └── hr/
+│       ├── employees.csv
+│       └── README.md
 │
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
@@ -430,7 +525,7 @@ bootcamp-data-science/
 
 ```bash
 git clone <repository-url>
-cd bootcamp-data-science
+cd bootcamp-data-analysis
 ```
 
 ### 2. Create Virtual Environment
@@ -454,7 +549,7 @@ pip install -r requirements.txt
 ### 4. Verify Installation
 
 ```bash
-python -c "import pandas, duckdb, streamlit; print('All packages installed successfully!')"
+python -c "import pandas, duckdb, streamlit, plotly; print('All packages installed successfully!')"
 ```
 
 ---
@@ -471,7 +566,11 @@ jupyter notebook
 ### Streamlit Apps
 
 ```bash
+# Run basic app
 streamlit run day2/session5_streamlit/apps/01_hello_streamlit.py
+
+# Run dashboard
+streamlit run day2/session5_streamlit/apps/04_analytics_dashboard.py
 ```
 
 ---
@@ -479,17 +578,28 @@ streamlit run day2/session5_streamlit/apps/01_hello_streamlit.py
 ## Sample requirements.txt
 
 ```
+# Data Processing
 pandas>=2.0.0
 numpy>=1.24.0
 duckdb>=0.9.0
-streamlit>=1.28.0
-plotly>=5.17.0
+openpyxl>=3.1.0
+pyarrow>=14.0.0
+
+# Visualization
 matplotlib>=3.7.0
 seaborn>=0.12.0
-scikit-learn>=1.3.0
+plotly>=5.17.0
+
+# Dashboard
+streamlit>=1.28.0
+
+# Development
 jupyter>=1.0.0
 notebook>=7.0.0
-openpyxl>=3.1.0
+ipykernel>=6.25.0
+
+# Utilities
+python-dotenv>=1.0.0
 ```
 
 ---
@@ -499,27 +609,36 @@ openpyxl>=3.1.0
 ### Preparation
 
 - [ ] Test all notebooks sebelum bootcamp
-- [ ] Prepare backup datasets
-- [ ] Setup demo environment
+- [ ] Prepare multiple datasets (different domains)
+- [ ] Setup demo environment & backup laptop
 - [ ] Prepare troubleshooting guide
-- [ ] Create feedback forms
+- [ ] Create feedback forms (pre & post)
+- [ ] Prepare certificates template
+- [ ] Setup communication channel (Slack/WhatsApp group)
 
 ### During Bootcamp
 
 - [ ] Start with environment check (30 menit before)
+- [ ] Ice breaking session
 - [ ] Encourage hands-on practice
-- [ ] Use real-world examples
+- [ ] Use real-world examples & case studies
 - [ ] Time management (stick to schedule)
-- [ ] Regular breaks
-- [ ] Interactive Q&A
-- [ ] Help struggling participants
+- [ ] Regular breaks (importance!)
+- [ ] Interactive Q&A after each session
+- [ ] Help struggling participants individually
+- [ ] Take photos for documentation
+- [ ] Collect attendance
 
 ### After Bootcamp
 
-- [ ] Share materials & recordings
-- [ ] Collect feedback
+- [ ] Share all materials & recordings
+- [ ] Share additional datasets
+- [ ] Collect feedback (survey)
 - [ ] Provide additional resources
-- [ ] Follow-up support channel (Slack/Discord)
+- [ ] Setup follow-up support channel (Slack/Discord)
+- [ ] Alumni network for future collaboration
+- [ ] Certificate distribution
+- [ ] Post-bootcamp project showcase (optional)
 
 ---
 
@@ -527,12 +646,77 @@ openpyxl>=3.1.0
 
 | Criteria | Weight | Description |
 |----------|--------|-------------|
-| **Data Processing** | 20% | Proper data loading, cleaning, transformation |
-| **DuckDB Usage** | 15% | Effective use of DuckDB for queries |
+| **Data Quality & Cleaning** | 20% | Proper data loading, cleaning, handling missing values |
+| **DuckDB Usage** | 15% | Effective use of DuckDB for queries and analysis |
+| **Data Analysis** | 20% | Quality of insights, statistical analysis, EDA |
 | **Visualization** | 20% | Clear, informative, and aesthetic charts |
-| **ML Model** | 25% | Model accuracy, proper evaluation, interpretation |
-| **Streamlit App** | 15% | User-friendly interface, interactivity |
+| **Streamlit Dashboard** | 20% | User-friendly interface, interactivity, design |
 | **Code Quality** | 5% | Clean, documented, organized code |
+
+**Total: 100%**
+
+**Grading Scale:**
+- A (90-100): Excellent - Production ready dashboard
+- B (80-89): Good - Well-functioning dashboard with minor improvements needed
+- C (70-79): Satisfactory - Basic requirements met
+- D (60-69): Needs Improvement - Missing key components
+- F (<60): Incomplete
+
+---
+
+## Common Issues & Troubleshooting
+
+### Installation Issues
+
+**Problem:** pip install fails
+```bash
+# Solution: Upgrade pip
+python -m pip install --upgrade pip
+```
+
+**Problem:** DuckDB import error
+```bash
+# Solution: Reinstall DuckDB
+pip uninstall duckdb
+pip install duckdb --no-cache-dir
+```
+
+### Streamlit Issues
+
+**Problem:** Streamlit won't start
+```bash
+# Check port availability
+streamlit run app.py --server.port 8502
+```
+
+**Problem:** Module not found in Streamlit
+```bash
+# Run with correct Python interpreter
+python -m streamlit run app.py
+```
+
+---
+
+## Additional Resources
+
+### Cheat Sheets
+
+- [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+- [DuckDB SQL Reference](https://duckdb.org/docs/sql/introduction)
+- [Streamlit Cheat Sheet](https://docs.streamlit.io/library/cheatsheet)
+
+### Video Tutorials
+
+- Python for Data Analysis (YouTube)
+- Streamlit Official Tutorials
+- Plotly Chart Examples
+
+### Practice Platforms
+
+- Kaggle Learn
+- DataCamp
+- LeetCode (SQL)
+- HackerRank (SQL & Python)
 
 ---
 
@@ -543,6 +727,17 @@ This bootcamp material is created for educational purposes.
 ## Contact
 
 For questions or support, contact: [Your Contact Information]
+
+---
+
+## Changelog
+
+**Version 1.0** (2024)
+- Initial release
+- Focus on Data Analysis (removed Machine Learning)
+- Added Advanced Analytics session
+- Enhanced Time Series Analysis
+- Expanded Statistical Analysis section
 
 ---
 
