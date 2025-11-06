@@ -1,14 +1,14 @@
-# 🚀 Quick Start Guide - Analisis RUP 2025
+# 🚀 Panduan Memulai Cepat - Analisis RUP 2025
 
 Panduan cepat untuk menjalankan project analisis data RUP 2025.
 
-## Prerequisites
+## Prasyarat
 
 - Python 3.12+ terinstall
 - UV package manager ([Install uv](https://github.com/astral-sh/uv))
-- Git (optional, untuk clone repository)
+- Git (opsional, untuk clone repository)
 
-## Step 1: Setup Project
+## Langkah 1: Setup Project
 
 ```bash
 # Jika belum di folder project
@@ -24,23 +24,23 @@ Output yang diharapkan:
 ✅ Installed 129 packages
 ```
 
-## Step 2: Verifikasi Instalasi
+## Langkah 2: Verifikasi Instalasi
 
 ```bash
 # Test import libraries
-uv run python -c "import pandas, duckdb, streamlit, plotly; print('✅ All libraries installed!')"
+uv run python -c "import pandas, duckdb, streamlit, plotly; print('✅ Semua library berhasil diinstall!')"
 ```
 
-## Step 3: Eksplorasi Data dengan Jupyter
+## Langkah 3: Eksplorasi Data dengan Jupyter
 
-### Opsi A: Via Browser (Recommended)
+### Opsi A: Via Browser (Direkomendasikan)
 
 ```bash
-# Start Jupyter Notebook server
+# Jalankan Jupyter Notebook server
 uv run jupyter notebook
 ```
 
-Browser akan terbuka otomatis. Navigate ke:
+Browser akan terbuka otomatis. Navigasi ke:
 ```
 day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb
 ```
@@ -51,11 +51,11 @@ day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb
 # Install jupyterlab jika belum
 uv pip install jupyterlab
 
-# Start JupyterLab
+# Jalankan JupyterLab
 uv run jupyter lab
 ```
 
-## Step 4: Jalankan Streamlit Dashboard
+## Langkah 4: Jalankan Streamlit Dashboard
 
 ```bash
 # Jalankan dashboard interaktif
@@ -64,16 +64,16 @@ uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
 
 Dashboard akan terbuka di browser: http://localhost:8501
 
-### Features Dashboard:
+### Fitur Dashboard:
 - 📊 Overview Data RUP
 - 💰 Analisis Pagu
 - 🏛️ Analisis K/L/PD
 - 📋 Metode & Jenis Pengadaan
-- 📅 Timeline Analysis
-- 🔍 Interactive Filters
-- 📥 Export Data
+- 📅 Analisis Timeline
+- 🔍 Filter Interaktif
+- 📥 Ekspor Data
 
-## Step 5: Eksplorasi Dataset
+## Langkah 5: Eksplorasi Dataset
 
 ### Cek Data dengan Python
 
@@ -122,7 +122,7 @@ result = conn.execute("""
 print(result)
 ```
 
-## 📁 File Structure
+## 📁 Struktur File
 
 ```
 day1/session1_python_pandas/notebooks/
@@ -132,54 +132,54 @@ day2/session5_streamlit/apps/
 └── rup_dashboard.py                           # Dashboard interaktif
 
 datasets/rup/
-├── RUP-PaketPenyedia-Terumumkan-2025.parquet # Data source
+├── RUP-PaketPenyedia-Terumumkan-2025.parquet # Sumber data
 └── README.md                                  # Dokumentasi dataset
 ```
 
-## Troubleshooting
+## Pemecahan Masalah
 
-### Issue: Module not found
+### Masalah: Module tidak ditemukan
 
 ```bash
 # Reinstall dependencies
 uv sync --refresh
 ```
 
-### Issue: Jupyter tidak muncul
+### Masalah: Jupyter tidak muncul
 
 ```bash
-# Install jupyter explicitly
+# Install jupyter secara eksplisit
 uv pip install jupyter notebook
 
 # Jalankan dengan full path
 uv run jupyter notebook
 ```
 
-### Issue: Streamlit error
+### Masalah: Error Streamlit
 
 ```bash
-# Check streamlit version
+# Cek versi streamlit
 uv pip list | grep streamlit
 
 # Reinstall jika perlu
 uv pip install --force-reinstall streamlit
 ```
 
-### Issue: Cannot read parquet file
+### Masalah: Tidak bisa membaca file parquet
 
 Pastikan file ada di lokasi yang benar:
 ```bash
 ls -lh datasets/rup/RUP-PaketPenyedia-Terumumkan-2025.parquet
 ```
 
-### Issue: Port 8501 already in use
+### Masalah: Port 8501 sudah digunakan
 
 ```bash
 # Gunakan port lain
 uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py --server.port 8502
 ```
 
-## 💡 Tips & Tricks
+## 💡 Tips & Trik
 
 ### 1. Auto-reload di Streamlit
 
@@ -206,9 +206,9 @@ Gunakan sidebar di kiri untuk:
 
 Di dashboard, klik tombol "Export Filtered Data (CSV)" di sidebar untuk download data yang sudah difilter.
 
-## 📊 Sample Analysis Queries
+## 📊 Contoh Query Analisis
 
-### Query 1: Top 10 Paket Terbesar
+### Query 1: 10 Paket Terbesar
 
 ```sql
 SELECT
@@ -247,49 +247,49 @@ GROUP BY bulan
 ORDER BY bulan;
 ```
 
-## 🎓 Learning Path
+## 🎓 Jalur Pembelajaran
 
 ### Untuk Pemula:
 1. Mulai dengan Jupyter notebook untuk memahami data
-2. Pelajari basic Pandas operations
+2. Pelajari operasi dasar Pandas
 3. Coba modifikasi visualisasi
-4. Explore dashboard untuk inspiration
+4. Eksplorasi dashboard untuk inspirasi
 
 ### Untuk Intermediate:
 1. Tambahkan analisis baru di notebook
 2. Buat visualisasi custom dengan Plotly
-3. Modifikasi dashboard (add new tabs/features)
-4. Eksperimen dengan DuckDB queries
+3. Modifikasi dashboard (tambah tab/fitur baru)
+4. Eksperimen dengan query DuckDB
 
 ### Untuk Advanced:
-1. Implement advanced analytics (time series, clustering)
-2. Add machine learning predictions
+1. Implementasikan analitik lanjutan (time series, clustering)
+2. Tambahkan prediksi machine learning
 3. Deploy dashboard ke cloud (Streamlit Cloud)
-4. Create automated reporting system
+4. Buat sistem pelaporan otomatis
 
-## 📚 Next Steps
+## 📚 Langkah Selanjutnya
 
-1. **Pelajari Documentation**:
+1. **Pelajari Dokumentasi**:
    - [datasets/rup/README.md](datasets/rup/README.md) - Detail dataset
    - [README.md](README.md) - Syllabus bootcamp lengkap
 
 2. **Eksperimen**:
-   - Modifikasi queries di notebook
+   - Modifikasi query di notebook
    - Tambah filter baru di dashboard
    - Buat visualisasi custom
 
-3. **Build Your Own**:
+3. **Bangun Sendiri**:
    - Gunakan dataset lain
-   - Buat dashboard untuk use case berbeda
-   - Share hasil analisis Anda
+   - Buat dashboard untuk kasus penggunaan berbeda
+   - Bagikan hasil analisis Anda
 
-## 🆘 Need Help?
+## 🆘 Butuh Bantuan?
 
-- Check documentation di [README.md](README.md)
-- Review dataset info di [datasets/rup/README.md](datasets/rup/README.md)
-- Search error messages online
-- Ask instructor/mentor di bootcamp
+- Cek dokumentasi di [README.md](README.md)
+- Review info dataset di [datasets/rup/README.md](datasets/rup/README.md)
+- Cari pesan error secara online
+- Tanya instruktur/mentor di bootcamp
 
 ---
 
-**Happy Analyzing! 📊🎉**
+**Selamat Menganalisis! 📊🎉**

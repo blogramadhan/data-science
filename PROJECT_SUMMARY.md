@@ -1,80 +1,80 @@
-# 📊 Project Summary: Analisis RUP 2025
+# 📊 Ringkasan Project: Analisis RUP 2025
 
-## ✅ Project Completed Successfully!
+## ✅ Project Berhasil Diselesaikan!
 
 Saya telah membuat project lengkap analisis data RUP (Rencana Umum Pengadaan) 2025 yang terintegrasi dengan syllabus bootcamp Data Analysis.
 
 ---
 
-## 🎯 What Has Been Created
+## 🎯 Apa yang Telah Dibuat
 
-### 1. **Jupyter Notebook - Exploratory Data Analysis**
+### 1. **Jupyter Notebook - Analisis Data Eksploratori**
    - **File**: `day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb`
-   - **Content**:
-     - Data loading dan inspection
-     - Statistical analysis
+   - **Konten**:
+     - Loading dan inspeksi data
+     - Analisis statistik
      - Analisis pagu (nilai pengadaan)
      - Analisis metode & jenis pengadaan
      - Analisis K/L/PD (instansi pemerintah)
      - Status PDN, UKM, dan PRADIPA
-     - Timeline analysis
+     - Analisis timeline
      - Visualisasi dengan Matplotlib & Seaborn
-     - Key insights & recommendations
+     - Insight utama & rekomendasi
 
-### 2. **Streamlit Dashboard - Interactive Analytics**
+### 2. **Streamlit Dashboard - Analitik Interaktif**
    - **File**: `day2/session5_streamlit/apps/rup_dashboard.py`
-   - **Features**:
-     - 📈 KPI Dashboard (4 key metrics)
-     - 🔍 Advanced Filtering (metode, jenis, K/L/PD, pagu range, status)
-     - 📊 5 Analysis Tabs:
-       1. Overview - Status & top packages
-       2. Analisis Pagu - Distribution & statistics
-       3. Analisis K/L/PD - Top 15 by count & budget
-       4. Metode & Jenis - Procurement methods analysis
-       5. Timeline - Monthly trends & heatmap
-     - 💾 Export functionality (CSV)
-     - 🎨 Professional UI with Plotly interactive charts
-     - ⚡ DuckDB integration for fast queries
+   - **Fitur**:
+     - 📈 Dashboard KPI (4 metrik utama)
+     - 🔍 Filter Lanjutan (metode, jenis, K/L/PD, range pagu, status)
+     - 📊 5 Tab Analisis:
+       1. Overview - Status & paket teratas
+       2. Analisis Pagu - Distribusi & statistik
+       3. Analisis K/L/PD - 15 teratas berdasarkan jumlah & anggaran
+       4. Metode & Jenis - Analisis metode pengadaan
+       5. Timeline - Trend bulanan & heatmap
+     - 💾 Fungsi ekspor (CSV)
+     - 🎨 UI profesional dengan chart interaktif Plotly
+     - ⚡ Integrasi DuckDB untuk query cepat
 
-### 3. **Dataset Documentation**
+### 3. **Dokumentasi Dataset**
    - **File**: `datasets/rup/README.md`
-   - **Content**:
-     - Dataset overview
-     - Column descriptions (48 columns)
-     - Statistics & insights
-     - Use cases
-     - Code examples (Pandas, DuckDB)
-     - Data quality notes
-     - Sample queries
+   - **Konten**:
+     - Overview dataset
+     - Deskripsi kolom (48 kolom)
+     - Statistik & insight
+     - Kasus penggunaan
+     - Contoh kode (Pandas, DuckDB)
+     - Catatan kualitas data
+     - Contoh query
 
-### 4. **Quick Start Guide**
+### 4. **Panduan Memulai Cepat**
    - **File**: `QUICKSTART.md`
-   - **Content**:
-     - Step-by-step setup instructions
-     - How to run Jupyter & Streamlit
-     - Sample queries & analysis
-     - Troubleshooting guide
-     - Tips & tricks
-     - Learning path
+   - **Konten**:
+     - Instruksi setup langkah demi langkah
+     - Cara menjalankan Jupyter & Streamlit
+     - Contoh query & analisis
+     - Panduan pemecahan masalah
+     - Tips & trik
+     - Jalur pembelajaran
 
-### 5. **Updated Main README**
+### 5. **README Utama Diperbarui**
    - **File**: `README.md`
-   - **Added**:
-     - Project showcase section
-     - Quick start commands
-     - Actual project structure
-     - Integration dengan syllabus
+   - **Ditambahkan**:
+     - Section showcase project
+     - Perintah quick start
+     - Struktur project aktual
+     - Integrasi dengan syllabus
 
-### 6. **Dependencies Configuration**
+### 6. **Konfigurasi Dependencies**
    - **File**: `pyproject.toml`
-   - **Updated with**:
-     - All required packages
-     - Proper versioning
-     - Description update
+   - **Diperbarui dengan**:
+     - Semua package yang diperlukan
+     - Versi yang tepat
+     - Deskripsi yang diperbarui
 
 ---
 
-## 📁 Final Project Structure
+## 📁 Struktur Project Final
 
 ```
 data-science/
@@ -82,57 +82,57 @@ data-science/
 ├── day1/
 │   └── session1_python_pandas/
 │       └── notebooks/
-│           └── 01_exploratory_data_analysis_rup.ipynb  ✅ NEW
+│           └── 01_exploratory_data_analysis_rup.ipynb  ✅ BARU
 │
 ├── day2/
 │   └── session5_streamlit/
 │       └── apps/
-│           └── rup_dashboard.py  ✅ NEW
+│           └── rup_dashboard.py  ✅ BARU
 │
 ├── datasets/
 │   └── rup/
 │       ├── RUP-PaketPenyedia-Terumumkan-2025.parquet  ✅
-│       └── README.md  ✅ NEW
+│       └── README.md  ✅ BARU
 │
-├── data/  (original data folder)
+├── data/  (folder data original)
 │   └── RUP-PaketPenyedia-Terumumkan-2025.parquet
 │
-├── pyproject.toml  ✅ UPDATED
-├── README.md  ✅ UPDATED
-├── QUICKSTART.md  ✅ NEW
-└── PROJECT_SUMMARY.md  ✅ NEW
+├── pyproject.toml  ✅ DIPERBARUI
+├── README.md  ✅ DIPERBARUI
+├── QUICKSTART.md  ✅ BARU
+└── PROJECT_SUMMARY.md  ✅ BARU
 ```
 
 ---
 
-## 🚀 How to Use
+## 🚀 Cara Menggunakan
 
-### Quick Start Commands:
+### Perintah Quick Start:
 
 ```bash
 # 1. Install dependencies
 uv sync
 
-# 2. Run Jupyter Notebook for EDA
+# 2. Jalankan Jupyter Notebook untuk EDA
 uv run jupyter notebook
-# Then open: day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb
+# Lalu buka: day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb
 
-# 3. Run Streamlit Dashboard
+# 3. Jalankan Streamlit Dashboard
 uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
-# Opens at: http://localhost:8501
+# Terbuka di: http://localhost:8501
 ```
 
 ---
 
-## 📊 Dataset Overview
+## 📊 Overview Dataset
 
-- **Name**: RUP (Rencana Umum Pengadaan) 2025
+- **Nama**: RUP (Rencana Umum Pengadaan) 2025
 - **Records**: 16,430 paket pengadaan
-- **Columns**: 48 attributes
-- **Size**: ~1.3 MB (Parquet)
+- **Kolom**: 48 atribut
+- **Ukuran**: ~1.3 MB (Parquet)
 - **Domain**: Pengadaan Barang/Jasa Pemerintah Indonesia
 
-### Key Metrics:
+### Metrik Utama:
 - Total Pagu: Beberapa Triliun Rupiah
 - Jumlah K/L/PD: Ratusan instansi
 - Periode: Tahun Anggaran 2025
@@ -140,186 +140,185 @@ uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
 
 ---
 
-## 🎓 Integration dengan Syllabus
+## 🎓 Integrasi dengan Syllabus
 
-Project ini perfectly aligned dengan syllabus bootcamp:
+Project ini sepenuhnya selaras dengan syllabus bootcamp:
 
-### ✅ Day 1 Coverage:
-- **Session 1**: Pandas for data exploration ✓
-- **Session 2**: DuckDB queries (implemented in dashboard) ✓
-- **Session 3**: Data Visualization (Matplotlib, Seaborn, Plotly) ✓
+### ✅ Coverage Hari 1:
+- **Session 1**: Pandas untuk eksplorasi data ✓
+- **Session 2**: Query DuckDB (diimplementasikan di dashboard) ✓
+- **Session 3**: Visualisasi Data (Matplotlib, Seaborn, Plotly) ✓
 
-### ✅ Day 2 Coverage:
-- **Session 4**: Advanced Analysis (cleaning, statistics, time series) ✓
-- **Session 5**: Streamlit Dashboard (full implementation) ✓
-- **Session 6**: Real-world Capstone Project ✓
+### ✅ Coverage Hari 2:
+- **Session 4**: Analisis Lanjutan (cleaning, statistik, time series) ✓
+- **Session 5**: Dashboard Streamlit (implementasi penuh) ✓
+- **Session 6**: Project Capstone Dunia Nyata ✓
 
 ---
 
-## 💡 Key Features
+## 💡 Fitur Utama
 
-### 1. **Real Government Data**
-   - Authentic procurement data from SIRUP
-   - Relevant for public sector analysis
-   - Transparency & accountability use case
+### 1. **Data Pemerintah Asli**
+   - Data pengadaan autentik dari SIRUP
+   - Relevan untuk analisis sektor publik
+   - Kasus penggunaan transparansi & akuntabilitas
 
-### 2. **Comprehensive Analysis**
+### 2. **Analisis Komprehensif**
    - Exploratory Data Analysis (EDA)
-   - Statistical summaries
-   - Trend analysis
-   - Distribution analysis
-   - Comparative analysis
+   - Ringkasan statistik
+   - Analisis trend
+   - Analisis distribusi
+   - Analisis komparatif
 
-### 3. **Interactive Dashboard**
-   - Dynamic filtering
-   - Multiple visualization types
-   - Export functionality
-   - Professional UI/UX
-   - Fast queries with DuckDB
+### 3. **Dashboard Interaktif**
+   - Filter dinamis
+   - Berbagai jenis visualisasi
+   - Fungsi ekspor
+   - UI/UX profesional
+   - Query cepat dengan DuckDB
 
-### 4. **Production-Ready Code**
-   - Clean & documented
-   - Modular structure
-   - Error handling
-   - Performance optimized
-   - Best practices applied
-
----
-
-## 🎯 Use Cases Demonstrated
-
-1. **Government Spending Analysis**
-   - Track budget allocation
-   - Identify top spenders
-   - Analyze procurement methods
-
-2. **Transparency Monitoring**
-   - Public procurement tracking
-   - PDN (local products) adoption
-   - UKM (SME) participation
-
-3. **Trend Analysis**
-   - Temporal patterns
-   - Seasonal variations
-   - Budget utilization
-
-4. **Comparative Analysis**
-   - Institution comparison
-   - Method effectiveness
-   - Regional distribution
+### 4. **Kode Production-Ready**
+   - Bersih & terdokumentasi
+   - Struktur modular
+   - Penanganan error
+   - Dioptimalkan untuk performa
+   - Best practice diterapkan
 
 ---
 
-## 📈 Technical Stack
+## 🎯 Kasus Penggunaan yang Didemonstrasikan
 
-### Data Processing:
-- **Pandas**: Data manipulation & analysis
-- **NumPy**: Numerical operations
-- **DuckDB**: SQL analytics engine
+1. **Analisis Belanja Pemerintah**
+   - Track alokasi anggaran
+   - Identifikasi pengeluaran terbesar
+   - Analisis metode pengadaan
 
-### Visualization:
-- **Matplotlib**: Static plots
-- **Seaborn**: Statistical graphics
-- **Plotly**: Interactive charts
+2. **Monitoring Transparansi**
+   - Tracking pengadaan publik
+   - Adopsi PDN (produk lokal)
+   - Partisipasi UKM
+
+3. **Analisis Trend**
+   - Pola temporal
+   - Variasi musiman
+   - Utilisasi anggaran
+
+4. **Analisis Komparatif**
+   - Perbandingan instansi
+   - Efektivitas metode
+   - Distribusi regional
+
+---
+
+## 📈 Stack Teknologi
+
+### Pemrosesan Data:
+- **Pandas**: Manipulasi & analisis data
+- **NumPy**: Operasi numerik
+- **DuckDB**: Engine analitik SQL
+
+### Visualisasi:
+- **Matplotlib**: Plot statis
+- **Seaborn**: Grafik statistik
+- **Plotly**: Chart interaktif
 
 ### Dashboard:
-- **Streamlit**: Web framework
-- **Plotly**: Interactive visualizations
+- **Streamlit**: Framework web
+- **Plotly**: Visualisasi interaktif
 
 ### Format:
-- **Parquet**: Efficient columnar storage
-- **Jupyter**: Interactive notebooks
+- **Parquet**: Penyimpanan kolumnar efisien
+- **Jupyter**: Notebook interaktif
 
 ---
 
 ## 🌟 Highlights
 
-### What Makes This Project Special:
+### Apa yang Membuat Project Ini Spesial:
 
-1. **Real-World Data**: Actual government procurement data
-2. **Complete Pipeline**: From raw data to interactive dashboard
-3. **Best Practices**: Following industry standards
-4. **Documentation**: Comprehensive guides & comments
-5. **Scalable**: Can handle larger datasets
-6. **Reusable**: Template for other analyses
-7. **Educational**: Perfect for learning
+1. **Data Dunia Nyata**: Data pengadaan pemerintah aktual
+2. **Pipeline Lengkap**: Dari raw data hingga dashboard interaktif
+3. **Best Practices**: Mengikuti standar industri
+4. **Dokumentasi**: Panduan & komentar komprehensif
+5. **Scalable**: Dapat menangani dataset lebih besar
+6. **Reusable**: Template untuk analisis lain
+7. **Edukatif**: Sempurna untuk pembelajaran
 
 ---
 
-## 📝 Next Steps & Improvements
+## 📝 Langkah Selanjutnya & Peningkatan
 
-### Suggestions for Students:
+### Saran untuk Peserta:
 
-1. **Add More Analysis**:
-   - Regional analysis (by province)
-   - Vendor analysis (if data available)
-   - Price benchmarking
-   - Anomaly detection
+1. **Tambah Analisis Lebih Banyak**:
+   - Analisis regional (per provinsi)
+   - Analisis vendor (jika data tersedia)
+   - Benchmarking harga
+   - Deteksi anomali
 
-2. **Enhance Dashboard**:
-   - Add more filters
-   - Create custom reports
-   - Add download templates
-   - Implement user preferences
+2. **Tingkatkan Dashboard**:
+   - Tambah lebih banyak filter
+   - Buat laporan custom
+   - Tambah template download
+   - Implementasi preferensi user
 
-3. **Advanced Analytics**:
+3. **Analitik Lanjutan**:
    - Predictive modeling
-   - Clustering analysis
-   - Network analysis
-   - Text mining (on descriptions)
+   - Analisis clustering
+   - Analisis network
+   - Text mining (pada deskripsi)
 
 4. **Deployment**:
-   - Deploy to Streamlit Cloud
-   - Add authentication
-   - Schedule updates
-   - Add monitoring
+   - Deploy ke Streamlit Cloud
+   - Tambah autentikasi
+   - Jadwalkan update
+   - Tambah monitoring
 
 ---
 
-## 📚 Learning Outcomes
+## 📚 Hasil Pembelajaran
 
-After completing this project, students will learn:
+Setelah menyelesaikan project ini, peserta akan belajar:
 
-✅ Data loading from Parquet files
-✅ Exploratory Data Analysis techniques
+✅ Loading data dari file Parquet
+✅ Teknik Exploratory Data Analysis
 ✅ Data cleaning & preparation
-✅ Statistical analysis
-✅ Data visualization (static & interactive)
-✅ SQL queries with DuckDB
-✅ Dashboard development with Streamlit
-✅ Project documentation
-✅ Code organization
-✅ Best practices in data analysis
+✅ Analisis statistik
+✅ Visualisasi data (statis & interaktif)
+✅ Query SQL dengan DuckDB
+✅ Pengembangan dashboard dengan Streamlit
+✅ Dokumentasi project
+✅ Organisasi kode
+✅ Best practices dalam analisis data
 
 ---
 
-## 🔗 Related Files
+## 🔗 File Terkait
 
-- Main Syllabus: [README.md](README.md)
+- Syllabus Utama: [README.md](README.md)
 - Quick Start: [QUICKSTART.md](QUICKSTART.md)
-- Dataset Docs: [datasets/rup/README.md](datasets/rup/README.md)
+- Docs Dataset: [datasets/rup/README.md](datasets/rup/README.md)
 - Jupyter Notebook: [day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb](day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb)
 - Dashboard App: [day2/session5_streamlit/apps/rup_dashboard.py](day2/session5_streamlit/apps/rup_dashboard.py)
 
 ---
 
-## 🎉 Conclusion
+## 🎉 Kesimpulan
 
 Project analisis RUP 2025 ini adalah demonstrasi lengkap dari:
-- **Data Analysis Pipeline**: Load → Clean → Analyze → Visualize → Dashboard
-- **Modern Tools**: Pandas, DuckDB, Streamlit, Plotly
-- **Real-World Application**: Government procurement analysis
-- **Professional Delivery**: Documentation, code quality, UX
+- **Pipeline Analisis Data**: Load → Clean → Analyze → Visualize → Dashboard
+- **Tools Modern**: Pandas, DuckDB, Streamlit, Plotly
+- **Aplikasi Dunia Nyata**: Analisis pengadaan pemerintah
+- **Delivery Profesional**: Dokumentasi, kualitas kode, UX
 
 Project ini siap digunakan sebagai:
-- ✅ Teaching material
+- ✅ Materi pengajaran
 - ✅ Portfolio project
-- ✅ Reference implementation
-- ✅ Starting template
+- ✅ Implementasi referensi
+- ✅ Template awal
 
 ---
 
-**Created**: 2025-01-06
-**Status**: ✅ Complete & Ready to Use
+**Dibuat**: 2025-01-06
+**Status**: ✅ Lengkap & Siap Digunakan
 **Tools**: Python 3.12, uv, Pandas, DuckDB, Streamlit, Plotly
-
