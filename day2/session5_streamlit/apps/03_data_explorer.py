@@ -201,12 +201,18 @@ with filter_cols[1]:
         if num_col:
             min_val = float(df[num_col].min())
             max_val = float(df[num_col].max())
-            range_vals = st.slider(
-                f"Range for {num_col}",
-                min_val, max_val,
-                (min_val, max_val)
-            )
-            filters[num_col] = range_vals
+
+            # Check if min and max are different
+            if min_val < max_val:
+                range_vals = st.slider(
+                    f"Range for {num_col}",
+                    min_val, max_val,
+                    (min_val, max_val)
+                )
+                filters[num_col] = range_vals
+            else:
+                st.info(f"Column '{num_col}' has only one unique value: {min_val}")
+                filters[num_col] = (min_val, max_val)
 
 with filter_cols[2]:
     if len(date_cols) > 0:
