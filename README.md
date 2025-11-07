@@ -18,7 +18,7 @@ Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan prak
 - Business Analyst yang ingin lebih technical
 - Programmer yang ingin masuk ke bidang Data Analytics
 - Fresh Graduate yang ingin berkarir di bidang data
-- Professional yang perlu mengolah dan visualisasi data
+- Profesional yang perlu mengolah dan visualisasi data
 
 ### ✅ Prerequisites
 
@@ -40,16 +40,16 @@ Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan prak
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Memulai
 
-### 1. Setup Environment
+### 1. Persiapan Lingkungan
 
 ```bash
 # Clone repository
 git clone <repository-url>
 cd data-science
 
-# Install dependencies dengan uv
+# Instalasi dependensi dengan uv
 uv sync
 
 # Atau dengan pip
@@ -64,25 +64,25 @@ uv run jupyter notebook
 # Buka notebook: day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb
 ```
 
-### 3. Jalankan Streamlit Apps
+### 3. Jalankan Aplikasi Streamlit
 
 ```bash
-# LAB 10: Hello Streamlit (Basic)
+# LAB 10: Hello Streamlit (Dasar)
 uv run streamlit run day2/session5_streamlit/apps/01_hello_streamlit.py
 
-# LAB 11: Interactive Components
+# LAB 11: Komponen Interaktif
 uv run streamlit run day2/session5_streamlit/apps/02_components_demo.py
 
-# LAB 12: Data Explorer
+# LAB 12: Penjelajah Data
 uv run streamlit run day2/session5_streamlit/apps/03_data_explorer.py
 
-# Production Dashboard - Analisis RUP
+# Dashboard Produksi - Analisis RUP
 uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
 ```
 
 ---
 
-## 📁 Struktur Project
+## 📁 Struktur Proyek
 
 ```
 data-science/
@@ -95,10 +95,17 @@ data-science/
 │   │   │   └── 01_duckdb_intro.py  ✅
 │   │   └── README.md  ✅
 │   └── session3_visualization/
+│       ├── notebooks/
+│       │   ├── 01_matplotlib_seaborn.ipynb  ✅
+│       │   └── 02_plotly_interactive.ipynb  ✅
 │       └── README.md  ✅
 │
 ├── day2/
 │   ├── session4_advanced_analysis/
+│   │   ├── notebooks/
+│   │   │   ├── 01_data_cleaning.ipynb  ✅
+│   │   │   ├── 02_time_series.ipynb  ✅
+│   │   │   └── 03_statistical_analysis.ipynb  ✅
 │   │   └── README.md  ✅
 │   └── session5_streamlit/
 │       ├── apps/
@@ -120,19 +127,19 @@ data-science/
 
 ---
 
-# 📚 HARI 1: Fundamental Data Analysis
+# 📚 HARI 1: Fundamental Analisis Data
 
-## Session 1: Python & Pandas untuk Analisis Data (09:00 - 12:00)
+## Sesi 1: Python & Pandas untuk Analisis Data (09:00 - 12:00)
 
 **Durasi:** 3 jam
-**Format:** Hands-on dengan Jupyter Notebook
-**Dataset:** RUP 2025
+**Format Pembelajaran:** Praktikum dengan Jupyter Notebook
+**Kumpulan Data:** RUP 2025
 
 ### Materi Pembelajaran
 
-#### 1.1 Setup Environment (30 menit)
-- Setup Python & Virtual Environment (uv/venv)
-- Install libraries yang dibutuhkan
+#### 1.1 Persiapan Lingkungan (30 menit)
+- Persiapan Python & Virtual Environment (uv/venv)
+- Instalasi pustaka yang dibutuhkan
 - Pengenalan Jupyter Notebook
 - Membuka dataset RUP 2025
 
@@ -146,9 +153,9 @@ data-science/
 - Memahami kolom-kolom dalam dataset RUP
 - Identifikasi tipe data dan missing values
 
-**B. Data Selection & Filtering**
+**B. Seleksi & Penyaringan Data**
 - Menggunakan `.loc[]` dan `.iloc[]` untuk seleksi data
-- Boolean indexing untuk filtering
+- Boolean indexing untuk penyaringan
 - Query method untuk filter kompleks
 - Contoh: Filter paket dengan pagu > 1 miliar
 
@@ -158,17 +165,17 @@ data-science/
 - Menghitung jumlah paket per satuan kerja
 - Top 10 satker dengan pagu terbesar
 
-**D. Data Manipulation**
+**D. Manipulasi Data**
 - Sorting data berdasarkan multiple columns
-- Handling missing values (detection & treatment)
-- String operations untuk cleaning
-- Date/time operations
+- Menangani missing values (deteksi & treatment)
+- Operasi string untuk cleaning
+- Operasi date/time
 
-**E. Statistical Summary**
-- Descriptive statistics (mean, median, std, percentiles)
-- Distribution analysis
-- Outlier detection
-- Correlation analysis antar variabel numerik
+**E. Ringkasan Statistik**
+- Statistik deskriptif (mean, median, std, percentiles)
+- Analisis distribusi
+- Deteksi outlier
+- Analisis korelasi antar variabel numerik
 
 **F. Data Visualization dengan Pandas**
 - Bar charts untuk categorical data
@@ -192,15 +199,15 @@ data-science/
 
 ---
 
-## Session 2: DuckDB untuk Query Analitik (13:00 - 15:30)
+## Sesi 2: DuckDB untuk Query Analitik (13:00 - 15:30)
 
 **Durasi:** 2.5 jam
-**Format:** Interactive Python Script
-**Dataset:** RUP 2025
+**Format Pembelajaran:** Skrip Python Interaktif
+**Kumpulan Data:** RUP 2025
 
 ### Materi Pembelajaran
 
-#### 2.1 Introduction to DuckDB (30 menit)
+#### 2.1 Pengenalan DuckDB (30 menit)
 
 **Konsep:**
 - Apa itu DuckDB dan mengapa menggunakannya?
@@ -216,20 +223,20 @@ data-science/
 
 #### 2.2 SQL dengan DuckDB (90 menit)
 
-**A. Basic SQL Operations**
+**A. Operasi SQL Dasar**
 - SELECT, WHERE, ORDER BY, LIMIT
 - DISTINCT untuk unique values
 - Agregasi: COUNT, SUM, AVG, MIN, MAX
 - GROUP BY dan HAVING
-- Filtering dengan multiple conditions
+- Penyaringan dengan multiple conditions
 
-**B. DuckDB Specific Features**
+**B. Fitur Khusus DuckDB**
 - Read Parquet file langsung tanpa loading ke memory
 - Query Pandas DataFrame dengan SQL
-- Convert query result ke DataFrame
+- Convert hasil query ke DataFrame
 - COPY statement untuk export
 
-**C. Advanced SQL Queries**
+**C. Query SQL Lanjutan**
 - JOIN operations (INNER, LEFT, RIGHT)
 - Subqueries dan nested queries
 - CTEs (Common Table Expressions) untuk query kompleks
@@ -243,27 +250,27 @@ data-science/
 -- Running total of pengumuman
 -- Ranking paket within kategori
 -- Monthly aggregations
--- Complex filtering dengan multiple conditions
+-- Penyaringan kompleks dengan multiple conditions
 ```
 
-#### 2.3 Integration Pandas & DuckDB (30 menit)
+#### 2.3 Integrasi Pandas & DuckDB (30 menit)
 
-**Workflow Integration:**
-- Register Pandas DataFrame sebagai DuckDB table
-- Query DuckDB table dan dapatkan hasilnya sebagai DataFrame
-- Performance comparison: Pandas GroupBy vs DuckDB SQL
-- Best practices: kapan pakai Pandas, kapan pakai DuckDB
-- Handling large datasets efficiently
+**Integrasi Alur Kerja:**
+- Daftarkan Pandas DataFrame sebagai tabel DuckDB
+- Query tabel DuckDB dan dapatkan hasilnya sebagai DataFrame
+- Perbandingan performa: Pandas GroupBy vs DuckDB SQL
+- Praktik terbaik: kapan pakai Pandas, kapan pakai DuckDB
+- Menangani dataset besar secara efisien
 
 #### 📄 Script:
 `day1/session2_duckdb/notebooks/01_duckdb_intro.py`
 
 **Praktik yang Dilakukan:**
-- Query top satker by pagu menggunakan SQL
-- Calculate running totals dengan window functions
-- Pivot analysis: metode pengadaan vs kategori
-- Time series aggregation by month/quarter
-- Performance benchmarking vs Pandas
+- Query top satker berdasarkan pagu menggunakan SQL
+- Hitung running totals dengan window functions
+- Analisis pivot: metode pengadaan vs kategori
+- Agregasi time series per bulan/kuartal
+- Benchmarking performa vs Pandas
 
 ---
 
@@ -271,15 +278,15 @@ data-science/
 
 ---
 
-## Session 3: Data Visualization (15:45 - 17:30)
+## Sesi 3: Visualisasi Data (15:45 - 17:30)
 
 **Durasi:** 1 jam 45 menit
-**Format:** Teori + Demo + Practice
-**Referensi:** `day1/session3_visualization/README.md`
+**Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
+**Kumpulan Data:** RUP 2025
 
 ### Materi Pembelajaran
 
-#### 3.1 Static Visualization dengan Matplotlib & Seaborn (45 menit)
+#### 3.1 Visualisasi Statis dengan Matplotlib & Seaborn (45 menit)
 
 **Matplotlib Basics:**
 - Figure dan Axes architecture
@@ -295,90 +302,108 @@ data-science/
 - Heatmaps untuk correlation matrix
 - Built-in themes dan color palettes
 
-**Praktik dengan Dataset RUP:**
-- Histogram distribusi pagu
-- Box plot pagu by metode pengadaan
-- Bar chart top 10 satker
-- Heatmap correlation numeric variables
+#### 📓 Notebook:
+`day1/session3_visualization/notebooks/01_matplotlib_seaborn.ipynb`
 
-#### 3.2 Interactive Visualization dengan Plotly (45 menit)
+**Praktik yang Dilakukan:**
+- Histogram distribusi pagu dengan mean & median lines
+- Horizontal bar chart: Top satker by total pagu
+- Pie chart: Distribusi metode pengadaan
+- Line chart: Trend pengumuman over time
+- Box plot & Violin plot: Pagu by metode
+- Count plot: Paket per metode
+- Heatmap: Correlation matrix
+- Subplots: Dashboard dengan multiple charts
+- Export visualizations dengan high resolution
 
-**Plotly Fundamentals:**
+#### 3.2 Visualisasi Interaktif dengan Plotly (45 menit)
+
+**Fundamental Plotly:**
 - Plotly Express vs Graph Objects
-- Interactive charts: hover, zoom, pan, select
-- Chart types: line, bar, scatter, box, sunburst, treemap
-- Subplots dan layout customization
+- Grafik interaktif: hover, zoom, pan, select
+- Tipe grafik: line, bar, scatter, box, sunburst, treemap
+- Subplots dan kustomisasi layout
 - Export ke HTML untuk sharing
 
-**Advanced Features:**
-- Add annotations dan shapes
+**Fitur Lanjutan:**
+- Tambahkan anotasi dan shapes
 - Update layout dan styling
-- Multiple traces on single chart
-- Responsive design
+- Multiple traces pada satu grafik
+- Desain responsif
 
-**Praktik dengan Dataset RUP:**
-- Interactive bar chart dengan hover info
-- Time series line chart dengan zoom
-- Scatter plot dengan color by category
-- Treemap untuk hierarchical view
+#### 📓 Notebook:
+`day1/session3_visualization/notebooks/02_plotly_interactive.ipynb`
+
+**Praktik yang Dilakukan:**
+- Bar chart interaktif: Top satker dengan hover tooltips
+- Histogram dengan interaktivitas
+- Scatter plot: Bubble chart dengan dimensi size & color
+- Box plot: Perbandingan distribusi interaktif
+- Sunburst chart: Visualisasi hierarkis
+- Treemap: Persegi panjang proporsional berdasarkan metode
+- Time series: Line chart dengan range slider
+- Graph Objects kustom dengan anotasi
+- Perbandingan berbagai traces
+- Layout dashboard dengan subplots
+- Ekspor grafik interaktif sebagai file HTML standalone
 
 #### 3.3 Data Storytelling (15 menit)
 
-**Principles:**
-- Memilih chart type yang tepat untuk data
-- Color theory dan accessibility (colorblind-friendly)
-- Chart best practices (avoid chartjunk)
-- Dashboard design principles
-- Common visualization mistakes
+**Prinsip:**
+- Memilih tipe grafik yang tepat untuk data
+- Teori warna dan aksesibilitas (ramah buta warna)
+- Praktik terbaik grafik (hindari chartjunk)
+- Prinsip desain dashboard
+- Kesalahan visualisasi umum
 
-**Chart Selection Guide:**
-- Comparison → Bar chart
-- Distribution → Histogram, Box plot
-- Relationship → Scatter plot
-- Composition → Pie chart, Treemap
-- Trend → Line chart
-
----
-
-## Day 1 Wrap-up (17:30 - 17:45)
-
-- Recap: Pandas, DuckDB, Visualization
-- Q&A Session
-- Preview Day 2: Advanced Analysis & Streamlit Dashboard
-- Optional homework: Eksplorasi dataset RUP lebih lanjut
+**Panduan Pemilihan Grafik:**
+- Perbandingan → Bar chart
+- Distribusi → Histogram, Box plot
+- Hubungan → Scatter plot
+- Komposisi → Pie chart, Treemap
+- Tren → Line chart
 
 ---
 
-# 📊 HARI 2: Advanced Analytics & Dashboard Interaktif
+## Penutup Hari 1 (17:30 - 17:45)
 
-## Session 4: Advanced Data Analysis Techniques (09:00 - 12:00)
+- Rekap: Pandas, DuckDB, Visualisasi
+- Sesi Tanya Jawab
+- Pratinjau Hari 2: Analisis Lanjutan & Dashboard Streamlit
+- Tugas opsional: Eksplorasi dataset RUP lebih lanjut
+
+---
+
+# 📊 HARI 2: Analisis Lanjutan & Dashboard Interaktif
+
+## Sesi 4: Teknik Analisis Data Lanjutan (09:00 - 12:00)
 
 **Durasi:** 3 jam
-**Format:** Teori + Code Examples
-**Referensi:** `day2/session4_advanced_analysis/README.md`
+**Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
+**Kumpulan Data:** RUP 2025
 
 ### Materi Pembelajaran
 
-#### 4.1 Data Cleaning & Transformation (60 menit)
+#### 4.1 Pembersihan & Transformasi Data (60 menit)
 
-**A. Handling Missing Data**
-- Detection: `.isnull()`, `.isna()`, `.info()`
-- Strategies:
+**A. Menangani Missing Data**
+- Deteksi: `.isnull()`, `.isna()`, `.info()`
+- Strategi:
   - Drop: `dropna()`
   - Fill: `fillna()` dengan value/mean/median
   - Forward/Backward fill: `ffill()`, `bfill()`
-  - Interpolation
-- Best practices untuk missing data
+  - Interpolasi
+- Praktik terbaik untuk missing data
 
-**B. Handling Outliers**
-- Detection methods:
+**B. Menangani Outliers**
+- Metode deteksi:
   - IQR (Interquartile Range) method
   - Z-score method
-  - Visualization dengan box plots
-- Treatment strategies:
-  - Remove outliers
+  - Visualisasi dengan box plots
+- Strategi treatment:
+  - Hapus outliers
   - Winsorization (capping)
-  - Transformation (log, sqrt)
+  - Transformasi (log, sqrt)
 - Kapan outliers adalah data valid vs error
 
 **C. Encoding Categorical Variables**
@@ -388,24 +413,36 @@ data-science/
 - Frequency Encoding
 
 **D. Feature Engineering**
-- Date/time feature extraction (year, month, quarter, day of week)
-- Binning continuous variables
-- Creating ratio features
-- Text feature engineering (length, word count)
+- Ekstraksi fitur date/time (year, month, quarter, day of week)
+- Binning variabel kontinyu
+- Membuat fitur rasio
+- Feature engineering teks (panjang, jumlah kata)
 
-**Contoh dengan Dataset RUP:**
-- Clean nama satker yang tidak konsisten
-- Handle missing values di kolom pagu
-- Create features: pagu_category (small, medium, large)
-- Extract features dari tanggal: month, quarter, is_end_of_year
+#### 📓 Notebook:
+`day2/session4_advanced_analysis/notebooks/01_data_cleaning.ipynb`
 
-#### 4.2 Time Series Analysis (60 menit)
+**Praktik yang Dilakukan:**
+- Data quality assessment (missing values, duplicates, dtypes)
+- Missing values detection dan visualization
+- Multiple strategies: drop, fill, impute
+- Outlier detection: IQR method & Z-score
+- Outlier treatment: Capping/Winsorization
+- Data transformation: Log, normalization, standardization
+- Label encoding untuk ordinal data
+- One-hot encoding untuk nominal data
+- Frequency encoding untuk high cardinality
+- Feature engineering tanggal (year, month, quarter, weekend, etc.)
+- Binning: Buat kategorikal dari kontinyu
+- Fitur teks: Panjang, jumlah kata
+- Ekspor dataset yang telah dibersihkan
 
-**A. DateTime Operations**
+#### 4.2 Analisis Time Series (60 menit)
+
+**A. Operasi DateTime**
 - Parsing dates dengan `pd.to_datetime()`
 - DateTime indexing
 - Resampling: daily, weekly, monthly, quarterly
-- Time zones handling
+- Penanganan time zones
 
 **B. Time Series Aggregations**
 - Rolling windows: moving average, moving sum
@@ -413,56 +450,90 @@ data-science/
 - Cumulative calculations: cumsum, cumprod
 - Lead and lag operations
 
-**C. Trend Analysis**
-- Growth calculations: MoM, YoY, QoQ
-- Trend detection
-- Seasonality analysis dengan decomposition
-- Simple forecasting concepts
+**C. Analisis Tren**
+- Perhitungan pertumbuhan: MoM, YoY, QoQ
+- Deteksi tren
+- Analisis seasonality dengan decomposition
+- Konsep forecasting sederhana
 
-**Contoh dengan Dataset RUP:**
-- Monthly trend of pengumuman paket
-- 7-day & 30-day moving averages
-- MoM growth rate calculation
-- Identify peak seasons for pengadaan
+#### 📓 Notebook:
+`day2/session4_advanced_analysis/notebooks/02_time_series.ipynb`
 
-#### 4.3 Statistical Analysis (60 menit)
+**Praktik yang Dilakukan:**
+- Parse dates dan DateTime indexing
+- Extract date components (year, month, quarter, day of week, etc.)
+- Resampling: Daily, Weekly, Monthly, Quarterly aggregations
+- Simple Moving Average (SMA) - 7d, 14d, 30d
+- Exponential Moving Average (EMA)
+- Statistik rolling: sum, std, min, max
+- Perhitungan kumulatif: cumsum, cumprod
+- Perhitungan tingkat pertumbuhan: DoD, WoW, MoM, YoY
+- Analisis seasonality: Pola bulanan & hari dalam seminggu
+- Dekomposisi musiman (trend, seasonal, residual)
+- Visualisasi berbagai granularitas waktu
+- Dasar-dasar forecasting time series
 
-**A. Descriptive Statistics**
-- Central tendency: mean, median, mode
-- Dispersion: variance, std dev, range, IQR
+#### 4.3 Analisis Statistik (60 menit)
+
+**A. Statistik Deskriptif**
+- Tendensi sentral: mean, median, mode
+- Dispersi: variance, std dev, range, IQR
 - Percentiles dan quantiles
 - Skewness dan kurtosis
 
-**B. Correlation Analysis**
-- Pearson correlation (linear relationship)
-- Spearman correlation (monotonic relationship)
-- Correlation matrix visualization
-- Causation vs correlation
+**B. Analisis Korelasi**
+- Korelasi Pearson (hubungan linear)
+- Korelasi Spearman (hubungan monotonik)
+- Visualisasi matriks korelasi
+- Kausalitas vs korelasi
 
-**C. Distribution Analysis**
-- Histogram analysis
-- Normal distribution testing
+**C. Analisis Distribusi**
+- Analisis histogram
+- Pengujian distribusi normal
 - Q-Q plots
-- Distribution fitting
+- Penyesuaian distribusi
 
-**D. Hypothesis Testing Basics**
-- Null hypothesis vs alternative hypothesis
-- P-values interpretation
-- T-test untuk comparing two groups
-- Chi-square test untuk categorical data
-- ANOVA untuk comparing multiple groups
+**D. Dasar-dasar Pengujian Hipotesis**
+- Hipotesis null vs hipotesis alternatif
+- Interpretasi nilai P
+- T-test untuk membandingkan dua grup
+- Chi-square test untuk data kategorikal
+- ANOVA untuk membandingkan beberapa grup
 
-**E. A/B Testing Fundamentals**
-- Design A/B test
-- Sample size calculation
-- Statistical significance
-- Interpreting results
+**E. Fundamental A/B Testing**
+- Merancang A/B test
+- Perhitungan ukuran sampel
+- Signifikansi statistik
+- Menginterpretasikan hasil
 
-**Contoh dengan Dataset RUP:**
-- Test if pagu follows normal distribution
-- Compare pagu across different metode (ANOVA)
-- Correlation between pagu and other numeric variables
-- Hypothesis testing: Are government procurements larger in Q4?
+#### 📓 Notebook:
+`day2/session4_advanced_analysis/notebooks/03_statistical_analysis.ipynb`
+
+**Praktik yang Dilakukan:**
+- **Statistik Deskriptif:**
+  - Tendensi sentral: Mean, median, mode dengan visualisasi
+  - Dispersi: Variance, std dev, range, CV
+  - Percentiles & Quartiles (box plots)
+  - Ukuran bentuk: Skewness & Kurtosis
+- **Analisis Korelasi:**
+  - Korelasi Pearson (hubungan linear)
+  - Korelasi Spearman (hubungan monotonik)
+  - Heatmap matriks korelasi
+  - Pengujian signifikansi statistik
+- **Analisis Distribusi:**
+  - Tes normalitas: Shapiro-Wilk, D'Agostino-Pearson
+  - Q-Q plots untuk penilaian visual
+  - Histogram dengan curve fitting
+- **Pengujian Hipotesis:**
+  - Independent T-test: Bandingkan 2 grup
+  - ANOVA: Bandingkan beberapa grup
+  - Chi-square test: Independensi kategorikal
+  - Interpretasi nilai P & tingkat signifikansi
+- **A/B Testing:**
+  - Perbandingan tingkat konversi
+  - Pengujian signifikansi statistik
+  - Perhitungan lift
+  - Penentuan pemenang
 
 ---
 
@@ -470,15 +541,15 @@ data-science/
 
 ---
 
-## Session 5: Streamlit Dashboard Interaktif (13:00 - 17:30)
+## Sesi 5: Dashboard Interaktif dengan Streamlit (13:00 - 17:30)
 
-**Durasi:** 4.5 jam (termasuk break)
-**Format:** Hands-on Labs
-**Applications:** 4 Streamlit apps
+**Durasi:** 4.5 jam (termasuk istirahat)
+**Format Pembelajaran:** Praktikum Lab
+**Aplikasi:** 4 aplikasi Streamlit
 
-### 5.1 Streamlit Basics - LAB 10 (13:00 - 14:00)
+### 5.1 Dasar-dasar Streamlit - LAB 10 (13:00 - 14:00)
 
-**App:** `01_hello_streamlit.py`
+**Aplikasi:** `01_hello_streamlit.py`
 
 **Topik yang Dipelajari:**
 
@@ -512,16 +583,16 @@ data-science/
 
 **Praktik:**
 - Buat halaman welcome dengan berbagai text elements
-- Display dataset RUP dengan interactive table
-- Show KPIs menggunakan metrics
-- Create simple charts
-- Implement responsive layout dengan columns
+- Tampilkan dataset RUP dengan tabel interaktif
+- Tampilkan KPI menggunakan metrik
+- Buat grafik sederhana
+- Implementasikan layout responsif dengan kolom
 
 ---
 
-### 5.2 Interactive Components - LAB 11 (14:00 - 15:15)
+### 5.2 Komponen Interaktif - LAB 11 (14:00 - 15:15)
 
-**App:** `02_components_demo.py`
+**Aplikasi:** `02_components_demo.py`
 
 **Topik yang Dipelajari:**
 
@@ -533,29 +604,29 @@ data-science/
 - Date & time: `st.date_input()`, `st.time_input()`
 - File: `st.file_uploader()`
 
-**B. Forms**
+**B. Formulir**
 - `st.form()` untuk batch input submission
-- Form submit button
-- Validation
+- Tombol submit formulir
+- Validasi
 
 **C. Session State**
-- Understanding Streamlit's execution model
+- Memahami model eksekusi Streamlit
 - `st.session_state` untuk persist data
-- Callbacks dan event handling
-- Counter example
-- Shopping cart example
+- Callbacks dan penanganan event
+- Contoh counter
+- Contoh keranjang belanja
 
 **D. Sidebar**
-- `st.sidebar` untuk navigation dan filters
-- Organizing controls
+- `st.sidebar` untuk navigasi dan filter
+- Mengatur kontrol
 
 **Praktik:**
-- Build interactive counter dengan buttons
-- Create todo list dengan checkboxes
-- Implement filter system dengan multiple widgets
-- Create registration form
-- File uploader dengan preview
-- Dynamic chart filtering
+- Bangun penghitung interaktif dengan tombol
+- Buat daftar tugas dengan kotak centang
+- Implementasikan sistem filter dengan berbagai widget
+- Buat formulir pendaftaran
+- Pengunggah file dengan pratinjau
+- Penyaringan grafik dinamis
 
 ---
 
@@ -563,147 +634,147 @@ data-science/
 
 ---
 
-### 5.3 Data Explorer - LAB 12 (15:30 - 16:45)
+### 5.3 Penjelajah Data - LAB 12 (15:30 - 16:45)
 
-**App:** `03_data_explorer.py`
+**Aplikasi:** `03_data_explorer.py`
 
 **Topik yang Dipelajari:**
 
-**A. Complete Data Analysis Workflow**
-- File upload (CSV, Excel, Parquet)
-- Data preview dan summary statistics
-- Interactive filtering system
-- Multiple analysis tabs
+**A. Alur Kerja Analisis Data Lengkap**
+- Unggah file (CSV, Excel, Parquet)
+- Pratinjau data dan statistik ringkasan
+- Sistem penyaringan interaktif
+- Berbagai tab analisis
 
-**B. DuckDB Integration**
-- `@st.cache_resource` untuk DuckDB connection
+**B. Integrasi DuckDB**
+- `@st.cache_resource` untuk koneksi DuckDB
 - `@st.cache_data` untuk caching data
-- Dynamic SQL query building dari filters
-- Query execution dan result display
+- Pembangunan query SQL dinamis dari filter
+- Eksekusi query dan tampilan hasil
 
-**C. Interactive Filters**
-- Categorical filters (multiselect)
-- Numeric filters (range slider)
-- Date range filters
-- Apply filters button
-- Real-time filtering
+**C. Filter Interaktif**
+- Filter kategorikal (multiselect)
+- Filter numerik (range slider)
+- Filter rentang tanggal
+- Tombol terapkan filter
+- Penyaringan waktu-nyata
 
-**D. Multiple Analysis Views**
-- Tab 1: Distribution Analysis
-  - Histogram untuk numeric columns
-  - Pie chart untuk categorical columns
-- Tab 2: Trend Analysis
-  - Time series line charts
-  - Moving averages
-  - Growth calculations
-- Tab 3: Relationship Analysis
+**D. Berbagai Tampilan Analisis**
+- Tab 1: Analisis Distribusi
+  - Histogram untuk kolom numerik
+  - Pie chart untuk kolom kategorikal
+- Tab 2: Analisis Tren
+  - Grafik garis time series
+  - Rata-rata bergerak
+  - Perhitungan pertumbuhan
+- Tab 3: Analisis Hubungan
   - Scatter plots
-  - Correlation heatmap
-- Tab 4: Aggregations
-  - Custom groupBy operations
-  - Pivot tables
-  - Summary statistics by group
+  - Heatmap korelasi
+- Tab 4: Agregasi
+  - Operasi groupBy kustom
+  - Tabel pivot
+  - Statistik ringkasan per grup
 
-**E. SQL Playground**
-- Custom SQL query editor
-- Execute user queries
-- Display results
-- Error handling
+**E. Playground SQL**
+- Editor query SQL kustom
+- Eksekusi query pengguna
+- Tampilkan hasil
+- Penanganan error
 
-**F. Export Functionality**
-- Download filtered data as CSV
-- Download to Excel
-- Download query results
+**F. Fungsi Ekspor**
+- Unduh data terfilter sebagai CSV
+- Unduh ke Excel
+- Unduh hasil query
 
 **Praktik:**
-- Upload dataset RUP atau custom data
-- Apply multiple filters
-- Explore data dengan different views
-- Write custom SQL queries
-- Export results
+- Unggah dataset RUP atau data kustom
+- Terapkan berbagai filter
+- Jelajahi data dengan berbagai tampilan
+- Tulis query SQL kustom
+- Ekspor hasil
 
 ---
 
-### 5.4 Production Dashboard - RUP Analysis (16:45 - 17:30)
+### 5.4 Dashboard Produksi - Analisis RUP (16:45 - 17:30)
 
-**App:** `rup_dashboard.py`
+**Aplikasi:** `rup_dashboard.py`
 
 **Topik yang Dipelajari:**
 
-**A. Production-Ready Dashboard**
-- Professional UI/UX design
+**A. Dashboard Siap Produksi**
+- Desain UI/UX profesional
 - Branding dan styling
-- Page configuration (`st.set_page_config()`)
-- Custom CSS
+- Konfigurasi halaman (`st.set_page_config()`)
+- CSS kustom
 
-**B. Complex Data Processing**
-- Data loading pipeline
-- Caching strategy untuk performance
-- Error handling
-- Data validation
+**B. Pemrosesan Data Kompleks**
+- Pipeline pemuatan data
+- Strategi caching untuk performa
+- Penanganan error
+- Validasi data
 
-**C. Advanced Visualizations**
-- Multiple coordinated charts
-- Plotly advanced features
-- Custom color schemes
-- Responsive design
+**C. Visualisasi Lanjutan**
+- Berbagai grafik terkoordinasi
+- Fitur lanjutan Plotly
+- Skema warna kustom
+- Desain responsif
 
-**D. KPIs dan Metrics**
-- Key performance indicators
-- Trend indicators dengan delta
-- Summary statistics cards
-- Comparison metrics
+**D. KPI dan Metrik**
+- Indikator kinerja utama
+- Indikator tren dengan delta
+- Kartu ringkasan statistik
+- Metrik perbandingan
 
-**E. Interactive Filters**
-- Sidebar filters
-- Cascading filters
-- Reset functionality
-- Filter state management
+**E. Filter Interaktif**
+- Filter sidebar
+- Filter bertingkat
+- Fungsi reset
+- Manajemen status filter
 
-**F. Best Practices**
-- Code organization
-- Performance optimization
-- User experience considerations
-- Deployment preparation
+**F. Praktik Terbaik**
+- Organisasi kode
+- Optimasi performa
+- Pertimbangan pengalaman pengguna
+- Persiapan deployment
 
 **Praktik:**
-- Study struktur dashboard lengkap
-- Analyze code patterns
-- Understand performance optimization
-- Learn best practices untuk production
-- Customize dashboard
+- Pelajari struktur dashboard lengkap
+- Analisis pola kode
+- Pahami optimasi performa
+- Pelajari praktik terbaik untuk produksi
+- Kustomisasi dashboard
 
 ---
 
-## Day 2 Wrap-up (17:30 - 17:45)
+## Penutup Hari 2 (17:30 - 17:45)
 
-### Review & Next Steps
+### Tinjauan & Langkah Selanjutnya
 
-**Key Takeaways:**
-- Data cleaning dan preprocessing techniques
-- Time series dan statistical analysis
-- Building interactive dashboards dengan Streamlit
-- Integration Pandas + DuckDB + Streamlit
+**Poin-poin Penting:**
+- Teknik pembersihan dan preprocessing data
+- Analisis time series dan statistik
+- Membangun dashboard interaktif dengan Streamlit
+- Integrasi Pandas + DuckDB + Streamlit
 
-**Resources untuk Belajar Lebih Lanjut:**
-- [Pandas Documentation](https://pandas.pydata.org/docs/)
-- [DuckDB Documentation](https://duckdb.org/docs/)
-- [Streamlit Documentation](https://docs.streamlit.io/)
+**Sumber Belajar Lebih Lanjut:**
+- [Dokumentasi Pandas](https://pandas.pydata.org/docs/)
+- [Dokumentasi DuckDB](https://duckdb.org/docs/)
+- [Dokumentasi Streamlit](https://docs.streamlit.io/)
 - [Plotly Python](https://plotly.com/python/)
 
-**Next Steps:**
-- Practice dengan dataset lain
-- Build custom dashboard untuk use case sendiri
-- Explore advanced Streamlit features
-- Deploy dashboard ke Streamlit Cloud
+**Langkah Selanjutnya:**
+- Berlatih dengan dataset lain
+- Bangun dashboard kustom untuk kasus penggunaan sendiri
+- Jelajahi fitur-fitur lanjutan Streamlit
+- Terapkan dashboard ke Streamlit Cloud
 
-**Q&A Session**
+**Sesi Tanya Jawab**
 
 ---
 
-## 📚 Resources & Learning Materials
+## 📚 Sumber Belajar & Materi
 
-### Official Documentation
+### Dokumentasi Resmi
 - **Pandas:** [https://pandas.pydata.org/docs/](https://pandas.pydata.org/docs/)
 - **DuckDB:** [https://duckdb.org/docs/](https://duckdb.org/docs/)
 - **Streamlit:** [https://docs.streamlit.io/](https://docs.streamlit.io/)
@@ -711,175 +782,175 @@ data-science/
 - **Seaborn:** [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
 - **Matplotlib:** [https://matplotlib.org/](https://matplotlib.org/)
 
-### Cheat Sheets
+### Lembar Contekan
 - [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
-- [DuckDB SQL Reference](https://duckdb.org/docs/sql/introduction)
+- [Referensi SQL DuckDB](https://duckdb.org/docs/sql/introduction)
 - [Streamlit Cheat Sheet](https://docs.streamlit.io/library/cheatsheet)
-- [Python Graph Gallery](https://python-graph-gallery.com/)
+- [Galeri Grafik Python](https://python-graph-gallery.com/)
 
-### Recommended Books
-- **"Python for Data Analysis"** by Wes McKinney (Creator of Pandas)
-- **"Storytelling with Data"** by Cole Nussbaumer Knaflic
-- **"Practical Statistics for Data Scientists"** by Peter Bruce & Andrew Bruce
+### Buku yang Direkomendasikan
+- **"Python for Data Analysis"** karya Wes McKinney (Pembuat Pandas)
+- **"Storytelling with Data"** karya Cole Nussbaumer Knaflic
+- **"Practical Statistics for Data Scientists"** karya Peter Bruce & Andrew Bruce
 
-### Online Learning Platforms
-- **Kaggle Learn** - Free interactive courses
-- **DataCamp** - Hands-on data science courses
-- **Real Python** - Python tutorials and articles
-- **Towards Data Science** - Medium publication for data science
+### Platform Pembelajaran Online
+- **Kaggle Learn** - Kursus interaktif gratis
+- **DataCamp** - Kursus data science praktis
+- **Real Python** - Tutorial dan artikel Python
+- **Towards Data Science** - Publikasi Medium untuk data science
 
-### Practice Datasets
-- **Kaggle Datasets** - Thousands of datasets untuk practice
-- **UCI Machine Learning Repository** - Classic datasets
-- **Data.gov** - US Government open data
-- **Google Dataset Search** - Search engine untuk datasets
+### Dataset untuk Latihan
+- **Kaggle Datasets** - Ribuan dataset untuk latihan
+- **UCI Machine Learning Repositori** - Dataset klasik
+- **Data.gov** - Data terbuka pemerintah AS
+- **Google Dataset Search** - Mesin pencari untuk dataset
 
 ---
 
-## 🐛 Troubleshooting
+## 🐛 Pemecahan Masalah
 
-### Installation Issues
+### Masalah Instalasi
 
-**Problem:** `pip install` gagal
+**Masalah:** `pip install` gagal
 ```bash
-# Solution: Upgrade pip
+# Solusi: Upgrade pip
 python -m pip install --upgrade pip setuptools wheel
 ```
 
-**Problem:** DuckDB import error
+**Masalah:** Error import DuckDB
 ```bash
-# Solution: Reinstall DuckDB
+# Solusi: Install ulang DuckDB
 pip uninstall duckdb
 pip install duckdb --no-cache-dir
 ```
 
-**Problem:** Jupyter tidak bisa start
+**Masalah:** Jupyter tidak bisa dijalankan
 ```bash
-# Solution: Install ulang Jupyter
+# Solusi: Install ulang Jupyter
 pip install --upgrade jupyter notebook
 ```
 
-### Streamlit Issues
+### Masalah Streamlit
 
-**Problem:** Streamlit tidak bisa start
+**Masalah:** Streamlit tidak bisa dijalankan
 ```bash
-# Check port availability
+# Cek ketersediaan port
 streamlit run app.py --server.port 8502
 ```
 
-**Problem:** Module not found di Streamlit
+**Masalah:** Module tidak ditemukan di Streamlit
 ```bash
-# Run with correct Python interpreter
+# Jalankan dengan interpreter Python yang benar
 python -m streamlit run app.py
 ```
 
-**Problem:** File upload size limit
+**Masalah:** Batas ukuran upload file
 ```toml
-# Create .streamlit/config.toml
+# Buat file .streamlit/config.toml
 [server]
 maxUploadSize = 1000  # MB
 ```
 
-### Data Loading Issues
+### Masalah Memuat Data
 
-**Problem:** File Parquet tidak bisa dibaca
+**Masalah:** File Parquet tidak bisa dibaca
 ```bash
 # Install pyarrow
 pip install pyarrow
 ```
 
-**Problem:** Memory error dengan dataset besar
+**Masalah:** Error memori dengan dataset besar
 ```python
-# Use DuckDB untuk query large files
+# Gunakan DuckDB untuk query file besar
 import duckdb
 df = duckdb.query("SELECT * FROM 'large_file.parquet' LIMIT 10000").df()
 ```
 
 ---
 
-## 💡 Tips & Best Practices
+## 💡 Tips & Praktik Terbaik
 
 ### Untuk Belajar Efektif
-1. **Practice, practice, practice** - Kerjakan semua labs
+1. **Latihan, latihan, latihan** - Kerjakan semua lab
 2. **Eksperimen dengan dataset lain** - Jangan hanya RUP
-3. **Bangun project sendiri** - Apply ke use case pribadi
-4. **Join komunitas** - Stack Overflow, Reddit, Discord
-5. **Read the docs** - Documentation adalah teman terbaik
-6. **Version control** - Gunakan Git untuk tracking progress
+3. **Bangun proyek sendiri** - Terapkan ke kasus penggunaan pribadi
+4. **Bergabung dengan komunitas** - Stack Overflow, Reddit, Discord
+5. **Baca dokumentasi** - Dokumentasi adalah teman terbaik
+6. **Kontrol versi** - Gunakan Git untuk melacak progres
 
 ### Untuk Development
-1. **Use virtual environments** - Isolate dependencies
-2. **Write clean code** - Follow PEP 8 style guide
-3. **Comment your code** - Explain the "why", not the "what"
-4. **Test incrementally** - Don't write too much before testing
-5. **Cache expensive operations** - Use `@st.cache_data` di Streamlit
-6. **Handle errors gracefully** - Always use try-except blocks
+1. **Gunakan virtual environment** - Isolasi dependensi
+2. **Tulis kode yang bersih** - Ikuti panduan gaya PEP 8
+3. **Beri komentar pada kode** - Jelaskan "mengapa", bukan "apa"
+4. **Uji secara bertahap** - Jangan menulis terlalu banyak sebelum diuji
+5. **Cache operasi mahal** - Gunakan `@st.cache_data` di Streamlit
+6. **Tangani error dengan baik** - Selalu gunakan blok try-except
 
-### Untuk Dashboard Production
-1. **Optimize performance** - Cache data, use efficient queries
-2. **Design for users** - Think about user experience
-3. **Mobile responsive** - Test di berbagai screen sizes
-4. **Error handling** - Show friendly error messages
-5. **Add loading states** - Use spinners dan progress bars
-6. **Documentation** - README untuk setup instructions
+### Untuk Dashboard Produksi
+1. **Optimalkan performa** - Cache data, gunakan query efisien
+2. **Desain untuk pengguna** - Pikirkan pengalaman pengguna
+3. **Responsif mobile** - Uji di berbagai ukuran layar
+4. **Penanganan error** - Tampilkan pesan error yang ramah
+5. **Tambahkan loading states** - Gunakan spinner dan progress bar
+6. **Dokumentasi** - README untuk instruksi setup
 
 ---
 
-## 🚀 Next Steps
+## 🚀 Langkah Selanjutnya
 
 ### Setelah Bootcamp
-1. **Build portfolio project** - Showcase your skills
-2. **Deploy your dashboard** - Use Streamlit Cloud (free)
-3. **Contribute to open source** - Learn from others
-4. **Explore advanced topics:**
-   - Machine Learning dengan scikit-learn
-   - Deep Learning dengan TensorFlow/PyTorch
+1. **Bangun portofolio proyek** - Tunjukkan kemampuan Anda
+2. **Terapkan dashboard Anda** - Gunakan Streamlit Cloud (gratis)
+3. **Berkontribusi ke sumber terbuka** - Belajar dari yang lain
+4. **Jelajahi topik lanjutan:**
+   - Pembelajaran Mesin dengan scikit-learn
+   - Pembelajaran Mendalam dengan TensorFlow/PyTorch
    - Big Data dengan Apache Spark
-   - Cloud platforms (AWS, GCP, Azure)
+   - Platform Cloud (AWS, GCP, Azure)
 
-### Career Path Options
-- **Data Analyst** - Business insights dan reporting
-- **Business Intelligence** - Dashboard dan visualization
-- **Data Engineer** - Data pipeline dan infrastructure
-- **Data Scientist** - Machine learning dan predictive models
-- **Analytics Engineer** - dbt, SQL, data modeling
+### Pilihan Jalur Karir
+- **Data Analyst** - Wawasan bisnis dan pelaporan
+- **Business Intelligence** - Dashboard dan visualisasi
+- **Data Engineer** - Pipeline data dan infrastruktur
+- **Data Scientist** - Pembelajaran mesin dan model prediktif
+- **Analytics Engineer** - dbt, SQL, pemodelan data
 
-### Continue Learning
-- Join data science communities (Kaggle, Reddit, Discord)
-- Follow data science blogs dan newsletters
-- Attend meetups dan conferences
-- Build personal projects dan portfolio
-- Network dengan professionals di industry
+### Lanjutkan Belajar
+- Bergabung dengan komunitas data science (Kaggle, Reddit, Discord)
+- Ikuti blog dan newsletter data science
+- Hadiri pertemuan dan konferensi
+- Bangun proyek pribadi dan portofolio
+- Jalin relasi dengan profesional di industri
 
 ---
 
-## 📞 Support & Contact
+## 📞 Dukungan & Kontak
 
 **Untuk pertanyaan atau dukungan:**
 - Email: [your-email@example.com]
 - GitHub Issues: [repository-issues-url]
 - Discord/Slack: [community-link]
 
-**Feedback:**
-Kami sangat menghargai feedback Anda untuk meningkatkan materi bootcamp ini. Silakan kirim feedback melalui form atau email.
+**Umpan Balik:**
+Kami sangat menghargai umpan balik Anda untuk meningkatkan materi bootcamp ini. Silakan kirim umpan balik melalui formulir atau email.
 
 ---
 
-## 📄 License
+## 📄 Lisensi
 
 Materi bootcamp ini dibuat untuk keperluan edukasi dan dapat digunakan secara bebas untuk pembelajaran.
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 Penghargaan
 
 Terima kasih kepada:
 - Komunitas open source Python, Pandas, DuckDB, dan Streamlit
-- Semua contributor dan maintainer libraries yang digunakan
-- Peserta bootcamp yang memberikan feedback
+- Semua kontributor dan pengelola pustaka yang digunakan
+- Peserta bootcamp yang memberikan umpan balik
 
 ---
 
-**Selamat Belajar! Happy Coding! 🎉**
+**Selamat Belajar! Selamat Coding! 🎉**
 
-*Last updated: 2024*
+*Terakhir diperbarui: 2024*
