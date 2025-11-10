@@ -54,11 +54,11 @@ pre {
 
 # 🎯 Tujuan Sesi
 
-Setelah sesi ini, Anda bisa:
+Setelah sesi ini, Anda akan mampu:
 
 - ✅ Memuat dan mengeksplorasi dataset dengan Pandas
 - ✅ Melakukan seleksi dan filtering data
-- ✅ Agregasi data dengan GroupBy operasi
+- ✅ Agregasi data dengan GroupBy operations
 - ✅ Menangani missing values
 - ✅ Membuat statistical summary
 - ✅ Visualisasi dasar dengan Pandas
@@ -100,7 +100,7 @@ jupyter notebook
 # 📦 Import Libraries
 
 ```python
-# Data pengolahan
+# Data manipulation
 import pandas as pd
 import numpy as np
 
@@ -150,9 +150,7 @@ Columns: 35
 
 # 🔍 Part 2: Data Inspection
 
-## Cara Melihat Data dengan `.head()` dan `.tail()`
-
-**Penjelasan:** `.head()` untuk lihat data dari atas, `.tail()` untuk lihat dari bawah
+## Method `.head()` dan `.tail()`
 
 <div class="columns">
 
@@ -370,10 +368,10 @@ result = df[(df['pagu'] > 1_000_000_000) |
 # 🔎 Query Method untuk Filter Kompleks
 
 ```python
-# Lebih readable untuk kondisi rumit
+# Lebih readable untuk kondisi kompleks
 result = df.query('pagu > 1_000_000_000 and metode_pengadaan == "Tender"')
 
-# Dengan variabel (tempat simpan data)
+# Dengan variable
 threshold = 1_000_000_000
 result = df.query('pagu > @threshold')
 
@@ -394,9 +392,7 @@ result = df.query('''
 
 # 📊 Part 4: Data Aggregation
 
-## Cara Kelompokkan Data dengan GroupBy
-
-**Penjelasan:** GroupBy seperti membuat ringkasan data berdasarkan kategori, misalnya total per metode
+## GroupBy Operations
 
 ### Konsep GroupBy
 
@@ -422,7 +418,7 @@ print(grouped)
 # 🎯 GroupBy: Agregasi Multiple Functions
 
 ```python
-# Gabung dengan multiple fungsi (blok kode yang bisa dipanggil)s
+# Aggregate dengan multiple functions
 agg_result = df.groupby('metode_pengadaan')['pagu'].agg([
     'count',  # Jumlah paket
     'sum',    # Total pagu
@@ -488,7 +484,7 @@ top_satker_df['Total Pagu (Miliar)'] = (
 print(top_satker_df)
 ```
 
-**Method Chaining:** Lebih pythonic dan efisien! 🐍
+**Method Chaining:** Lebih pythonic dan efficient! 🐍
 
 ---
 
@@ -880,13 +876,7 @@ plt.show()
 
 # 💡 Praktik Terbaik
 
-## Tips untuk Pemula
-
-💡 **Jangan takut error!** Error adalah bagian dari belajar coding
-💡 **Coba-coba!** Gak akan rusak kok, eksperimen aja
-💡 **Google adalah teman** Gak apa-apa search solusi di Google
-
-## Tips Analisis Data
+## Tips untuk Analisis Data Efektif
 
 1. **Selalu mulai dengan EDA** 🔍
    - Understand your data sebelum analysis
@@ -930,10 +920,6 @@ plt.show()
 ---
 
 # ⚠️ Kesalahan Umum
-
-## Kesalahan Pemula (Normal Kok!)
-
-⚠️ **Semua pernah alami ini!** Jangan frustasi
 
 ## Kesalahan yang Sering Terjadi
 
@@ -1007,9 +993,9 @@ plt.show()
 
 **Sesi 2: DuckDB untuk Query Analitik**
 - SQL queries pada dataset besar
-- Window fungsi (blok kode yang bisa dipanggil)s & CTEs
+- Window functions & CTEs
 - Integration dengan Pandas
-- Kecepatan comparison
+- Performance comparison
 
 **BREAK sampai 13:00** ☕
 

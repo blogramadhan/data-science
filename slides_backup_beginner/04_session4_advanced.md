@@ -57,15 +57,15 @@ pre {
 
 # 🎯 Tujuan Sesi
 
-Setelah sesi ini, Anda bisa:
+Setelah sesi ini, Anda akan mampu:
 
 - ✅ Menangani missing values dengan berbagai strategi
 - ✅ Mendeteksi dan treatment outliers
 - ✅ Feature engineering untuk analisis lanjutan
 - ✅ Time series analysis dan trend forecasting
 - ✅ Statistical hypothesis testing
-- ✅ A/B testing dasar-dasar
-- ✅ Data perubahan teknik
+- ✅ A/B testing fundamentals
+- ✅ Data transformation techniques
 
 ---
 
@@ -80,23 +80,20 @@ Setelah sesi ini, Anda bisa:
 
 ---
 
-# 🧹 Part 1: Bersihkan # 🧹 Part 1: Data Cleaning & Transformation Ubah Data
-
-**Kenapa penting?** Data mentah biasanya kotor: ada yang kosong, salah, atau duplikat
-Kita perlu bersihkan dulu sebelum analisis
+# 🧹 Part 1: Data Cleaning & Transformation
 
 ## Notebook: `01_data_cleaning.ipynb`
 
-**Kenapa pakai Data Cleaning?**
+**Why Data Cleaning?**
 - Real-world data is messy 🗑️
 - Missing values, duplicates, errors
 - 80% of data science adalah data preparation
 - "Garbage in, garbage out"
 
-**Yang akan dipelajari:**
-- Missing values deteksi & treatment
-- Outlier deteksi & handling
-- Data perubahan
+**Topics:**
+- Missing values detection & treatment
+- Outlier detection & handling
+- Data transformation
 - Feature engineering
 
 ---
@@ -147,7 +144,7 @@ df_clean = df.dropna(
 )
 ```
 
-**Kapan pakai:** < 5% missing, random pattern
+**Use when:** < 5% missing, random pattern
 
 </div>
 
@@ -172,7 +169,7 @@ df.fillna(method='bfill')
 df['nilai'].interpolate()
 ```
 
-**Kapan pakai:** Data punya pattern
+**Use when:** Data punya pattern
 
 </div>
 
@@ -268,13 +265,13 @@ df['pagu_capped'] = df['pagu'].clip(
 ### 3. Transformation
 
 ```python
-# Log perubahan
+# Log transformation
 df['pagu_log'] = np.log1p(df['pagu'])
 
 # Square root
 df['pagu_sqrt'] = np.sqrt(df['pagu'])
 
-# Box-Cox perubahan
+# Box-Cox transformation
 from scipy.stats import boxcox
 df['pagu_boxcox'], _ = boxcox(
     df['pagu'] + 1
@@ -290,7 +287,7 @@ df['pagu_boxcox'], _ = boxcox(
 # 🏷️ Encoding Categorical Variables
 
 ```python
-from sklearn.persiapan data import LabelEncoder, OneHotEncoder
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 # 1. Label Encoding (Ordinal)
 le = LabelEncoder()
@@ -300,7 +297,7 @@ df['metode_encoded'] = le.fit_transform(df['metode_pengadaan'])
 df_encoded = pd.get_dummies(df, columns=['metode_pengadaan', 'jenis_pengadaan'])
 
 # Alternative dengan sklearn
-from sklearn.persiapan data import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder
 ohe = OneHotEncoder(sparse=False, drop='first')
 encoded = ohe.fit_transform(df[['metode_pengadaan']])
 
@@ -381,10 +378,7 @@ df['uppercase_ratio'] = df['nama_paket'].apply(
 
 ---
 
-# 📊 Part 2: Analisis Data Berdasarkan Waktu
-
-**Penjelasan:** Time series = data yang punya urutan waktu (harian, bulanan, dll)
-Bisa lihat trend, pola musiman, prediksi masa depan
+# 📊 Part 2: Time Series Analysis
 
 ## Notebook: `02_time_series.ipynb`
 
@@ -392,9 +386,9 @@ Bisa lihat trend, pola musiman, prediksi masa depan
 
 **Applications:**
 - Trend analysis
-- Seasonality deteksi
+- Seasonality detection
 - Forecasting
-- Anomaly deteksi
+- Anomaly detection
 
 **Dataset RUP:**
 - `tgl_pengumuman_paket`
@@ -430,21 +424,21 @@ df['durasi_kontrak'] = (df['tgl_akhir_kontrak'] - df['tgl_awal_kontrak']).dt.day
 # 📊 Resampling: Agregasi Time Series
 
 ```python
-# Daily penggabungan
+# Daily aggregation
 daily = df_ts.resample('D').size()
 
-# Weekly penggabungan
+# Weekly aggregation
 weekly = df_ts.resample('W').agg({
     'pagu': ['sum', 'mean', 'count']
 })
 
-# Monthly penggabungan
+# Monthly aggregation
 monthly = df_ts.resample('M').agg({
     'pagu': 'sum',
     'kd_rup': 'count'
 })
 
-# Quarterly penggabungan
+# Quarterly aggregation
 quarterly = df_ts.resample('Q').agg({
     'pagu': ['sum', 'mean'],
     'kd_rup': 'count'
@@ -587,20 +581,17 @@ plt.show()
 
 ---
 
-# 📊 Part 3: Analisis Statistik Dasar
-
-**Penjelasan:** Pakai statistik untuk validasi asumsi dan ambil keputusan dari data
-Contoh: Apakah perbedaan ini signifikan atau cuma kebetulan?
+# 📊 Part 3: Statistical Analysis
 
 ## Notebook: `03_statistical_analysis.ipynb`
 
 **Statistical Analysis untuk:**
-- Paham distribusi data
+- Memahami distribusi data
 - Test hypothesis
 - Make data-driven decisions
 - Validate assumptions
 
-**Yang akan dipelajari:**
+**Topics:**
 - Descriptive statistics
 - Correlation analysis
 - Distribution analysis
@@ -623,7 +614,7 @@ std_dev = df['pagu'].std()
 range_val = df['pagu'].max() - df['pagu'].min()
 iqr = df['pagu'].quantile(0.75) - df['pagu'].quantile(0.25)
 
-# Coefisien of Variation
+# Coefficient of Variation
 cv = (std_dev / mean_pagu) * 100
 
 # Shape

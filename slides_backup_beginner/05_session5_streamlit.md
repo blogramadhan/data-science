@@ -59,13 +59,13 @@ pre {
 
 # 🎯 Tujuan Sesi
 
-Setelah sesi ini, Anda bisa:
+Setelah sesi ini, Anda akan mampu:
 
 - ✅ Membuat web app dengan Streamlit (tanpa web dev background!)
 - ✅ Menggunakan text elements dan data displays
 - ✅ Implementasi interactive widgets (buttons, sliders, selects)
 - ✅ Mengelola session state
-- ✅ Penggabungan dengan Pandas & DuckDB
+- ✅ Integrasi dengan Pandas & DuckDB
 - ✅ Membuat charts interaktif dengan Plotly
 - ✅ Build production-ready dashboard
 
@@ -84,9 +84,6 @@ Setelah sesi ini, Anda bisa:
 ---
 
 # 🚀 Apa itu Streamlit?
-
-**Penjelasan Sederhana:** Streamlit = cara termudah buat web app dengan Python
-Gak perlu belajar HTML/CSS/JavaScript!
 
 ## Framework Python untuk Data Apps
 
@@ -158,7 +155,7 @@ streamlit run app.py
 
 ## Aplikasi: `01_hello_streamlit.py`
 
-**Tujuan:**
+**Objectives:**
 - Understand Streamlit basics
 - Text elements
 - Data display
@@ -369,7 +366,7 @@ for i, tab in enumerate(tabs):
 
 ## Aplikasi: `02_components_demo.py`
 
-**Yang akan dipelajari:**
+**Topics:**
 - Input widgets (buttons, sliders, selects)
 - Forms
 - Session state
@@ -379,7 +376,7 @@ for i, tab in enumerate(tabs):
 uv run streamlit run 02_components_demo.py
 ```
 
-**Anda akan bisa:**
+**Learn:**
 - How to capture user input
 - How to maintain state
 - How to create interactive experiences
@@ -504,10 +501,7 @@ if uploaded_file:
 
 ---
 
-# 📝 Forms - Kumpulkan Input Sekaligus
-
-**Penjelasan:** Form berguna biar app gak rerun setiap kali user input sesuatu
-Semua input dikumpulkan, baru di-submit sekaligus
+# 📝 Forms
 
 ```python
 # Form (batch submit)
@@ -531,10 +525,7 @@ with st.form("my_form"):
 
 ---
 
-# 💾 Session State - Simpan Data Sementara
-
-**Penjelasan:** Session state buat menyimpan data selama user pakai app
-Contoh: simpan angka counter, data yang di-filter, dll
+# 💾 Session State
 
 ## Persist Data Across Reruns
 
@@ -561,13 +552,10 @@ filtered_df = st.session_state.df[
 
 ---
 
-# 🔄 Callbacks - Aksi Saat Ada Perubahan
-
-**Penjelasan:** Callback = fungsi (blok kode yang bisa dipanggil) yang jalan otomatis saat widget berubah
-Contoh: auto-hitung saat slider berubah
+# 🔄 Callbacks
 
 ```python
-# Callback fungsi (blok kode yang bisa dipanggil)
+# Callback function
 def update_value():
     st.session_state.value_squared = st.session_state.slider_value ** 2
 
@@ -636,7 +624,7 @@ with st.sidebar:
 3. Interactive filters
 4. Multiple analysis tabs
 5. SQL playground
-6. Export fitur
+6. Export functionality
 
 ```bash
 uv run streamlit run 03_data_explorer.py
@@ -779,7 +767,7 @@ if st.button("Run Query"):
 
 ---
 
-# 💾 Caching untuk Kecepatan
+# 💾 Caching untuk Performance
 
 ```python
 # Cache data loading
@@ -806,7 +794,7 @@ def expensive_computation(df):
     return processed_data
 ```
 
-**Caching = ⚡ Kecepatan!**
+**Caching = ⚡ Performance!**
 
 ---
 
@@ -859,8 +847,8 @@ with col3:
 - ✅ Professional UI/UX
 - ✅ Custom styling & branding
 - ✅ Complex data processing
-- ✅ Advanced tampilans
-- ✅ Kecepatan pengoptimalan
+- ✅ Advanced visualizations
+- ✅ Performance optimization
 - ✅ Error handling
 
 ```bash
@@ -1062,7 +1050,7 @@ if 'df' not in locals():
 
 # 🎯 Praktik Terbaik
 
-## Kecepatan
+## Performance
 
 1. **Cache aggressively** 💾
    ```python
@@ -1079,7 +1067,7 @@ if 'df' not in locals():
 3. **Minimize reruns** 🔄
    - Use forms
    - Use session state
-   - Disable auto-rerun for expensive operasi
+   - Disable auto-rerun for expensive operations
 
 4. **Lazy loading** ⏱️
    - Load data only when needed
@@ -1266,7 +1254,7 @@ host = st.secrets["database"]["host"]
 - ✅ Visualisasi dengan Matplotlib, Seaborn, Plotly
 
 ### Hari 2
-- ✅ Data cleaning & perubahan
+- ✅ Data cleaning & transformation
 - ✅ Time series analysis
 - ✅ Statistical testing
 - ✅ Building interactive dashboards dengan Streamlit
@@ -1370,7 +1358,7 @@ host = st.secrets["database"]["host"]
    - Help others
 
 4. **Stay Curious** 🔍
-   - New tools & teknik
+   - New tools & techniques
    - Industry trends
    - Best practices
 
@@ -1381,13 +1369,13 @@ host = st.secrets["database"]["host"]
 ## Apa yang Kami Bahas
 
 - **Duration:** 16 hours (2 days)
-- **Sessions:** 5 lengkap sessions
+- **Sessions:** 5 comprehensive sessions
 - **Notebooks:** 7 hands-on tutorials
 - **Apps:** 4 Streamlit applications
 - **Technologies:** Python, Pandas, DuckDB, Plotly, Streamlit
 - **Dataset:** 16,430 real procurement records
 - **Code Lines:** 2000+ lines of code written
-- **Skills:** Data analysis, SQL, tampilan, web apps
+- **Skills:** Data analysis, SQL, visualization, web apps
 
 **Intensive but worth it!** 💪
 

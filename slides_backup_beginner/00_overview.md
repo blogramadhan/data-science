@@ -106,33 +106,33 @@ Bootcamp intensif ini dirancang untuk membekali Anda dengan keterampilan praktis
 Setelah bootcamp ini, Anda akan mampu:
 
 ### 1. Analisis Data dengan Python & Pandas
-- ✅ Membaca dan mengeksplorasi data (melihat pola & tren)
-- ✅ Membersihkan data yang kotor/tidak lengkap
-- ✅ Mengolah data untuk mendapatkan informasi
+- ✅ Exploratory Data Analysis (EDA) komprehensif
+- ✅ Data cleaning dan transformasi
+- ✅ Manipulasi data tingkat lanjut
 
-### 2. Menulis Query dengan DuckDB
-- ✅ Membuat query SQL untuk analisis data
-- ✅ Menggabungkan DuckDB dengan Pandas
-- ✅ Membuat query yang lebih cepat
+### 2. Query Analitik dengan DuckDB
+- ✅ SQL query kompleks (CTEs, Window Functions)
+- ✅ Integrasi dengan Pandas
+- ✅ Performance optimization
 
 ---
 
 # 🎯 Tujuan Pembelajaran (lanjutan)
 
-### 3. Membuat Visualisasi Data
-- ✅ Membuat grafik statis dengan Matplotlib & Seaborn
-- ✅ Membuat grafik interaktif dengan Plotly
-- ✅ Menyajikan data dengan cara yang mudah dipahami
+### 3. Visualisasi Data yang Efektif
+- ✅ Static charts (Matplotlib/Seaborn)
+- ✅ Interactive charts (Plotly)
+- ✅ Data storytelling principles
 
-### 4. Membangun Dashboard dengan Streamlit
-- ✅ Membuat aplikasi web tanpa perlu jago coding web
-- ✅ Menambahkan filter interaktif di dashboard
-- ✅ Membuat dashboard yang siap dipakai
+### 4. Dashboard Interaktif dengan Streamlit
+- ✅ Aplikasi web tanpa web development
+- ✅ Filter interaktif & data exploration
+- ✅ Production-ready dashboard
 
-### 5. Teknik Analisis Dasar & Lanjutan
-- ✅ Menganalisis data berdasarkan waktu (time series)
-- ✅ Melakukan uji statistik sederhana
-- ✅ Dasar-dasar A/B testing
+### 5. Teknik Analisis Lanjutan
+- ✅ Time series analysis
+- ✅ Statistical testing
+- ✅ A/B testing fundamentals
 
 ---
 
@@ -153,15 +153,15 @@ Bootcamp ini cocok untuk:
 ## Yang Perlu Anda Siapkan:
 
 ### Pengetahuan
-- ✅ Pernah coding Python (walau sedikit) - **pemula boleh ikut!**
-- ✅ Pernah dengar SQL (tidak harus jago)
-- ✅ Suka berpikir logis dan memecahkan masalah
+- ✅ Pemahaman dasar pemrograman (Python lebih disukai)
+- ✅ Familiar dengan konsep database & SQL dasar
+- ✅ Pola pikir analitis dan pemecahan masalah
 
 ### Hardware & Software
 - ✅ Laptop dengan minimal **8GB RAM**
-- ✅ **Python 3.8+** terinstal (akan dibantu saat setup)
-- ✅ Text editor seperti VS Code (gratis & mudah)
-- ✅ Git - untuk menyimpan kode (akan dipandu)
+- ✅ **Python 3.8+** terinstal
+- ✅ Text editor (VS Code direkomendasikan)
+- ✅ Git untuk version control
 
 ---
 
@@ -171,29 +171,29 @@ Bootcamp ini cocok untuk:
 
 <div>
 
-### Alat Utama
-- **Python** - Bahasa pemrograman yang mudah
-- **Jupyter Notebook** - Tempat nulis kode & lihat hasilnya langsung
-- **uv** - Untuk install library (otomatis & mudah)
-- **Git** - Untuk backup kode
+### Core Tools
+- **Python 3.9+**
+- **Jupyter Notebook**
+- **uv** (package manager)
+- **Git**
 
-### Untuk Olah Data
-- **Pandas** - Untuk baca & olah data (seperti Excel tapi lebih powerful)
-- **NumPy** - Untuk hitung-hitungan angka
-- **DuckDB** - Untuk query data dengan SQL (cepat!)
+### Pemrosesan Data
+- **Pandas** - Manipulasi data
+- **NumPy** - Operasi numerik
+- **DuckDB** - Query analitik
 
 </div>
 
 <div>
 
-### Untuk Visualisasi
-- **Plotly** - Buat grafik yang bisa di-klik & zoom
-- **Matplotlib** - Buat grafik sederhana
-- **Seaborn** - Buat grafik statistik cantik
+### Visualisasi
+- **Plotly** - Grafik interaktif
+- **Matplotlib** - Plot statis
+- **Seaborn** - Visualisasi statistik
 
-### Untuk Dashboard
-- **Streamlit** - Buat web app tanpa perlu HTML/CSS/JS
-- Mudah banget, cukup Python!
+### Dashboard
+- **Streamlit** - Aplikasi web
+- **Altair** - Visualisasi deklaratif
 
 </div>
 
@@ -337,7 +337,7 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 
 # 💡 Tips untuk Sukses
 
-## Belajar Maksimal
+## Maksimalkan Pembelajaran Anda
 
 - ✅ **Ikuti semua latihan hands-on**
   - Jangan hanya menonton, coding bersama!
@@ -349,7 +349,7 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
   - Coba variasi, rusak sesuatu, belajar dari kesalahan
 
 - ✅ **Catat wawasan penting**
-  - Catatan untuk nanti
+  - Dokumentasi untuk referensi masa depan
 
 - ✅ **Berkolaborasi dengan peserta lain**
   - Belajar dari rekan, berbagi pengetahuan
@@ -391,7 +391,7 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 
 ### Sesi 2: DuckDB
 - Dasar-dasar SQL
-- Window fungsi (blok kode yang bisa dipanggil)s
+- Window functions
 - CTE & subquery
 - Integrasi Pandas
 
@@ -425,18 +425,18 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 
 # 🏆 Apa yang Membuat Bootcamp Ini Berbeda?
 
-## Yang Membuat Bootcamp Ini Berbeda
+## Proposisi Nilai Unik
 
 1. **Dataset Dunia Nyata** 🌍
    - Bukan dataset mainan, tapi data pengadaan pemerintah asli
 
-2. **Belajar Lengkap dari Awal sampai Akhir** 🔄
+2. **Alur Kerja End-to-End** 🔄
    - Dari data mentah → wawasan → dashboard produksi
 
-3. **Tools Modern yang Banyak Dipakai** ⚡
+3. **Tumpukan Teknologi Modern** ⚡
    - DuckDB untuk performa, Streamlit untuk kesederhanaan
 
-4. **Keterampilan yang Langsung Bisa Dipakai Kerja** 🚀
+4. **Keterampilan Siap Produksi** 🚀
    - Bukan hanya tutorial, tapi keterampilan untuk bekerja
 
 5. **Membangun Portofolio** 📁

@@ -54,14 +54,14 @@ pre {
 
 # 🎯 Tujuan Sesi
 
-Setelah sesi ini, Anda bisa:
+Setelah sesi ini, Anda akan mampu:
 
-- ✅ Paham apa itu DuckDB dan use cases-nya
+- ✅ Memahami apa itu DuckDB dan use cases-nya
 - ✅ Menulis SQL queries untuk analisis data
-- ✅ Menggunakan aggregate fungsi (blok kode yang bisa dipanggil)s dan GROUP BY
-- ✅ Menguasai window fungsi (blok kode yang bisa dipanggil)s (ROW_NUMBER, RANK, LAG, LEAD)
+- ✅ Menggunakan aggregate functions dan GROUP BY
+- ✅ Menguasai window functions (ROW_NUMBER, RANK, LAG, LEAD)
 - ✅ Menulis CTEs (Common Table Expressions)
-- ✅ Mengintegrasikan DuckDB dengan Pandas alur kerja
+- ✅ Mengintegrasikan DuckDB dengan Pandas workflow
 - ✅ Membandingkan performa DuckDB vs Pandas
 
 ---
@@ -72,17 +72,13 @@ Setelah sesi ini, Anda bisa:
 |-------|-------|--------|
 | 13:00 - 13:30 | Pengenalan DuckDB & Setup | 30 min |
 | 13:30 - 15:00 | SQL dengan DuckDB | 90 min |
-| 15:00 - 15:30 | Penggabungan Pandas & DuckDB | 30 min |
+| 15:00 - 15:30 | Integrasi Pandas & DuckDB | 30 min |
 
 ---
 
-# 🦆 Apa itu DuckDB?
+# 🦆 What is DuckDB?
 
-**Penjelasan Sederhana:** DuckDB itu seperti Excel yang bisa dipakai dengan SQL, tapi lebih cepat untuk analisis data besar
-
-## Database untuk Analisis Data (Tidak Perlu Install Server)
-
-**Mudahnya:** DuckDB bisa langsung dipakai tanpa setup ribet seperti database lain
+## In-Process Analytical Database
 
 <div class="columns">
 
@@ -132,9 +128,6 @@ Setelah sesi ini, Anda bisa:
 ---
 
 # 🆚 OLAP vs OLTP
-
-**Penjelasan:** OLAP untuk analisis data (baca banyak), OLTP untuk transaksi (tulis banyak)
-DuckDB cocok untuk OLAP (analisis)
 
 <div class="columns">
 
@@ -294,7 +287,7 @@ LIMIT 100;
 
 ---
 
-# 📊 Gabung Functions
+# 📊 Aggregate Functions
 
 ## COUNT, SUM, AVG, MIN, MAX
 
@@ -357,7 +350,7 @@ SELECT
     SUM(pagu) as total_pagu
 FROM rup
 GROUP BY metode_pengadaan
-HAVING COUNT(*) > 100  -- Filter after penggabungan
+HAVING COUNT(*) > 100  -- Filter after aggregation
 ORDER BY total_pagu DESC;
 
 -- Multiple HAVING conditions
@@ -404,7 +397,7 @@ ORDER BY pagu DESC NULLS LAST;
 
 ## Apa itu Window Functions?
 
-**Window fungsi (blok kode yang bisa dipanggil)s** lakukan kalkulasi pada sekelompok rows yang berhubungan dengan current row, **tanpa collapse hasil seperti GROUP BY**.
+**Window functions** melakukan kalkulasi pada sekelompok rows yang berhubungan dengan current row, **tanpa collapse hasil seperti GROUP BY**.
 
 ```sql
 -- GROUP BY: Collapse ke 1 row per group
@@ -468,7 +461,7 @@ WHERE rank_in_metode <= 5
 ORDER BY metode_pengadaan, rank_in_metode;
 ```
 
-**PARTITION BY** = **GROUP BY** untuk window fungsi (blok kode yang bisa dipanggil)s
+**PARTITION BY** = **GROUP BY** untuk window functions
 
 ---
 
@@ -550,7 +543,7 @@ WHERE avg_pagu > 1000000;
 # 🎯 Multiple CTEs
 
 ```sql
--- Beberapa CTEs untuk analisis rumit
+-- Beberapa CTEs untuk analisis kompleks
 WITH metode_stats AS (
     SELECT
         metode_pengadaan,
@@ -633,7 +626,7 @@ LIMIT 10;
 # 📝 String Functions
 
 ```sql
--- String pengolahan
+-- String manipulation
 SELECT
     nama_paket,
     UPPER(nama_paket) as upper_case,
@@ -676,7 +669,7 @@ SELECT
 FROM rup
 LIMIT 20;
 
--- Use in penggabungan
+-- Use in aggregation
 SELECT
     CASE
         WHEN pagu < 100000000 THEN 'Small'
@@ -690,7 +683,7 @@ GROUP BY kategori;
 
 ---
 
-# 🐍 Penggabungan dengan Pandas
+# 🐍 Integrasi dengan Pandas
 
 ## Execute Query → DataFrame
 
@@ -745,7 +738,7 @@ result = conn.from_df(df).filter("pagu > 1000000").df()
 
 ---
 
-# ⚡ Kecepatan Comparison
+# ⚡ Performance Comparison
 
 ```python
 import time
@@ -773,7 +766,7 @@ print(f"DuckDB: {duckdb_time:.4f}s")
 print(f"Speedup: {pandas_time/duckdb_time:.2f}x")
 ```
 
-**DuckDB often faster untuk penggabungans!** ⚡
+**DuckDB often faster untuk aggregations!** ⚡
 
 ---
 
@@ -888,7 +881,7 @@ GROUP BY metode_pengadaan;
 
 ## Tips Menulis SQL yang Baik
 
-1. **Use CTEs untuk rumit queries** 📝
+1. **Use CTEs untuk kompleks queries** 📝
    - Lebih readable daripada nested subqueries
 
 2. **Index pada kolom yang sering di-filter** ⚡
@@ -945,7 +938,7 @@ GROUP BY metode_pengadaan;
    - Running total per month
 
 3. **Time Series**
-   - Monthly penggabungan
+   - Monthly aggregation
    - Week-over-week growth
    - Identify trends
 
@@ -956,9 +949,9 @@ GROUP BY metode_pengadaan;
 4. **Complex Analysis**
    - Pivot table: Metode vs Jenis
    - CTEs untuk multi-step analysis
-   - Combine filters dan penggabungans
+   - Combine filters dan aggregations
 
-5. **Kecepatan Test**
+5. **Performance Test**
    - Compare Pandas vs DuckDB
    - Benchmark complex queries
    - Optimize slow queries
@@ -976,10 +969,10 @@ GROUP BY metode_pengadaan;
 
 - ✅ DuckDB = SQL untuk data analysis yang fast
 - ✅ Perfect untuk analytical workloads (OLAP)
-- ✅ Window fungsi (blok kode yang bisa dipanggil)s untuk ranking & running calculations
+- ✅ Window functions untuk ranking & running calculations
 - ✅ CTEs membuat complex queries lebih readable
 - ✅ Native integration dengan Pandas
-- ✅ Often faster than Pandas untuk penggabungans
+- ✅ Often faster than Pandas untuk aggregations
 - ✅ Can query Parquet files directly
 - ✅ No server needed - embedded database
 
@@ -994,14 +987,14 @@ GROUP BY metode_pengadaan;
 - **DuckDB Docs:** https://duckdb.org/docs/
 - **SQL Reference:** https://duckdb.org/docs/sql/introduction
 - **DuckDB Python API:** https://duckdb.org/docs/api/python/overview
-- **Window Functions Guide:** https://duckdb.org/docs/sql/window_fungsi (blok kode yang bisa dipanggil)s
+- **Window Functions Guide:** https://duckdb.org/docs/sql/window_functions
 
 ## Sesi Selanjutnya
 
 **Sesi 3: Visualisasi Data**
 - Matplotlib & Seaborn untuk static plots
-- Plotly untuk interactive tampilans
-- Data storytelling prinsip
+- Plotly untuk interactive visualizations
+- Data storytelling principles
 
 **BREAK sampai 15:45** ☕
 
@@ -1028,7 +1021,7 @@ GROUP BY metode_pengadaan;
 -- Aggregation
 SELECT col, COUNT(*), SUM(val) FROM table GROUP BY col;
 
--- Window fungsi (blok kode yang bisa dipanggil)
+-- Window function
 SELECT col, ROW_NUMBER() OVER (ORDER BY val DESC) FROM table;
 
 -- CTE

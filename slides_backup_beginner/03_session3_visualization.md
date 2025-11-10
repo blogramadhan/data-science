@@ -56,7 +56,7 @@ pre {
 
 # 🎯 Tujuan Sesi
 
-Setelah sesi ini, Anda bisa:
+Setelah sesi ini, Anda akan mampu:
 
 - ✅ Membuat visualisasi statistik dengan Matplotlib & Seaborn
 - ✅ Membuat grafik interaktif dengan Plotly
@@ -78,9 +78,7 @@ Setelah sesi ini, Anda bisa:
 
 ---
 
-# 📊 Part 1: Matplotlib # 📊 Part 1: Matplotlib & Seaborn Seaborn
-
-**Penjelasan:** Matplotlib untuk buat grafik dasar, Seaborn untuk grafik statistik yang lebih cantik
+# 📊 Part 1: Matplotlib & Seaborn
 
 ## Static Visualizations for Statistical Analysis
 
@@ -282,7 +280,7 @@ plt.show()
 
 ### Advantages
 - ✅ Beautiful defaults
-- ✅ Statistical fungsi (blok kode yang bisa dipanggil)s built-in
+- ✅ Statistical functions built-in
 - ✅ Less code untuk complex plots
 - ✅ Better color palettes
 - ✅ Automatic legend/labels
@@ -367,7 +365,7 @@ sns.countplot(data=df, x='jenis_pengadaan', ax=axes[0], palette='Set2')
 axes[0].set_title('Count Plot: Jenis Pengadaan', fontsize=12, fontweight='bold')
 axes[0].set_xticklabels(axes[0].get_xticklabels(), rotation=45, ha='right')
 
-# Bar plot (dengan penggabungan)
+# Bar plot (dengan aggregation)
 jenis_avg = df.groupby('jenis_pengadaan')['pagu'].mean().reset_index()
 sns.barplot(data=jenis_avg, x='jenis_pengadaan', y='pagu', ax=axes[1], palette='Set2')
 axes[1].set_title('Average Pagu by Jenis', fontsize=12, fontweight='bold')
@@ -458,9 +456,7 @@ plt.show()
 
 ---
 
-# 📊 Part 2: Plotly - Grafik yang Bisa Diklik
-
-**Penjelasan:** Plotly buat grafik interaktif: bisa zoom, hover lihat detail, klik legend
+# 📊 Part 2: Plotly Interactive
 
 ## Interactive Visualizations
 
@@ -490,7 +486,7 @@ print(f"Plotly version: {plotly.__version__}")
 ```
 
 **Plotly Express vs Graph Objects:**
-- **Express:** Quick, concise, tapi limited kustomisasi
+- **Express:** Quick, concise, tapi limited customization
 - **Graph Objects:** Full control, lebih verbose
 
 ---
@@ -676,7 +672,7 @@ fig.show()
 # 🎨 Graph Objects: Full Control
 
 ```python
-# Using Graph Objects untuk full kustomisasi
+# Using Graph Objects untuk full customization
 fig = go.Figure()
 
 # Add multiple traces
@@ -756,13 +752,9 @@ for fmt in ['html', 'png', 'pdf']:
 
 ---
 
-# 🎨 Part 3: Ceritakan Data dengan Baik
+# 🎨 Part 3: Data Storytelling
 
-**Penjelasan:** Visualisasi bukan cuma buat grafik, tapi ceritakan insight dari data
-
-## Pilih Grafik yang Tepat
-
-**Tips:** Jangan asal bikin grafik! Pilih yang sesuai tujuan: perbandingan, trend, komposisi, dll
+## Choosing the Right Chart
 
 | Purpose | Chart Type | Use When |
 |---------|-----------|----------|
@@ -844,7 +836,7 @@ for fmt in ['html', 'png', 'pdf']:
 ## Latihan untuk Anda
 
 1. **Distribution Analysis**
-   - Histogram pagu dengan kustomisasi
+   - Histogram pagu dengan customization
    - Box plot per kategori
    - KDE plot comparison
 
@@ -929,15 +921,15 @@ fig.update_layout(autosize=True)
 ## Yang Harus Anda Ingat
 
 - ✅ Matplotlib = Foundation, full control
-- ✅ Seaborn = Statistical tampilan, beautiful defaults
+- ✅ Seaborn = Statistical visualization, beautiful defaults
 - ✅ Plotly = Interactivity, modern web-ready
 - ✅ Choose chart type berdasarkan purpose
-- ✅ Keep tampilans simple dan clear
+- ✅ Keep visualizations simple dan clear
 - ✅ Color & styling matters
 - ✅ Always label axes dan add titles
 - ✅ Export dalam format yang sesuai (PNG/PDF/HTML)
 
-**Good tampilan = Clear communication** 📊
+**Good visualization = Clear communication** 📊
 
 ---
 
@@ -968,7 +960,7 @@ fig.update_layout(autosize=True)
 ## Besok (Hari 2)
 
 📊 **Sesi 4:** Teknik Analisis Data Lanjutan
-- Data cleaning & perubahan
+- Data cleaning & transformation
 - Time series analysis
 - Statistical testing
 
