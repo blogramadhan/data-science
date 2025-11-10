@@ -830,8 +830,8 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ### Buku yang Direkomendasikan
 - **"Python for Data Analysis"** karya Wes McKinney (Pembuat Pandas)
-- **"Storytelling with Data"** karya Cole Nussbaumer Knaflic
-- **"Practical Statistics for Data Scientists"** karya Peter Bruce & Andrew Bruce
+- **"Streamlit for Data Science: Create Interactive Data Apps in Python"** karya Tyler Richards
+- **"DuckDB in Action"** karya Mark Needham & Simon Aubury (MotherDuck)
 
 ### Platform Pembelajaran Online
 - **Kaggle Learn** - Kursus interaktif gratis
