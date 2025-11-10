@@ -6,6 +6,43 @@
 
 Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan praktis dalam analisis data menggunakan Python, DuckDB sebagai database analitik, dan Streamlit untuk membuat dashboard interaktif. Peserta akan belajar langsung menggunakan **dataset RUP (Rencana Umum Pengadaan) 2025** sebagai studi kasus.
 
+### 🎓 Tujuan Pembelajaran
+
+Setelah menyelesaikan bootcamp ini, peserta akan mampu:
+
+1. **Menguasai Analisis Data dengan Python & Pandas**
+   - Melakukan Exploratory Data Analysis (EDA) secara komprehensif
+   - Membersihkan dan mentransformasi data mentah menjadi insights
+   - Menggunakan Pandas untuk manipulasi data tingkat lanjut
+
+2. **Menggunakan DuckDB untuk Query Analitik**
+   - Memahami kelebihan DuckDB untuk analisis data
+   - Menulis query SQL kompleks dengan window functions dan CTEs
+   - Mengintegrasikan DuckDB dengan workflow Pandas
+
+3. **Membuat Visualisasi Data yang Efektif**
+   - Menggunakan Matplotlib & Seaborn untuk visualisasi statistik
+   - Membuat grafik interaktif dengan Plotly
+   - Menerapkan prinsip data storytelling
+
+4. **Membangun Dashboard Interaktif dengan Streamlit**
+   - Membuat aplikasi web analitik tanpa perlu web development expertise
+   - Implementasi filter interaktif dan real-time data exploration
+   - Deploy dashboard yang siap produksi
+
+5. **Menerapkan Teknik Analisis Lanjutan**
+   - Time series analysis dan trend forecasting
+   - Statistical hypothesis testing
+   - A/B testing fundamentals
+
+### 📈 Hasil Akhir yang Diharapkan
+
+Peserta akan membuat portfolio yang berisi:
+- ✅ 7 Jupyter Notebooks dengan analisis lengkap
+- ✅ 4 Aplikasi Streamlit interaktif
+- ✅ 1 Production-ready Dashboard untuk analisis RUP 2025
+- ✅ Pemahaman mendalam tentang workflow analisis data end-to-end
+
 ### 📊 Dataset: RUP 2025
 - **Topik**: Rencana Umum Pengadaan Barang/Jasa Pemerintah 2025
 - **Jumlah Records**: 16,430 paket pengadaan
@@ -128,8 +165,17 @@ data-science/
 **Durasi:** 3 jam
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebook
 **Kumpulan Data:** RUP 2025
+**Notebook:** `day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb`
 
-### Materi Pembelajaran
+### 🎯 Tujuan Sesi
+
+Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas untuk:
+- Memahami struktur dan karakteristik dataset
+- Mengidentifikasi pola, tren, dan anomali dalam data
+- Melakukan data cleaning dan preprocessing
+- Membuat insight bisnis dari data pengadaan pemerintah
+
+### 📚 Materi Pembelajaran
 
 #### 1.1 Persiapan Lingkungan (30 menit)
 - Persiapan Python & Virtual Environment (uv/venv)
