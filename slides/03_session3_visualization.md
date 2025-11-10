@@ -86,14 +86,14 @@ Setelah sesi ini, Anda bisa:
 
 **Matplotlib:**
 - Foundation untuk plotting di Python
-- Low-level control
+- Rendah-level control
 - Customizable
 
 **Seaborn:**
 - Built on top of Matplotlib
 - Statistical plots
 - Beautiful default themes
-- High-level interface
+- Tinggi-level interface
 
 ---
 
@@ -241,7 +241,7 @@ ax.set_title('Distribusi Metode Pengadaan', fontsize=14, fontweight='bold', pad=
 plt.show()
 ```
 
-**Note:** Pie charts best untuk max 5-7 categories
+**Catatan:** Pie charts best untuk max 5-7 categories
 
 ---
 
@@ -280,9 +280,9 @@ plt.show()
 
 <div>
 
-### Advantages
+### Kelebihan
 - ✅ Beautiful defaults
-- ✅ Statistical fungsi (blok kode yang bisa dipanggil)s built-in
+- ✅ Statistical functions built-in
 - ✅ Less code untuk complex plots
 - ✅ Better color palettes
 - ✅ Automatic legend/labels
@@ -291,7 +291,7 @@ plt.show()
 
 <div>
 
-### Use Cases
+### Kapan Dipakai
 - Distribution analysis
 - Relationship plots
 - Categorical comparisons
@@ -438,13 +438,13 @@ plt.show()
 
 ```python
 # Set theme
-sns.set_theme(style="darkgrid")  # Options: white, dark, whitegrid, darkgrid, ticks
+sns.set_theme(style="darkgrid")  # Opsi: white, dark, whitegrid, darkgrid, ticks
 
 # Set context (scales elements)
-sns.set_context("talk")  # Options: paper, notebook, talk, poster
+sns.set_context("talk")  # Opsi: paper, notebook, talk, poster
 
 # Set color palette
-sns.set_palette("husl")  # Options: deep, muted, bright, pastel, dark, colorblind
+sns.set_palette("husl")  # Opsi: deep, muted, bright, pastel, dark, colorblind
 
 # Custom palette
 custom_colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A"]
@@ -481,8 +481,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# Plotly Express: High-level, quick plots
-# Graph Objects: Low-level, full control
+# Plotly Express: Tinggi-level, quick plots
+# Graph Objects: Rendah-level, full control
 
 # Check version
 import plotly
@@ -491,7 +491,7 @@ print(f"Plotly version: {plotly.__version__}")
 
 **Plotly Express vs Graph Objects:**
 - **Express:** Quick, concise, tapi limited kustomisasi
-- **Graph Objects:** Full control, lebih verbose
+- **Graph Objects:** Lengkap control, lebih verbose
 
 ---
 
@@ -673,7 +673,7 @@ fig.show()
 
 ---
 
-# 🎨 Graph Objects: Full Control
+# 🎨 Graph Objects: Lengkap Control
 
 ```python
 # Using Graph Objects untuk full kustomisasi
@@ -764,14 +764,14 @@ for fmt in ['html', 'png', 'pdf']:
 
 **Tips:** Jangan asal bikin grafik! Pilih yang sesuai tujuan: perbandingan, trend, komposisi, dll
 
-| Purpose | Chart Type | Use When |
+| Tujuan | Jenis Grafik | Kapan Digunakan |
 |---------|-----------|----------|
-| **Comparison** | Bar, Column | Comparing categories |
-| **Distribution** | Histogram, Box, Violin | Understanding spread |
-| **Relationship** | Scatter, Bubble | Showing correlation |
-| **Composition** | Pie, Treemap, Sunburst | Parts of whole |
-| **Trend** | Line, Area | Change over time |
-| **Ranking** | Horizontal Bar | Showing order |
+| **Perbandingan** | Bar, Column | Membandingkan kategori |
+| **Distribusi** | Histogram, Box, Violin | Memahami sebaran |
+| **Hubungan** | Scatter, Bubble | Menunjukkan korelasi |
+| **Komposisi** | Pie, Treemap, Sunburst | Bagian dari keseluruhan |
+| **Tren** | Line, Area | Perubahan dari waktu ke waktu |
+| **Peringkat** | Horizontal Bar | Menunjukkan urutan |
 
 ---
 
@@ -779,41 +779,41 @@ for fmt in ['html', 'png', 'pdf']:
 
 ## Praktik Terbaik
 
-1. **Choose the right chart** 📊
-   - Match chart type to data type
+1. **Pilih grafik yang tepat** 📊
+   - Sesuaikan jenis grafik dengan jenis data
 
-2. **Keep it simple** ✨
-   - Avoid chartjunk
-   - Less is more
+2. **Buat sesederhana mungkin** ✨
+   - Hindari grafik yang terlalu ramai
+   - Lebih sedikit lebih baik
 
-3. **Use color wisely** 🎨
-   - Consistent color scheme
-   - Colorblind-friendly palettes
+3. **Gunakan warna dengan bijak** 🎨
+   - Skema warna yang konsisten
+   - Palet ramah buta warna
 
-4. **Label clearly** 🏷️
-   - Descriptive titles
-   - Axis labels with units
-   - Data source citation
+4. **Beri label yang jelas** 🏷️
+   - Judul yang deskriptif
+   - Label sumbu dengan satuan
+   - Sitasi sumber data
 
 ---
 
 # 🎨 Data Visualization Principles (lanjutan)
 
-5. **Highlight key insights** 💡
+5. **Tonjolkan poin-poin penting** 💡
    - Annotations untuk poin penting
-   - Visual hierarchy
+   - Hirarki visual
 
-6. **Consider your audience** 👥
+6. **Pertimbangkan audiens Anda** 👥
    - Technical vs non-technical
    - Context matters
 
-7. **Tell a story** 📖
+7. **Ceritakan sebuah kisah** 📖
    - Clear narrative flow
-   - Actionable insights
+   - Insight yang actionable
 
-8. **Be honest** ✅
-   - Don't mislead with scales
-   - Show uncertainty when relevant
+8. **Jujur** ✅
+   - Don't menyesatkan dengan skala
+   - Tunjukkan ketidakpastian jika relevan
 
 ---
 
@@ -822,14 +822,14 @@ for fmt in ['html', 'png', 'pdf']:
 ## What to Avoid
 
 1. **3D Pie Charts** 🚫
-   - Hard to interpret
-   - Distorted perception
+   - Sulit diinterpretasi
+   - Persepsi terdistorsi
 
 2. **Too Many Colors** 🌈
-   - Confusing and overwhelming
+   - Membingungkan dan overwhelming
 
 3. **Truncated Y-Axis** 📉
-   - Misleading comparisons
+   - Perbandingan menyesatkan
 
 4. **Pie Charts with Many Slices** 🥧
    - Use bar chart instead
@@ -916,7 +916,7 @@ fig.add_shape(type="rect", x0=0, y0=0, x1=1, y1=1)
 fig.add_annotation(x=2, y=3, text="Important Point!")
 
 # Theme templates
-fig.update_layout(template="plotly_dark")  # Options: plotly, plotly_white, plotly_dark, ggplot2, seaborn
+fig.update_layout(template="plotly_dark")  # Opsi: plotly, plotly_white, plotly_dark, ggplot2, seaborn
 
 # Responsive sizing
 fig.update_layout(autosize=True)
@@ -937,7 +937,7 @@ fig.update_layout(autosize=True)
 - ✅ Always label axes dan add titles
 - ✅ Export dalam format yang sesuai (PNG/PDF/HTML)
 
-**Good tampilan = Clear communication** 📊
+**Baik tampilan = Clear communication** 📊
 
 ---
 
@@ -1003,7 +1003,7 @@ fig.update_layout(autosize=True)
    - Apply teknik hari ini
 
 2. **Buat Sendiri Visualizations**
-   - Experiment dengan styling
+   - Eksperimen dengan styling
    - Try different chart types
 
 3. **Baca Dokumentasi**

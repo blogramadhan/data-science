@@ -94,24 +94,24 @@ Gak perlu belajar HTML/CSS/JavaScript!
 
 <div>
 
-### Features
-- 🐍 **Pure Python** - No HTML/CSS/JS
-- ⚡ **Fast Development** - Build in hours
-- 🎨 **Beautiful UI** - Auto-responsive
+### Fitur
+- 🐍 **Pure Python** - Tanpa HTML/CSS/JS
+- ⚡ **Cepat Development** - Bangun dalam hitungan jam
+- 🎨 **UI yang Cantik** - Otomatis responsif
 - 🔄 **Reactive** - Auto-rerun on changes
-- 🆓 **Free Deployment** - Streamlit Cloud
+- 🆓 **Deployment Gratis** - Streamlit Cloud
 
 </div>
 
 <div>
 
-### Use Cases
-- Data dashboards
-- ML demos
-- Data explorers
-- Admin tools
+### Kapan Dipakai
+- Dashboard data
+- Demo ML
+- Explorer data
+- Tools admin
 - Prototyping
-- Internal tools
+- Tools internal
 
 </div>
 
@@ -137,7 +137,7 @@ streamlit --version
 streamlit hello
 ```
 
-**Create Your First App:**
+**Create Your Pertama App:**
 
 ```python
 # app.py
@@ -217,9 +217,9 @@ import streamlit as st
 df = pd.read_parquet('data.parquet')
 
 # Interactive dataframe
-st.dataframe(df)  # Sortable, scrollable
+st.dataframe(df)  # Bisa diurutkan, bisa di-scroll
 
-# Static table
+# Tabel statis
 st.table(df.head(10))
 
 # Metrics with delta
@@ -237,12 +237,12 @@ st.json({"name": "Streamlit", "version": "1.28"})
 # 📈 Basic Charts
 
 ```python
-# Built-in charts (simple but limited)
+# Grafik bawaan (sederhana tapi terbatas)
 st.line_chart(df['pagu'])
 st.bar_chart(df.groupby('metode_pengadaan')['pagu'].sum())
 st.area_chart(df)
 
-# Plotly charts (recommended!)
+# Plotly charts (direkomendasikan!)
 import plotly.express as px
 
 fig = px.bar(df, x='metode_pengadaan', y='pagu',
@@ -302,10 +302,10 @@ with col3:
     st.header("Column 3")
     st.write("Content 3")
 
-# Custom width ratios
+# Rasio lebar kustom
 col1, col2 = st.columns([2, 1])  # 2:1 ratio
 
-# Responsive columns
+# Kolom responsif
 for col in st.columns(4):
     col.metric("Metric", "100", "5%")
 ```
@@ -315,13 +315,13 @@ for col in st.columns(4):
 # 📦 Layouts: Container & Expander
 
 ```python
-# Container (grouping)
+# Container (pengelompokan)
 with st.container():
     st.write("Inside container")
     st.write("More content")
 
 # Expander (collapsible)
-with st.expander("Click to expand"):
+with st.expander("Klik untuk expand"):
     st.write("Hidden content")
     st.image("chart.png")
 
@@ -380,9 +380,9 @@ uv run streamlit run 02_components_demo.py
 ```
 
 **Anda akan bisa:**
-- How to capture user input
-- How to maintain state
-- How to create interactive experiences
+- Bagaimana cara capture user input
+- Bagaimana cara maintain state
+- How untuk membuat interactive experiences
 
 ---
 
@@ -510,7 +510,7 @@ if uploaded_file:
 Semua input dikumpulkan, baru di-submit sekaligus
 
 ```python
-# Form (batch submit)
+# Form (kirim sekaligus)
 with st.form("my_form"):
     st.write("Fill out the form")
 
@@ -630,7 +630,7 @@ with st.sidebar:
 
 ## Aplikasi: `03_data_explorer.py`
 
-**Full Data Analysis Workflow:**
+**Lengkap Analisis Data Workflow:**
 1. File upload (CSV, Excel, Parquet)
 2. Data preview & summary stats
 3. Interactive filters
@@ -661,7 +661,7 @@ uploaded_file = st.file_uploader(
 )
 
 if uploaded_file:
-    # Read file based on type
+    # Read file berdasarkan type
     if uploaded_file.name.endswith('.csv'):
         df = pd.read_csv(uploaded_file)
     elif uploaded_file.name.endswith('.xlsx'):
@@ -802,7 +802,7 @@ conn = get_connection()
 @st.cache_data
 def expensive_computation(df):
     """Cache computational results"""
-    # Complex processing
+    # Rumit processing
     return processed_data
 ```
 
@@ -858,7 +858,7 @@ with col3:
 **Production-Ready Features:**
 - ✅ Professional UI/UX
 - ✅ Custom styling & branding
-- ✅ Complex data processing
+- ✅ Rumit data processing
 - ✅ Advanced tampilans
 - ✅ Kecepatan pengoptimalan
 - ✅ Error handling
@@ -1099,7 +1099,7 @@ if 'df' not in locals():
 2. **Meaningful labels** 🏷️
    - Descriptive text
    - Help tooltips
-   - Examples
+   - Contoh
 
 3. **Feedback** 💬
    - Loading spinners
@@ -1118,7 +1118,7 @@ if 'df' not in locals():
 ## Code Organization
 
 ```python
-# Good structure
+# Baik structure
 import streamlit as st
 import pandas as pd
 
@@ -1230,7 +1230,7 @@ host = st.secrets["database"]["host"]
 - ✅ Rich widget library untuk interactivity
 - ✅ Session state untuk persistent data
 - ✅ Caching untuk performance
-- ✅ Easy integration dengan Pandas, DuckDB, Plotly
+- ✅ Mudah integration dengan Pandas, DuckDB, Plotly
 - ✅ Free deployment di Streamlit Cloud
 - ✅ Perfect untuk prototypes & internal tools
 - ✅ Production-ready dengan proper error handling
@@ -1292,7 +1292,7 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 🚀 Next Steps
+# 🚀 Selanjutnya Steps
 
 ## Lanjutkan Perjalanan Belajar Anda
 
@@ -1302,7 +1302,7 @@ host = st.secrets["database"]["host"]
    - Build your portfolio
 
 2. **Deploy Your Apps** 🌐
-   - Share your dashboards
+   - Bagikan your dashboards
    - Get feedback
    - Iterate and improve
 
@@ -1314,7 +1314,7 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 🚀 Next Steps (lanjutan)
+# 🚀 Selanjutnya Steps (lanjutan)
 
 4. **Join Communities** 👥
    - Kaggle competitions
@@ -1322,7 +1322,7 @@ host = st.secrets["database"]["host"]
    - Local meetups
    - Online communities
 
-5. **Contribute to Open Source** 🌟
+5. **Kontribusi to Open Source** 🌟
    - GitHub projects
    - Documentation
    - Bug fixes
@@ -1355,7 +1355,7 @@ host = st.secrets["database"]["host"]
 
 ## Untuk Sukses in Data Field
 
-1. **Practice Regularly** 🏋️
+1. **Latihan Regularly** 🏋️
    - Consistency > intensity
    - Daily coding habit
 
@@ -1365,7 +1365,7 @@ host = st.secrets["database"]["host"]
    - Blog posts
 
 3. **Learn in Public** 📢
-   - Share your projects
+   - Bagikan your projects
    - Write tutorials
    - Help others
 
@@ -1464,9 +1464,9 @@ You've demonstrated:
 **Good Luck with Your**
 **Data Analytics Journey!**
 
-### See You in the Data World! 🌍
+### See You di Data World! 🌍
 
-*May your insights be meaningful*
+*Mei your insights be meaningful*
 *and your dashboards be beautiful!* ✨
 
 ---
@@ -1476,7 +1476,7 @@ You've demonstrated:
 ## Materi Pembelajaran Tambahan
 
 **Books:**
-- "Python for Data Analysis" - Wes McKinney
+- "Python for Analisis Data" - Wes McKinney
 - "Storytelling with Data" - Cole Nussbaumer Knaflic
 - "Practical Statistics for Data Scientists"
 
@@ -1484,7 +1484,7 @@ You've demonstrated:
 - Kaggle Learn
 - DataCamp
 - Coursera
-- Fast.ai
+- Cepat.ai
 
 **Communities:**
 - r/datascience

@@ -340,11 +340,11 @@ df['days_since_start'] = (df['tgl'] - df['tgl'].min()).dt.days
 # Equal-width binning
 df['pagu_binned'] = pd.cut(df['pagu'],
                             bins=5,
-                            labels=['Very Low', 'Low', 'Medium', 'High', 'Very High'])
+                            labels=['Very Rendah', 'Rendah', 'Sedang', 'Tinggi', 'Very Tinggi'])
 
 # Custom bins
 bins = [0, 100_000_000, 1_000_000_000, 10_000_000_000, float('inf')]
-labels = ['Small', 'Medium', 'Large', 'Very Large']
+labels = ['Small', 'Sedang', 'Large', 'Very Large']
 df['pagu_category'] = pd.cut(df['pagu'], bins=bins, labels=labels)
 
 # Quantile-based binning (equal frequency)
@@ -837,7 +837,7 @@ else:
 ## Latihan
 
 1. **Data Cleaning**
-   - Handle missing values in your dataset
+   - Tangani nilai yang hilang in your dataset
    - Detect and treat outliers
    - Create new features from existing columns
 
@@ -847,7 +847,7 @@ else:
    - Detect seasonality
 
 3. **Statistical Testing**
-   - Compare groups dengan t-test
+   - Compare mengelompokkan dengan t-test
    - Correlation analysis
    - Test for normality
 
@@ -858,20 +858,20 @@ else:
 ## Data Cleaning
 
 1. **Understand before action** 🔍
-   - Investigate WHY data is missing
-   - Don't blindly remove outliers
+   - Investigasi KENAPA data is missing
+   - Jangan asal remove outliers
 
-2. **Document decisions** 📝
+2. **Dokumentasikan keputusan** 📝
    - Why you filled/dropped
    - Keep original data
 
 3. **Validate results** ✅
    - Check distributions before/after
-   - Sanity checks
+   - Periksa kewajarans
 
-4. **Consider domain knowledge** 🎓
-   - Outliers bisa valid di context tertentu
-   - Missing bisa punya meaning
+4. **Pertimbangkan pengetahuan domain** 🎓
+   - Outliers bisa valid di konteks tertentu
+   - Missing bisa punya arti
 
 ---
 
@@ -880,31 +880,31 @@ else:
 ## Statistical Analysis
 
 1. **Check assumptions** ⚖️
-   - Normality, independence, homogeneity
+   - Normalitas, independensi, homogenitas
 
 2. **Choose right test** 🎯
-   - Parametric vs non-parametric
-   - Sample size matters
+   - Parametrik vs non-parametrik
+   - Ukuran sampel penting
 
 3. **Interpret correctly** 🤔
-   - P-value ≠ effect size
-   - Statistical ≠ practical significance
+   - P-value ≠ ukuran efek
+   - Statistical ≠ signifikansi praktis
 
 4. **Multiple testing correction** 🔄
-   - Bonferroni, FDR when doing multiple tests
+   - Bonferroni, FDR saat doing multiple tests
 
 ---
 
 # 📚 Poin Penting
 
 - ✅ Data cleaning adalah critical step (80% effort!)
-- ✅ Handle missing values based on pattern & domain
+- ✅ Tangani nilai yang hilang berdasarkan pattern & domain
 - ✅ Outliers perlu investigation, bukan auto-remove
 - ✅ Feature engineering boosts analysis quality
 - ✅ Time series analysis reveals trends & patterns
 - ✅ Statistical tests validate hypotheses
 - ✅ Always check assumptions before testing
-- ✅ P-value < 0.05 doesn't mean practical significance
+- ✅ P-value < 0.05 doesn't mean signifikansi praktis
 
 **Clean data = Better insights!** 🧹✨
 
@@ -939,4 +939,4 @@ else:
 
 ### Pertanyaan?? 🙋
 
-**Next: Building Dashboards!** 🚀
+**Selanjutnya: Building Dashboards!** 🚀

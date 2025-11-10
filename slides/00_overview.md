@@ -391,7 +391,7 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 
 ### Sesi 2: DuckDB
 - Dasar-dasar SQL
-- Window fungsi (blok kode yang bisa dipanggil)s
+- Window functions
 - CTE & subquery
 - Integrasi Pandas
 

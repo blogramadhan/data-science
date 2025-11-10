@@ -58,8 +58,8 @@ Setelah sesi ini, Anda bisa:
 
 - ✅ Paham apa itu DuckDB dan use cases-nya
 - ✅ Menulis SQL queries untuk analisis data
-- ✅ Menggunakan aggregate fungsi (blok kode yang bisa dipanggil)s dan GROUP BY
-- ✅ Menguasai window fungsi (blok kode yang bisa dipanggil)s (ROW_NUMBER, RANK, LAG, LEAD)
+- ✅ Menggunakan aggregate functions dan GROUP BY
+- ✅ Menguasai window functions (ROW_NUMBER, RANK, LAG, LEAD)
 - ✅ Menulis CTEs (Common Table Expressions)
 - ✅ Mengintegrasikan DuckDB dengan Pandas alur kerja
 - ✅ Membandingkan performa DuckDB vs Pandas
@@ -88,11 +88,11 @@ Setelah sesi ini, Anda bisa:
 
 <div>
 
-### Key Features
+### Fitur Utama
 - 📊 **OLAP** (Analytical) Database
 - ⚡ **In-Memory** Processing
 - 📂 **Columnar** Storage
-- 🚀 **Fast** Query Execution
+- 🚀 **Cepat** Query Execution
 - 🔧 **Embedded** (No Server)
 - 🐍 **Python** Native Support
 
@@ -100,13 +100,13 @@ Setelah sesi ini, Anda bisa:
 
 <div>
 
-### Use Cases
-- ✅ Data Analysis
-- ✅ ETL Pipelines
-- ✅ Data Science Workflows
-- ✅ Quick Prototyping
-- ✅ Local Analytics
-- ✅ Testing & Development
+### Kapan Dipakai
+- ✅ Analisis Data
+- ✅ Pipeline ETL
+- ✅ Alur Kerja Data Science
+- ✅ Prototyping Cepat
+- ✅ Analitik Lokal
+- ✅ Testing Testing & Development Development
 
 </div>
 
@@ -122,12 +122,12 @@ Setelah sesi ini, Anda bisa:
 
 | Feature | DuckDB | Pandas | PostgreSQL | SQLite |
 |---------|--------|--------|------------|--------|
-| Setup | ✅ Easy | ✅ Easy | ❌ Complex | ✅ Easy |
-| Speed | ✅ Fast | ⚠️ Medium | ✅ Fast | ⚠️ Slow (Analytics) |
-| SQL Support | ✅ Full | ❌ No | ✅ Full | ⚠️ Limited |
-| Analytics | ✅ Optimized | ✅ Good | ⚠️ Mixed | ❌ Poor |
-| Memory | ✅ Efficient | ⚠️ High | ✅ Efficient | ✅ Low |
-| Big Data | ✅ Good | ❌ Limited | ✅ Good | ❌ Poor |
+| Setup | ✅ Mudah | ✅ Mudah | ❌ Rumit | ✅ Mudah |
+| Speed | ✅ Cepat | ⚠️ Sedang | ✅ Cepat | ⚠️ Lambat (Analitik) |
+| SQL Support | ✅ Lengkap | ❌ No | ✅ Lengkap | ⚠️ Terbatas |
+| Analytics | ✅ Optimal | ✅ Baik | ⚠️ Campuran | ❌ Buruk |
+| Memory | ✅ Efisien | ⚠️ Tinggi | ✅ Efisien | ✅ Rendah |
+| Big Data | ✅ Baik | ❌ Terbatas | ✅ Baik | ❌ Buruk |
 
 ---
 
@@ -141,7 +141,7 @@ DuckDB cocok untuk OLAP (analisis)
 <div>
 
 ### OLTP (Transaction)
-**Examples:** PostgreSQL, MySQL
+**Contoh:** PostgreSQL, MySQL
 
 - ✅ Many small transactions
 - ✅ Row-oriented
@@ -155,14 +155,14 @@ DuckDB cocok untuk OLAP (analisis)
 <div>
 
 ### OLAP (Analytical)
-**Examples:** DuckDB, ClickHouse
+**Contoh:** DuckDB, ClickHouse
 
 - ✅ Large scans
 - ✅ Column-oriented
 - ✅ SELECT heavy
 - ✅ Denormalized data
 - ✅ Batch processing
-- ✅ **Fast for analytics**
+- ✅ **Cepat for analytics**
 
 </div>
 
@@ -404,7 +404,7 @@ ORDER BY pagu DESC NULLS LAST;
 
 ## Apa itu Window Functions?
 
-**Window fungsi (blok kode yang bisa dipanggil)s** lakukan kalkulasi pada sekelompok rows yang berhubungan dengan current row, **tanpa collapse hasil seperti GROUP BY**.
+**Window functions** lakukan kalkulasi pada sekelompok rows yang berhubungan dengan current row, **tanpa collapse hasil seperti GROUP BY**.
 
 ```sql
 -- GROUP BY: Collapse ke 1 row per group
@@ -468,13 +468,13 @@ WHERE rank_in_metode <= 5
 ORDER BY metode_pengadaan, rank_in_metode;
 ```
 
-**PARTITION BY** = **GROUP BY** untuk window fungsi (blok kode yang bisa dipanggil)s
+**PARTITION BY** = **GROUP BY** untuk window functions
 
 ---
 
 # 📈 LAG & LEAD Functions
 
-## Akses Previous/Next Row
+## Akses Sebelumnya/Selanjutnya Row
 
 ```sql
 -- Time series analysis dengan LAG/LEAD
@@ -490,7 +490,7 @@ GROUP BY tgl_pengumuman_paket::DATE
 ORDER BY tanggal;
 ```
 
-**LAG:** Previous row | **LEAD:** Next row
+**LAG:** Sebelumnya row | **LEAD:** Selanjutnya row
 
 ---
 
@@ -600,7 +600,7 @@ FROM (
 ) subquery;
 ```
 
-**CTEs > Subqueries** untuk readability! 👍
+**CTEs > Subqueries** agar mudah dibaca! 👍
 
 ---
 
@@ -648,10 +648,10 @@ LIMIT 10;
 SELECT *
 FROM rup
 WHERE nama_paket LIKE '%Konstruksi%'
-   OR nama_paket ILIKE '%konstruksi%'  -- case insensitive
+   OR nama_paket ILIKE '%konstruksi%'  -- tidak case sensitive
 LIMIT 20;
 
--- Regular expressions
+-- Ekspresi reguler
 SELECT * FROM rup
 WHERE REGEXP_MATCHES(nama_paket, '(?i)jalan|jembatan')
 LIMIT 20;
@@ -668,7 +668,7 @@ SELECT
     pagu,
     CASE
         WHEN pagu < 100000000 THEN 'Small'
-        WHEN pagu < 1000000000 THEN 'Medium'
+        WHEN pagu < 1000000000 THEN 'Sedang'
         WHEN pagu < 10000000000 THEN 'Large'
         ELSE 'Very Large'
     END as kategori_pagu,
@@ -680,7 +680,7 @@ LIMIT 20;
 SELECT
     CASE
         WHEN pagu < 100000000 THEN 'Small'
-        WHEN pagu < 1000000000 THEN 'Medium'
+        WHEN pagu < 1000000000 THEN 'Sedang'
         ELSE 'Large'
     END as kategori,
     COUNT(*) as jumlah
@@ -891,7 +891,7 @@ GROUP BY metode_pengadaan;
 1. **Use CTEs untuk rumit queries** 📝
    - Lebih readable daripada nested subqueries
 
-2. **Index pada kolom yang sering di-filter** ⚡
+2. **Index pada kolom yang sering difilter** ⚡
    ```sql
    CREATE INDEX idx_pagu ON rup(pagu);
    ```
@@ -911,18 +911,18 @@ GROUP BY metode_pengadaan;
 5. **Gunakan meaningful aliases** 🏷️
    ```sql
    SELECT
-       COUNT(*) as total_paket,  -- Good
+       COUNT(*) as total_paket,  -- Baik
        SUM(pagu) as tp             -- Bad
    FROM rup;
    ```
 
-6. **Format SQL untuk readability** ✨
+6. **Format SQL agar mudah dibaca** ✨
    - Indentation, line breaks, uppercase keywords
 
 7. **Avoid SELECT *** ⚠️
-   - Specify columns yang dibutuhkan saja
+   - Tentukan kolom yang dibutuhkan saja
 
-8. **Comment complex queries** 💬
+8. **Beri komentar pada query rumit** 💬
    ```sql
    -- Calculate running total per satker
    SELECT ... ;
@@ -953,10 +953,10 @@ GROUP BY metode_pengadaan;
 
 # 🎯 Latihan Praktis (lanjutan)
 
-4. **Complex Analysis**
+4. **Rumit Analysis**
    - Pivot table: Metode vs Jenis
    - CTEs untuk multi-step analysis
-   - Combine filters dan penggabungans
+   - Combine menyaring dan penggabungans
 
 5. **Kecepatan Test**
    - Compare Pandas vs DuckDB
@@ -976,10 +976,10 @@ GROUP BY metode_pengadaan;
 
 - ✅ DuckDB = SQL untuk data analysis yang fast
 - ✅ Perfect untuk analytical workloads (OLAP)
-- ✅ Window fungsi (blok kode yang bisa dipanggil)s untuk ranking & running calculations
+- ✅ Window functions untuk ranking & running calculations
 - ✅ CTEs membuat complex queries lebih readable
 - ✅ Native integration dengan Pandas
-- ✅ Often faster than Pandas untuk penggabungans
+- ✅ Often lebih cepat dari Pandas untuk penggabungans
 - ✅ Can query Parquet files directly
 - ✅ No server needed - embedded database
 
@@ -994,7 +994,7 @@ GROUP BY metode_pengadaan;
 - **DuckDB Docs:** https://duckdb.org/docs/
 - **SQL Reference:** https://duckdb.org/docs/sql/introduction
 - **DuckDB Python API:** https://duckdb.org/docs/api/python/overview
-- **Window Functions Guide:** https://duckdb.org/docs/sql/window_fungsi (blok kode yang bisa dipanggil)s
+- **Window Functions Guide:** https://duckdb.org/docs/sql/window_functions
 
 ## Sesi Selanjutnya
 

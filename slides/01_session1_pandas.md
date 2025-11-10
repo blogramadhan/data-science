@@ -72,7 +72,7 @@ Setelah sesi ini, Anda bisa:
 | Waktu | Topik | Durasi |
 |-------|-------|--------|
 | 09:00 - 09:30 | Persiapan Environment | 30 min |
-| 09:30 - 11:00 | Exploratory Data Analysis (EDA) | 90 min |
+| 09:30 - 11:00 | Exploratory Analisis Data (EDA) | 90 min |
 | 11:00 - 11:15 | **BREAK** | 15 min |
 | 11:15 - 12:00 | Latihan Praktis & Q&A | 45 min |
 
@@ -299,7 +299,7 @@ print(subset.head())
 
 <div>
 
-### `.loc[]` - Label-based
+### `.loc[]` - Berbasis label
 
 ```python
 # Rows 0 sampai 4
@@ -319,7 +319,7 @@ high_value = df.loc[
 
 <div>
 
-### `.iloc[]` - Integer-based
+### `.iloc[]` - Berbasis integer
 
 ```python
 # Rows 0 sampai 4 (exclusive)
@@ -328,10 +328,10 @@ df.iloc[0:5]
 # Specific rows & columns
 df.iloc[0:5, [0, 1, 2]]
 
-# First 100 rows
+# Pertama 100 rows
 df.iloc[:100]
 
-# Last 50 rows
+# Terakhir 50 rows
 df.iloc[-50:]
 ```
 
@@ -422,7 +422,7 @@ print(grouped)
 # 🎯 GroupBy: Agregasi Multiple Functions
 
 ```python
-# Gabung dengan multiple fungsi (blok kode yang bisa dipanggil)s
+# Gabung dengan multiple functions
 agg_result = df.groupby('metode_pengadaan')['pagu'].agg([
     'count',  # Jumlah paket
     'sum',    # Total pagu
@@ -874,7 +874,7 @@ plt.show()
 6. **Custom Analysis**
    - Filter paket konstruksi dengan pagu > 1M
    - Analisis per kategori pengadaan
-   - Create summary report
+   - Buat laporan ringkasan
 
 ---
 
@@ -889,12 +889,12 @@ plt.show()
 ## Tips Analisis Data
 
 1. **Selalu mulai dengan EDA** 🔍
-   - Understand your data sebelum analysis
+   - Pahami data Anda sebelum analisis
 
-2. **Document your code** 📝
+2. **Dokumentasikan kode Anda** 📝
    - Gunakan comments dan markdown cells
 
-3. **Method chaining untuk readability** ⛓️
+3. **Method chaining agar mudah dibaca** ⛓️
    ```python
    result = (df
              .groupby('metode')['pagu']
@@ -903,16 +903,16 @@ plt.show()
              .head(10))
    ```
 
-4. **Handle missing values dengan hati-hati** ⚠️
+4. **Tangani nilai yang hilang dengan hati-hati** ⚠️
    - Jangan asal drop atau fill
 
 ---
 
 # 💡 Praktik Terbaik (lanjutan)
 
-5. **Validate your results** ✅
-   - Cross-check dengan berbagai metode
-   - Sanity check (apakah masuk akal?)
+5. **Validasi hasil Anda** ✅
+   - Periksa ulang dengan berbagai metode
+   - Periksa kewajaran (apakah masuk akal?)
 
 6. **Visualisasi untuk insight** 📊
    - A picture is worth a thousand numbers
@@ -942,7 +942,7 @@ plt.show()
    # ❌ Bad
    df[df['pagu'] > 1000000]['new_col'] = value
 
-   # ✅ Good
+   # ✅ Baik
    df.loc[df['pagu'] > 1000000, 'new_col'] = value
    ```
 
@@ -951,7 +951,7 @@ plt.show()
    # ❌ Bad
    df['col'][0] = value
 
-   # ✅ Good
+   # ✅ Baik
    df.loc[0, 'col'] = value
    ```
 
@@ -967,12 +967,12 @@ plt.show()
    df_filtered = df[df['pagu'] > 1000000].reset_index(drop=True)
    ```
 
-5. **Menggunakan `and`/`or` instead of `&`/`|` untuk boolean**
+5. **Menggunakan `and`/`or` daripada `&`/`|` untuk boolean**
    ```python
    # ❌ Bad
    df[(df['pagu'] > 1000) and (df['metode'] == 'Tender')]
 
-   # ✅ Good
+   # ✅ Baik
    df[(df['pagu'] > 1000) & (df['metode'] == 'Tender')]
    ```
 
@@ -987,7 +987,7 @@ plt.show()
 - ✅ `.loc[]` untuk label-based, `.iloc[]` untuk integer-based
 - ✅ Boolean indexing untuk filtering
 - ✅ GroupBy untuk agregasi dan summary
-- ✅ Handle missing values dengan strategi yang tepat
+- ✅ Tangani nilai yang hilang dengan strategi yang tepat
 - ✅ Visualisasi untuk memahami data
 - ✅ Method chaining untuk code yang clean
 
@@ -995,7 +995,7 @@ plt.show()
 
 ---
 
-# 🔗 Sumber Daya Resources & Next Steps Langkah Selanjutnya
+# 🔗 Sumber Daya Resources & Selanjutnya Steps Langkah Selanjutnya
 
 ## Dokumentasi & Cheat Sheets
 
@@ -1007,7 +1007,7 @@ plt.show()
 
 **Sesi 2: DuckDB untuk Query Analitik**
 - SQL queries pada dataset besar
-- Window fungsi (blok kode yang bisa dipanggil)s & CTEs
+- Window functions & CTEs
 - Integration dengan Pandas
 - Kecepatan comparison
 
