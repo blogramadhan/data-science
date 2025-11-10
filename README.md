@@ -967,12 +967,10 @@ df = duckdb.query("SELECT * FROM 'large_file.parquet' LIMIT 10000").df()
 ## 📞 Dukungan & Kontak
 
 **Untuk pertanyaan atau dukungan:**
-- Email: [your-email@example.com]
-- GitHub Issues: [repository-issues-url]
-- Discord/Slack: [community-link]
+- Email: kurnia@ramadhan.me
 
 **Umpan Balik:**
-Kami sangat menghargai umpan balik Anda untuk meningkatkan materi bootcamp ini. Silakan kirim umpan balik melalui formulir atau email.
+Kami sangat menghargai umpan balik Anda untuk meningkatkan materi bootcamp ini. Silakan kirim umpan balik melalui email.
 
 ---
 
@@ -993,4 +991,4 @@ Terima kasih kepada:
 
 **Selamat Belajar! Selamat Coding! 🎉**
 
-*Terakhir diperbarui: 2024*
+*Terakhir diperbarui: 2025*
