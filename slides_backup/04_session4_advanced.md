@@ -823,9 +823,9 @@ else:
 
 ---
 
-# 🎯 Latihan Praktis
+# 🎯 Hands-On Practice
 
-## Latihan
+## Exercises
 
 1. **Data Cleaning**
    - Handle missing values in your dataset
@@ -844,7 +844,7 @@ else:
 
 ---
 
-# 💡 Praktik Terbaik
+# 💡 Best Practices
 
 ## Data Cleaning
 
@@ -866,7 +866,7 @@ else:
 
 ---
 
-# 💡 Praktik Terbaik (lanjutan)
+# 💡 Best Practices (lanjutan)
 
 ## Statistical Analysis
 
@@ -886,7 +886,7 @@ else:
 
 ---
 
-# 📚 Poin Penting
+# 📚 Key Takeaways
 
 - ✅ Data cleaning adalah critical step (80% effort!)
 - ✅ Handle missing values based on pattern & domain
@@ -908,7 +908,7 @@ else:
 - **Statsmodels:** https://www.statsmodels.org/
 - **Practical Statistics for Data Scientists** (Book)
 
-## Sesi Selanjutnya
+## Next Session
 
 **Sesi 5: Dashboard Interaktif dengan Streamlit**
 - Building web apps with Streamlit
@@ -928,6 +928,6 @@ else:
 
 **Makan siang sampai 13:00**
 
-### Pertanyaan?? 🙋
+### Questions? 🙋
 
 **Next: Building Dashboards!** 🚀

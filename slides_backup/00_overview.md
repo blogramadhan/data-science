@@ -271,7 +271,7 @@ data-science/
 
 # 🚀 Setup Environment
 
-## Memulai Cepat
+## Quick Start
 
 ```bash
 # 1. Clone repository
@@ -517,8 +517,8 @@ J: Yang penting adalah keterampilan dan portofolio yang dihasilkan!
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-# Terima Kasih! 🙏
+# Thank You! 🙏
 
 **Good Luck & Happy Learning!**
 
-*Pertanyaan sebelum kita mulai?*
+*Questions before we start?*

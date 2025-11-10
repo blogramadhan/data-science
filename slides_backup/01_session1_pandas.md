@@ -74,7 +74,7 @@ Setelah sesi ini, Anda akan mampu:
 | 09:00 - 09:30 | Persiapan Environment | 30 min |
 | 09:30 - 11:00 | Exploratory Data Analysis (EDA) | 90 min |
 | 11:00 - 11:15 | **BREAK** | 15 min |
-| 11:15 - 12:00 | Latihan Praktis & Q&A | 45 min |
+| 11:15 - 12:00 | Hands-On Practice & Q&A | 45 min |
 
 ---
 
@@ -833,7 +833,7 @@ plt.show()
 
 # 🎯 Praktik Hands-On
 
-## Latihan untuk Anda Coba
+## Exercises untuk Anda Coba
 
 1. **Analisis Distribusi Pagu**
    - Hitung mean, median, std dev
@@ -854,7 +854,7 @@ plt.show()
 
 # 🎯 Praktik Hands-On (lanjutan)
 
-## Latihan Tambahan
+## More Exercises
 
 4. **Trend Analysis**
    - Plot pengumuman paket per bulan
@@ -874,7 +874,7 @@ plt.show()
 
 ---
 
-# 💡 Praktik Terbaik
+# 💡 Best Practices
 
 ## Tips untuk Analisis Data Efektif
 
@@ -898,7 +898,7 @@ plt.show()
 
 ---
 
-# 💡 Praktik Terbaik (lanjutan)
+# 💡 Best Practices (lanjutan)
 
 5. **Validate your results** ✅
    - Cross-check dengan berbagai metode
@@ -919,7 +919,7 @@ plt.show()
 
 ---
 
-# ⚠️ Kesalahan Umum
+# ⚠️ Common Pitfalls
 
 ## Kesalahan yang Sering Terjadi
 
@@ -943,7 +943,7 @@ plt.show()
 
 ---
 
-# ⚠️ Kesalahan Umum (lanjutan)
+# ⚠️ Common Pitfalls (lanjutan)
 
 3. **Tidak handle missing values**
    - Selalu check sebelum calculation
@@ -964,7 +964,7 @@ plt.show()
 
 ---
 
-# 📚 Poin Penting
+# 📚 Key Takeaways
 
 ## Yang Harus Anda Ingat
 
@@ -981,7 +981,7 @@ plt.show()
 
 ---
 
-# 🔗 Sumber Daya Resources & Next Steps Langkah Selanjutnya
+# 🔗 Resources & Next Steps
 
 ## Dokumentasi & Cheat Sheets
 
@@ -989,7 +989,7 @@ plt.show()
 - **Pandas Cheat Sheet:** https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
 - **10 Minutes to Pandas:** https://pandas.pydata.org/docs/user_guide/10min.html
 
-## Sesi Selanjutnya
+## Next Session
 
 **Sesi 2: DuckDB untuk Query Analitik**
 - SQL queries pada dataset besar
@@ -1012,7 +1012,7 @@ plt.show()
 
 *Jangan lupa save notebook Anda!*
 
-### Pertanyaan?? 🙋
+### Questions? 🙋
 
 ---
 
@@ -1025,4 +1025,4 @@ plt.show()
 - 💬 **Ask:** Jangan ragu bertanya!
 - 🐛 **Issues:** GitHub issues untuk bug reports
 
-**Sampai jumpa di Sesi 2!** 🚀
+**See you at Sesi 2!** 🚀

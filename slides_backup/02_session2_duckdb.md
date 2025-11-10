@@ -794,7 +794,7 @@ result_df.to_excel('rup_report.xlsx', index=False)
 
 ---
 
-# 🎯 Contoh Dunia Nyata
+# 🎯 Real-World Examples
 
 ## Example 1: Top Satker Analysis
 
@@ -824,7 +824,7 @@ ORDER BY total_pagu DESC;
 
 ---
 
-# 🎯 Contoh Dunia Nyata
+# 🎯 Real-World Examples
 
 ## Example 2: Monthly Trend Analysis
 
@@ -852,7 +852,7 @@ ORDER BY bulan;
 
 ---
 
-# 🎯 Contoh Dunia Nyata
+# 🎯 Real-World Examples
 
 ## Example 3: Pivot Analysis
 
@@ -877,7 +877,7 @@ GROUP BY metode_pengadaan;
 
 ---
 
-# 💡 Praktik Terbaik
+# 💡 Best Practices
 
 ## Tips Menulis SQL yang Baik
 
@@ -899,7 +899,7 @@ GROUP BY metode_pengadaan;
 
 ---
 
-# 💡 Praktik Terbaik (lanjutan)
+# 💡 Best Practices (lanjutan)
 
 5. **Gunakan meaningful aliases** 🏷️
    ```sql
@@ -923,9 +923,9 @@ GROUP BY metode_pengadaan;
 
 ---
 
-# 🎯 Latihan Praktis
+# 🎯 Hands-On Practice
 
-## Latihan untuk Anda
+## Exercises untuk Anda
 
 1. **Basic Aggregation**
    - Top 10 satker by total pagu
@@ -944,7 +944,7 @@ GROUP BY metode_pengadaan;
 
 ---
 
-# 🎯 Latihan Praktis (lanjutan)
+# 🎯 Hands-On Practice (lanjutan)
 
 4. **Complex Analysis**
    - Pivot table: Metode vs Jenis
@@ -963,7 +963,7 @@ GROUP BY metode_pengadaan;
 
 ---
 
-# 📚 Poin Penting
+# 📚 Key Takeaways
 
 ## Yang Harus Anda Ingat
 
@@ -989,7 +989,7 @@ GROUP BY metode_pengadaan;
 - **DuckDB Python API:** https://duckdb.org/docs/api/python/overview
 - **Window Functions Guide:** https://duckdb.org/docs/sql/window_functions
 
-## Sesi Selanjutnya
+## Next Session
 
 **Sesi 3: Visualisasi Data**
 - Matplotlib & Seaborn untuk static plots
@@ -1009,13 +1009,13 @@ GROUP BY metode_pengadaan;
 
 **Coffee Break sampai 15:45**
 
-### Pertanyaan?? 🙋
+### Questions? 🙋
 
 ---
 
-# 📞 Referensi Cepat
+# 📞 Quick Reference
 
-## Pola Umum
+## Common Patterns
 
 ```sql
 -- Aggregation
@@ -1036,4 +1036,4 @@ SELECT * FROM (
 ) WHERE rn <= 5;
 ```
 
-**Sampai jumpa di Sesi 3!** 🚀
+**See you at Sesi 3!** 🚀

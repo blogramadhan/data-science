@@ -1048,7 +1048,7 @@ if 'df' not in locals():
 
 ---
 
-# 🎯 Praktik Terbaik
+# 🎯 Best Practices
 
 ## Performance
 
@@ -1075,7 +1075,7 @@ if 'df' not in locals():
 
 ---
 
-# 🎯 Praktik Terbaik (lanjutan)
+# 🎯 Best Practices (lanjutan)
 
 ## UX/UI
 
@@ -1101,7 +1101,7 @@ if 'df' not in locals():
 
 ---
 
-# 🎯 Praktik Terbaik (lanjutan)
+# 🎯 Best Practices (lanjutan)
 
 ## Code Organization
 
@@ -1138,9 +1138,9 @@ if __name__ == "__main__":
 
 ---
 
-# 🎯 Latihan Praktis
+# 🎯 Hands-On Practice
 
-## Latihan Akhir
+## Final Exercise
 
 **Build Your Own Dashboard!**
 
@@ -1154,7 +1154,7 @@ Requirements:
 7. ✅ Error handling
 8. ✅ Caching
 
-**Waktu: 1 jam**
+**Time: 1 hour**
 
 ---
 
@@ -1212,7 +1212,7 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 📚 Poin Penting
+# 📚 Key Takeaways
 
 - ✅ Streamlit = Python → Web App (no web dev needed!)
 - ✅ Rich widget library untuk interactivity
@@ -1282,7 +1282,7 @@ host = st.secrets["database"]["host"]
 
 # 🚀 Next Steps
 
-## Lanjutkan Perjalanan Belajar Anda
+## Continue Your Learning Journey
 
 1. **Build Projects** 💻
    - Find datasets you're interested in
@@ -1324,9 +1324,9 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 🎯 Jalur Karir
+# 🎯 Career Paths
 
-## Kemana Anda Bisa Pergi?
+## Where Can You Go?
 
 - **Data Analyst** - Business insights & reporting
 - **Business Intelligence Analyst** - Dashboards & viz
@@ -1339,9 +1339,9 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 💡 Tips Akhir
+# 💡 Final Tips
 
-## Untuk Sukses in Data Field
+## For Success in Data Field
 
 1. **Practice Regularly** 🏋️
    - Consistency > intensity
@@ -1364,9 +1364,9 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 📊 Statistik Bootcamp
+# 📊 Bootcamp Statistics
 
-## Apa yang Kami Bahas
+## What We Covered
 
 - **Duration:** 16 hours (2 days)
 - **Sessions:** 5 comprehensive sessions
@@ -1383,7 +1383,7 @@ host = st.secrets["database"]["host"]
 
 # 📝 Feedback
 
-## Bantu Kami Berkembang
+## Help Us Improve
 
 We'd love to hear your feedback:
 
@@ -1398,7 +1398,7 @@ We'd love to hear your feedback:
 
 # 🎓 Certificate
 
-## Anda Layak Mendapatkannya!
+## You Earned It!
 
 **Congratulations on completing:**
 
@@ -1415,7 +1415,7 @@ You've demonstrated:
 
 ---
 
-# 📞 Tetap Terhubung
+# 📞 Stay Connected
 
 ## Resources & Support
 
@@ -1436,18 +1436,18 @@ You've demonstrated:
 
 ## You Did It! 🏆
 
-### Terima Kasih for Participating!
+### Thank You for Participating!
 
 **Keep Coding, Keep Learning, Keep Building!**
 
-*Pertanyaan?? Let's discuss!* 💬
+*Questions? Let's discuss!* 💬
 
 ---
 
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-# 🙏 Terima Kasih!
+# 🙏 Thank You!
 
 **Good Luck with Your**
 **Data Analytics Journey!**
@@ -1459,9 +1459,9 @@ You've demonstrated:
 
 ---
 
-# 📚 Sumber Daya Bonus
+# 📚 Bonus Resources
 
-## Materi Pembelajaran Tambahan
+## Additional Learning Materials
 
 **Books:**
 - "Python for Data Analysis" - Wes McKinney

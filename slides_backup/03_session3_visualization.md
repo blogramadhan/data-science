@@ -769,7 +769,7 @@ for fmt in ['html', 'png', 'pdf']:
 
 # 🎨 Data Visualization Principles
 
-## Praktik Terbaik
+## Best Practices
 
 1. **Choose the right chart** 📊
    - Match chart type to data type
@@ -831,9 +831,9 @@ for fmt in ['html', 'png', 'pdf']:
 
 ---
 
-# 🎯 Latihan Praktis
+# 🎯 Hands-On Practice
 
-## Latihan untuk Anda
+## Exercises untuk Anda
 
 1. **Distribution Analysis**
    - Histogram pagu dengan customization
@@ -852,7 +852,7 @@ for fmt in ['html', 'png', 'pdf']:
 
 ---
 
-# 🎯 Latihan Praktis (lanjutan)
+# 🎯 Hands-On Practice (lanjutan)
 
 4. **Interactive Dashboards**
    - Create subplot dengan 4 charts
@@ -916,7 +916,7 @@ fig.update_layout(autosize=True)
 
 ---
 
-# 📚 Poin Penting
+# 📚 Key Takeaways
 
 ## Yang Harus Anda Ingat
 
@@ -982,23 +982,23 @@ fig.update_layout(autosize=True)
 
 **See you tomorrow at 09:00** 🚀
 
-### Pertanyaan?? 🙋
+### Questions? 🙋
 
 ---
 
-# 📞 Tugas Rumah (Opsional)
+# 📞 Homework (Optional)
 
-## Latihan untuk Malam Ini
+## Practice untuk Malam Ini
 
-1. **Jelajahi Dataset Lain**
+1. **Explore Dataset Lain**
    - Cari dataset di Kaggle
    - Apply teknik hari ini
 
-2. **Buat Sendiri Visualizations**
+2. **Create Your Own Visualizations**
    - Experiment dengan styling
    - Try different chart types
 
-3. **Baca Dokumentasi**
+3. **Read Documentation**
    - Plotly express gallery
    - Seaborn examples
 
