@@ -4,7 +4,7 @@ theme: default
 paginate: true
 backgroundColor: #fff
 header: 'Sesi 4: Teknik Analisis Data Lanjutan'
-footer: 'Bootcamp Analisis Data | Hari 2'
+footer: '© 2025 | Data Science Bootcamp | Hari 2'
 ---
 
 <style>
@@ -976,17 +976,6 @@ else:
 
 ---
 
-# 📞 Tetap Terhubung
-
-## Resources & Support
-
-- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
-- 📧 **Email:** [kurnia@ramadhan.me]
-
-**We're here to support your journey!** 🤝
-
----
-
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
@@ -999,3 +988,14 @@ else:
 ### Pertanyaan?? 🙋
 
 **Selanjutnya: Building Dashboards!** 🚀
+
+---
+
+# 📞 Tetap Terhubung
+
+## Resources & Support
+
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
+
+**We're here to support your journey!** 🤝

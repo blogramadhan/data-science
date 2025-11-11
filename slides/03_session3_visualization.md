@@ -4,7 +4,7 @@ theme: default
 paginate: true
 backgroundColor: #fff
 header: 'Sesi 3: Visualisasi Data'
-footer: 'Bootcamp Analisis Data | Hari 1'
+footer: '© 2025 | Data Science Bootcamp | Hari 1'
 ---
 
 <style>

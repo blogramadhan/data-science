@@ -4,7 +4,7 @@ theme: default
 paginate: true
 backgroundColor: #fff
 header: 'Sesi 5: Dashboard Interaktif dengan Streamlit'
-footer: 'Bootcamp Analisis Data | Hari 2'
+footer: '© 2025 | Data Science Bootcamp | Hari 2'
 ---
 
 <style>
@@ -1546,14 +1546,14 @@ You've demonstrated:
 
 ---
 
-# 📚 Sumber Daya Bonus
+# 📚 Sumber Daya Lainnya
 
 ## Materi Pembelajaran Tambahan
 
 **Books:**
-- "Python for Analisis Data" - Wes McKinney
-- "Storytelling with Data" - Cole Nussbaumer Knaflic
-- "Practical Statistics for Data Scientists"
+- **"Python for Data Analysis"** karya Wes McKinney (Pembuat Pandas)
+- **"Streamlit for Data Science: Create Interactive Data Apps in Python"** karya Tyler Richards
+- **"DuckDB in Action"** karya Mark Needham & Simon Aubury (MotherDuck)
 
 **Online Courses:**
 - Kaggle Learn
@@ -1563,7 +1563,7 @@ You've demonstrated:
 
 ---
 
-# 📚 Sumber Daya Bonus (lanjutan)
+# 📚 Sumber Daya Lainnya (lanjutan)
 
 **Communities:**
 - r/datascience

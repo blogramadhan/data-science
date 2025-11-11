@@ -4,7 +4,7 @@ theme: default
 paginate: true
 backgroundColor: #fff
 header: 'Sesi 2: DuckDB untuk Query Analitik'
-footer: 'Bootcamp Analisis Data | Hari 1'
+footer: '© 2025 | Data Science Bootcamp | Hari 1'
 ---
 
 <style>
@@ -1066,8 +1066,8 @@ GROUP BY metode_pengadaan;
 - ✅ Window functions untuk ranking & running calculations
 - ✅ CTEs membuat complex queries lebih readable
 - ✅ Native integration dengan Pandas
-- ✅ Often lebih cepat dari Pandas untuk penggabungans
-- ✅ Can query Parquet files directly
+- ✅ Lebih cepat dari Pandas untuk penggabungans
+- ✅ Query file Parquet secara langsung
 - ✅ No server needed - embedded database
 
 **DuckDB + Pandas = Powerful combo!** 💪

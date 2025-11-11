@@ -3,8 +3,8 @@ marp: true
 theme: default
 paginate: true
 backgroundColor: #fff
-header: 'Bootcamp Analisis Data - Python, DuckDB & Streamlit'
-footer: '© 2024 | Data Science Bootcamp'
+header: 'Bootcamp Data Science - Python, DuckDB & Streamlit'
+footer: '© 2025 | Data Science Bootcamp'
 ---
 
 <style>
@@ -54,7 +54,7 @@ table {
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-# 📊 Bootcamp Analisis Data
+# 📊 Bootcamp Data Science
 ## Python, DuckDB & Streamlit
 
 ### Pembelajaran Praktis dengan Dataset Nyata
@@ -544,24 +544,6 @@ J: Yang penting adalah keterampilan dan portofolio yang dihasilkan!
 ### Python & Pandas untuk Analisis Data
 
 **Let's dive in!** 💪
-
----
-
-# 📞 Dukungan & Sumber Daya
-
-## Bantuan Selama Bootcamp
-
-- 💬 **Tanya Instruktur** - Jangan ragu bertanya
-- 👥 **Diskusi Grup** - Berkolaborasi dengan peserta lain
-- 📚 **Dokumentasi** - Referensi selalu tersedia
-- 💻 **Repository** - Semua kode ada di Git
-
-## Setelah Bootcamp
-
-- 📧 Dukungan email
-- 🐛 GitHub Issues untuk bug/pertanyaan
-- 💬 Komunitas Discord/Slack (jika ada)
-- 📖 Akses ke materi selamanya
 
 ---
 
