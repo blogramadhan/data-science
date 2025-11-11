@@ -77,6 +77,21 @@ Peserta akan membuat portfolio yang berisi:
 
 ---
 
+## 📑 Slides
+
+Seluruh materi presentasi tersedia di folder `slides/`. Gunakan [Marp](https://marp.app/) atau Markdown viewer favorit Anda untuk membukanya.
+
+| File | Fokus Materi | Referensi Praktik |
+| ---- | ------------ | ----------------- |
+| `slides/00_overview.md` | Agenda bootcamp, struktur hari 1 & 2 | Ikuti sebagai panduan umum sesi |
+| `slides/01_session1_pandas.md` | Sesi 1 – Pandas & EDA | Notebook `day1/session1_python_pandas` |
+| `slides/02_session2_duckdb.md` | Sesi 2 – DuckDB & SQL analitik | Notebook `day1/session2_duckdb` |
+| `slides/03_session3_visualization.md` | Sesi 3 – Visualisasi (Matplotlib/Seaborn/Plotly) | Notebook `day1/session3_visualization` |
+| `slides/04_session4_advanced.md` | Sesi 4 – Analisis lanjutan (cleaning, time series, statistik) | Notebook `day2/session4_advanced_analysis` |
+| `slides/05_session5_streamlit.md` | Sesi 5 – Dashboard Streamlit | Aplikasi `day2/session5_streamlit/apps` |
+
+---
+
 ## 🚀 Memulai
 
 ### 1. Persiapan Lingkungan
@@ -166,6 +181,7 @@ data-science/
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebook
 **Kumpulan Data:** RUP 2025
 **Notebook:** `day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb`
+**Slides:** `slides/01_session1_pandas.md`
 
 ### 🎯 Tujuan Sesi
 
@@ -244,6 +260,7 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 **Durasi:** 2.5 jam
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebook
 **Kumpulan Data:** RUP 2025
+**Slides:** `slides/02_session2_duckdb.md`
 
 ### Materi Pembelajaran
 
@@ -323,6 +340,7 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 **Durasi:** 1 jam 45 menit
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
 **Kumpulan Data:** RUP 2025
+**Slides:** `slides/03_session3_visualization.md`
 
 ### Materi Pembelajaran
 
@@ -421,6 +439,7 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 **Durasi:** 3 jam
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
 **Kumpulan Data:** RUP 2025
+**Slides:** `slides/04_session4_advanced.md`
 
 ### Materi Pembelajaran
 
@@ -586,6 +605,7 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 **Durasi:** 4.5 jam (termasuk istirahat)
 **Format Pembelajaran:** Praktikum Lab
 **Aplikasi:** 4 aplikasi Streamlit
+**Slides:** `slides/05_session5_streamlit.md`
 
 ### 5.1 Dasar-dasar Streamlit - LAB 10 (13:00 - 14:00)
 

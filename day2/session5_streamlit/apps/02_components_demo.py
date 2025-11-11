@@ -483,7 +483,7 @@ with st.sidebar:
         st.snow()
 
     st.divider()
-    st.caption("Bootcamp Data Analysis 2024")
+    st.caption("Bootcamp Data Analysis 2025")
 
 # ========================================
 # FOOTER

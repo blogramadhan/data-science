@@ -60,6 +60,32 @@ def load_sample_data():
 
     return df
 
+
+def convert_date_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Try to convert common date columns stored as string/object."""
+    date_keywords = ("date", "tanggal", "tgl", "time", "waktu")
+    for col in df.columns:
+        if pd.api.types.is_datetime64_any_dtype(df[col]):
+            continue
+        if df[col].dtype == object:
+            lower_name = col.lower()
+            should_try = any(keyword in lower_name for keyword in date_keywords)
+            if not should_try:
+                unique_ratio = df[col].nunique(dropna=True) / max(len(df[col]), 1)
+                should_try = unique_ratio > 0.3  # heuristic for potential timestamps
+            if should_try:
+                converted = pd.to_datetime(df[col], errors='coerce')
+                if converted.notna().mean() > 0.5:
+                    df[col] = converted
+    return df
+
+
+def prepare_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    """Central place for light preprocessing before analysis."""
+    df = df.copy()
+    df = convert_date_columns(df)
+    return df
+
 # ========================================
 # SESSION STATE
 # ========================================
@@ -93,16 +119,18 @@ with col1:
 
     if uploaded_file is not None:
         try:
-            if uploaded_file.name.endswith('.csv'):
-                df = pd.read_csv(uploaded_file)
-            else:
-                df = pd.read_excel(uploaded_file)
+            with st.spinner("📥 Membaca file..."):
+                if uploaded_file.name.endswith('.csv'):
+                    df = pd.read_csv(uploaded_file)
+                else:
+                    df = pd.read_excel(uploaded_file)
 
-            st.session_state.data = df
+            st.session_state.data = prepare_dataframe(df)
             st.success(f"✅ File '{uploaded_file.name}' loaded successfully!")
 
         except Exception as e:
             st.error(f"❌ Error loading file: {e}")
+            st.session_state.data = None
 
 with col2:
     st.subheader("📊 Use Sample Data")
@@ -113,7 +141,8 @@ with col2:
     """)
 
     if st.button("Load Sample Data"):
-        st.session_state.data = load_sample_data()
+        with st.spinner("Menyiapkan sample dataset..."):
+            st.session_state.data = prepare_dataframe(load_sample_data())
         st.success("✅ Sample data loaded!")
 
 # Check if data is loaded
@@ -440,21 +469,29 @@ with col1:
 with col2:
     if st.button("📋 Sample Queries"):
         st.code("""
--- Top 5 by numeric column
-SELECT * FROM data ORDER BY sales DESC LIMIT 5
+-- Top 5 baris by sales
+SELECT *
+FROM data
+ORDER BY sales DESC
+LIMIT 5;
 
--- Group by aggregation
-SELECT category, SUM(sales) as total_sales
-FROM data GROUP BY category
+-- Total sales per category
+SELECT category, SUM(sales) AS total_sales
+FROM data
+GROUP BY category
+ORDER BY total_sales DESC;
 
--- Filtering and sorting
-SELECT * FROM data
-WHERE sales > 1000
-ORDER BY date DESC
+-- Filter revenue dan urutkan tanggal
+SELECT date, product, revenue
+FROM data
+WHERE revenue > 5000
+ORDER BY date DESC;
 
--- Join example (if multiple tables)
-SELECT a.*, b.column FROM data a
-LEFT JOIN other_table b ON a.id = b.id
+-- Pivot sederhana: rata-rata sales per region & category
+SELECT region, category, AVG(sales) AS avg_sales
+FROM data
+GROUP BY region, category
+ORDER BY region, avg_sales DESC;
         """, language='sql')
 
 if execute_btn:
@@ -551,7 +588,7 @@ with st.sidebar:
     max_rows = st.slider("Max rows to display", 10, 100, 10)
 
     st.divider()
-    st.caption("Bootcamp Data Analysis 2024")
+    st.caption("Bootcamp Data Analysis 2025")
 
 # ========================================
 # FOOTER

@@ -12,6 +12,7 @@ Topik yang dipelajari:
 import streamlit as st
 import pandas as pd
 import numpy as np
+import time
 
 # ========================================
 # PAGE CONFIGURATION
@@ -157,10 +158,15 @@ st.info("ℹ️ Info: Streamlit akan auto-refresh setiap kali Anda save file.")
 st.warning("⚠️ Warning: Pastikan data sudah di-backup sebelum melanjutkan.")
 st.error("❌ Error: File tidak ditemukan!")
 
+# Spinner demo
+st.subheader("Loading Spinner")
+with st.spinner("Memuat data demo..."):
+    time.sleep(1.5)
+st.success("Data berhasil dimuat!")
+
 # Progress bar
 st.subheader("Progress Bar")
 progress_bar = st.progress(0)
-import time
 for percent_complete in range(100):
     time.sleep(0.01)
     progress_bar.progress(percent_complete + 1)
@@ -282,7 +288,7 @@ with st.sidebar:
 
     st.divider()
 
-    st.caption("Bootcamp Data Analysis 2024")
+    st.caption("Bootcamp Data Analysis 2025")
 
 # ========================================
 # FOOTER

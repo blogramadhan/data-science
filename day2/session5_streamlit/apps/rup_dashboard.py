@@ -10,13 +10,19 @@ import plotly.graph_objects as go
 import duckdb
 from datetime import datetime
 import numpy as np
+from pathlib import Path
 
 # Page config
 st.set_page_config(
     page_title="Dashboard RUP 2025",
     page_icon="📊",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        "Get Help": "https://docs.streamlit.io/",
+        "Report a bug": "https://thynk.my.id/",
+        "About": "# Dashboard Analisis RUP 2025\nBootcamp Data Analysis"
+    }
 )
 
 # Custom CSS
@@ -45,25 +51,57 @@ st.markdown("---")
 # Load data function with caching
 @st.cache_data
 def load_data():
-    """Load RUP data from parquet file"""
-    import os
-    from pathlib import Path
-
-    # Get the project root directory (3 levels up from this file)
+    """Load RUP data from parquet file."""
     current_file = Path(__file__).resolve()
     project_root = current_file.parent.parent.parent.parent
     data_path = project_root / 'datasets' / 'rup' / 'RUP-PaketPenyedia-Terumumkan-2025.parquet'
 
+    if not data_path.exists():
+        raise FileNotFoundError(f"Dataset not found at {data_path}")
+
     df = pd.read_parquet(data_path)
+    return format_date_columns(df)
 
-    # Convert date columns
-    date_columns = ['tgl_awal_pemilihan', 'tgl_akhir_pemilihan',
-                    'tgl_awal_kontrak', 'tgl_akhir_kontrak',
-                    'tgl_buat_paket', 'tgl_pengumuman_paket']
 
+@st.cache_data
+def generate_sample_rup_data(num_rows: int = 2000) -> pd.DataFrame:
+    """Fallback synthetic dataset when parquet file is unavailable."""
+    rng = np.random.default_rng(42)
+    satkers = [f"Satker {i:02d}" for i in range(1, 21)]
+    metode = ["Tender", "Penunjukan Langsung", "Tender Cepat", "E-Purchasing"]
+    jenis = ["Barang", "Jasa Konsultansi", "Jasa Lainnya", "Pekerjaan Konstruksi"]
+
+    base_date = datetime(2025, 1, 1)
+    data = {
+        "nama_paket": [f"Paket {i:05d}" for i in range(num_rows)],
+        "pagu": rng.integers(5e8, 5e11, num_rows).astype(float),
+        "nama_satker": rng.choice(satkers, num_rows),
+        "metode_pengadaan": rng.choice(metode, num_rows),
+        "jenis_pengadaan": rng.choice(jenis, num_rows),
+        "status_pdn": rng.choice(["Ya", "Tidak"], num_rows, p=[0.4, 0.6]),
+        "status_ukm": rng.choice(["Ya", "Tidak"], num_rows, p=[0.5, 0.5]),
+        "status_pradipa": rng.choice(["Ya", "Tidak"], num_rows, p=[0.3, 0.7]),
+        "tgl_pengumuman_paket": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(0, 365, num_rows)],
+        "tgl_buat_paket": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(-30, 335, num_rows)],
+        "tgl_awal_pemilihan": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(0, 200, num_rows)],
+        "tgl_akhir_pemilihan": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(30, 300, num_rows)],
+        "tgl_awal_kontrak": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(60, 320, num_rows)],
+        "tgl_akhir_kontrak": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(90, 365, num_rows)],
+    }
+    df = pd.DataFrame(data)
+    return df
+
+
+def format_date_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Ensure all relevant date columns are datetime."""
+    date_columns = [
+        'tgl_awal_pemilihan', 'tgl_akhir_pemilihan',
+        'tgl_awal_kontrak', 'tgl_akhir_kontrak',
+        'tgl_buat_paket', 'tgl_pengumuman_paket'
+    ]
     for col in date_columns:
-        df[col] = pd.to_datetime(df[col], errors='coerce')
-
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors='coerce')
     return df
 
 # Initialize DuckDB connection
@@ -74,13 +112,19 @@ def init_duckdb():
 
 # Load data
 with st.spinner('⏳ Loading data...'):
-    df = load_data()
-    conn = init_duckdb()
+    try:
+        df = load_data()
+        data_source = "dataset resmi"
+    except FileNotFoundError as e:
+        st.warning(f"⚠️ {e}")
+        st.info("Memuat sample data agar demo tetap berjalan.")
+        df = format_date_columns(generate_sample_rup_data())
+        data_source = "sample generator"
 
-    # Register DataFrame in DuckDB
+    conn = init_duckdb()
     conn.register('rup', df)
 
-st.success(f'✅ Data loaded successfully! Total records: {len(df):,}')
+st.success(f'✅ Data loaded successfully from {data_source}! Total records: {len(df):,}')
 
 # Sidebar filters
 st.sidebar.header("🔍 Filters")
@@ -130,13 +174,13 @@ def apply_filters():
     query += f" AND pagu >= {pagu_range[0] * 1e9} AND pagu <= {pagu_range[1] * 1e9}"
 
     if show_pdn:
-        query += " AND status_pdn = 'PDN'"
+        query += " AND status_pdn = 'Ya'"
 
     if show_ukm:
-        query += " AND status_ukm = 'UKM'"
+        query += " AND status_ukm = 'Ya'"
 
     if show_pradipa:
-        query += " AND status_pradipa = 'PraDIPA'"
+        query += " AND status_pradipa = 'Ya'"
 
     return conn.execute(query).df()
 
@@ -164,7 +208,7 @@ with col2:
     total_pagu = filtered_df['pagu'].sum()
     st.metric(
         label="Total Pagu",
-        value=f"Rp {total_pagu/1e12:.2f} T",
+        value=f"Rp {total_pagu/1e9:.2f} M",
         delta=f"{(total_pagu/df['pagu'].sum()*100):.1f}% dari total"
     )
 
@@ -172,7 +216,7 @@ with col3:
     avg_pagu = filtered_df['pagu'].mean()
     st.metric(
         label="Rata-rata Pagu",
-        value=f"Rp {avg_pagu/1e9:.2f} M"
+        value=f"Rp {avg_pagu/1e6:.2f} Jt"
     )
 
 with col4:
@@ -533,11 +577,10 @@ with st.sidebar:
     # Export data
     st.markdown("---")
     st.subheader("📥 Export Data")
-    if st.button("Export Filtered Data (CSV)"):
-        csv = filtered_df.to_csv(index=False)
-        st.download_button(
-            label="Download CSV",
-            data=csv,
-            file_name=f"rup_filtered_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
-            mime="text/csv"
-        )
+    csv = filtered_df.to_csv(index=False)
+    st.download_button(
+        label="Download CSV",
+        data=csv,
+        file_name=f"rup_filtered_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+        mime="text/csv",
+    )
