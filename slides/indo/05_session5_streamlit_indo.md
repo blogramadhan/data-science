@@ -10,7 +10,7 @@ footer: '© 2025 | Data Science Bootcamp | Hari 2'
 <style>
 section {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 1.35;
 }
 p, li {
@@ -25,17 +25,18 @@ h2 {
   color: #2c5aa0;
 }
 code {
-  background-color: #f4f4f4;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 0.78em;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 0.8em;
 }
 pre {
   background-color: #2d2d2d;
   color: #f8f8f2;
-  padding: 12px;
+  padding: 15px;
   border-radius: 5px;
-  font-size: 0.55em;
+  font-size: 0.6em;
   line-height: 1.3;
 }
 .columns {

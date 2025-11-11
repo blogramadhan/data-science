@@ -25,9 +25,11 @@ h2 {
   color: #2c5aa0;
 }
 code {
-  background-color: #f4f4f4;
-  padding: 2px 6px;
-  border-radius: 3px;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 0.8em;
 }
 pre {
   background-color: #2d2d2d;
@@ -43,7 +45,6 @@ pre {
   gap: 20px;
 }
 ul {
-  line-height: 1.35;
   margin-bottom: 12px;
 }
 table {
