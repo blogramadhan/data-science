@@ -1509,11 +1509,8 @@ You've demonstrated:
 
 ## Resources & Support
 
-- 📧 **Email:** [support email]
-- 💬 **Community:** [Discord/Slack link]
-- 🐛 **Issues:** [GitHub issues]
-- 📚 **Materials:** [Repository link]
-- 💼 **LinkedIn:** [Instructor profiles]
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
 
 **We're here to support your journey!** 🤝
 

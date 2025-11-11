@@ -976,6 +976,17 @@ else:
 
 ---
 
+# 📞 Tetap Terhubung
+
+## Resources & Support
+
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
+
+**We're here to support your journey!** 🤝
+
+---
+
 <!-- _class: lead -->
 <!-- _paginate: false -->
 

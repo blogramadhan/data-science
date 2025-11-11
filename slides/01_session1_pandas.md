@@ -1090,3 +1090,14 @@ plt.show()
 - 🐛 **Issues:** GitHub issues untuk bug reports
 
 **Sampai jumpa di Sesi 2!** 🚀
+
+---
+
+# 📞 Tetap Terhubung
+
+## Resources & Support
+
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
+
+**We're here to support your journey!** 🤝

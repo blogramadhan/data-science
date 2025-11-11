@@ -1135,3 +1135,14 @@ SELECT * FROM (
 ```
 
 **Sampai jumpa di Sesi 3!** 🚀
+
+---
+
+# 📞 Tetap Terhubung
+
+## Resources & Support
+
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
+
+**We're here to support your journey!** 🤝

@@ -1053,3 +1053,14 @@ fig.update_layout(autosize=True)
    - Seaborn examples
 
 **See you tomorrow!** 💪
+
+---
+
+# 📞 Tetap Terhubung
+
+## Resources & Support
+
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
+
+**We're here to support your journey!** 🤝

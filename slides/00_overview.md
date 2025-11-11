@@ -573,3 +573,14 @@ J: Yang penting adalah keterampilan dan portofolio yang dihasilkan!
 **Good Luck & Happy Learning!**
 
 *Pertanyaan sebelum kita mulai?*
+
+---
+
+# 📞 Tetap Terhubung
+
+## Resources & Support
+
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
+
+**We're here to support your journey!** 🤝
