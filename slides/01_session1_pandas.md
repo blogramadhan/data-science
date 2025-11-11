@@ -557,6 +557,8 @@ import matplotlib.pyplot as plt
 missing_pct[missing_pct > 0].plot(kind='barh')
 plt.title('Percentage of Missing Values')
 plt.xlabel('Percentage (%)')
+plt.xticks(rotation=45)
+plt.tight_layout()
 plt.show()
 ```
 
@@ -935,13 +937,14 @@ plt.show()
 # 💡 Praktik Terbaik (lanjutan)
 
 3. **Method chaining agar mudah dibaca** ⛓️
-   ```python
-   result = (df
-             .groupby('metode')['pagu']
-             .sum()
-             .sort_values(ascending=False)
-             .head(10))
-   ```
+
+```python
+result = (df
+         .groupby('metode')['pagu']
+         .sum()
+         .sort_values(ascending=False)
+         .head(10))
+```
 
 4. **Tangani nilai yang hilang dengan hati-hati** ⚠️
    - Jangan asal drop atau fill

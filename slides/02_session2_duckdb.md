@@ -770,7 +770,7 @@ conn.register('rup', df)
 
 # 🐍 Penggabungan dengan Pandas (lanjutan)
 
-```sql
+```python
 # Query dan dapat hasil sebagai DataFrame
 result_df = conn.execute("""
     SELECT
@@ -1036,7 +1036,7 @@ GROUP BY metode_pengadaan;
    - Week-over-week growth
    - Identify trends
 
-4. **Rumit Analysis**
+4. **Analisis Rumit**
    - Pivot table: Metode vs Jenis
    - CTEs untuk multi-step analysis
    - Combine menyaring dan penggabungans

@@ -450,7 +450,7 @@ selected = st.selectbox(
 
 # Multi-select
 selected_list = st.multiselect(
-    "Select multiple:",
+    "Select multiple",
     options=df['metode_pengadaan'].unique()
 )
 ```
@@ -1250,20 +1250,24 @@ col1, col2 = st.columns([2, 1])
 st.dataframe(df, hide_index=True)
 
 # 3. Sticky header
-st.markdown("""
+st.markdown(
+    """
     <style>
     [data-testid="stHeader"] {
         background-color: rgba(255, 255, 255, 0.95);
     }
     </style>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True
+)
 
 # 4. Remove "Made with Streamlit"
-st.markdown("""
+st.markdown(
+    """
     <style>
     footer {visibility: hidden;}
     </style>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True
+)
 ```
 
 ---
