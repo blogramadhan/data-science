@@ -10,6 +10,11 @@ footer: 'Bootcamp Analisis Data | Hari 1'
 <style>
 section {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  line-height: 1.35;
+}
+p, li {
+  line-height: 1.35;
 }
 h1 {
   color: #1f77b4;
@@ -30,12 +35,19 @@ pre {
   color: #f8f8f2;
   padding: 15px;
   border-radius: 5px;
-  font-size: 0.75em;
+  font-size: 0.6em;
+  line-height: 1.3;
 }
 .columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+ul {
+  margin-bottom: 12px;
+}
+table {
+  font-size: 0.85em;
 }
 </style>
 

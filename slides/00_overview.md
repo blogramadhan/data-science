@@ -10,6 +10,11 @@ footer: '© 2024 | Data Science Bootcamp'
 <style>
 section {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  line-height: 1.35;
+}
+p, li {
+  line-height: 1.35;
 }
 h1 {
   color: #1f77b4;
@@ -29,6 +34,8 @@ pre {
   color: #f8f8f2;
   padding: 15px;
   border-radius: 5px;
+  font-size: 0.6em;
+  line-height: 1.3;
 }
 .columns {
   display: grid;
@@ -36,7 +43,11 @@ pre {
   gap: 20px;
 }
 ul {
-  line-height: 1.8;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+table {
+  font-size: 0.85em;
 }
 </style>
 
