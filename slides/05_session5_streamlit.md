@@ -596,7 +596,13 @@ st.slider(
 # Display calculated value
 if 'value_squared' in st.session_state:
     st.write(f"Squared: {st.session_state.value_squared}")
+```
 
+---
+
+# 🔄 Callbacks - Aksi Saat Ada Perubahan (lanjutan)
+
+```python
 # Button callback
 def reset():
     st.session_state.count = 0
@@ -706,7 +712,13 @@ if df[cat_col].dtype == 'object':
 
     if selected_values:
         df = df[df[cat_col].isin(selected_values)]
+```
 
+---
+
+# 🎯 Interactive Filters (lanjutan)
+
+```python
 # Numeric filter
 numeric_cols = df.select_dtypes(include=['number']).columns
 if len(numeric_cols) > 0:
@@ -779,7 +791,13 @@ query = st.text_area(
     value="SELECT * FROM data LIMIT 10",
     height=150
 )
+```
 
+---
+
+# 🦆 DuckDB Integration (lanjutan)
+
+```python
 if st.button("Run Query"):
     try:
         result = conn.execute(query).df()
@@ -850,7 +868,13 @@ with col2:
         "data.xlsx",
         "application/vnd.ms-excel"
     )
+```
 
+---
+
+# 📥 Export Functionality (lanjutan)
+
+```python
 # Export to Parquet
 with col3:
     parquet = df.to_parquet(index=False)
@@ -932,7 +956,13 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+```
 
+---
+
+# 💅 Custom CSS Styling (lanjutan)
+
+```python
 # Use custom HTML
 st.markdown('<h1 class="main-header">📊 Dashboard</h1>',
             unsafe_allow_html=True)
@@ -965,7 +995,13 @@ with col2:
         f"{total_pagu/1e12:.2f}T",
         delta="+2.3%"
     )
+```
 
+---
+
+# 📊 KPI Cards (lanjutan)
+
+```python
 with col3:
     st.metric(
         "Avg Pagu",
@@ -1004,7 +1040,13 @@ fig.add_trace(
     go.Pie(labels=metode_counts.index, values=metode_counts.values),
     row=1, col=2
 )
+```
 
+---
+
+# 📊 Advanced Plotly Charts (lanjutan)
+
+```python
 # Update layout
 fig.update_layout(height=800, showlegend=False)
 st.plotly_chart(fig, use_container_width=True)
@@ -1064,6 +1106,10 @@ if 'df' not in locals():
    duckdb
    ```
 
+---
+
+# 🚀 Deployment (lanjutan)
+
 3. **Deploy on Streamlit Cloud**
    - Go to https://share.streamlit.io
    - Connect GitHub repo
@@ -1093,6 +1139,10 @@ if 'df' not in locals():
    - Use session state
    - Disable auto-rerun for expensive operasi
 
+---
+
+# 🎯 Praktik Terbaik (lanjutan)
+
 4. **Lazy loading** ⏱️
    - Load data only when needed
    - Use pagination for large tables
@@ -1112,6 +1162,10 @@ if 'df' not in locals():
    - Descriptive text
    - Help tooltips
    - Contoh
+
+---
+
+# 🎯 Praktik Terbaik (lanjutan)
 
 3. **Feedback** 💬
    - Loading spinners
@@ -1149,7 +1203,13 @@ def create_filters():
 def display_metrics(df):
     # KPI cards
     pass
+```
 
+---
+
+# 🎯 Praktik Terbaik (lanjutan)
+
+```python
 def main():
     # Main app logic
     df = load_data()
@@ -1164,7 +1224,7 @@ if __name__ == "__main__":
 
 # 🎯 Latihan Praktis
 
-## Latihan Akhir
+## Latihan Akhir (Waktu 1 Jam)
 
 **Build Your Own Dashboard!**
 
@@ -1177,8 +1237,6 @@ Requirements:
 6. ✅ Custom styling
 7. ✅ Error handling
 8. ✅ Caching
-
-**Waktu: 1 jam**
 
 ---
 
@@ -1318,21 +1376,25 @@ host = st.secrets["database"]["host"]
    - Get feedback
    - Iterate and improve
 
+---
+
+# 🚀 Selanjutnya Steps (lanjutan)
+
 3. **Learn Advanced Topics** 📚
    - Machine Learning (scikit-learn)
    - Deep Learning (TensorFlow/PyTorch)
    - Big Data (Apache Spark)
    - Cloud Platforms (AWS, GCP, Azure)
 
----
-
-# 🚀 Selanjutnya Steps (lanjutan)
-
 4. **Join Communities** 👥
    - Kaggle competitions
    - Data science forums
    - Local meetups
    - Online communities
+
+---
+
+# 🚀 Selanjutnya Steps (lanjutan)
 
 5. **Kontribusi to Open Source** 🌟
    - GitHub projects
@@ -1375,6 +1437,10 @@ host = st.secrets["database"]["host"]
    - GitHub profile
    - Personal website
    - Blog posts
+
+---
+
+# 💡 Tips Akhir (lanjutan)
 
 3. **Learn in Public** 📢
    - Bagikan your projects
@@ -1497,6 +1563,10 @@ You've demonstrated:
 - DataCamp
 - Coursera
 - Cepat.ai
+
+---
+
+# 📚 Sumber Daya Bonus (lanjutan)
 
 **Communities:**
 - r/datascience

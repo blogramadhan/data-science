@@ -101,6 +101,10 @@ Setelah sesi ini, Anda bisa:
 - Rendah-level control
 - Customizable
 
+---
+
+## Static Visualizations for Statistical Analysis (lanjutan)
+
 **Seaborn:**
 - Built on top of Matplotlib
 - Statistical plots
@@ -704,7 +708,13 @@ for metode in df['metode_pengadaan'].unique():
         line=dict(width=2),
         marker=dict(size=6)
     ))
+```
 
+---
+
+# 🎨 Graph Objects: Lengkap Control (lanjutan)
+
+```python
 fig.update_layout(
     title='Trend per Metode Pengadaan',
     xaxis_title='Bulan',
@@ -802,14 +812,14 @@ for fmt in ['html', 'png', 'pdf']:
    - Skema warna yang konsisten
    - Palet ramah buta warna
 
+---
+
+# 🎨 Data Visualization Principles (lanjutan)
+
 4. **Beri label yang jelas** 🏷️
    - Judul yang deskriptif
    - Label sumbu dengan satuan
    - Sitasi sumber data
-
----
-
-# 🎨 Data Visualization Principles (lanjutan)
 
 5. **Tonjolkan poin-poin penting** 💡
    - Annotations untuk poin penting
@@ -818,6 +828,10 @@ for fmt in ['html', 'png', 'pdf']:
 6. **Pertimbangkan audiens Anda** 👥
    - Technical vs non-technical
    - Context matters
+
+---
+
+# 🎨 Data Visualization Principles (lanjutan)
 
 7. **Ceritakan sebuah kisah** 📖
    - Clear narrative flow
@@ -843,6 +857,10 @@ for fmt in ['html', 'png', 'pdf']:
 3. **Truncated Y-Axis** 📉
    - Perbandingan menyesatkan
 
+---
+
+# ❌ Common Visualization Mistakes (lanjutan)
+
 4. **Pie Charts with Many Slices** 🥧
    - Use bar chart instead
 
@@ -865,19 +883,23 @@ for fmt in ['html', 'png', 'pdf']:
    - Multi-line chart per metode
    - Seasonal patterns
 
+---
+
+# 🎯 Latihan Praktis (lanjutan)
+
 3. **Comparison Charts**
    - Top N satker horizontal bar
    - Grouped bar chart metode vs jenis
    - Stacked bar chart
 
----
-
-# 🎯 Latihan Praktis (lanjutan)
-
 4. **Interactive Dashboards**
    - Create subplot dengan 4 charts
    - Sunburst untuk hierarchy
    - Treemap untuk proportions
+
+---
+
+# 🎯 Latihan Praktis (lanjutan)
 
 5. **Advanced Customization**
    - Custom color schemes
@@ -984,6 +1006,10 @@ fig.update_layout(autosize=True)
 - Time series analysis
 - Statistical testing
 
+---
+
+# 🎉 Penutup Hari 1 (lanjutan)
+
 🚀 **Sesi 5:** Dashboard Interaktif dengan Streamlit
 - Building web apps
 - Interactive filters
@@ -1017,6 +1043,10 @@ fig.update_layout(autosize=True)
 2. **Buat Sendiri Visualizations**
    - Eksperimen dengan styling
    - Try different chart types
+
+---
+
+# 📞 Tugas Rumah (Opsional) (lanjutan)
 
 3. **Baca Dokumentasi**
    - Plotly express gallery

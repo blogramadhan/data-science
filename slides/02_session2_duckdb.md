@@ -92,6 +92,8 @@ Setelah sesi ini, Anda bisa:
 
 **Penjelasan Sederhana:** DuckDB itu seperti Excel yang bisa dipakai dengan SQL, tapi lebih cepat untuk analisis data besar
 
+---
+
 ## Database untuk Analisis Data (Tidak Perlu Install Server)
 
 **Mudahnya:** DuckDB bisa langsung dipakai tanpa setup ribet seperti database lain
@@ -180,8 +182,6 @@ DuckDB cocok untuk OLAP (analisis)
 
 </div>
 
-**DuckDB adalah OLAP database!** 🎯
-
 ---
 
 # 🛠️ Installation & Setup
@@ -233,6 +233,10 @@ result = duckdb.query("""
 """).df()
 ```
 
+</div>
+
+<div>
+
 ### 2. Register Pandas DataFrame
 
 ```python
@@ -250,6 +254,14 @@ result = conn.query("SELECT * FROM rup")
 
 <div>
 
+---
+
+# 📁 Loading Data ke DuckDB (lanjutan)
+
+<div class="columns">
+
+<div>
+
 ### 3. CREATE TABLE
 
 ```python
@@ -260,6 +272,10 @@ conn.execute("""
     'RUP-2025.parquet'
 """)
 ```
+
+</div>
+
+<div>
 
 ### 4. Load dari CSV
 
@@ -295,7 +311,13 @@ SELECT nama_paket, pagu
 FROM rup
 WHERE pagu > 1000000000
 LIMIT 10;
+```
 
+---
+
+# 🔍 Basic SQL Queries (lanjutan)
+
+```sql
 -- Multiple conditions
 SELECT *
 FROM rup
@@ -371,7 +393,13 @@ FROM rup
 GROUP BY metode_pengadaan
 HAVING COUNT(*) > 100  -- Filter after penggabungan
 ORDER BY total_pagu DESC;
+```
 
+---
+
+# 🔢 HAVING Clause (lanjutan)
+
+```sql
 -- Multiple HAVING conditions
 SELECT
     nama_satker,
@@ -550,6 +578,13 @@ top_satker AS (
     ORDER BY total_pagu DESC
     LIMIT 20
 )
+```
+
+---
+
+# 🔗 CTEs (Common Table Expressions) (lanjutan)
+
+```sql
 SELECT *
 FROM top_satker
 WHERE avg_pagu > 1000000;
@@ -579,6 +614,13 @@ jenis_stats AS (
     FROM rup
     GROUP BY jenis_pengadaan
 ),
+```
+
+---
+
+# 🎯 Multiple CTEs (lanjutan)
+
+```sql
 combined AS (
     SELECT 'Metode' as kategori, * FROM metode_stats
     UNION ALL
@@ -687,7 +729,13 @@ SELECT
     metode_pengadaan
 FROM rup
 LIMIT 20;
+```
 
+---
+
+# 🔢 CASE WHEN (Conditional Logic) (lanjutan)
+
+```sql
 -- Use in penggabungan
 SELECT
     CASE
@@ -716,7 +764,13 @@ df = pd.read_parquet('RUP-2025.parquet')
 # Register DataFrame
 conn = duckdb.connect(':memory:')
 conn.register('rup', df)
+```
 
+---
+
+# 🐍 Penggabungan dengan Pandas (lanjutan)
+
+```sql
 # Query dan dapat hasil sebagai DataFrame
 result_df = conn.execute("""
     SELECT
@@ -766,7 +820,13 @@ import time
 start = time.time()
 pandas_result = df.groupby('metode_pengadaan')['pagu'].agg(['count', 'sum', 'mean'])
 pandas_time = time.time() - start
+```
 
+---
+
+# ⚡ Kecepatan Comparison (lanjutan)
+
+```sql
 # DuckDB approach
 start = time.time()
 duckdb_result = conn.execute("""
@@ -785,7 +845,7 @@ print(f"DuckDB: {duckdb_time:.4f}s")
 print(f"Speedup: {pandas_time/duckdb_time:.2f}x")
 ```
 
-**DuckDB often faster untuk penggabungans!** ⚡
+**DuckDB lebih cepat!** ⚡
 
 ---
 
@@ -836,6 +896,13 @@ ranked_satker AS (
         ROW_NUMBER() OVER (ORDER BY total_paket DESC) as rank_by_count
     FROM satker_metrics
 )
+```
+
+---
+
+## Example 1: Top Satker Analysis (lanjutan)
+
+```sql
 SELECT * FROM ranked_satker
 WHERE rank_by_pagu <= 20 OR rank_by_count <= 20
 ORDER BY total_pagu DESC;
@@ -913,12 +980,12 @@ GROUP BY metode_pengadaan;
    EXPLAIN SELECT * FROM rup WHERE pagu > 1000000;
    ```
 
-4. **Limit results saat development** 🎯
-   - Gunakan LIMIT untuk testing
-
 ---
 
 # 💡 Praktik Terbaik (lanjutan)
+
+4. **Limit results saat development** 🎯
+   - Gunakan LIMIT untuk testing
 
 5. **Gunakan meaningful aliases** 🏷️
    ```sql
@@ -930,6 +997,10 @@ GROUP BY metode_pengadaan;
 
 6. **Format SQL agar mudah dibaca** ✨
    - Indentation, line breaks, uppercase keywords
+
+---
+
+# 💡 Praktik Terbaik (lanjutan)
 
 7. **Avoid SELECT *** ⚠️
    - Tentukan kolom yang dibutuhkan saja
@@ -956,19 +1027,23 @@ GROUP BY metode_pengadaan;
    - Top 3 paket per satker
    - Running total per month
 
+---
+
+# 🎯 Latihan Praktis (lanjutan)
+
 3. **Time Series**
    - Monthly penggabungan
    - Week-over-week growth
    - Identify trends
 
----
-
-# 🎯 Latihan Praktis (lanjutan)
-
 4. **Rumit Analysis**
    - Pivot table: Metode vs Jenis
    - CTEs untuk multi-step analysis
    - Combine menyaring dan penggabungans
+
+---
+
+# 🎯 Latihan Praktis (lanjutan)
 
 5. **Kecepatan Test**
    - Compare Pandas vs DuckDB
@@ -1007,6 +1082,10 @@ GROUP BY metode_pengadaan;
 - **SQL Reference:** https://duckdb.org/docs/sql/introduction
 - **DuckDB Python API:** https://duckdb.org/docs/api/python/overview
 - **Window Functions Guide:** https://duckdb.org/docs/sql/window_functions
+
+---
+
+# 🔗 Resources (lanjutan)
 
 ## Sesi Selanjutnya
 

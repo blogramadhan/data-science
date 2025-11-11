@@ -140,6 +140,10 @@ Setelah bootcamp ini, Anda akan mampu:
 - ✅ Menambahkan filter interaktif di dashboard
 - ✅ Membuat dashboard yang siap dipakai
 
+---
+
+# 🎯 Tujuan Pembelajaran (lanjutan)
+
 ### 5. Teknik Analisis Dasar & Lanjutan
 - ✅ Menganalisis data berdasarkan waktu (time series)
 - ✅ Melakukan uji statistik sederhana
@@ -188,11 +192,6 @@ Bootcamp ini cocok untuk:
 - **uv** - Untuk install library (otomatis & mudah)
 - **Git** - Untuk backup kode
 
-### Untuk Olah Data
-- **Pandas** - Untuk baca & olah data (seperti Excel tapi lebih powerful)
-- **NumPy** - Untuk hitung-hitungan angka
-- **DuckDB** - Untuk query data dengan SQL (cepat!)
-
 </div>
 
 <div>
@@ -209,6 +208,15 @@ Bootcamp ini cocok untuk:
 </div>
 
 </div>
+
+---
+
+# 🛠️ Tools & Libraries (lanjutan)
+
+### Untuk Olah Data
+- **Pandas** - Untuk baca & olah data (seperti Excel tapi lebih powerful)
+- **NumPy** - Untuk hitung-hitungan angka
+- **DuckDB** - Untuk query data dengan SQL (cepat!)
 
 ---
 
@@ -339,6 +347,12 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
    - Demonstrasi instruktur
    - Ikuti bersama
 
+---
+
+# 📚 Metode Pembelajaran (lanjutan)
+
+## Pembelajaran Hands-On
+
 3. 🔨 **Praktikum** (50%)
    - Latihan hands-on
    - Masalah dunia nyata
@@ -361,6 +375,12 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 
 - ✅ **Catat wawasan penting**
   - Catatan untuk nanti
+
+---
+
+# 💡 Tips untuk Sukses (lanjutan)
+
+## Belajar Maksimal
 
 - ✅ **Berkolaborasi dengan peserta lain**
   - Belajar dari rekan, berbagi pengetahuan
@@ -400,6 +420,10 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 - Penanganan nilai hilang
 - Ringkasan statistik
 
+</div>
+
+<div>
+
 ### Sesi 2: DuckDB
 - Dasar-dasar SQL
 - Window functions
@@ -407,6 +431,14 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 - Integrasi Pandas
 
 </div>
+
+</div>
+
+---
+
+# 🎯 Hasil Pembelajaran - Detail (lanjutan)
+
+<div class="columns">
 
 <div>
 
@@ -417,6 +449,10 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 - Plot statistik Seaborn
 - Interaktivitas Plotly
 - Panduan pemilihan grafik
+
+</div>
+
+<div>
 
 ### Sesi 4: Lanjutan
 - Teknik pembersihan data
@@ -450,6 +486,12 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 4. **Keterampilan yang Langsung Bisa Dipakai Kerja** 🚀
    - Bukan hanya tutorial, tapi keterampilan untuk bekerja
 
+---
+
+# 🏆 Apa yang Membuat Bootcamp Ini Berbeda? (lanjutan)
+
+## Yang Membuat Bootcamp Ini Berbeda
+
 5. **Membangun Portofolio** 📁
    - 7 notebook + 4 aplikasi = portofolio yang mengesankan
 
@@ -469,8 +511,6 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 - [ ] Instal dependencies (`uv sync` atau `pip install`)
 - [ ] Tes dengan `jupyter notebook`
 - [ ] Unduh/verifikasi dataset RUP 2025
-
-**Siap? Mari kita mulai! 🚀**
 
 ---
 

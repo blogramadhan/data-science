@@ -105,6 +105,10 @@ Kita perlu bersihkan dulu sebelum analisis
 - 80% of data science adalah data preparation
 - "Garbage in, garbage out"
 
+---
+
+# 🧹 Part 1: Bersihkan # 🧹 Part 1: Data Cleaning & Transformation Ubah Data (lanjutan)
+
 **Yang akan dipelajari:**
 - Missing values deteksi & treatment
 - Outlier deteksi & handling
@@ -408,6 +412,10 @@ Bisa lihat trend, pola musiman, prediksi masa depan
 - Forecasting
 - Anomaly deteksi
 
+---
+
+# 📊 Part 2: Analisis Data Berdasarkan Waktu (lanjutan)
+
 **Dataset RUP:**
 - `tgl_pengumuman_paket`
 - `tgl_awal_pemilihan`, `tgl_akhir_pemilihan`
@@ -612,6 +620,10 @@ Contoh: Apakah perbedaan ini signifikan atau cuma kebetulan?
 - Make data-driven decisions
 - Validate assumptions
 
+---
+
+# 📊 Part 3: Analisis Statistik Dasar (lanjutan)
+
 **Yang akan dipelajari:**
 - Descriptive statistics
 - Correlation analysis
@@ -803,7 +815,13 @@ metrics = {
         'std': group_b.std()
     }
 }
+```
 
+---
+
+# 🧪 A/B Testing Fundamentals (lanjutan)
+
+```python
 # Calculate lift
 lift = ((metrics['Group B']['mean'] - metrics['Group A']['mean']) /
         metrics['Group A']['mean'] * 100)
@@ -835,7 +853,13 @@ print(f"Group B (n={metrics['Group B']['n']}): Mean = {metrics['Group B']['mean'
 print(f"Lift: {lift:.2f}%")
 print(f"T-statistic: {t_stat:.4f}")
 print(f"P-value: {p_value:.4f}")
+```
 
+---
+
+# 🧪 A/B Testing: Statistical Significance (lanjutan)
+
+```python
 if p_value < 0.05:
     print("✅ Result is statistically significant!")
 else:
@@ -858,6 +882,10 @@ else:
    - Calculate growth rates
    - Detect seasonality
 
+---
+
+# 🎯 Latihan Praktis (lanjutan)
+
 3. **Statistical Testing**
    - Compare mengelompokkan dengan t-test
    - Correlation analysis
@@ -876,6 +904,10 @@ else:
 2. **Dokumentasikan keputusan** 📝
    - Why you filled/dropped
    - Keep original data
+
+---
+
+# 💡 Praktik Terbaik (lanjutan)
 
 3. **Validate results** ✅
    - Check distributions before/after
@@ -901,6 +933,10 @@ else:
 3. **Interpret correctly** 🤔
    - P-value ≠ ukuran efek
    - Statistical ≠ signifikansi praktis
+
+---
+
+# 💡 Praktik Terbaik (lanjutan)
 
 4. **Multiple testing correction** 🔄
    - Bonferroni, FDR saat doing multiple tests

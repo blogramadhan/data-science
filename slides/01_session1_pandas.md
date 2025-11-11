@@ -211,6 +211,10 @@ df.info()
 - Data types
 - Memory usage
 
+---
+
+# 📊 Data Info dengan `.info()` (lanjutan)
+
 ```
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 16430 entries, 0 to 16429
@@ -239,6 +243,10 @@ df.describe()
 - **min:** nilai minimum
 - **25%, 50%, 75%:** quartiles
 - **max:** nilai maximum
+
+---
+
+# 📈 Statistical Summary dengan `.describe()` (lanjutan)
 
 ```python
 # Include semua tipe data
@@ -415,6 +423,10 @@ result = df.query('''
 1. **Split** - Pisahkan data berdasarkan kategori
 2. **Apply** - Terapkan fungsi agregasi
 3. **Combine** - Gabungkan hasil
+
+---
+
+# 📊 Part 4: Data Aggregation (lanjutan)
 
 ```python
 # Group by metode pengadaan, hitung total pagu
@@ -837,7 +849,13 @@ axes[0,1].set_title('Metode Pengadaan')
 df['jenis_pengadaan'].value_counts().plot(kind='barh',
                                           ax=axes[1,0])
 axes[1,0].set_title('Jenis Pengadaan')
+```
 
+---
+
+# 🎨 Styling dan Customization (lanjutan)
+
+```python
 # Plot 4: Box plot
 df.boxplot(column='pagu', by='metode_pengadaan', ax=axes[1,1])
 
@@ -861,21 +879,27 @@ plt.show()
    - Find top 10 satker by jumlah paket
    - Compare keduanya
 
+---
+
+# 🎯 Praktik Hands-On (lanjutan)
+
+## Latihan tambahan
+
 3. **Analisis Metode Pengadaan**
    - Hitung distribusi per metode
    - Rata-rata pagu per metode
    - Visualisasi dengan bar chart
 
----
-
-# 🎯 Praktik Hands-On (lanjutan)
-
-## Latihan Tambahan
-
 4. **Trend Analysis**
    - Plot pengumuman paket per bulan
    - Hitung pertumbuhan month-over-month
    - Identifikasi bulan dengan aktivitas tertinggi
+
+---
+
+# 🎯 Praktik Hands-On (lanjutan)
+
+## Latihan tambahan
 
 5. **Data Quality Check**
    - Identify missing values
@@ -905,6 +929,10 @@ plt.show()
 
 2. **Dokumentasikan kode Anda** 📝
    - Gunakan comments dan markdown cells
+
+---
+
+# 💡 Praktik Terbaik (lanjutan)
 
 3. **Method chaining agar mudah dibaca** ⛓️
    ```python
@@ -936,6 +964,10 @@ plt.show()
    df_clean.to_excel('report.xlsx', index=False)
    ```
 
+---
+
+# 💡 Praktik Terbaik (lanjutan)
+
 8. **Version control your notebooks** 🔄
    - Use Git for tracking changes
 
@@ -958,6 +990,10 @@ plt.show()
    df.loc[df['pagu'] > 1000000, 'new_col'] = value
    ```
 
+---
+
+# ⚠️ Kesalahan Umum (lanjutan)
+
 2. **Chained indexing**
    ```python
    # ❌ Bad
@@ -967,10 +1003,6 @@ plt.show()
    df.loc[0, 'col'] = value
    ```
 
----
-
-# ⚠️ Kesalahan Umum (lanjutan)
-
 3. **Tidak handle missing values**
    - Selalu check sebelum calculation
 
@@ -978,6 +1010,10 @@ plt.show()
    ```python
    df_filtered = df[df['pagu'] > 1000000].reset_index(drop=True)
    ```
+
+---
+
+# ⚠️ Kesalahan Umum (lanjutan)
 
 5. **Menggunakan `and`/`or` daripada `&`/`|` untuk boolean**
    ```python
@@ -1014,6 +1050,8 @@ plt.show()
 - **Pandas Documentation:** https://pandas.pydata.org/docs/
 - **Pandas Cheat Sheet:** https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
 - **10 Minutes to Pandas:** https://pandas.pydata.org/docs/user_guide/10min.html
+
+---
 
 ## Sesi Selanjutnya
 
