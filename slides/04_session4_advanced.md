@@ -86,10 +86,12 @@ Setelah sesi ini, Anda bisa:
 
 | Waktu | Topik | Durasi |
 |-------|-------|--------|
-| 09:00 - 10:00 | Data Cleaning & Transformation | 60 min |
-| 10:00 - 11:00 | Time Series Analysis | 60 min |
-| 11:00 - 11:15 | **BREAK** | 15 min |
-| 11:15 - 12:00 | Statistical Analysis | 45 min |
+| 08:00 - 08:15 | Kick-off & Problem Framing | 15 min |
+| 08:15 - 09:00 | Data Cleaning & Transformation | 45 min |
+| 09:00 - 09:45 | Feature Engineering & Outliers | 45 min |
+| 09:45 - 10:30 | Time Series Analysis | 45 min |
+| 10:30 - 11:15 | Forecasting Mini Lab | 45 min |
+| 11:15 - 12:00 | Statistical Analysis & Wrap-up | 45 min |
 
 ---
 

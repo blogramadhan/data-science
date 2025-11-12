@@ -83,9 +83,11 @@ Setelah sesi ini, Anda bisa:
 
 | Waktu | Topik | Durasi |
 |-------|-------|--------|
-| 13:00 - 13:30 | Pengenalan DuckDB & Setup | 30 min |
-| 13:30 - 15:00 | SQL dengan DuckDB | 90 min |
-| 15:00 - 15:30 | Penggabungan Pandas & DuckDB | 30 min |
+| 13:00 - 13:15 | Kick-off DuckDB & Setup Environment | 15 min |
+| 13:15 - 13:45 | DuckDB Fundamentals & Storage Concepts | 30 min |
+| 13:45 - 14:15 | SELECT, FILTER, ORDER BY | 30 min |
+| 14:15 - 14:45 | Aggregations & Window Functions | 30 min |
+| 14:45 - 15:00 | Integrasi DuckDB + Pandas & Wrap-up | 15 min |
 
 ---
 

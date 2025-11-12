@@ -84,10 +84,12 @@ Setelah sesi ini, Anda bisa:
 
 | Waktu | Topik | Durasi |
 |-------|-------|--------|
-| 09:00 - 09:30 | Persiapan Environment | 30 min |
-| 09:30 - 11:00 | Exploratory Analisis Data (EDA) | 90 min |
-| 11:00 - 11:15 | **BREAK** | 15 min |
-| 11:15 - 12:00 | Latihan Praktis & Q&A | 45 min |
+| 08:00 - 08:15 | Kick-off & Tujuan Sesi | 15 min |
+| 08:15 - 09:00 | Persiapan Environment & Data Loading | 45 min |
+| 09:00 - 10:00 | Exploratory Data Analysis Fundamentals | 60 min |
+| 10:00 - 11:00 | Data Cleaning & Handling Missing Values | 60 min |
+| 11:00 - 11:45 | Aggregasi & GroupBy Lanjutan | 45 min |
+| 11:45 - 12:00 | Visualisasi Cepat & Wrap-up | 15 min |
 
 ---
 

@@ -88,11 +88,13 @@ Setelah sesi ini, Anda bisa:
 
 | Waktu | Topik | Aplikasi | Durasi |
 |-------|-------|----------|--------|
-| 13:00 - 14:00 | Dasar Streamlit | `01_hello_streamlit.py` | 60 min |
-| 14:00 - 15:15 | Komponen Interaktif | `02_components_demo.py` | 75 min |
-| 15:15 - 15:30 | **BREAK** | ☕ | 15 min |
-| 15:30 - 16:45 | Data Explorer | `03_data_explorer.py` | 75 min |
-| 16:45 - 17:30 | Production Dashboard | `rup_dashboard.py` | 45 min |
+| 13:00 - 13:20 | Kick-off & Agenda | `01_hello_streamlit.py` | 20 min |
+| 13:20 - 14:00 | Layout & Text Components | `01_hello_streamlit.py` | 40 min |
+| 14:00 - 14:45 | Input Widgets & Session State | `02_components_demo.py` | 45 min |
+| 14:45 - 15:00 | Data Display & Caching | `02_components_demo.py` | 15 min |
+| 15:00 - 15:30 | **BREAK** | ☕ | 30 min |
+| 15:30 - 16:15 | Data Explorer Build & Metrics | `03_data_explorer.py` | 45 min |
+| 16:15 - 17:00 | Dashboard Architecture, Deployment & Q&A | `rup_dashboard.py` | 45 min |
 
 ---
 

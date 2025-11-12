@@ -177,7 +177,7 @@ Bootcamp ini cocok untuk:
 - ✅ Laptop dengan minimal **8GB RAM**
 - ✅ **Python 3.8+** terinstal (akan dibantu saat setup)
 - ✅ Text editor seperti VS Code (gratis & mudah)
-- ✅ Git - untuk menyimpan kode (akan dipandu)
+- ✅ Github - untuk menyimpan kode
 
 ---
 
@@ -244,11 +244,11 @@ Bootcamp ini cocok untuk:
 
 | Waktu | Sesi | Topik |
 |-------|------|-------|
-| 09:00 - 12:00 | **Sesi 1** | Python & Pandas untuk Analisis Data |
-| 12:00 - 13:00 | **BREAK** | Istirahat & Makan Siang |
-| 13:00 - 15:30 | **Sesi 2** | DuckDB untuk Query Analitik |
-| 15:30 - 15:45 | **BREAK** | Coffee Break |
-| 15:45 - 17:30 | **Sesi 3** | Visualisasi Data |
+| 08:00 - 12:00 | **Sesi 1** | Python & Pandas untuk Analisis Data |
+| 12:00 - 13:00 | **BREAK / ISHOMA** | Istirahat & Makan Siang |
+| 13:00 - 15:00 | **Sesi 2** | DuckDB untuk Query Analitik |
+| 15:00 - 15:30 | **BREAK** | Coffee Break |
+| 15:30 - 17:00 | **Sesi 3** | Visualisasi Data |
 
 ---
 
@@ -258,11 +258,11 @@ Bootcamp ini cocok untuk:
 
 | Waktu | Sesi | Topik |
 |-------|------|-------|
-| 09:00 - 12:00 | **Sesi 4** | Teknik Analisis Data Lanjutan |
-| 12:00 - 13:00 | **BREAK** | Istirahat & Makan Siang |
-| 13:00 - 17:30 | **Sesi 5** | Dashboard Interaktif dengan Streamlit |
-
-*(Termasuk coffee break 15 menit)*
+| 08:00 - 12:00 | **Sesi 4** | Teknik Analisis Data Lanjutan |
+| 12:00 - 13:00 | **BREAK / ISHOMA** | Istirahat & Makan Siang |
+| 13:00 - 15:00 | **Sesi 5** | Dashboard Interaktif dengan Streamlit |
+| 15:00 - 15:30 | **BREAK** | Coffee Break |
+| 15:30 - 17:00 | **Sesi 5 (lanjutan)** | Deployment & Presentasi Dashboard |
 
 ---
 
@@ -310,7 +310,7 @@ uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
 
 ---
 
-# 🚀 Setup Environment (Alternative)
+# 🚀 Setup Environment (Alternatif)
 
 ## Menggunakan pip
 
@@ -418,7 +418,7 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 - Memuat & memeriksa data
 - Penyaringan & pemilihan
 - GroupBy & agregasi
-- Penanganan nilai hilang
+- Penanganan nilai yang kosong
 - Ringkasan statistik
 
 </div>
@@ -476,7 +476,7 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 ## Yang Membuat Bootcamp Ini Berbeda
 
 1. **Dataset Dunia Nyata** 🌍
-   - Bukan dataset mainan, tapi data pengadaan pemerintah asli
+   - Bukan dataset mainan, tapi data pengadaan barang dan jasa pemerintah asli
 
 2. **Belajar Lengkap dari Awal sampai Akhir** 🔄
    - Dari data mentah → wawasan → dashboard produksi
@@ -506,7 +506,7 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 
 - [ ] Instal Python 3.8+
 - [ ] Instal VS Code atau editor favorit
-- [ ] Instal Git
+- [ ] Instal Git (jika diperlukan)
 - [ ] Clone repository
 - [ ] Siapkan virtual environment
 - [ ] Instal dependencies (`uv sync` atau `pip install`)
@@ -521,10 +521,10 @@ Bootcamp ini menggunakan pendekatan **belajar dengan praktik**:
 J: Tidak perlu mahir, tapi sebaiknya sudah familiar dengan sintaks dasar
 
 **T: Apakah perlu latar belakang statistik?**
-J: Tidak wajib, konsep statistik akan dijelaskan dari dasar
+J: Tidak wajib, konsep statistik dasar
 
 **T: Apakah bisa menggunakan dataset sendiri?**
-J: Ya! Setelah paham alur kerja dengan RUP, bisa pakai dataset lain
+J: Ya! Setelah paham alur kerja dengan RUP, bisa menggunakan dataset lain
 
 **T: Bagaimana jika tertinggal?**
 J: Semua materi ada di notebook, bisa direview nanti

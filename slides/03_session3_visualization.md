@@ -85,9 +85,11 @@ Setelah sesi ini, Anda bisa:
 
 | Waktu | Topik | Durasi |
 |-------|-------|--------|
-| 15:45 - 16:30 | Matplotlib & Seaborn | 45 min |
-| 16:30 - 17:15 | Plotly Interactive | 45 min |
-| 17:15 - 17:30 | Data Storytelling & Q&A | 15 min |
+| 15:30 - 15:40 | Kick-off & Visual Story Goals | 10 min |
+| 15:40 - 16:05 | Matplotlib Fundamentals | 25 min |
+| 16:05 - 16:30 | Seaborn Statistical Plots | 25 min |
+| 16:30 - 16:50 | Plotly Interaktif & Dashboard Mini | 20 min |
+| 16:50 - 17:00 | Data Storytelling & Q&A | 10 min |
 
 ---
 
