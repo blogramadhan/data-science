@@ -60,7 +60,7 @@ table {
 
 ## HARI 1: Fundamental Analisis Data
 
-**Durasi:** 1 jam 45 menit (15:45 - 17:30)
+**Durasi:** 1 jam 30 menit (15:30 - 17:00)
 **Notebooks:**
 - `01_matplotlib_seaborn.ipynb`
 - `02_plotly_interactive.ipynb`
@@ -93,7 +93,7 @@ Setelah sesi ini, Anda bisa:
 
 ---
 
-# 📊 Part 1: Matplotlib # 📊 Part 1: Matplotlib & Seaborn Seaborn
+# 📊 Part 1: Matplotlib # 📊 Part 1: Matplotlib & Seaborn 
 
 **Penjelasan:** Matplotlib untuk buat grafik dasar, Seaborn untuk grafik statistik yang lebih cantik
 
@@ -101,7 +101,7 @@ Setelah sesi ini, Anda bisa:
 
 **Matplotlib:**
 - Foundation untuk plotting di Python
-- Rendah-level control
+- Low-level control
 - Customizable
 
 ---
@@ -112,7 +112,7 @@ Setelah sesi ini, Anda bisa:
 - Built on top of Matplotlib
 - Statistical plots
 - Beautiful default themes
-- Tinggi-level interface
+- High-level interface
 
 ---
 
@@ -539,7 +539,7 @@ fig.update_layout(
 fig.show()
 ```
 
-**Hover untuk lihat details!** 🖱️
+**Hover untuk lihat detail!** 🖱️
 
 ---
 
@@ -841,7 +841,7 @@ for fmt in ['html', 'png', 'pdf']:
    - Insight yang actionable
 
 8. **Jujur** ✅
-   - Don't menyesatkan dengan skala
+   - Jangan menyesatkan dengan skala
    - Tunjukkan ketidakpastian jika relevan
 
 ---
@@ -974,7 +974,7 @@ fig.update_layout(autosize=True)
 - ✅ Always label axes dan add titles
 - ✅ Export dalam format yang sesuai (PNG/PDF/HTML)
 
-**Baik tampilan = Clear communication** 📊
+**Tampilan baik = Clear communication** 📊
 
 ---
 
@@ -988,19 +988,15 @@ fig.update_layout(autosize=True)
 - **Python Graph Gallery:** https://python-graph-gallery.com/
 - **From Data to Viz:** https://www.data-to-viz.com/
 
-## Books
-- "Storytelling with Data" - Cole Nussbaumer Knaflic
-- "The Visual Display of Quantitative Information" - Edward Tufte
-
 ---
 
 # 🎉 Penutup Hari 1
 
 ## Recap Hari 1
 
-✅ **Sesi 1:** Python & Pandas untuk Analisis Data
-✅ **Sesi 2:** DuckDB untuk Query Analitik
-✅ **Sesi 3:** Visualisasi Data
+- ✅ **Sesi 1:** Python & Pandas untuk Analisis Data
+- ✅ **Sesi 2:** DuckDB untuk Query Analitik
+- ✅ **Sesi 3:** Visualisasi Data
 
 ## Besok (Hari 2)
 
@@ -1029,7 +1025,7 @@ fig.update_layout(autosize=True)
 
 **Istirahat yang cukup!**
 
-**See you tomorrow at 09:00** 🚀
+**See you tomorrow at 08:00** 🚀
 
 ### Pertanyaan?? 🙋
 

@@ -60,7 +60,7 @@ table {
 
 ## HARI 2: Analisis Lanjutan & Dashboard
 
-**Durasi:** 4.5 jam (13:00 - 17:30) *includes break*
+**Durasi:** 4.5 jam (13:00 - 17:00) *includes break*
 
 **Aplikasi:**
 - `01_hello_streamlit.py`
@@ -111,10 +111,10 @@ Gak perlu belajar HTML/CSS/JavaScript!
 
 ### Fitur
 - 🐍 **Pure Python** - Tanpa HTML/CSS/JS
-- ⚡ **Cepat Development** - Bangun dalam hitungan jam
+- ⚡ **Fast Development** - Bangun dalam hitungan jam
 - 🎨 **UI yang Cantik** - Otomatis responsif
 - 🔄 **Reactive** - Auto-rerun on changes
-- 🆓 **Deployment Gratis** - Streamlit Cloud
+- 🆓 **Free Deployment** - Streamlit Cloud
 
 </div>
 
@@ -152,7 +152,7 @@ streamlit --version
 streamlit hello
 ```
 
-**Create Your Pertama App:**
+**Create Your First App:**
 
 ```python
 # app.py
@@ -169,7 +169,7 @@ streamlit run app.py
 
 ---
 
-# 📊 LAB 10: Hello Streamlit
+# 📊 Hello Streamlit
 
 ## Aplikasi: `01_hello_streamlit.py`
 
@@ -380,7 +380,7 @@ for i, tab in enumerate(tabs):
 
 ---
 
-# 🎮 LAB 11: Interactive Components
+# 🎮 Interactive Components
 
 ## Aplikasi: `02_components_demo.py`
 
@@ -397,7 +397,7 @@ uv run streamlit run 02_components_demo.py
 **Anda akan bisa:**
 - Bagaimana cara capture user input
 - Bagaimana cara maintain state
-- How untuk membuat interactive experiences
+- Cara untuk membuat interactive experiences
 
 ---
 
@@ -521,7 +521,7 @@ if uploaded_file:
 
 # 📝 Forms - Kumpulkan Input Sekaligus
 
-**Penjelasan:** Form berguna biar app gak rerun setiap kali user input sesuatu
+**Penjelasan:** Form berguna biar app tidak rerun setiap kali user input sesuatu.
 Semua input dikumpulkan, baru di-submit sekaligus
 
 ```python
@@ -647,7 +647,7 @@ with st.sidebar:
 
 ---
 
-# 🔍 LAB 12: Data Explorer
+# 🔍 Data Explorer
 
 ## Aplikasi: `03_data_explorer.py`
 
@@ -897,9 +897,9 @@ with col3:
 **Production-Ready Features:**
 - ✅ Professional UI/UX
 - ✅ Custom styling & branding
-- ✅ Rumit data processing
-- ✅ Advanced tampilans
-- ✅ Kecepatan pengoptimalan
+- ✅ Complicated data processing
+- ✅ Advanced display
+- ✅ Optimization speed
 - ✅ Error handling
 
 ```bash
@@ -1164,7 +1164,7 @@ if 'df' not in locals():
 2. **Meaningful labels** 🏷️
    - Descriptive text
    - Help tooltips
-   - Contoh
+   - Example
 
 ---
 
@@ -1187,7 +1187,7 @@ if 'df' not in locals():
 ## Code Organization
 
 ```python
-# Baik structure
+# Good structure
 import streamlit as st
 import pandas as pd
 
@@ -1307,7 +1307,7 @@ host = st.secrets["database"]["host"]
 - ✅ Rich widget library untuk interactivity
 - ✅ Session state untuk persistent data
 - ✅ Caching untuk performance
-- ✅ Mudah integration dengan Pandas, DuckDB, Plotly
+- ✅ Easy integration dengan Pandas, DuckDB, Plotly
 - ✅ Free deployment di Streamlit Cloud
 - ✅ Perfect untuk prototypes & internal tools
 - ✅ Production-ready dengan proper error handling
@@ -1369,7 +1369,7 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 🚀 Selanjutnya Steps
+# 🚀 Next Steps
 
 ## Lanjutkan Perjalanan Belajar Anda
 
@@ -1379,13 +1379,13 @@ host = st.secrets["database"]["host"]
    - Build your portfolio
 
 2. **Deploy Your Apps** 🌐
-   - Bagikan your dashboards
+   - Share your dashboards
    - Get feedback
    - Iterate and improve
 
 ---
 
-# 🚀 Selanjutnya Steps (lanjutan)
+# 🚀 Next Steps (lanjutan)
 
 3. **Learn Advanced Topics** 📚
    - Machine Learning (scikit-learn)
@@ -1401,7 +1401,7 @@ host = st.secrets["database"]["host"]
 
 ---
 
-# 🚀 Selanjutnya Steps (lanjutan)
+# 🚀 Next Steps (lanjutan)
 
 5. **Kontribusi to Open Source** 🌟
    - GitHub projects
@@ -1434,9 +1434,9 @@ host = st.secrets["database"]["host"]
 
 # 💡 Tips Akhir
 
-## Untuk Sukses in Data Field
+## For success in Data Field
 
-1. **Latihan Regularly** 🏋️
+1. **Exercise Regularly** 🏋️
    - Consistency > intensity
    - Daily coding habit
 
@@ -1450,7 +1450,7 @@ host = st.secrets["database"]["host"]
 # 💡 Tips Akhir (lanjutan)
 
 3. **Learn in Public** 📢
-   - Bagikan your projects
+   - Share your projects
    - Write tutorials
    - Help others
 
@@ -1463,7 +1463,7 @@ host = st.secrets["database"]["host"]
 
 # 📊 Statistik Bootcamp
 
-## Apa yang Kami Bahas
+## Apa yang dibahas
 
 - **Duration:** 16 hours (2 days)
 - **Sessions:** 5 lengkap sessions
@@ -1472,15 +1472,13 @@ host = st.secrets["database"]["host"]
 - **Technologies:** Python, Pandas, DuckDB, Plotly, Streamlit
 - **Dataset:** 16,430 real procurement records
 - **Code Lines:** 2000+ lines of code written
-- **Skills:** Data analysis, SQL, tampilan, web apps
+- **Skills:** Data analysis, SQL, display, web apps
 
 **Intensive but worth it!** 💪
 
 ---
 
 # 📝 Feedback
-
-## Bantu Kami Berkembang
 
 We'd love to hear your feedback:
 
@@ -1490,36 +1488,6 @@ We'd love to hear your feedback:
 4. **Would you recommend this to others?** ⭐
 
 **Your feedback helps us make better bootcamps!**
-
----
-
-# 🎓 Certificate
-
-## Anda Layak Mendapatkannya!
-
-**Congratulations on completing:**
-
-📜 **Bootcamp Analisis Data**
-**Python, DuckDB & Streamlit**
-
-You've demonstrated:
-- Data analysis proficiency
-- SQL query skills
-- Visualization expertise
-- Dashboard building capability
-
-**Keep learning, keep building!** 🚀
-
----
-
-# 📞 Tetap Terhubung
-
-## Resources & Support
-
-- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
-- 📧 **Email:** [kurnia@ramadhan.me]
-
-**We're here to support your journey!** 🤝
 
 ---
 
@@ -1546,9 +1514,9 @@ You've demonstrated:
 **Good Luck with Your**
 **Data Analytics Journey!**
 
-### See You di Data World! 🌍
+### See You at Data World! 🌍
 
-*Mei your insights be meaningful*
+*May your insights be meaningful*
 *and your dashboards be beautiful!* ✨
 
 ---
@@ -1564,9 +1532,9 @@ You've demonstrated:
 
 **Online Courses:**
 - Kaggle Learn
+- Udemy
 - DataCamp
 - Coursera
-- Cepat.ai
 
 ---
 
@@ -1579,3 +1547,14 @@ You've demonstrated:
 - Stack Overflow
 
 **Keep exploring!** 🔍
+
+---
+
+# 📞 Tetap Terhubung
+
+## Resources & Support
+
+- 👤 **Nama:** [Kurnia Ramadhan,ST.,M.Eng]
+- 📧 **Email:** [kurnia@ramadhan.me]
+
+**We're here to support your journey!** 🤝

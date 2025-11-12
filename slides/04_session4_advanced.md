@@ -60,7 +60,7 @@ table {
 
 ## HARI 2: Analisis Lanjutan & Dashboard
 
-**Durasi:** 3 jam (09:00 - 12:00)
+**Durasi:** 3 jam (08:00 - 12:00)
 **Notebooks:**
 - `01_data_cleaning.ipynb`
 - `02_time_series.ipynb`
@@ -95,7 +95,7 @@ Setelah sesi ini, Anda bisa:
 
 ---
 
-# 🧹 Part 1: Bersihkan # 🧹 Part 1: Data Cleaning & Transformation Ubah Data
+# 🧹 Part 1: Data Cleaning & Data Transformation 
 
 **Kenapa penting?** Data mentah biasanya kotor: ada yang kosong, salah, atau duplikat
 Kita perlu bersihkan dulu sebelum analisis
@@ -105,17 +105,17 @@ Kita perlu bersihkan dulu sebelum analisis
 **Kenapa pakai Data Cleaning?**
 - Real-world data is messy 🗑️
 - Missing values, duplicates, errors
-- 80% of data science adalah data preparation
+- 80% of data science is data preparation
 - "Garbage in, garbage out"
 
 ---
 
-# 🧹 Part 1: Bersihkan # 🧹 Part 1: Data Cleaning & Transformation Ubah Data (lanjutan)
+# 🧹 Part 1: Data Cleaning & Data Transformation (lanjutan)
 
 **Yang akan dipelajari:**
-- Missing values deteksi & treatment
-- Outlier deteksi & handling
-- Data perubahan
+- Missing values detection & treatment
+- Outlier detection & handling
+- Data transformation
 - Feature engineering
 
 ---
@@ -191,7 +191,7 @@ df.fillna(method='bfill')
 df['nilai'].interpolate()
 ```
 
-**Kapan pakai:** Data punya pattern
+**Kapan pakai:** Data pattern
 
 </div>
 
@@ -410,10 +410,10 @@ Bisa lihat trend, pola musiman, prediksi masa depan
 **Time Series = Data dengan timestamp**
 
 **Applications:**
-- Trend analysis
-- Seasonality deteksi
+- Trend analysist
+- Seasonality detection
 - Forecasting
-- Anomaly deteksi
+- Anomaly detection
 
 ---
 
@@ -453,21 +453,21 @@ df['durasi_kontrak'] = (df['tgl_akhir_kontrak'] - df['tgl_awal_kontrak']).dt.day
 # 📊 Resampling: Agregasi Time Series
 
 ```python
-# Daily penggabungan
+# Daily merge
 daily = df_ts.resample('D').size()
 
-# Weekly penggabungan
+# Weekly merge
 weekly = df_ts.resample('W').agg({
     'pagu': ['sum', 'mean', 'count']
 })
 
-# Monthly penggabungan
+# Monthly merge
 monthly = df_ts.resample('M').agg({
     'pagu': 'sum',
     'kd_rup': 'count'
 })
 
-# Quarterly penggabungan
+# Quarterly merge
 quarterly = df_ts.resample('Q').agg({
     'pagu': ['sum', 'mean'],
     'kd_rup': 'count'
@@ -519,7 +519,7 @@ rolling_stats = pd.DataFrame({
     'max': daily_counts.rolling(window=window).max()
 })
 
-# Plot dengan confidence interval
+# Plot with confidence interval
 fig, ax = plt.subplots(figsize=(14, 6))
 ax.plot(rolling_stats['count'], label='Actual', alpha=0.5)
 ax.plot(rolling_stats['mean'], label=f'{window}-day MA', linewidth=2)
@@ -914,7 +914,7 @@ else:
 
 3. **Validate results** ✅
    - Check distributions before/after
-   - Periksa kewajarans
+   - Periksa kewajaran
 
 4. **Pertimbangkan pengetahuan domain** 🎓
    - Outliers bisa valid di konteks tertentu

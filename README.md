@@ -75,6 +75,28 @@ Peserta akan membuat portfolio yang berisi:
 - Matplotlib & Seaborn untuk visualisasi static
 - Jupyter Notebook untuk eksplorasi
 
+### 🗓️ Agenda Bootcamp (Ringkas)
+
+#### Hari 1: Fundamental Analisis Data
+
+| Waktu | Sesi | Topik |
+|-------|------|-------|
+| 08:00 - 12:00 | **Sesi 1** | Python & Pandas untuk Analisis Data |
+| 12:00 - 13:00 | **BREAK / ISHOMA** | Istirahat & makan siang |
+| 13:00 - 15:00 | **Sesi 2** | DuckDB untuk Query Analitik |
+| 15:00 - 15:30 | **BREAK** | Coffee break |
+| 15:30 - 17:00 | **Sesi 3** | Visualisasi Data |
+
+#### Hari 2: Analisis Lanjutan & Dashboard
+
+| Waktu | Sesi | Topik |
+|-------|------|-------|
+| 08:00 - 12:00 | **Sesi 4** | Teknik Analisis Data Lanjutan |
+| 12:00 - 13:00 | **BREAK / ISHOMA** | Istirahat & makan siang |
+| 13:00 - 15:00 | **Sesi 5** | Dashboard Interaktif dengan Streamlit |
+| 15:00 - 15:30 | **BREAK** | Coffee break |
+| 15:30 - 17:00 | **Sesi 5 (lanjutan)** | Deployment & Presentasi Dashboard |
+
 ---
 
 ## 📑 Slides
@@ -175,13 +197,21 @@ data-science/
 
 # 📚 HARI 1: Fundamental Analisis Data
 
-## Sesi 1: Python & Pandas untuk Analisis Data (09:00 - 12:00)
+## Sesi 1: Python & Pandas untuk Analisis Data (08:00 - 12:00)
 
-**Durasi:** 3 jam
+**Durasi:** 4 jam
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebook
 **Kumpulan Data:** RUP 2025
 **Notebook:** `day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb`
 **Slides:** `slides/01_session1_pandas.md`
+
+### ⏰ Agenda Ringkas
+- 08:00 – 08:15 · Kick-off & tujuan sesi
+- 08:15 – 09:00 · Persiapan environment & loading data
+- 09:00 – 10:00 · EDA fundamentals dengan Pandas
+- 10:00 – 11:00 · Data cleaning & handling missing values
+- 11:00 – 11:45 · Aggregasi & GroupBy lanjutan
+- 11:45 – 12:00 · Visualisasi cepat & wrap-up
 
 ### 🎯 Tujuan Sesi
 
@@ -193,51 +223,29 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ### 📚 Materi Pembelajaran
 
-#### 1.1 Persiapan Lingkungan (30 menit)
-- Persiapan Python & Virtual Environment (uv/venv)
-- Instalasi pustaka yang dibutuhkan
-- Pengenalan Jupyter Notebook
-- Membuka dataset RUP 2025
+#### 1.1 Kick-off & Setup Lingkungan (08:00 - 09:00)
+- Sinkronisasi tujuan sesi, aturan main, dan struktur dataset RUP 2025
+- Menyiapkan environment dengan `uv` atau `venv`, instalasi library wajib
+- Membuka notebook `01_exploratory_data_analysis_rup.ipynb`
+- Quick tour data dictionary & pemetaan kebutuhan analisis
 
-#### 1.2 Exploratory Data Analysis (EDA) dengan Pandas (150 menit)
+#### 1.2 EDA Fundamentals dengan Pandas (09:00 - 10:00)
+- Membaca file Parquet dan memahami struktur dengan `.head()`, `.info()`, `.describe()`
+- Seleksi kolom/baris via `.loc[]`, `.iloc[]`, serta `query()` untuk filter cepat
+- Teknik eksplorasi awal: distribusi, unique values, spotting missing data
+- Hands-on: filter paket dengan pagu > 1 miliar & satker tertentu
 
-**Topik yang Dipelajari:**
+#### 1.3 Data Cleaning & Quality Checks (10:00 - 11:00)
+- Deteksi missing values (`isnull`, visual cues) dan strategi `dropna`/`fillna`
+- Normalisasi tipe data (datetime, numerik, kategorikal) serta operasi string
+- Penanganan duplikasi, trimming whitespace, dan validasi business rules
+- Dokumentasi asumsi & temuan kualitas data sebelum analisis lanjut
 
-**A. Loading dan Inspeksi Data**
-- Membaca file Parquet dengan Pandas
-- Inspeksi struktur data: `.head()`, `.info()`, `.describe()`, `.shape`
-- Memahami kolom-kolom dalam dataset RUP
-- Identifikasi tipe data dan missing values
-
-**B. Seleksi & Penyaringan Data**
-- Menggunakan `.loc[]` dan `.iloc[]` untuk seleksi data
-- Boolean indexing untuk penyaringan
-- Query method untuk filter kompleks
-- Contoh: Filter paket dengan pagu > 1 miliar
-
-**C. Data Aggregation**
-- GroupBy operations untuk agregasi
-- Menghitung total pagu per metode pengadaan
-- Menghitung jumlah paket per satuan kerja
-- Top 10 satker dengan pagu terbesar
-
-**D. Manipulasi Data**
-- Sorting data berdasarkan multiple columns
-- Menangani missing values (deteksi & treatment)
-- Operasi string untuk cleaning
-- Operasi date/time
-
-**E. Ringkasan Statistik**
-- Statistik deskriptif (mean, median, std, percentiles)
-- Analisis distribusi
-- Deteksi outlier
-- Analisis korelasi antar variabel numerik
-
-**F. Data Visualization dengan Pandas**
-- Bar charts untuk categorical data
-- Histogram untuk distribusi pagu
-- Time series plotting
-- Basic styling dan customization
+#### 1.4 Aggregasi, Visualisasi Cepat & Wrap-up (11:00 - 12:00)
+- GroupBy + agregasi untuk pagu per metode, satker, dan kategori
+- Statistik deskriptif, deteksi outlier sederhana, dan korelasi cepat
+- Visualisasi kilat dengan `DataFrame.plot()` untuk tren & komposisi
+- Mini challenge + recap insight sebagai persiapan sesi DuckDB
 
 #### 📓 Notebook:
 `day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb`
@@ -251,73 +259,52 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ---
 
-## BREAK (12:00 - 13:00)
+## BREAK / ISHOMA (12:00 - 13:00)
 
 ---
 
-## Sesi 2: DuckDB untuk Query Analitik (13:00 - 15:30)
+## Sesi 2: DuckDB untuk Query Analitik (13:00 - 15:00)
 
-**Durasi:** 2.5 jam
+**Durasi:** 2 jam
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebook
 **Kumpulan Data:** RUP 2025
 **Slides:** `slides/02_session2_duckdb.md`
 
+### ⏰ Agenda Ringkas
+- 13:00 – 13:15 · Kick-off DuckDB & setup environment
+- 13:15 – 13:45 · DuckDB fundamentals & storage concepts
+- 13:45 – 14:15 · SELECT, FILTER, ORDER BY
+- 14:15 – 14:45 · Aggregations & window functions
+- 14:45 – 15:00 · Integrasi DuckDB + Pandas & wrap-up
+
 ### Materi Pembelajaran
 
-#### 2.1 Pengenalan DuckDB (30 menit)
+#### 2.1 Kick-off DuckDB & Setup (13:00 - 13:15)
+- Perbandingan OLAP vs OLTP dan alasan memilih DuckDB untuk analitik lokal
+- Instalasi, import, dan membuat koneksi in-memory/persistent
+- Demo cepat membaca file Parquet langsung tanpa load penuh ke RAM
 
-**Konsep:**
-- Apa itu DuckDB dan mengapa menggunakannya?
-- OLAP vs OLTP database
-- DuckDB vs Traditional Databases (PostgreSQL, MySQL)
-- In-memory analytics & columnar storage
-- Use cases: kapan pakai Pandas vs DuckDB
+#### 2.2 Fundamentals & Storage Concepts (13:15 - 13:45)
+- Arsitektur columnar storage, vectorized execution, dan implikasi performa
+- Struktur tabel, tipe data, dan cara memetakan dataset RUP
+- Praktik terbaik menyusun skema/VIew sementara untuk eksplorasi
 
-**Setup:**
-- Install dan import DuckDB
-- Create connection (in-memory vs persistent)
-- Basic query execution
+#### 2.3 Query Essentials (13:45 - 14:15)
+- SELECT, WHERE, ORDER BY, LIMIT, DISTINCT untuk eksplorasi dasar
+- Agregasi inti: COUNT, SUM, AVG, MIN, MAX plus GROUP BY/HAVING
+- Contoh nyata: Top satker berdasarkan pagu, filter kombinasi kondisi
 
-#### 2.2 SQL dengan DuckDB (90 menit)
-
-**A. Operasi SQL Dasar**
-- SELECT, WHERE, ORDER BY, LIMIT
-- DISTINCT untuk unique values
-- Agregasi: COUNT, SUM, AVG, MIN, MAX
-- GROUP BY dan HAVING
-- Penyaringan dengan multiple conditions
-
-**B. Fitur Khusus DuckDB**
-- Read Parquet file langsung tanpa loading ke memory
-- Query Pandas DataFrame dengan SQL
-- Convert hasil query ke DataFrame
-- COPY statement untuk export
-
-**C. Query SQL Lanjutan**
-- JOIN operations (INNER, LEFT, RIGHT)
-- Subqueries dan nested queries
-- CTEs (Common Table Expressions) untuk query kompleks
+#### 2.4 Aggregations & Window Functions (14:15 - 14:45)
+- Common Table Expressions (CTE) untuk menyusun query modular
 - Window functions: ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD
-- CASE WHEN untuk conditional logic
-- Aggregate functions dengan OVER clause
+- Penggabungan dengan Pandas DataFrame register untuk analisis hibrida
+- Benchmark singkat Pandas GroupBy vs DuckDB query
 
-**Contoh Query dengan Dataset RUP:**
-```sql
--- Top 10 Satker by Total Pagu
--- Running total of pengumuman
--- Ranking paket within kategori
--- Monthly aggregations
--- Penyaringan kompleks dengan multiple conditions
-```
-
-#### 2.3 Integrasi Pandas & DuckDB (30 menit)
-
-**Integrasi Alur Kerja:**
-- Daftarkan Pandas DataFrame sebagai tabel DuckDB
-- Query tabel DuckDB dan dapatkan hasilnya sebagai DataFrame
-- Perbandingan performa: Pandas GroupBy vs DuckDB SQL
-- Praktik terbaik: kapan pakai Pandas, kapan pakai DuckDB
-- Menangani dataset besar secara efisien
+#### 2.5 Integrasi Workflow & Wrap-up (14:45 - 15:00)
+- Copy/Export hasil query ke Parquet/CSV
+- Mengubah hasil query menjadi DataFrame (`.df()`) untuk visualisasi lanjut
+- Checklist kapan memilih DuckDB dibanding Pandas
+- Hands-on mini challenge & Q&A menjelang coffee break
 
 #### 📓 Notebook:
 `day1/session2_duckdb/notebooks/01_duckdb_intro.ipynb`
@@ -331,99 +318,62 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ---
 
-## BREAK (15:30 - 15:45)
+## Coffee Break (15:00 - 15:30)
 
 ---
 
-## Sesi 3: Visualisasi Data (15:45 - 17:30)
+## Sesi 3: Visualisasi Data (15:30 - 17:00)
 
-**Durasi:** 1 jam 45 menit
+**Durasi:** 1 jam 30 menit
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
 **Kumpulan Data:** RUP 2025
 **Slides:** `slides/03_session3_visualization.md`
 
+### ⏰ Agenda Ringkas
+- 15:30 – 15:40 · Kick-off & visual story goals
+- 15:40 – 16:05 · Matplotlib fundamentals
+- 16:05 – 16:30 · Seaborn statistical plots
+- 16:30 – 16:50 · Plotly interaktif & dashboard mini
+- 16:50 – 17:00 · Data storytelling & Q&A
+
 ### Materi Pembelajaran
 
-#### 3.1 Visualisasi Statis dengan Matplotlib & Seaborn (45 menit)
+#### 3.1 Kick-off & Visual Story Goals (15:30 - 15:40)
+- Menyelaraskan tujuan sesi, konteks insight RUP, dan alur cerita yang ingin dibangun
+- Checklist penilaian kualitas grafik (readability, warna, fokus insight)
 
-**Matplotlib Basics:**
-- Figure dan Axes architecture
-- Plot types: line, bar, scatter, histogram, pie
-- Customization: colors, labels, legends, grid
-- Subplots untuk multiple charts
-- Export ke image files (PNG, PDF)
+#### 3.2 Matplotlib Fundamentals (15:40 - 16:05)
+- Struktur Figure/Axes, konfigurasi tema, dan pengaturan ukuran
+- Line, bar, scatter, serta histogram untuk highlight tren & distribusi
+- Subplots dan anotasi untuk menaruh beberapa grafik dalam satu kanvas
+- Export cepat ke PNG/PDF untuk laporan
 
-**Seaborn untuk Statistical Plots:**
-- Distribution plots: histplot, kdeplot, boxplot, violinplot
-- Categorical plots: barplot, countplot, pointplot
-- Relationship plots: scatterplot, regplot
-- Heatmaps untuk correlation matrix
-- Built-in themes dan color palettes
+#### 3.3 Seaborn Statistical Plots (16:05 - 16:30)
+- Histogram, box, violin, dan kde plot untuk memotret distribusi pagu
+- Categorical plots (countplot/barplot) untuk metode pengadaan dan satker
+- Heatmap korelasi dan color palette ramah color-blind
+- Styling cepat via `sns.set_theme` dan context manager
 
 #### 📓 Notebook:
 `day1/session3_visualization/notebooks/01_matplotlib_seaborn.ipynb`
 
-**Praktik yang Dilakukan:**
-- Histogram distribusi pagu dengan mean & median lines
-- Horizontal bar chart: Top satker by total pagu
-- Pie chart: Distribusi metode pengadaan
-- Line chart: Trend pengumuman over time
-- Box plot & Violin plot: Pagu by metode
-- Count plot: Paket per metode
-- Heatmap: Correlation matrix
-- Subplots: Dashboard dengan multiple charts
-- Export visualizations dengan high resolution
-
-#### 3.2 Visualisasi Interaktif dengan Plotly (45 menit)
-
-**Fundamental Plotly:**
-- Plotly Express vs Graph Objects
-- Grafik interaktif: hover, zoom, pan, select
-- Tipe grafik: line, bar, scatter, box, sunburst, treemap
-- Subplots dan kustomisasi layout
-- Export ke HTML untuk sharing
-
-**Fitur Lanjutan:**
-- Tambahkan anotasi dan shapes
-- Update layout dan styling
-- Multiple traces pada satu grafik
-- Desain responsif
+#### 3.4 Plotly Mini Dashboard (16:30 - 16:50)
+- Plotly Express vs Graph Objects dan kapan memakai masing-masing
+- Interaktivitas default: hover, zoom, select, range slider
+- Sunburst, treemap, bubble chart untuk multi-dimensi insight RUP
+- Menyusun mini dashboard multi-tab + export ke HTML standalone
 
 #### 📓 Notebook:
 `day1/session3_visualization/notebooks/02_plotly_interactive.ipynb`
 
-**Praktik yang Dilakukan:**
-- Bar chart interaktif: Top satker dengan hover tooltips
-- Histogram dengan interaktivitas
-- Scatter plot: Bubble chart dengan dimensi size & color
-- Box plot: Perbandingan distribusi interaktif
-- Sunburst chart: Visualisasi hierarkis
-- Treemap: Persegi panjang proporsional berdasarkan metode
-- Time series: Line chart dengan range slider
-- Graph Objects kustom dengan anotasi
-- Perbandingan berbagai traces
-- Layout dashboard dengan subplots
-- Ekspor grafik interaktif sebagai file HTML standalone
-
-#### 3.3 Data Storytelling (15 menit)
-
-**Prinsip:**
-- Memilih tipe grafik yang tepat untuk data
-- Teori warna dan aksesibilitas (ramah buta warna)
-- Praktik terbaik grafik (hindari chartjunk)
-- Prinsip desain dashboard
-- Kesalahan visualisasi umum
-
-**Panduan Pemilihan Grafik:**
-- Perbandingan → Bar chart
-- Distribusi → Histogram, Box plot
-- Hubungan → Scatter plot
-- Komposisi → Pie chart, Treemap
-- Tren → Line chart
+#### 3.5 Data Storytelling & Q&A (16:50 - 17:00)
+- Prinsip memilih chart (comparison, distribution, relationship, composition, trend)
+- Tips warna, hierarki visual, dan menghindari chartjunk
+- Checklist final storytelling + sesi tanya jawab menjelang wrap-up
 
 ---
 
-## Penutup Hari 1 (17:30 - 17:45)
+## Penutup Hari 1 (17:00 - 17:15)
 
 - Rekap: Pandas, DuckDB, Visualisasi
 - Sesi Tanya Jawab
@@ -434,180 +384,84 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 # 📊 HARI 2: Analisis Lanjutan & Dashboard Interaktif
 
-## Sesi 4: Teknik Analisis Data Lanjutan (09:00 - 12:00)
+## Sesi 4: Teknik Analisis Data Lanjutan (08:00 - 12:00)
 
-**Durasi:** 3 jam
+**Durasi:** 4 jam
 **Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
 **Kumpulan Data:** RUP 2025
 **Slides:** `slides/04_session4_advanced.md`
 
+### ⏰ Agenda Ringkas
+- 08:00 – 08:15 · Kick-off & problem framing
+- 08:15 – 09:00 · Data cleaning & transformation
+- 09:00 – 09:45 · Feature engineering & outliers
+- 09:45 – 10:30 · Time series analysis
+- 10:30 – 11:15 · Forecasting mini lab
+- 11:15 – 12:00 · Statistical analysis & wrap-up
+
 ### Materi Pembelajaran
 
-#### 4.1 Pembersihan & Transformasi Data (60 menit)
+#### 4.1 Kick-off & Problem Framing (08:00 - 08:15)
+- Menetapkan objective analisis lanjutan dan metrik keberhasilan
+- Mengidentifikasi tantangan data nyata (missing, outliers, bias)
 
-**A. Menangani Missing Data**
-- Deteksi: `.isnull()`, `.isna()`, `.info()`
-- Strategi:
-  - Drop: `dropna()`
-  - Fill: `fillna()` dengan value/mean/median
-  - Forward/Backward fill: `ffill()`, `bfill()`
-  - Interpolasi
-- Praktik terbaik untuk missing data
+#### 4.2 Data Cleaning & Transformation (08:15 - 09:00)
+- Audit kualitas data: duplicates, missing pattern, tipe data
+- Strategi `dropna`, `fillna`, forward/backward fill, interpolation
+- Normalisasi/standarisasi, log transform, serta export dataset bersih
 
-**B. Menangani Outliers**
-- Metode deteksi:
-  - IQR (Interquartile Range) method
-  - Z-score method
-  - Visualisasi dengan box plots
-- Strategi treatment:
-  - Hapus outliers
-  - Winsorization (capping)
-  - Transformasi (log, sqrt)
-- Kapan outliers adalah data valid vs error
-
-**C. Encoding Categorical Variables**
-- Label Encoding untuk ordinal data
-- One-Hot Encoding untuk nominal data
-- Target Encoding
-- Frequency Encoding
-
-**D. Feature Engineering**
-- Ekstraksi fitur date/time (year, month, quarter, day of week)
-- Binning variabel kontinyu
-- Membuat fitur rasio
-- Feature engineering teks (panjang, jumlah kata)
+#### 4.3 Feature Engineering & Outliers (09:00 - 09:45)
+- Deteksi outlier (IQR, Z-score) + treatment (capping, winsorization)
+- Encoding kategorikal (label, one-hot, frequency, target)
+- Feature engineering tanggal, rasio, dan teks pendek
 
 #### 📓 Notebook:
 `day2/session4_advanced_analysis/notebooks/01_data_cleaning.ipynb`
 
-**Praktik yang Dilakukan:**
-- Data quality assessment (missing values, duplicates, dtypes)
-- Missing values detection dan visualization
-- Multiple strategies: drop, fill, impute
-- Outlier detection: IQR method & Z-score
-- Outlier treatment: Capping/Winsorization
-- Data transformation: Log, normalization, standardization
-- Label encoding untuk ordinal data
-- One-hot encoding untuk nominal data
-- Frequency encoding untuk high cardinality
-- Feature engineering tanggal (year, month, quarter, weekend, etc.)
-- Binning: Buat kategorikal dari kontinyu
-- Fitur teks: Panjang, jumlah kata
-- Ekspor dataset yang telah dibersihkan
+#### 4.4 Time Series Foundations (09:45 - 10:30)
+- Parsing tanggal, DateTime indexing, dan resampling multi-granular
+- Rolling/expanding windows, EMA/SMA, cumulative metrics
+- Growth rate (DoD, MoM, YoY) dan analisis seasonality
 
-#### 4.2 Analisis Time Series (60 menit)
-
-**A. Operasi DateTime**
-- Parsing dates dengan `pd.to_datetime()`
-- DateTime indexing
-- Resampling: daily, weekly, monthly, quarterly
-- Penanganan time zones
-
-**B. Time Series Aggregations**
-- Rolling windows: moving average, moving sum
-- Expanding windows
-- Cumulative calculations: cumsum, cumprod
-- Lead and lag operations
-
-**C. Analisis Tren**
-- Perhitungan pertumbuhan: MoM, YoY, QoQ
-- Deteksi tren
-- Analisis seasonality dengan decomposition
-- Konsep forecasting sederhana
+#### 4.5 Forecasting Mini Lab (10:30 - 11:15)
+- Dekomposisi tren-musiman, moving average forecast, dan baseline modeling
+- Kombinasi DuckDB + Pandas untuk pipeline analitik waktu
 
 #### 📓 Notebook:
 `day2/session4_advanced_analysis/notebooks/02_time_series.ipynb`
 
-**Praktik yang Dilakukan:**
-- Parse dates dan DateTime indexing
-- Extract date components (year, month, quarter, day of week, etc.)
-- Resampling: Daily, Weekly, Monthly, Quarterly aggregations
-- Simple Moving Average (SMA) - 7d, 14d, 30d
-- Exponential Moving Average (EMA)
-- Statistik rolling: sum, std, min, max
-- Perhitungan kumulatif: cumsum, cumprod
-- Perhitungan tingkat pertumbuhan: DoD, WoW, MoM, YoY
-- Analisis seasonality: Pola bulanan & hari dalam seminggu
-- Dekomposisi musiman (trend, seasonal, residual)
-- Visualisasi berbagai granularitas waktu
-- Dasar-dasar forecasting time series
-
-#### 4.3 Analisis Statistik (60 menit)
-
-**A. Statistik Deskriptif**
-- Tendensi sentral: mean, median, mode
-- Dispersi: variance, std dev, range, IQR
-- Percentiles dan quantiles
-- Skewness dan kurtosis
-
-**B. Analisis Korelasi**
-- Korelasi Pearson (hubungan linear)
-- Korelasi Spearman (hubungan monotonik)
-- Visualisasi matriks korelasi
-- Kausalitas vs korelasi
-
-**C. Analisis Distribusi**
-- Analisis histogram
-- Pengujian distribusi normal
-- Q-Q plots
-- Penyesuaian distribusi
-
-**D. Dasar-dasar Pengujian Hipotesis**
-- Hipotesis null vs hipotesis alternatif
-- Interpretasi nilai P
-- T-test untuk membandingkan dua grup
-- Chi-square test untuk data kategorikal
-- ANOVA untuk membandingkan beberapa grup
-
-**E. Fundamental A/B Testing**
-- Merancang A/B test
-- Perhitungan ukuran sampel
-- Signifikansi statistik
-- Menginterpretasikan hasil
+#### 4.6 Statistical Analysis & Experimentation (11:15 - 12:00)
+- Statistik deskriptif lanjut (skewness, kurtosis, percentiles)
+- Korelasi Pearson & Spearman + heatmap interpretasi
+- Pengujian hipotesis (t-test, ANOVA, chi-square) dan dasar A/B testing
+- Interpretasi p-value, signifikansi, dan rekomendasi keputusan
 
 #### 📓 Notebook:
 `day2/session4_advanced_analysis/notebooks/03_statistical_analysis.ipynb`
 
-**Praktik yang Dilakukan:**
-- **Statistik Deskriptif:**
-  - Tendensi sentral: Mean, median, mode dengan visualisasi
-  - Dispersi: Variance, std dev, range, CV
-  - Percentiles & Quartiles (box plots)
-  - Ukuran bentuk: Skewness & Kurtosis
-- **Analisis Korelasi:**
-  - Korelasi Pearson (hubungan linear)
-  - Korelasi Spearman (hubungan monotonik)
-  - Heatmap matriks korelasi
-  - Pengujian signifikansi statistik
-- **Analisis Distribusi:**
-  - Tes normalitas: Shapiro-Wilk, D'Agostino-Pearson
-  - Q-Q plots untuk penilaian visual
-  - Histogram dengan curve fitting
-- **Pengujian Hipotesis:**
-  - Independent T-test: Bandingkan 2 grup
-  - ANOVA: Bandingkan beberapa grup
-  - Chi-square test: Independensi kategorikal
-  - Interpretasi nilai P & tingkat signifikansi
-- **A/B Testing:**
-  - Perbandingan tingkat konversi
-  - Pengujian signifikansi statistik
-  - Perhitungan lift
-  - Penentuan pemenang
+---
+
+## BREAK / ISHOMA (12:00 - 13:00)
 
 ---
 
-## BREAK (12:00 - 13:00)
+## Sesi 5: Dashboard Interaktif dengan Streamlit (13:00 - 17:00)
 
----
-
-## Sesi 5: Dashboard Interaktif dengan Streamlit (13:00 - 17:30)
-
-**Durasi:** 4.5 jam (termasuk istirahat)
+**Durasi:** 4 jam (termasuk istirahat)
 **Format Pembelajaran:** Praktikum Lab
 **Aplikasi:** 4 aplikasi Streamlit
 **Slides:** `slides/05_session5_streamlit.md`
 
-### 5.1 Dasar-dasar Streamlit - LAB 10 (13:00 - 14:00)
+### ⏰ Agenda Ringkas
+- 13:00 – 13:20 · Kick-off & agenda (`01_hello_streamlit.py`)
+- 13:20 – 14:00 · Layout & text components (`01_hello_streamlit.py`)
+- 14:00 – 14:45 · Input widgets & session state (`02_components_demo.py`)
+- 14:45 – 15:00 · Data display & caching (`02_components_demo.py`)
+- 15:00 – 15:30 · **Break / Ishoma**
+- 15:30 – 16:15 · Data explorer build & metrics (`03_data_explorer.py`)
+- 16:15 – 17:00 · Dashboard architecture, deployment & Q&A (`rup_dashboard.py`)
+
+### 5.1 Kick-off & Dasar-dasar Streamlit - LAB 10 (13:00 - 14:00)
 
 **Aplikasi:** `01_hello_streamlit.py`
 
@@ -650,7 +504,7 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ---
 
-### 5.2 Komponen Interaktif - LAB 11 (14:00 - 15:15)
+### 5.2 Komponen Interaktif & Session State - LAB 11 (14:00 - 15:00)
 
 **Aplikasi:** `02_components_demo.py`
 
@@ -690,11 +544,11 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ---
 
-## BREAK (15:15 - 15:30)
+## Coffee Break (15:00 - 15:30)
 
 ---
 
-### 5.3 Penjelajah Data - LAB 12 (15:30 - 16:45)
+### 5.3 Penjelajah Data - LAB 12 (15:30 - 16:15)
 
 **Aplikasi:** `03_data_explorer.py`
 
@@ -755,7 +609,7 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ---
 
-### 5.4 Dashboard Produksi - Analisis RUP (16:45 - 17:30)
+### 5.4 Dashboard Produksi - Analisis RUP (16:15 - 17:00)
 
 **Aplikasi:** `rup_dashboard.py`
 
@@ -806,7 +660,7 @@ Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas
 
 ---
 
-## Penutup Hari 2 (17:30 - 17:45)
+## Penutup Hari 2 (17:00 - 17:15)
 
 ### Tinjauan & Langkah Selanjutnya
 

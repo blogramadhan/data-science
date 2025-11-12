@@ -109,7 +109,7 @@ Setelah sesi ini, Anda bisa:
 - 📊 **OLAP** (Analytical) Database
 - ⚡ **In-Memory** Processing
 - 📂 **Columnar** Storage
-- 🚀 **Cepat** Query Execution
+- 🚀 **Fast** Query Execution
 - 🔧 **Embedded** (No Server)
 - 🐍 **Python** Native Support
 
@@ -121,9 +121,9 @@ Setelah sesi ini, Anda bisa:
 - ✅ Analisis Data
 - ✅ Pipeline ETL
 - ✅ Alur Kerja Data Science
-- ✅ Prototyping Cepat
+- ✅ Fast Prototyping
 - ✅ Analitik Lokal
-- ✅ Testing Testing & Development Development
+- ✅ Testing & Development
 
 </div>
 
@@ -150,8 +150,7 @@ Setelah sesi ini, Anda bisa:
 
 # 🆚 OLAP vs OLTP
 
-**Penjelasan:** OLAP untuk analisis data (baca banyak), OLTP untuk transaksi (tulis banyak)
-DuckDB cocok untuk OLAP (analisis)
+**Penjelasan:** OLAP (Online Analytical Processing) untuk analisis data (baca banyak), OLTP (Online Transaction Processing) untuk transaksi (tulis banyak) DuckDB cocok untuk OLAP (analisis)
 
 <div class="columns">
 
@@ -201,7 +200,7 @@ import pandas as pd
 print(f"DuckDB version: {duckdb.__version__}")
 ```
 
-**Versi terbaru:** 0.9+ (as of 2024)
+**Versi terbaru:** 1.4.1 LTS (7 Oktober 2025)
 
 ```python
 # Create connection
@@ -447,7 +446,7 @@ ORDER BY pagu DESC NULLS LAST;
 
 ## Apa itu Window Functions?
 
-**Window functions** lakukan kalkulasi pada sekelompok rows yang berhubungan dengan current row, **tanpa collapse hasil seperti GROUP BY**.
+**Window functions** melakukan kalkulasi pada sekelompok baris yang berhubungan dengan baris terkini, **tanpa collapse hasil seperti GROUP BY**.
 
 ```sql
 -- GROUP BY: Collapse ke 1 row per group
@@ -970,7 +969,7 @@ GROUP BY metode_pengadaan;
 
 ## Tips Menulis SQL yang Baik
 
-1. **Use CTEs untuk rumit queries** 📝
+1. **Use CTEs untuk query yang rumit** 📝
    - Lebih readable daripada nested subqueries
 
 2. **Index pada kolom yang sering difilter** ⚡
@@ -1064,12 +1063,12 @@ GROUP BY metode_pengadaan;
 
 ## Yang Harus Anda Ingat
 
-- ✅ DuckDB = SQL untuk data analysis yang fast
+- ✅ DuckDB = SQL untuk data analysis yang cepat
 - ✅ Perfect untuk analytical workloads (OLAP)
 - ✅ Window functions untuk ranking & running calculations
 - ✅ CTEs membuat complex queries lebih readable
 - ✅ Native integration dengan Pandas
-- ✅ Lebih cepat dari Pandas untuk penggabungans
+- ✅ Lebih cepat dari Pandas untuk penggabungan
 - ✅ Query file Parquet secara langsung
 - ✅ No server needed - embedded database
 
