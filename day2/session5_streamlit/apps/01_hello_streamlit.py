@@ -277,7 +277,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader("Column 1")
     st.write("Ini adalah kolom pertama")
-    st.image("https://via.placeholder.com/150", caption="Placeholder Image")
+    st.image("https://picsum.photos/150", caption="Random Image from Picsum")
 
 with col2:
     st.subheader("Column 2")
