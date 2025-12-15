@@ -25,9 +25,80 @@ st.set_page_config(
 )
 
 # ========================================
-# CUSTOM CSS (Optional)
+# SIDEBAR (Moved to top for theme selection)
 # ========================================
-st.markdown("""
+with st.sidebar:
+    st.subheader("About")
+    st.info("""
+        **Hello Streamlit App**
+
+        Aplikasi ini mendemonstrasikan:
+        - Text elements
+        - Data display
+        - Status messages
+        - Simple charts
+        - Layout components
+    """)
+
+    st.divider()
+
+    st.header("📋 Sidebar Menu")
+    st.write("Sidebar berguna untuk navigasi dan filter.")
+
+    st.subheader("Settings")
+    show_code = st.checkbox("Show code examples", value=True)
+    theme = st.selectbox("Theme", ["Light", "Dark", "Auto"])
+
+    st.divider()
+
+    st.caption("Bootcamp Data Analysis 2025")
+
+# ========================================
+# CUSTOM CSS (Theme-based)
+# ========================================
+# Apply theme-based CSS
+if theme == "Dark":
+    theme_css = """
+    <style>
+    .stApp {
+        background-color: #0E1117;
+        color: #FAFAFA;
+    }
+    .big-font {
+        font-size: 20px !important;
+        font-weight: bold;
+        color: #FAFAFA;
+    }
+    .highlight {
+        background-color: #FFA726;
+        padding: 5px;
+        border-radius: 3px;
+        color: #000;
+    }
+    </style>
+    """
+elif theme == "Light":
+    theme_css = """
+    <style>
+    .stApp {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+    .big-font {
+        font-size: 20px !important;
+        font-weight: bold;
+        color: #000000;
+    }
+    .highlight {
+        background-color: #FFEB3B;
+        padding: 5px;
+        border-radius: 3px;
+        color: #000;
+    }
+    </style>
+    """
+else:  # Auto
+    theme_css = """
     <style>
     .big-font {
         font-size: 20px !important;
@@ -39,7 +110,9 @@ st.markdown("""
         border-radius: 3px;
     }
     </style>
-""", unsafe_allow_html=True)
+    """
+
+st.markdown(theme_css, unsafe_allow_html=True)
 
 # ========================================
 # 1. BASIC TEXT ELEMENTS
@@ -262,33 +335,6 @@ with tab3:
     st.info("Tabs berguna untuk mengorganisir konten yang berbeda dalam satu page.")
 
 st.divider()
-
-# ========================================
-# SIDEBAR
-# ========================================
-with st.sidebar:
-    st.header("📋 Sidebar Menu")
-    st.write("Sidebar berguna untuk navigasi dan filter.")
-
-    st.subheader("About")
-    st.info("""
-        **Hello Streamlit App**
-
-        Aplikasi ini mendemonstrasikan:
-        - Text elements
-        - Data display
-        - Status messages
-        - Simple charts
-        - Layout components
-    """)
-
-    st.subheader("Settings")
-    show_code = st.checkbox("Show code examples", value=True)
-    theme = st.selectbox("Theme", ["Light", "Dark", "Auto"])
-
-    st.divider()
-
-    st.caption("Bootcamp Data Analysis 2025")
 
 # ========================================
 # FOOTER
