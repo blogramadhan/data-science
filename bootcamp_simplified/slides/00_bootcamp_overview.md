@@ -74,8 +74,11 @@ Setelah bootcamp, peserta akan bisa:
 ## 💻 Kebutuhan Setup
 
 ```bash
-# Instal dependensi
+# Instal dependensi (pip)
 pip install pandas duckdb plotly streamlit
+
+# Atau pakai uv (lebih cepat)
+uv pip install pandas duckdb plotly streamlit
 
 # Verifikasi instalasi
 python -c "import pandas, duckdb, plotly, streamlit; print('OK!')"
