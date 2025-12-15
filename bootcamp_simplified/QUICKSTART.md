@@ -1,10 +1,10 @@
-# 🚀 Quick Start Guide
+# 🚀 Panduan Mulai Cepat
 
-Panduan cepat untuk memulai bootcamp.
+Panduan singkat untuk langsung jalan.
 
 ## ⚡ Setup Cepat (5 menit)
 
-### 1. Install Dependencies
+### 1. Instal Dependensi
 
 ```bash
 # Navigasi ke folder bootcamp_simplified
@@ -14,16 +14,16 @@ cd bootcamp_simplified
 pip install -r requirements.txt
 ```
 
-### 2. Verifikasi Installation
+### 2. Verifikasi Instalasi
 
 ```bash
 # Test Python & packages
 python -c "import pandas, duckdb, plotly, streamlit; print('✅ All packages installed!')"
 ```
 
-### 3. Mulai Belajar!
+### 3. Mulai Belajar
 
-#### Untuk Day 1 (Notebooks):
+#### Untuk Hari 1 (Notebook):
 
 ```bash
 # Jalankan Jupyter
@@ -38,7 +38,7 @@ jupyter notebook
 #   3. day1/session3_visualization_basics/notebooks/03_visualization_fundamental.ipynb (60 menit)
 ```
 
-#### Untuk Day 2 (Streamlit - Full Day):
+#### Untuk Hari 2 (Streamlit - Full Day):
 
 ```bash
 # Session 3: Streamlit Basics (120 menit)
@@ -96,39 +96,39 @@ Jika dataset tidak ditemukan, pastikan struktur folder benar.
 
 ## ⏱️ Jadwal Bootcamp
 
-### Day 1: Data Analysis Fundamentals (4 jam)
-- **09:00 - 11:00** Session 1: Pandas Fundamental (120 menit)
-  - Load & explore data
+### Hari 1: Dasar Analisis Data (4 jam)
+- **09:00 - 11:00** Sesi 1: Pandas Fundamental (120 menit)
+  - Muat & eksplorasi data
   - Seleksi & filtering
   - GroupBy & agregasi
-- **11:00 - 11:15** Break ☕
-- **11:15 - 13:15** Session 2: DuckDB & Visualization (120 menit)
-  - SQL queries (60 menit)
-  - Plotly charts (60 menit)
-- **13:15 - 14:15** Lunch 🍱
-- **14:15 - 14:45** Review & Q&A Day 1
-- **14:45 - 15:00** Preview Day 2
+- **11:00 - 11:15** Istirahat ☕
+- **11:15 - 13:15** Sesi 2: DuckDB & Visualisasi (120 menit)
+  - Query SQL (60 menit)
+  - Chart Plotly (60 menit)
+- **13:15 - 14:15** Makan siang 🍱
+- **14:15 - 14:45** Review & Q&A Hari 1
+- **14:45 - 15:00** Pratinjau Hari 2
 
-### Day 2: Streamlit Dashboard Full Day (4 jam)
-- **09:00 - 11:00** Session 3: Streamlit Basics (120 menit)
-  - Setup & Layout
+### Hari 2: Streamlit Dashboard Full Day (4 jam)
+- **09:00 - 11:00** Sesi 3: Dasar Streamlit (120 menit)
+  - Setup & layout
   - Widgets (selectbox, slider, checkbox, radio)
-  - Metrics & KPI cards
+  - Metrics & kartu KPI
   - Data table
   - Buttons & actions
   - **File:** `day2/session3_streamlit_basics/app_part1.py`
-- **11:00 - 11:15** Break ☕
-- **11:15 - 13:15** Session 4: Dashboard Complete (120 menit)
-  - Tabs & multi-section layout
-  - Plotly chart integration
-  - Advanced filtering
-  - Caching & performance
-  - Export (CSV/Excel)
+- **11:00 - 11:15** Istirahat ☕
+- **11:15 - 13:15** Sesi 4: Dashboard Lengkap (120 menit)
+  - Tabs & layout multi-section
+  - Integrasi chart Plotly
+  - Filtering lanjutan
+  - Caching & performa
+  - Ekspor (CSV/Excel)
   - **File:** `day2/session4_streamlit_complete/app_complete.py`
-- **13:15 - 14:15** Lunch 🍱
-- **14:15 - 15:00** Deploy to Streamlit Cloud
-  - GitHub setup
-  - Deploy configuration
+- **13:15 - 14:15** Makan siang 🍱
+- **14:15 - 15:00** Deploy ke Streamlit Cloud
+  - Setup GitHub
+  - Konfigurasi deploy
   - Testing & troubleshooting
 - **15:00 - 15:30** Final Q&A & Closing
 
@@ -145,7 +145,7 @@ pip install jupyter
 code .
 ```
 
-### Problem: Dataset not found
+### Problem: Dataset tidak ditemukan
 ```bash
 # Cek path dataset
 ls ../datasets/rup/
@@ -175,21 +175,21 @@ pip install -r requirements.txt --force-reinstall
 
 ## 💡 Tips
 
-1. **Save your work:** Notebooks auto-save, tapi lebih baik `Ctrl+S` berkala
-2. **Clear output:** Jika notebook lambat, `Cell > All Output > Clear`
-3. **Restart kernel:** Jika ada error aneh, `Kernel > Restart & Clear Output`
-4. **Documentation:** Tekan `Shift+Tab` di function untuk lihat docs
-5. **Shortcuts:** `Shift+Enter` untuk run cell, `Esc` untuk command mode
+1. **Simpan pekerjaan:** Notebook auto-save, tapi tetap tekan `Ctrl+S` berkala
+2. **Bersihkan output:** Jika notebook melambat, `Cell > All Output > Clear`
+3. **Restart kernel:** Jika muncul error aneh, `Kernel > Restart & Clear Output`
+4. **Dokumentasi:** Tekan `Shift+Tab` di fungsi untuk melihat dokumentasi
+5. **Shortcut:** `Shift+Enter` untuk menjalankan cell, `Esc` untuk command mode
 
 ---
 
-## 📚 Resources
+## 📚 Sumber Belajar
 
-- **Cheat Sheets:**
+- **Lembar Ringkas:**
   - [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
   - [SQL Cheat Sheet](https://www.sqltutorial.org/sql-cheat-sheet/)
 
-- **Documentation:**
+- **Dokumentasi:**
   - [Pandas](https://pandas.pydata.org/docs/)
   - [DuckDB](https://duckdb.org/docs/)
   - [Plotly](https://plotly.com/python/)

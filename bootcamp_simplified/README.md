@@ -1,83 +1,83 @@
-# 🎓 Bootcamp Data Analysis - Simplified Version
+# 🎓 Bootcamp Analisis Data - Versi Sederhana
 
-**Versi Sederhana & Fundamental untuk Bootcamp 2 Hari**
+**Edisi Fundamental selama 2 Hari**
 
-Folder ini berisi materi bootcamp yang telah disederhanakan agar lebih fokus pada konsep fundamental dan dapat diselesaikan dalam waktu bootcamp yang terbatas.
+Folder ini berisi materi bootcamp yang dipadatkan supaya fokus pada konsep dasar dan selesai dalam durasi bootcamp singkat.
 
 ## 📋 Struktur Materi
 
-### Day 1: Data Analysis Fundamentals
+### Hari 1: Dasar Analisis Data
 
-#### ⏰ Session 1: Pandas Fundamental (120 menit)
+#### ⏰ Sesi 1: Pandas Fundamental (120 menit)
 **File:** `day1/session1_pandas_basics/notebooks/01_pandas_fundamental.ipynb`
 
 **Topik:**
-- Load & explore data
-- Seleksi data (columns & rows)
+- Muat & eksplorasi data
+- Seleksi kolom & baris
 - Filtering dengan boolean indexing
 - GroupBy & agregasi
 - Missing values
-- Summary statistics
+- Statistik ringkasan
 
-**Output:** Peserta dapat melakukan operasi dasar Pandas untuk analisis data
+**Output:** Peserta dapat menjalankan operasi dasar Pandas untuk analisis data
 
 ---
 
-#### ⏰ Session 2: DuckDB & Visualization (120 menit)
+#### ⏰ Sesi 2: DuckDB & Visualisasi (120 menit)
 **File:**
 - `day1/session2_duckdb_basics/notebooks/02_duckdb_fundamental.ipynb`
 - `day1/session3_visualization_basics/notebooks/03_visualization_fundamental.ipynb`
 
 **Topik DuckDB (60 menit):**
 - Setup DuckDB
-- SQL queries dasar (SELECT, WHERE, ORDER BY)
-- Aggregate functions (SUM, COUNT, AVG)
+- Query SQL dasar (SELECT, WHERE, ORDER BY)
+- Fungsi agregasi (SUM, COUNT, AVG)
 - GROUP BY & HAVING
-- Export results
+- Ekspor hasil
 
-**Topik Visualization (60 menit):**
-- Bar chart & Pie chart
-- Line chart untuk trend
+**Topik Visualisasi (60 menit):**
+- Bar chart & pie chart
+- Line chart untuk tren
 - Integrasi Plotly dengan Pandas
 
-**Output:** Peserta dapat menjalankan SQL query dan membuat visualisasi dasar
+**Output:** Peserta dapat menjalankan query SQL dan membuat visualisasi dasar
 
 ---
 
-### Day 2: Streamlit Dashboard (Full Day)
+### Hari 2: Dashboard Streamlit (Full Day)
 
-#### ⏰ Session 3: Streamlit Basics (120 menit)
+#### ⏰ Sesi 3: Dasar Streamlit (120 menit)
 **File:** `day2/session3_streamlit_basics/app_part1.py`
 
 **Topik:**
-- Setup Streamlit app
-- Layout (columns, containers)
+- Setup aplikasi Streamlit
+- Layout (kolom, container)
 - Widgets (selectbox, slider, checkbox)
-- Metrics & KPI cards
-- Data table
+- Metrics & kartu KPI
+- Tabel data
 
 **Output:** Aplikasi Streamlit dasar dengan widgets interaktif
 
 ---
 
-#### ⏰ Session 4: Streamlit Dashboard Complete (120 menit)
+#### ⏰ Sesi 4: Dashboard Streamlit Lengkap (120 menit)
 **File:** `day2/session4_streamlit_complete/app_complete.py`
 
 **Topik:**
-- Tabs & multi-section layout
-- Integrasi dengan Plotly charts
+- Tabs & layout multi-section
+- Integrasi Plotly charts
 - Filtering & interaktivitas
-- Caching untuk performance
-- Export data (CSV/Excel)
+- Caching untuk performa
+- Ekspor data (CSV/Excel)
 - Deploy ke Streamlit Cloud
 
-**Output:** Dashboard RUP lengkap yang siap production
+**Output:** Dashboard RUP lengkap yang siap produksi
 
 ---
 
 ## 🚀 Cara Menggunakan
 
-### 1. Setup Environment
+### 1. Siapkan Environment
 
 ```bash
 # Clone repo (jika belum)
@@ -88,34 +88,34 @@ cd data-science/bootcamp_simplified
 pip install pandas plotly streamlit duckdb pyarrow
 ```
 
-### 2. Jalankan Notebooks (Day 1)
+### 2. Jalankan Notebooks (Hari 1)
 
 ```bash
-# Session 1-3: Buka di Jupyter
+# Sesi 1-3: buka di Jupyter
 jupyter notebook
 
-# Atau gunakan VS Code dengan Jupyter extension
+# Atau gunakan VS Code dengan ekstensi Jupyter
 ```
 
-### 3. Jalankan Streamlit App (Day 2)
+### 3. Jalankan Streamlit App (Hari 2)
 
 ```bash
 cd day2/session4_streamlit
 streamlit run app_simple.py
 ```
 
-Dashboard akan terbuka di browser pada `http://localhost:8501`
+Dashboard terbuka di browser pada `http://localhost:8501`
 
 ---
 
 ## 📊 Dataset
 
-**Dataset:** RUP Paket Penyedia Terumumkan 2025
-**Lokasi:** `../datasets/rup/RUP-PaketPenyedia-Terumumkan-2025.parquet`
-**Size:** ~16,430 rows, 48 columns
-**Format:** Parquet (efficient & compressed)
+**Dataset:** RUP Paket Penyedia Terumumkan 2025  
+**Lokasi:** `../datasets/rup/RUP-PaketPenyedia-Terumumkan-2025.parquet`  
+**Ukuran:** ~16.430 baris, 48 kolom  
+**Format:** Parquet (efisien & terkompresi)
 
-**Kolom Penting:**
+**Kolom penting:**
 - `nama_paket`: Nama paket pengadaan
 - `pagu`: Nilai pagu (Rupiah)
 - `metode_pengadaan`: Tender, E-Purchasing, dll
@@ -128,46 +128,46 @@ Dashboard akan terbuka di browser pada `http://localhost:8501`
 
 ## ⚡ Perbedaan dengan Versi Lengkap
 
-| Aspek | Versi Lengkap | Versi Simplified |
-|-------|---------------|------------------|
+| Aspek | Versi Lengkap | Versi Sederhana |
+|-------|---------------|-----------------|
 | **Durasi** | 3-4 hari | 2 hari (8 jam efektif) |
-| **Fokus** | Comprehensive & advanced | Fundamental & praktis |
-| **Pandas** | 69 cells, semua fitur | 20 cells, operasi inti |
-| **DuckDB** | Advanced queries, joins | Basic queries, agregasi |
-| **Visualization** | Matplotlib + Seaborn + Plotly | Plotly only |
-| **Streamlit** | Multi-page, complex | **2 sessions progressif** (basics → complete) |
-| **Advanced Topics** | Statistical analysis, time series | ❌ Dihapus |
-| **Waktu Streamlit** | 25% dari total | **50% dari total (full day 2)** |
+| **Fokus** | Komprehensif & advance | Fundamental & praktis |
+| **Pandas** | 69 sel, semua fitur | 20 sel, operasi inti |
+| **DuckDB** | Query lanjutan, join | Query dasar, agregasi |
+| **Visualisasi** | Matplotlib + Seaborn + Plotly | Plotly saja |
+| **Streamlit** | Multi-halaman, kompleks | **2 sesi progresif** (dasar → lengkap) |
+| **Topik lanjut** | Statistik, time series | ❌ Dihilangkan |
+| **Porsi Streamlit** | 25% | **50% (full day 2)** |
 
 ---
 
 ## 🎯 Learning Outcomes
 
-Setelah menyelesaikan bootcamp simplified, peserta akan dapat:
+Setelah menyelesaikan bootcamp versi sederhana, peserta mampu:
 
-✅ Memuat dan mengeksplorasi data dengan Pandas
-✅ Melakukan filtering, grouping, dan agregasi
-✅ Menulis SQL queries dengan DuckDB
-✅ Membuat visualisasi interaktif dengan Plotly
-✅ Membangun dashboard sederhana dengan Streamlit
+✅ Memuat dan mengeksplorasi data dengan Pandas  
+✅ Melakukan filtering, grouping, dan agregasi  
+✅ Menulis query SQL dengan DuckDB  
+✅ Membuat visualisasi interaktif dengan Plotly  
+✅ Membangun dashboard sederhana dengan Streamlit  
 ✅ Deploy dashboard ke Streamlit Cloud
 
 ---
 
 ## 📚 Materi Tambahan (Opsional)
 
-Jika waktu tersedia, topik ini bisa ditambahkan:
+Jika waktu memungkinkan, tambah topik:
 
-- **Data Cleaning:** Handle duplicates, outliers, data types
+- **Data Cleaning:** Tangani duplikat, outlier, tipe data
 - **Time Series:** Resampling, rolling windows
-- **Advanced Charts:** Scatter plots, heatmaps, treemaps
-- **Streamlit Advanced:** Multi-page apps, session state, forms
+- **Chart Lanjutan:** Scatter, heatmap, treemap
+- **Streamlit Lanjutan:** Multi-halaman, session state, forms
 
-Materi lengkap tersedia di folder `../day1` dan `../day2`
+Materi lengkap ada di folder `../day1` dan `../day2`.
 
 ---
 
-## 🔗 Resources
+## 🔗 Sumber Belajar
 
 - **Pandas Docs:** https://pandas.pydata.org/docs/
 - **DuckDB Docs:** https://duckdb.org/docs/
@@ -179,18 +179,18 @@ Materi lengkap tersedia di folder `../day1` dan `../day2`
 
 ## 💡 Tips untuk Instruktur
 
-1. **Session 1-3:** Fokus pada hands-on, biarkan peserta coding sendiri
-2. **Session 4:** Live coding dashboard step-by-step
-3. **Breaks:** 15 menit setiap 90 menit
-4. **Q&A:** Alokasikan 15-30 menit di akhir setiap session
-5. **Practice:** Gunakan "Latihan Mandiri" di akhir setiap notebook
+1. **Sesi 1-3:** Fokus hands-on, biarkan peserta mencoba sendiri  
+2. **Sesi 4:** Live coding dashboard step-by-step  
+3. **Break:** 15 menit setiap 90 menit  
+4. **Q&A:** 15-30 menit di akhir tiap sesi  
+5. **Latihan:** Gunakan “Latihan Mandiri” di akhir notebook
 
 ---
 
-## 📝 License
+## 📝 Lisensi
 
-Materi bootcamp ini dibuat untuk keperluan edukasi.
+Materi bootcamp ini disiapkan untuk kebutuhan edukasi.
 
 ---
 
-**Happy Learning! 🚀**
+**Selamat belajar! 🚀**

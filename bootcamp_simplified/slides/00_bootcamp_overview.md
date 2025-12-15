@@ -10,7 +10,7 @@ backgroundColor: #fff
 # 🎓 Bootcamp Analisis Data
 ## Python, DuckDB & Streamlit
 
-**Versi Disederhanakan - 2 Hari**
+**Bootcamp 2 Hari: Dari Data Analyst ke Dashboard Builder**
 
 ---
 

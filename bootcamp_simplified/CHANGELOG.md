@@ -1,130 +1,118 @@
-# 📝 Changelog - Bootcamp Simplified
+# 📝 Catatan Perubahan - Bootcamp Simplified
 
-## Version 2.0 - Streamlit Full Day (Latest)
+## Versi 2.0 - Streamlit Full Day (Terbaru)
 
-**Tanggal:** December 15, 2024
+**Tanggal:** 15 Desember 2024
 
-### 🎯 Major Changes
+### 🎯 Perubahan Utama
 
 #### Restrukturisasi Jadwal
-- **Day 1:** Data Analysis Fundamentals (4 jam)
-  - Session 1: Pandas (120 menit) ← lebih panjang
-  - Session 2: DuckDB + Visualization (120 menit) ← digabung
+- **Hari 1:** Dasar Analisis Data (4 jam)  
+  - Sesi 1: Pandas (120 menit) ← durasi lebih panjang  
+  - Sesi 2: DuckDB + Visualisasi (120 menit) ← digabung
 
-- **Day 2:** Streamlit Dashboard Full Day (4 jam) ← NEW!
-  - Session 3: Streamlit Basics (120 menit) ← NEW
-  - Session 4: Dashboard Complete (120 menit) ← NEW
+- **Hari 2:** Dashboard Streamlit Full Day (4 jam) ← BARU  
+  - Sesi 3: Dasar Streamlit (120 menit) ← BARU  
+  - Sesi 4: Dashboard Lengkap (120 menit) ← BARU
 
-#### Perubahan Konten
+#### Pembaruan Konten
 
-1. **Session 1: Pandas** (120 menit)
-   - Tidak ada perubahan konten
-   - Durasi diperpanjang dari 90 → 120 menit
+1. **Sesi 1: Pandas** (120 menit)  
+   - Konten tetap  
+   - Durasi dari 90 → 120 menit
 
-2. **Session 2: DuckDB + Visualization** (120 menit)
-   - DuckDB: 60 menit (reduced from 90)
-   - Visualization: 60 menit (reduced from 90)
-   - Kombinasi 2 session dalam 1 slot
+2. **Sesi 2: DuckDB + Visualisasi** (120 menit)  
+   - DuckDB: 60 menit (dari 90)  
+   - Visualisasi: 60 menit (dari 90)  
+   - Dua sesi digabung menjadi satu slot
 
-3. **Session 3: Streamlit Basics** (120 menit) ← **NEW**
-   - **File:** `day2/session3_streamlit_basics/app_part1.py`
-   - **Fokus:**
-     - Layout fundamentals (columns, containers, expanders)
-     - Semua widgets (text_input, selectbox, multiselect, slider, checkbox, radio)
-     - Metrics & KPI cards
-     - Data table
-     - Buttons & actions
-     - Progress bar & status messages
+3. **Sesi 3: Dasar Streamlit** (120 menit) ← **BARU**  
+   - **File:** `day2/session3_streamlit_basics/app_part1.py`  
+   - **Fokus:** layout (columns, containers, expanders), semua widget (text_input, selectbox, multiselect, slider, checkbox, radio), metrics & KPI, data table, tombol & aksi, progress/status  
    - **Output:** Aplikasi interaktif dengan filtering lengkap
 
-4. **Session 4: Dashboard Complete** (120 menit) ← **NEW**
-   - **File:** `day2/session4_streamlit_complete/app_complete.py`
-   - **Fokus:**
-     - Tabs untuk multi-section layout
-     - Integrasi Plotly charts (pie, bar, line, scatter)
-     - Advanced filtering dengan DuckDB-style
-     - Caching (@st.cache_data)
-     - Export (CSV dengan timestamp)
-     - Deploy instructions
-   - **Output:** Production-ready dashboard
+4. **Sesi 4: Dashboard Lengkap** (120 menit) ← **BARU**  
+   - **File:** `day2/session4_streamlit_complete/app_complete.py`  
+   - **Fokus:** tabs multi-section, integrasi chart Plotly (pie, bar, line, scatter), filtering ala DuckDB, caching (@st.cache_data), ekspor CSV dengan timestamp, panduan deploy  
+   - **Output:** Dashboard siap produksi
 
 ### 📊 Distribusi Waktu
 
-| Topik | Version 1.0 | Version 2.0 | Change |
-|-------|-------------|-------------|--------|
-| Pandas | 90 min (11%) | 120 min (15%) | +30 min |
-| DuckDB | 90 min (11%) | 60 min (7.5%) | -30 min |
-| Visualization | 90 min (11%) | 60 min (7.5%) | -30 min |
-| Streamlit | 180 min (22%) | **240 min (30%)** | **+60 min** |
+| Topik | Versi 1.0 | Versi 2.0 | Perubahan |
+|-------|-----------|-----------|-----------|
+| Pandas | 90 menit (11%) | 120 menit (15%) | +30 menit |
+| DuckDB | 90 menit (11%) | 60 menit (7,5%) | -30 menit |
+| Visualisasi | 90 menit (11%) | 60 menit (7,5%) | -30 menit |
+| Streamlit | 180 menit (22%) | **240 menit (30%)** | **+60 menit** |
 | **Total Streamlit** | 22% | **50% (full day 2)** | **+128%** |
 
-### 🎓 Keunggulan Version 2.0
+### 🎓 Keunggulan Versi 2.0
 
-✅ **Lebih Banyak Hands-on Streamlit**
-- Full day 2 dedicated untuk Streamlit
-- 2 aplikasi berbeda (progressive learning)
-- Dari basics → production-ready
+✅ **Lebih banyak praktik Streamlit**  
+- Hari kedua penuh untuk Streamlit  
+- 2 aplikasi berbeda (pembelajaran progresif)  
+- Dari dasar → siap produksi  
 
-✅ **Progressive Learning**
-- Session 3: Fokus pada widgets & layout
-- Session 4: Fokus pada charts & advanced features
-- Step-by-step, tidak overwhelming
+✅ **Progressive learning**  
+- Sesi 3: Fokus widget & layout  
+- Sesi 4: Fokus chart & fitur lanjut  
+- Step-by-step, tidak overwhelming  
 
-✅ **Realistic untuk Bootcamp**
-- Day 1: Data analysis basics (cukup untuk foundation)
-- Day 2: Full focus pada building dashboard
-- Peserta pulang dengan 2 dashboard
+✅ **Realistis untuk bootcamp**  
+- Hari 1: Fondasi analisis data  
+- Hari 2: Full fokus membangun dashboard  
+- Peserta pulang dengan 2 dashboard  
 
-✅ **Production-Ready Output**
-- Session 4 dashboard siap deploy
-- Include caching, export, dan best practices
-- Ready untuk portfolio
+✅ **Output siap produksi**  
+- Dashboard Sesi 4 siap deploy  
+- Sudah termasuk caching, ekspor, best practice  
+- Cocok untuk portofolio
 
-### 📁 New File Structure
+### 📁 Struktur File Baru
 
 ```
 bootcamp_simplified/
 ├── day1/
-│   ├── session1_pandas_basics/        # 120 min
-│   ├── session2_duckdb_basics/        # 60 min
-│   └── session3_visualization_basics/ # 60 min
+│   ├── session1_pandas_basics/        # 120 menit
+│   ├── session2_duckdb_basics/        # 60 menit
+│   └── session3_visualization_basics/ # 60 menit
 │
 └── day2/
-    ├── session3_streamlit_basics/     # 120 min ← NEW!
+    ├── session3_streamlit_basics/     # 120 menit ← BARU!
     │   └── app_part1.py
-    └── session4_streamlit_complete/   # 120 min ← NEW!
+    └── session4_streamlit_complete/   # 120 menit ← BARU!
         └── app_complete.py
 ```
 
-### 🔄 Migration from Version 1.0
+### 🔄 Migrasi dari Versi 1.0
 
-Jika Anda menggunakan version 1.0:
+Jika Anda masih memakai versi 1.0:
 
-1. **Tidak perlu perubahan** untuk Day 1 notebooks
-2. **Day 2:** Gunakan 2 file baru:
-   - `session3_streamlit_basics/app_part1.py` (basics)
-   - `session4_streamlit_complete/app_complete.py` (complete)
-3. **Old file:** `session4_streamlit/app_simple.py` → archived
+1. **Tidak ada perubahan** untuk notebook Hari 1  
+2. **Hari 2:** Gunakan 2 file baru:  
+   - `session3_streamlit_basics/app_part1.py` (dasar)  
+   - `session4_streamlit_complete/app_complete.py` (lengkap)  
+3. **File lama:** `session4_streamlit/app_simple.py` → diarsipkan
 
 ### 📌 Breaking Changes
 
-- ❌ Removed: `day2/session4_streamlit/app_simple.py`
-- ✅ Added: `day2/session3_streamlit_basics/app_part1.py`
-- ✅ Added: `day2/session4_streamlit_complete/app_complete.py`
+- ❌ Dihapus: `day2/session4_streamlit/app_simple.py`  
+- ✅ Ditambah: `day2/session3_streamlit_basics/app_part1.py`  
+- ✅ Ditambah: `day2/session4_streamlit_complete/app_complete.py`
 
 ---
 
-## Version 1.0 - Initial Release
+## Versi 1.0 - Rilis Awal
 
-**Tanggal:** December 15, 2024
+**Tanggal:** 15 Desember 2024
 
-### Features
+### Fitur
 
-- 4 sessions: Pandas, DuckDB, Visualization, Streamlit
-- Equal time distribution (90 min each for day 1)
-- Single Streamlit app (simplified)
+- 4 sesi: Pandas, DuckDB, Visualisasi, Streamlit  
+- Distribusi waktu seimbang (90 menit per sesi hari 1)  
+- Satu aplikasi Streamlit (simplified)
 
-### File Structure
+### Struktur File
 
 ```
 bootcamp_simplified/
@@ -139,17 +127,17 @@ bootcamp_simplified/
 
 ---
 
-## Comparison Summary
+## Ringkasan Perbandingan
 
-| Aspect | V1.0 | V2.0 |
-|--------|------|------|
-| Day 1 Sessions | 3 x 90 min | 1 x 120 min + 1 x 120 min (combined) |
-| Day 2 Sessions | 1 x 180 min | 2 x 120 min |
-| Streamlit Apps | 1 app | 2 apps (progressive) |
-| Streamlit Time | 180 min (22%) | 240 min (50%) |
-| Focus | Balanced | Streamlit-heavy |
-| Output | 1 simple dashboard | 2 dashboards (basic + complete) |
+| Aspek | Versi 1.0 | Versi 2.0 |
+|-------|-----------|-----------|
+| Sesi Hari 1 | 3 x 90 menit | 1 x 120 menit + 1 x 120 menit (digabung) |
+| Sesi Hari 2 | 1 x 180 menit | 2 x 120 menit |
+| Aplikasi Streamlit | 1 aplikasi | 2 aplikasi (progresif) |
+| Waktu Streamlit | 180 menit (22%) | 240 menit (50%) |
+| Fokus | Seimbang | Lebih berat ke Streamlit |
+| Output | 1 dashboard sederhana | 2 dashboard (basic + complete) |
 
 ---
 
-**Recommendation:** Use Version 2.0 for bootcamps yang fokus pada dashboard building dan deployment.
+**Rekomendasi:** Gunakan Versi 2.0 untuk bootcamp yang menekankan pembuatan dashboard dan deployment.
