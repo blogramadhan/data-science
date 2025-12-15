@@ -78,9 +78,9 @@ def generate_sample_rup_data(num_rows: int = 2000) -> pd.DataFrame:
         "nama_satker": rng.choice(satkers, num_rows),
         "metode_pengadaan": rng.choice(metode, num_rows),
         "jenis_pengadaan": rng.choice(jenis, num_rows),
-        "status_pdn": rng.choice(["Ya", "Tidak"], num_rows, p=[0.4, 0.6]),
-        "status_ukm": rng.choice(["Ya", "Tidak"], num_rows, p=[0.5, 0.5]),
-        "status_pradipa": rng.choice(["Ya", "Tidak"], num_rows, p=[0.3, 0.7]),
+        "status_pdn": rng.choice(["PDN", "Non-PDN"], num_rows, p=[0.4, 0.6]),
+        "status_ukm": rng.choice(["UKM", "Non-UKM"], num_rows, p=[0.5, 0.5]),
+        "status_pradipa": rng.choice(["PraDIPA", "Non-PraDIPA"], num_rows, p=[0.3, 0.7]),
         "tgl_pengumuman_paket": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(0, 365, num_rows)],
         "tgl_buat_paket": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(-30, 335, num_rows)],
         "tgl_awal_pemilihan": [base_date + pd.Timedelta(days=int(d)) for d in rng.integers(0, 200, num_rows)],
@@ -160,27 +160,32 @@ show_pradipa = st.sidebar.checkbox('Hanya PRADIPA', False)
 
 # Apply filters using DuckDB
 def apply_filters():
-    query = "SELECT * FROM rup WHERE 1=1"
+    # Start with all conditions
+    conditions = []
 
     if selected_metode != 'Semua':
-        query += f" AND metode_pengadaan = '{selected_metode}'"
+        conditions.append(f"metode_pengadaan = '{selected_metode}'")
 
     if selected_jenis != 'Semua':
-        query += f" AND jenis_pengadaan = '{selected_jenis}'"
+        conditions.append(f"jenis_pengadaan = '{selected_jenis}'")
 
     if selected_satker != 'Semua':
-        query += f" AND nama_satker = '{selected_satker}'"
+        conditions.append(f"nama_satker = '{selected_satker}'")
 
-    query += f" AND pagu >= {pagu_range[0] * 1e9} AND pagu <= {pagu_range[1] * 1e9}"
+    conditions.append(f"pagu >= {pagu_range[0] * 1e9} AND pagu <= {pagu_range[1] * 1e9}")
 
-    if show_pdn:
-        query += " AND status_pdn = 'Ya'"
+    # Check if status columns exist before filtering
+    if show_pdn and 'status_pdn' in df.columns:
+        conditions.append("status_pdn = 'PDN'")
 
-    if show_ukm:
-        query += " AND status_ukm = 'Ya'"
+    if show_ukm and 'status_ukm' in df.columns:
+        conditions.append("status_ukm = 'UKM'")
 
-    if show_pradipa:
-        query += " AND status_pradipa = 'Ya'"
+    if show_pradipa and 'status_pradipa' in df.columns:
+        conditions.append("status_pradipa = 'PraDIPA'")
+
+    # Build query with all conditions
+    query = "SELECT * FROM rup WHERE " + " AND ".join(conditions)
 
     return conn.execute(query).df()
 
@@ -248,14 +253,14 @@ with tab1:
         status_data = {
             'Status': ['PDN', 'UKM', 'PRADIPA'],
             'Ya': [
-                (filtered_df['status_pdn'] == 'Ya').sum(),
-                (filtered_df['status_ukm'] == 'Ya').sum(),
-                (filtered_df['status_pradipa'] == 'Ya').sum()
+                (filtered_df['status_pdn'] == 'PDN').sum(),
+                (filtered_df['status_ukm'] == 'UKM').sum(),
+                (filtered_df['status_pradipa'] == 'PraDIPA').sum()
             ],
             'Tidak/Lainnya': [
-                (filtered_df['status_pdn'] != 'Ya').sum(),
-                (filtered_df['status_ukm'] != 'Ya').sum(),
-                (filtered_df['status_pradipa'] != 'Ya').sum()
+                (filtered_df['status_pdn'] != 'PDN').sum(),
+                (filtered_df['status_ukm'] != 'UKM').sum(),
+                (filtered_df['status_pradipa'] != 'PraDIPA').sum()
             ]
         }
 
@@ -356,8 +361,8 @@ with tab3:
         COUNT(*) as jumlah_paket,
         SUM(pagu) as total_pagu,
         AVG(pagu) as rata_pagu,
-        SUM(CASE WHEN status_pdn = 'Ya' THEN 1 ELSE 0 END) as paket_pdn,
-        SUM(CASE WHEN status_ukm = 'Ya' THEN 1 ELSE 0 END) as paket_ukm
+        SUM(CASE WHEN status_pdn = 'PDN' THEN 1 ELSE 0 END) as paket_pdn,
+        SUM(CASE WHEN status_ukm = 'UKM' THEN 1 ELSE 0 END) as paket_ukm
     FROM rup
     GROUP BY nama_satker
     ORDER BY total_pagu DESC

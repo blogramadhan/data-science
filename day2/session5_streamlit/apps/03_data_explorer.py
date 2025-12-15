@@ -84,6 +84,13 @@ def prepare_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """Central place for light preprocessing before analysis."""
     df = df.copy()
     df = convert_date_columns(df)
+
+    # Clean string columns: strip whitespace
+    for col in df.select_dtypes(include=['object']).columns:
+        df[col] = df[col].astype(str).str.strip()
+        # Replace 'nan' string back to actual NaN
+        df[col] = df[col].replace('nan', pd.NA)
+
     return df
 
 # ========================================
@@ -94,6 +101,9 @@ if 'data' not in st.session_state:
 
 if 'conn' not in st.session_state:
     st.session_state.conn = init_duckdb()
+
+if 'filtered_df' not in st.session_state:
+    st.session_state.filtered_df = None
 
 # ========================================
 # TITLE
@@ -216,13 +226,17 @@ with filter_cols[0]:
     if len(categorical_cols) > 0:
         cat_col = st.selectbox("Select Category Column", categorical_cols)
         if cat_col:
-            unique_vals = ['All'] + sorted(df[cat_col].unique().tolist())
+            # Clean up unique values (strip whitespace and remove None)
+            unique_vals = df[cat_col].dropna().astype(str).str.strip().unique().tolist()
+            unique_vals = sorted([v for v in unique_vals if v])  # Remove empty strings
             selected_cat = st.multiselect(
                 f"Filter {cat_col}",
-                unique_vals[1:],
-                default=unique_vals[1:]
+                unique_vals,
+                default=unique_vals
             )
-            filters[cat_col] = selected_cat
+            # Only add filter if user selected at least one value
+            if selected_cat and len(selected_cat) > 0:
+                filters[cat_col] = selected_cat
 
 with filter_cols[1]:
     if len(numeric_cols) > 0:
@@ -247,12 +261,19 @@ with filter_cols[2]:
     if len(date_cols) > 0:
         date_col = st.selectbox("Select Date Column", date_cols)
         if date_col:
+            min_date = df[date_col].min()
+            max_date = df[date_col].max()
             date_range = st.date_input(
                 f"Date Range for {date_col}",
-                value=(df[date_col].min(), df[date_col].max())
+                value=(min_date, max_date),
+                min_value=min_date,
+                max_value=max_date
             )
-            if len(date_range) == 2:
+            # Ensure we have both start and end dates
+            if isinstance(date_range, tuple) and len(date_range) == 2:
                 filters[date_col] = date_range
+            elif len(date_range) == 2:
+                filters[date_col] = tuple(date_range)
 
 with filter_cols[3]:
     st.write("")  # Spacer
@@ -268,23 +289,57 @@ def build_query(filters):
     for col, val in filters.items():
         if isinstance(val, list):  # Categorical
             if len(val) > 0:
-                values_str = "', '".join(val)
-                query += f" AND {col} IN ('{values_str}')"
+                # Escape single quotes in values to prevent SQL injection
+                escaped_vals = [str(v).replace("'", "''") for v in val]
+                values_str = "', '".join(escaped_vals)
+                query += f" AND \"{col}\" IN ('{values_str}')"
         elif isinstance(val, tuple) and len(val) == 2:  # Range or date range
             if isinstance(val[0], (int, float)):  # Numeric range
-                query += f" AND {col} >= {val[0]} AND {col} <= {val[1]}"
+                query += f" AND \"{col}\" >= {val[0]} AND \"{col}\" <= {val[1]}"
             else:  # Date range
-                query += f" AND {col} >= '{val[0]}' AND {col} <= '{val[1]}'"
+                query += f" AND \"{col}\" >= '{val[0]}' AND \"{col}\" <= '{val[1]}'"
 
     return query
 
 # Execute query
 query = build_query(filters)
-filtered_df = st.session_state.conn.execute(query).df()
+try:
+    filtered_df = st.session_state.conn.execute(query).df()
+    st.session_state.filtered_df = filtered_df  # Store in session state for sidebar
 
-st.info(f"📊 Filtered data: {len(filtered_df):,} rows (from {len(df):,} total)")
+    # Show results
+    if len(filtered_df) == 0:
+        st.warning("⚠️ Tidak ada data yang sesuai dengan filter yang dipilih.")
+        st.info("💡 Tip: Periksa nilai filter atau gunakan tombol 'Reset Filters'")
+    else:
+        st.success(f"📊 Filtered data: {len(filtered_df):,} rows (from {len(df):,} total)")
 
-with st.expander("🔍 View SQL Query"):
+except Exception as e:
+    st.error(f"❌ Error applying filters: {e}")
+    st.info("Menggunakan data asli tanpa filter...")
+    filtered_df = df  # Fallback to original data
+    st.session_state.filtered_df = df
+
+with st.expander("🔍 View SQL Query & Active Filters"):
+    if filters:
+        st.write("**Active Filters:**")
+        for col, val in filters.items():
+            st.write(f"- `{col}`: {val}")
+
+        # Debug: Show available values in data for categorical filters
+        st.divider()
+        st.write("**Debug Info:**")
+        for col, val in filters.items():
+            if isinstance(val, list):
+                actual_values = df[col].dropna().astype(str).str.strip().unique().tolist()
+                st.write(f"- Available values in `{col}`: {sorted(actual_values)}")
+                # Check if filter values exist in data
+                missing = [v for v in val if v not in actual_values]
+                if missing:
+                    st.warning(f"⚠️ Values tidak ditemukan di data: {missing}")
+
+        st.divider()
+    st.write("**SQL Query:**")
     st.code(query, language='sql')
 
 st.divider()
@@ -575,11 +630,15 @@ with st.sidebar:
 
     st.subheader("📊 Quick Stats")
     if st.session_state.data is not None:
-        st.metric("Current Data Size", f"{len(filtered_df):,} rows")
-        st.metric("Total Columns", len(filtered_df.columns))
+        # Use filtered data from session state if available
+        display_df = st.session_state.get('filtered_df', st.session_state.data)
+        st.metric("Current Data Size", f"{len(display_df):,} rows")
+        st.metric("Total Columns", len(display_df.columns))
 
-        if len(numeric_cols) > 0:
-            st.metric("Numeric Columns", len(numeric_cols))
+        # Count numeric columns from the display dataframe
+        num_cols_count = len(display_df.select_dtypes(include=[np.number]).columns)
+        if num_cols_count > 0:
+            st.metric("Numeric Columns", num_cols_count)
 
     st.divider()
 
