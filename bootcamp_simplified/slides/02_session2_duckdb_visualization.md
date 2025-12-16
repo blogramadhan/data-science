@@ -10,14 +10,15 @@ backgroundColor: #fff
 # 🦆 Sesi 2
 ## DuckDB & Visualisasi
 
-**Hari 1 - 120 menit**  
-Bagian A: DuckDB (60 menit) | Bagian B: Visualisasi (60 menit)
+**Hari 1 - 120 menit**
+Bagian A: DuckDB (105 menit) | Bagian B: Visualisasi (120 menit)
+
+**Oleh: Kurnia Ramadhan, ST., M.Eng**
+**Tahun: 2025**
 
 ---
 
 # Bagian A: Dasar DuckDB
-
-**60 menit**
 
 ---
 
@@ -282,8 +283,6 @@ LIMIT 10;
 
 # Bagian B: Visualisasi Data
 
-**60 menit**
-
 ---
 
 ## 📊 Apa itu Plotly?
@@ -377,7 +376,7 @@ fig.show()
 
 ---
 
-## 3️⃣ Diagram Pai
+## 3️⃣ Diagram Pie
 
 ```python
 # Distribusi Jenis Pengadaan
@@ -566,10 +565,8 @@ fig.show()
 
 <!-- _class: lead -->
 
-# 🍱 Waktunya Makan Siang!
+# 🎉 Hari 1 Selesai!
 
 **Selanjutnya (Besok):** Sesi 3 - Dasar Streamlit
 
-Hari 1 selesai! 🎉
-
----
+Terima kasih & sampai jumpa besok!

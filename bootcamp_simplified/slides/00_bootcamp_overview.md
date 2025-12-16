@@ -7,31 +7,35 @@ backgroundColor: #fff
 
 <!-- _class: lead -->
 
-# 🎓 Bootcamp Analisis Data
+# 🎓 Bootcamp Data Science
 ## Python, DuckDB & Streamlit
 
 **Bootcamp 2 Hari: Dari Data Analyst ke Dashboard Builder**
+
+**Oleh: Kurnia Ramadhan, ST., M.Eng**
+**Tahun: 2025**
 
 ---
 
 ## 📋 Agenda Bootcamp
 
-### Hari 1: Dasar Analisis Data (4 jam)
-- ⏰ **09:00-11:00** Sesi 1: Pandas Fundamental (120 menit)
-- ☕ **11:00-11:15** Istirahat
-- ⏰ **11:15-13:15** Sesi 2: DuckDB & Visualisasi (120 menit)
-- 🍱 **13:15-14:15** Makan siang
-- 📝 **14:15-15:00** Review & Pratinjau
+### Hari 1: Dasar Data Science (4 jam)
+- ⏰ **08:00-10:00** Sesi 1: Pandas Fundamental (120 menit)
+- ☕ **10:00-10:15** Istirahat
+- ⏰ **10:15-12:00** Sesi 2: DuckDB & Visualisasi (105 menit)
+- 🍱 **12:00-13:00** ISHOMA
+- ⏰ **13:00-15:00** Sesi 3: Praktik & Visualisasi Lanjutan (120 menit)
+- 📝 **15:00-15:45** Review & Pratinjau
 
 ---
 
 ### Hari 2: Dashboard Streamlit (4 jam)
-- ⏰ **09:00-11:00** Sesi 3: Dasar Streamlit (120 menit)
-- ☕ **11:00-11:15** Istirahat
-- ⏰ **11:15-13:15** Sesi 4: Dashboard Lengkap (120 menit)
-- 🍱 **13:15-14:15** Makan siang
-- 🚀 **14:15-15:00** Deploy ke Cloud
-- 💬 **15:00-15:30** Tanya Jawab & Penutupan
+- ⏰ **08:00-10:00** Sesi 3: Dasar Streamlit (120 menit)
+- ☕ **10:00-10:15** Istirahat
+- ⏰ **10:15-11:30** Sesi 4: Dashboard Lengkap - Bagian 1 (75 menit)
+- 🍱 **11:30-13:00** ISHOMA
+- ⏰ **13:00-14:45** Sesi 5: Dashboard Lengkap - Bagian 2 & Deploy (105 menit)
+- 💬 **14:45-15:45** Review, Tanya Jawab & Penutupan
 
 ---
 
@@ -60,13 +64,13 @@ Setelah bootcamp, peserta akan bisa:
 
 ---
 
-## 🛠️ Tumpukan Teknologi
+## 🛠️ Teknologi
 
 | Tool | Kegunaan | Sesi |
 |------|---------|------|
 | **Pandas** | Manipulasi data | Hari 1 - S1 |
 | **DuckDB** | Analitik SQL | Hari 1 - S2 |
-| **Plotly** | Visualisasi interaktif | Hari 1 - S2, Hari 2 |
+| **Plotly** | Visualisasi interaktif | Hari 1 - S2 |
 | **Streamlit** | Dashboard web | Hari 2 - S3, S4 |
 
 ---
@@ -85,9 +89,13 @@ python -c "import pandas, duckdb, plotly, streamlit; print('OK!')"
 
 # Jalankan Jupyter (Hari 1)
 jupyter notebook
+# Atau dengan uv
+uv run jupyter notebook
 
 # Jalankan Streamlit (Hari 2)
 streamlit run app.py
+# Atau dengan uv
+uv run streamlit run app.py
 ```
 
 ---
@@ -111,7 +119,7 @@ bootcamp_simplified/
 ## 🎓 Pendekatan Mengajar
 
 - **Praktik langsung:** 80% coding, 20% teori  
-- **Progresif:** Dari dasar hingga mahir  
+- **Progresif:** Dari dasar hingga cukup mahir  
 - **Real-world:** Dataset & use case nyata  
 - **Interaktif:** Live coding & tanya jawab  
 - **Praktis:** Langsung bisa dipakai
@@ -129,6 +137,10 @@ bootcamp_simplified/
 - Python 3.9+
 - Text editor / VS Code
 - Browser
+
+---
+
+## ✅ Prasyarat (Lanjutan)
 
 **Mindset:**
 - Siap belajar
@@ -152,8 +164,6 @@ Di akhir bootcamp, peserta akan memiliki:
 
 # 🚀 Yuk Mulai!
 
-**Hari 1: Dasar Analisis Data**
+**Hari 1: Dasar Data Science**
 
 Sesi 1: Pandas Fundamental
-
----

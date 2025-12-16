@@ -77,7 +77,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 ---
 
-## 📈 Tipe Grafik: Diagram Pai
+## 📈 Tipe Grafik: Diagram Pie
 
 ```python
 # Siapkan data
@@ -181,7 +181,7 @@ def load_data():
     df = pd.read_parquet('data.parquet')
     return df
 
-# Cache filtering mahal
+# Cache filtering 
 @st.cache_data
 def apply_filters(_df, metode, jenis, satker, pagu_range):
     """Cache hasil filter"""
@@ -189,7 +189,13 @@ def apply_filters(_df, metode, jenis, satker, pagu_range):
 
     if metode != 'Semua':
         filtered = filtered[filtered['metode_pengadaan'] == metode]
+```
 
+---
+
+## 💾 Caching Lanjutan
+
+```python
     # ... filter lainnya
 
     return filtered
@@ -347,7 +353,7 @@ filtered_df = apply_filters(df, metode, pagu_range)
 
 ---
 
-## 🎯 Struktur Dashboard Lengkap (lanj.)
+## 🎯 Struktur Dashboard Lengkap (Lanjutan)
 
 ```python
 # 5. Konten utama dengan tabs
@@ -480,7 +486,7 @@ def load_data():
 
 ---
 
-## ⚠️ Jebakan Umum (lanj.)
+## ⚠️ Jebakan Umum (Lanjutan)
 
 ❌ **Jangan:** Plot seluruh dataset besar
 ```python
@@ -494,7 +500,7 @@ fig = px.scatter(df.head(1000))  # Jauh lebih cepat
 
 ---
 
-## ⚠️ Jebakan Umum (lanj.)
+## ⚠️ Jebakan Umum (Lanjutan)
 
 ❌ **Jangan:** Lupa menangani data kosong
 ```python
@@ -633,3 +639,13 @@ Anda telah menuntaskan Bootcamp Streamlit!
 **Happy building! 💻**
 
 ---
+
+<!-- _class: lead -->
+
+# 🎉 Terima kasih!
+
+**Bootcamp Streamlit telah selesai!**
+
+**Apa yang akan Anda bangun selanjutnya?** 🚀
+
+**Kembangkan keterampilan Anda dengan Streamlit!** 💡

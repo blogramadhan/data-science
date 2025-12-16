@@ -61,6 +61,8 @@ def show_data():
 
 ---
 
+## 💡 Mengapa Streamlit?
+
 **Streamlit:**
 ```python
 import streamlit as st
@@ -503,5 +505,3 @@ streamlit run app.py --server.headless true
 
 **Selanjutnya:** Sesi 4 - Dashboard Lengkap  
 Tambah chart, fitur lanjutan & deploy!
-
----

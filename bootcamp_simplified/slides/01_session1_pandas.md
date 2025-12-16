@@ -10,8 +10,11 @@ backgroundColor: #fff
 # 📊 Sesi 1
 ## Pandas Fundamental
 
-**Hari 1 - 120 menit**  
-Bootcamp Analisis Data
+**Hari 1 - 120 menit**
+Bootcamp Data Science
+
+**Oleh: Kurnia Ramadhan, ST., M.Eng**
+**Tahun: 2025**
 
 ---
 
@@ -401,5 +404,3 @@ df['metode'] = df['metode'].astype('category')
 # ☕ Waktunya Istirahat!
 
 **Selanjutnya:** Sesi 2 - DuckDB & Visualisasi
-
----
