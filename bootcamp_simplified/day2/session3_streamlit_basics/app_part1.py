@@ -293,7 +293,7 @@ st.markdown("---")
 st.markdown("""
     <div style='text-align: center; color: #888; padding: 20px;'>
         <p><strong>Session 3: Streamlit Basics</strong></p>
-        <p>Bootcamp Data Analysis | Day 2</p>
+        <p>Bootcamp Data Science | Day 2</p>
     </div>
 """, unsafe_allow_html=True)
 

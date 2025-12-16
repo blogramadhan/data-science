@@ -441,7 +441,7 @@ st.markdown("---")
 st.markdown("""
     <div style='text-align: center; color: #888; padding: 20px;'>
         <p><strong>Dashboard RUP 2025 - Production Ready</strong></p>
-        <p>Session 4: Streamlit Dashboard Complete | Bootcamp Data Analysis</p>
+        <p>Session 4: Streamlit Dashboard Complete | Bootcamp Data Science</p>
         <p>Data Source: Sistem Informasi Rencana Umum Pengadaan</p>
     </div>
 """, unsafe_allow_html=True)
