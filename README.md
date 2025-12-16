@@ -109,15 +109,28 @@ Di akhir bootcamp, peserta akan memiliki:
 
 ## 📑 Slides
 
-Seluruh materi presentasi tersedia di folder [materi_bootcamp/slides/](materi_bootcamp/slides/). Gunakan [Marp](https://marp.app/) atau Markdown viewer favorit Anda untuk membukanya.
+Seluruh materi presentasi tersedia di folder [materi_bootcamp/slides/](materi_bootcamp/slides/) dalam 3 format:
+- 📝 **Markdown** (source) - Untuk edit & version control
+- 📄 **PDF** - Untuk distribusi & viewing (ukuran kecil)
+- 📊 **PowerPoint (PPTX)** - Untuk presentasi interaktif
 
-| File | Fokus Materi | Referensi Praktik |
-| ---- | ------------ | ----------------- |
-| [00_bootcamp_overview.md](materi_bootcamp/slides/00_bootcamp_overview.md) | Agenda bootcamp, struktur hari 1 & 2 | Ikuti sebagai panduan umum sesi |
-| [01_session1_pandas.md](materi_bootcamp/slides/01_session1_pandas.md) | Sesi 1 – Pandas Fundamental | Notebook [01_pandas_fundamental.ipynb](materi_bootcamp/day1/session1_pandas_basics/notebooks/01_pandas_fundamental.ipynb) |
-| [02_session2_duckdb_visualization.md](materi_bootcamp/slides/02_session2_duckdb_visualization.md) | Sesi 2 – DuckDB & Visualisasi | Notebook [02_duckdb_fundamental.ipynb](materi_bootcamp/day1/session2_duckdb_basics/notebooks/02_duckdb_fundamental.ipynb) & [03_visualization_fundamental.ipynb](materi_bootcamp/day1/session3_visualization_basics/notebooks/03_visualization_fundamental.ipynb) |
-| [03_session3_streamlit_basics.md](materi_bootcamp/slides/03_session3_streamlit_basics.md) | Sesi 3 – Dasar Streamlit | Aplikasi [app_part1.py](materi_bootcamp/day2/session3_streamlit_basics/app_part1.py) |
-| [04_session4_streamlit_complete.md](materi_bootcamp/slides/04_session4_streamlit_complete.md) | Sesi 4 – Dashboard Lengkap | Aplikasi [app_complete.py](materi_bootcamp/day2/session4_streamlit_complete/app_complete.py) |
+> Dibuat dengan [Marp](https://marp.app/) - Markdown Presentation Ecosystem
+
+### Daftar Slides
+
+| # | Topik | Markdown | PDF | PPTX | Referensi Praktik |
+|---|-------|----------|-----|------|-------------------|
+| 00 | Bootcamp Overview | [.md](materi_bootcamp/slides/00_bootcamp_overview.md) | [.pdf](materi_bootcamp/slides/pdf/00_bootcamp_overview.pdf) | [.pptx](materi_bootcamp/slides/ppt/00_bootcamp_overview.pptx) | Panduan umum sesi |
+| 01 | Pandas Fundamental | [.md](materi_bootcamp/slides/01_session1_pandas.md) | [.pdf](materi_bootcamp/slides/pdf/01_session1_pandas.pdf) | [.pptx](materi_bootcamp/slides/ppt/01_session1_pandas.pptx) | [01_pandas_fundamental.ipynb](materi_bootcamp/day1/session1_pandas_basics/notebooks/01_pandas_fundamental.ipynb) |
+| 02 | DuckDB & Visualisasi | [.md](materi_bootcamp/slides/02_session2_duckdb_visualization.md) | [.pdf](materi_bootcamp/slides/pdf/02_session2_duckdb_visualization.pdf) | [.pptx](materi_bootcamp/slides/ppt/02_session2_duckdb_visualization.pptx) | [02_duckdb...ipynb](materi_bootcamp/day1/session2_duckdb_basics/notebooks/02_duckdb_fundamental.ipynb) & [03_visualization...ipynb](materi_bootcamp/day1/session3_visualization_basics/notebooks/03_visualization_fundamental.ipynb) |
+| 03 | Dasar Streamlit | [.md](materi_bootcamp/slides/03_session3_streamlit_basics.md) | [.pdf](materi_bootcamp/slides/pdf/03_session3_streamlit_basics.pdf) | [.pptx](materi_bootcamp/slides/ppt/03_session3_streamlit_basics.pptx) | [app_part1.py](materi_bootcamp/day2/session3_streamlit_basics/app_part1.py) |
+| 04 | Dashboard Lengkap | [.md](materi_bootcamp/slides/04_session4_streamlit_complete.md) | [.pdf](materi_bootcamp/slides/pdf/04_session4_streamlit_complete.pdf) | [.pptx](materi_bootcamp/slides/ppt/04_session4_streamlit_complete.pptx) | [app_complete.py](materi_bootcamp/day2/session4_streamlit_complete/app_complete.py) |
+
+**Generate ulang slides:**
+```bash
+cd materi_bootcamp/slides
+./convert_slides.sh
+```
 
 ---
 
