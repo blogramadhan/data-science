@@ -1,25 +1,48 @@
-# Bootcamp Data Analysis - Dependencies
+# Bootcamp Data Science - Simplified Requirements
+# Dependencies untuk materi bootcamp (versi sederhana)
 # Python 3.9+
 
-# Core Data Analysis
-pandas>=2.0.0
-numpy>=1.24.0
+# ============================================
+# CORE DEPENDENCIES (Yang Benar-Benar Digunakan)
+# ============================================
 
-# Database
+# Data manipulation & analysis
+pandas>=2.0.0
+# numpy otomatis terinstall sebagai dependency pandas
+
+# SQL analytics database
 duckdb>=0.9.0
 
-# Visualization
+# Interactive visualization
 plotly>=5.18.0
 
-# Dashboard
+# Dashboard framework
 streamlit>=1.28.0
 
-# File Formats
+# File format support (untuk baca Parquet)
 pyarrow>=14.0.0
 
-# Optional (untuk export PNG)
-# kaleido>=0.2.1
-
-# Jupyter
+# Jupyter notebook (untuk menjalankan .ipynb files)
 jupyter>=1.0.0
-ipykernel>=6.25.0
+notebook>=7.0.0
+
+# ============================================
+# CATATAN
+# ============================================
+# Library di atas sudah cukup untuk menjalankan SEMUA
+# materi di folder materi_bootcamp:
+# - ✅ day1/session1_pandas_basics
+# - ✅ day1/session2_duckdb_basics
+# - ✅ day1/session3_visualization_basics
+# - ✅ day2/session3_streamlit_basics
+# - ✅ day2/session4_streamlit_complete
+#
+# Untuk instalasi dengan dependencies lengkap (termasuk
+# matplotlib, seaborn, scipy, scikit-learn, dll),
+# gunakan requirements.txt di root project:
+#
+#   pip install -r ../requirements.txt
+#
+# Atau dengan uv (recommended):
+#
+#   uv sync

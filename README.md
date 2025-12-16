@@ -133,8 +133,20 @@ cd data-science
 # Instalasi dependensi dengan uv (recommended)
 uv sync
 
-# Atau dengan pip
+# Atau dengan pip menggunakan requirements.txt
+pip install -r requirements.txt
+
+# Atau install minimal dependencies
 pip install pandas duckdb plotly streamlit jupyter
+```
+
+**Generate requirements.txt dengan UV:**
+```bash
+# Membuat requirements.txt dari pyproject.toml
+uv pip compile pyproject.toml -o requirements.txt
+
+# Atau export dari environment aktif dengan semua dependencies terinstall
+uv pip freeze > requirements.txt
 ```
 
 ### 2. Verifikasi Instalasi
@@ -142,6 +154,12 @@ pip install pandas duckdb plotly streamlit jupyter
 ```bash
 # Verifikasi semua library terinstall
 python -c "import pandas, duckdb, plotly, streamlit; print('✅ Semua library berhasil terinstall!')"
+
+# Atau cek versi dengan uv
+uv pip list
+
+# Atau cek dengan pip
+pip list
 ```
 
 ### 3. Jalankan Jupyter Notebook (Hari 1)
@@ -542,11 +560,19 @@ python -m <module>
 
 ### Untuk Development
 1. **Gunakan virtual environment** - Isolasi dependensi
-2. **Tulis kode yang bersih** - Ikuti panduan gaya PEP 8
-3. **Beri komentar pada kode** - Jelaskan "mengapa", bukan "apa"
-4. **Uji secara bertahap** - Jangan menulis terlalu banyak sebelum diuji
-5. **Cache operasi mahal** - Gunakan `@st.cache_data` di Streamlit
-6. **Tangani error dengan baik** - Selalu gunakan blok try-except
+2. **Gunakan UV untuk package management** - Lebih cepat dan konsisten
+   ```bash
+   # Generate requirements.txt untuk berbagi proyek
+   uv pip compile pyproject.toml -o requirements.txt
+
+   # Sync dependencies dari pyproject.toml
+   uv sync
+   ```
+3. **Tulis kode yang bersih** - Ikuti panduan gaya PEP 8
+4. **Beri komentar pada kode** - Jelaskan "mengapa", bukan "apa"
+5. **Uji secara bertahap** - Jangan menulis terlalu banyak sebelum diuji
+6. **Cache operasi mahal** - Gunakan `@st.cache_data` di Streamlit
+7. **Tangani error dengan baik** - Selalu gunakan blok try-except
 
 ### Untuk Dashboard Produksi
 1. **Optimalkan performa** - Cache data, gunakan query efisien
