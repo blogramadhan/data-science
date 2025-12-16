@@ -369,51 +369,112 @@ data-science/
 
 ### Masalah Instalasi
 
-**Masalah:** `pip install` gagal
+**Masalah:** `uv sync` gagal atau library tidak terinstall
+```bash
+# Solusi 1: Update uv ke versi terbaru
+pip install --upgrade uv
+
+# Solusi 2: Clear cache dan sync ulang
+uv cache clean
+uv sync
+
+# Solusi 3: Install manual dengan uv
+uv pip install pandas duckdb plotly streamlit jupyter
+```
+
+**Masalah:** `pip install` gagal (jika tidak menggunakan uv)
 ```bash
 # Solusi: Upgrade pip
 python -m pip install --upgrade pip setuptools wheel
+
+# Kemudian install ulang dependencies
+pip install pandas duckdb plotly streamlit jupyter
 ```
 
 **Masalah:** Error import DuckDB
 ```bash
-# Solusi: Install ulang DuckDB
+# Dengan uv
+uv pip uninstall duckdb
+uv pip install duckdb --no-cache-dir
+
+# Dengan pip
 pip uninstall duckdb
 pip install duckdb --no-cache-dir
 ```
 
 **Masalah:** Jupyter tidak bisa dijalankan
 ```bash
-# Solusi: Install ulang Jupyter
+# Dengan uv
+uv pip install --upgrade jupyter notebook
+uv run jupyter notebook
+
+# Dengan pip
 pip install --upgrade jupyter notebook
+jupyter notebook
+```
+
+**Masalah:** UV tidak terinstall
+```bash
+# Install uv (macOS/Linux)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install uv (Windows)
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Atau dengan pip
+pip install uv
 ```
 
 ### Masalah Streamlit
 
 **Masalah:** Streamlit tidak bisa dijalankan
 ```bash
-# Cek ketersediaan port
+# Dengan uv - cek ketersediaan port
+uv run streamlit run app.py --server.port 8502
+
+# Dengan pip
 streamlit run app.py --server.port 8502
 ```
 
 **Masalah:** Module tidak ditemukan di Streamlit
 ```bash
-# Jalankan dengan interpreter Python yang benar
-python -m streamlit run app.py
+# Dengan uv (recommended)
+uv run streamlit run materi_bootcamp/day2/session3_streamlit_basics/app_part1.py
+
+# Dengan pip - gunakan interpreter Python yang benar
+python -m streamlit run materi_bootcamp/day2/session3_streamlit_basics/app_part1.py
+```
+
+**Masalah:** Streamlit error "No module named 'streamlit'"
+```bash
+# Pastikan streamlit terinstall di environment yang benar
+# Dengan uv
+uv pip list | grep streamlit
+uv pip install streamlit
+
+# Dengan pip
+pip list | grep streamlit
+pip install streamlit
 ```
 
 **Masalah:** Batas ukuran upload file
 ```toml
-# Buat file .streamlit/config.toml
+# Buat file .streamlit/config.toml di root project
 [server]
 maxUploadSize = 1000  # MB
+
+[browser]
+gatherUsageStats = false
 ```
 
 ### Masalah Memuat Data
 
 **Masalah:** File Parquet tidak bisa dibaca
 ```bash
-# Install pyarrow
+# Install pyarrow dengan uv
+uv pip install pyarrow
+
+# Atau dengan pip
 pip install pyarrow
 ```
 
@@ -422,6 +483,49 @@ pip install pyarrow
 # Gunakan DuckDB untuk query file besar
 import duckdb
 df = duckdb.query("SELECT * FROM 'large_file.parquet' LIMIT 10000").df()
+
+# Atau baca dengan chunking
+import pandas as pd
+chunks = pd.read_csv('large_file.csv', chunksize=10000)
+for chunk in chunks:
+    # Process chunk
+    pass
+```
+
+**Masalah:** Dataset RUP tidak ditemukan
+```bash
+# Pastikan file ada di lokasi yang benar
+ls -la datasets/rup/
+
+# Jika tidak ada, cek apakah file sudah di-download
+# File seharusnya ada di: datasets/rup/RUP-PaketPenyedia-Terumumkan-2025.parquet
+```
+
+### Masalah Environment
+
+**Masalah:** Virtual environment tidak aktif (jika menggunakan venv)
+```bash
+# Aktifkan venv (Linux/macOS)
+source .venv/bin/activate
+
+# Aktifkan venv (Windows)
+.venv\Scripts\activate
+
+# Dengan uv, tidak perlu aktifkan manual, gunakan:
+uv run jupyter notebook
+uv run streamlit run app.py
+```
+
+**Masalah:** Conflict antara uv dan pip
+```bash
+# Best practice: Pilih salah satu
+# Jika pakai uv, gunakan uv untuk semua operasi
+uv pip install <package>
+uv run <command>
+
+# Jika pakai pip, gunakan pip konsisten
+pip install <package>
+python -m <module>
 ```
 
 ---
