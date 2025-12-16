@@ -1,53 +1,48 @@
-# Bootcamp Analisis Data - Python, DuckDB & Streamlit
+# 🎓 Bootcamp Data Science
+## Python, DuckDB & Streamlit
 
-**Durasi:** 2 Hari (16 Jam Total)
+**Bootcamp 2 Hari: Dari Data Analyst ke Dashboard Builder**
+
+**Oleh: Kurnia Ramadhan, ST., M.Eng**
+**Tahun: 2025**
+
+---
 
 ## 🎯 Tentang Bootcamp
 
 Bootcamp intensif ini dirancang untuk membekali peserta dengan keterampilan praktis dalam analisis data menggunakan Python, DuckDB sebagai database analitik, dan Streamlit untuk membuat dashboard interaktif. Peserta akan belajar langsung menggunakan **dataset RUP (Rencana Umum Pengadaan) 2025** sebagai studi kasus.
 
-### 🎓 Tujuan Pembelajaran
+### 📊 Dataset: RUP 2025
+
+**RUP Paket Penyedia Terumumkan 2025**
+
+- 📦 **16,430** paket pengadaan
+- 💰 Total pagu **~2 Triliun** rupiah
+- 🏢 Ratusan satuan kerja
+- 📅 Data sepanjang 2024-2025
+- 📍 **Lokasi:** `datasets/rup/RUP-PaketPenyedia-Terumumkan-2025.parquet`
+
+**Kasus penggunaan:** Analisis & monitoring pengadaan pemerintah
+
+### 🎓 Hasil Pembelajaran
 
 Setelah menyelesaikan bootcamp ini, peserta akan mampu:
 
-1. **Menguasai Analisis Data dengan Python & Pandas**
-   - Melakukan Exploratory Data Analysis (EDA) secara komprehensif
-   - Membersihkan dan mentransformasi data mentah menjadi insights
-   - Menggunakan Pandas untuk manipulasi data tingkat lanjut
+✅ Menganalisis data dengan **Pandas**
+✅ Menulis query SQL dengan **DuckDB**
+✅ Membuat visualisasi dengan **Plotly**
+✅ Membangun dashboard dengan **Streamlit**
+✅ Melakukan deploy dashboard ke cloud
 
-2. **Menggunakan DuckDB untuk Query Analitik**
-   - Memahami kelebihan DuckDB untuk analisis data
-   - Menulis query SQL kompleks dengan window functions dan CTEs
-   - Mengintegrasikan DuckDB dengan workflow Pandas
+### 📈 Output Akhir
 
-3. **Membuat Visualisasi Data yang Efektif**
-   - Menggunakan Matplotlib & Seaborn untuk visualisasi statistik
-   - Membuat grafik interaktif dengan Plotly
-   - Menerapkan prinsip data storytelling
+Di akhir bootcamp, peserta akan memiliki:
 
-4. **Membangun Dashboard Interaktif dengan Streamlit**
-   - Membuat aplikasi web analitik tanpa perlu web development expertise
-   - Implementasi filter interaktif dan real-time data exploration
-   - Deploy dashboard yang siap produksi
-
-5. **Menerapkan Teknik Analisis Lanjutan**
-   - Time series analysis dan trend forecasting
-   - Statistical hypothesis testing
-   - A/B testing fundamentals
-
-### 📈 Hasil Akhir yang Diharapkan
-
-Peserta akan membuat portfolio yang berisi:
-- ✅ 7 Jupyter Notebooks dengan analisis lengkap
-- ✅ 4 Aplikasi Streamlit interaktif
-- ✅ 1 Production-ready Dashboard untuk analisis RUP 2025
-- ✅ Pemahaman mendalam tentang workflow analisis data end-to-end
-
-### 📊 Dataset: RUP 2025
-- **Topik**: Rencana Umum Pengadaan Barang/Jasa Pemerintah 2025
-- **Jumlah Records**: 16,430 paket pengadaan
-- **Ukuran File**: ~1.3 MB (format Parquet)
-- **Lokasi**: `datasets/rup/RUP-PaketPenyedia-Terumumkan-2025.parquet`
+1. 📓 3 notebook Jupyter (Pandas, DuckDB, Visualisasi)
+2. 📱 2 aplikasi Streamlit (Basic & Complete)
+3. 🚀 1 dashboard ter-deploy (Streamlit Cloud)
+4. 📚 Dokumentasi lengkap
+5. 💼 Portofolio pribadi
 
 ### 🎓 Target Peserta
 
@@ -57,60 +52,71 @@ Peserta akan membuat portfolio yang berisi:
 - Fresh Graduate yang ingin berkarir di bidang data
 - Profesional yang perlu mengolah dan visualisasi data
 
-### ✅ Prerequisites
+### ✅ Prasyarat
 
-- Pemahaman dasar programming (Python preferred)
-- Familiar dengan konsep database (SQL dasar)
-- Laptop dengan minimal 8GB RAM
-- Python 3.8+ terinstall
+**Basic Python:**
+- Variabel, fungsi, loops
+- List, dictionary
+- Dasar pandas (lebih baik jika sudah pernah)
 
-### 🛠️ Tools & Libraries
-
+**Tools:**
 - Python 3.9+
-- Pandas untuk manipulasi data
-- NumPy untuk operasi numerik
-- DuckDB untuk query analitik
-- Streamlit untuk dashboard interaktif
-- Plotly untuk visualisasi interaktif
-- Matplotlib & Seaborn untuk visualisasi static
-- Jupyter Notebook untuk eksplorasi
+- Text editor / VS Code
+- Browser
+- Laptop dengan minimal 8GB RAM
 
-### 🗓️ Agenda Bootcamp (Ringkas)
+**Mindset:**
+- Siap belajar
+- Tidak takut error!
 
-#### Hari 1: Fundamental Analisis Data
+### 🛠️ Teknologi
+
+| Tool | Kegunaan | Sesi |
+|------|---------|------|
+| **Pandas** | Manipulasi data | Hari 1 - S1 |
+| **DuckDB** | Analitik SQL | Hari 1 - S2 |
+| **Plotly** | Visualisasi interaktif | Hari 1 - S2 |
+| **Streamlit** | Dashboard web | Hari 2 - S3, S4 |
+
+---
+
+## 🗓️ Agenda Bootcamp
+
+### Hari 1: Dasar Data Science
 
 | Waktu | Sesi | Topik |
 |-------|------|-------|
-| 08:00 - 12:00 | **Sesi 1** | Python & Pandas untuk Analisis Data |
+| 08:00 - 10:00 | **Sesi 1** | Pandas Fundamental (120 menit) |
+| 10:00 - 10:15 | **BREAK** | Coffee break |
+| 10:15 - 12:00 | **Sesi 2** | DuckDB Fundamental (105 menit) |
 | 12:00 - 13:00 | **BREAK / ISHOMA** | Istirahat & makan siang |
-| 13:00 - 15:00 | **Sesi 2** | DuckDB untuk Query Analitik |
-| 15:00 - 15:30 | **BREAK** | Coffee break |
-| 15:30 - 17:00 | **Sesi 3** | Visualisasi Data |
+| 13:00 - 15:00 | **Sesi 2 (lanjutan)** | Visualisasi Fundamental (120 menit) |
+| 15:00 - 15:45 | **Review** | Review & Pratinjau Hari 2 |
 
-#### Hari 2: Analisis Lanjutan & Dashboard
+### Hari 2: Dashboard Streamlit
 
 | Waktu | Sesi | Topik |
 |-------|------|-------|
-| 08:00 - 12:00 | **Sesi 4** | Teknik Analisis Data Lanjutan |
-| 12:00 - 13:00 | **BREAK / ISHOMA** | Istirahat & makan siang |
-| 13:00 - 15:00 | **Sesi 5** | Dashboard Interaktif dengan Streamlit |
-| 15:00 - 15:30 | **BREAK** | Coffee break |
-| 15:30 - 17:00 | **Sesi 5 (lanjutan)** | Deployment & Presentasi Dashboard |
+| 08:00 - 10:00 | **Sesi 3** | Dasar Streamlit (120 menit) |
+| 10:00 - 10:15 | **BREAK** | Coffee break |
+| 10:15 - 11:30 | **Sesi 4** | Dashboard Lengkap - Bagian 1 (75 menit) |
+| 11:30 - 13:00 | **BREAK / ISHOMA** | Istirahat & makan siang |
+| 13:00 - 14:45 | **Sesi 4 (lanjutan)** | Dashboard Lengkap - Bagian 2 & Deploy (105 menit) |
+| 14:45 - 15:45 | **Penutupan** | Review, Tanya Jawab & Penutupan |
 
 ---
 
 ## 📑 Slides
 
-Seluruh materi presentasi tersedia di folder `slides/`. Gunakan [Marp](https://marp.app/) atau Markdown viewer favorit Anda untuk membukanya.
+Seluruh materi presentasi tersedia di folder [materi_bootcamp/slides/](materi_bootcamp/slides/). Gunakan [Marp](https://marp.app/) atau Markdown viewer favorit Anda untuk membukanya.
 
 | File | Fokus Materi | Referensi Praktik |
 | ---- | ------------ | ----------------- |
-| `slides/00_overview.md` | Agenda bootcamp, struktur hari 1 & 2 | Ikuti sebagai panduan umum sesi |
-| `slides/01_session1_pandas.md` | Sesi 1 – Pandas & EDA | Notebook `day1/session1_python_pandas` |
-| `slides/02_session2_duckdb.md` | Sesi 2 – DuckDB & SQL analitik | Notebook `day1/session2_duckdb` |
-| `slides/03_session3_visualization.md` | Sesi 3 – Visualisasi (Matplotlib/Seaborn/Plotly) | Notebook `day1/session3_visualization` |
-| `slides/04_session4_advanced.md` | Sesi 4 – Analisis lanjutan (cleaning, time series, statistik) | Notebook `day2/session4_advanced_analysis` |
-| `slides/05_session5_streamlit.md` | Sesi 5 – Dashboard Streamlit | Aplikasi `day2/session5_streamlit/apps` |
+| [00_bootcamp_overview.md](materi_bootcamp/slides/00_bootcamp_overview.md) | Agenda bootcamp, struktur hari 1 & 2 | Ikuti sebagai panduan umum sesi |
+| [01_session1_pandas.md](materi_bootcamp/slides/01_session1_pandas.md) | Sesi 1 – Pandas Fundamental | Notebook [01_pandas_fundamental.ipynb](materi_bootcamp/day1/session1_pandas_basics/notebooks/01_pandas_fundamental.ipynb) |
+| [02_session2_duckdb_visualization.md](materi_bootcamp/slides/02_session2_duckdb_visualization.md) | Sesi 2 – DuckDB & Visualisasi | Notebook [02_duckdb_fundamental.ipynb](materi_bootcamp/day1/session2_duckdb_basics/notebooks/02_duckdb_fundamental.ipynb) & [03_visualization_fundamental.ipynb](materi_bootcamp/day1/session3_visualization_basics/notebooks/03_visualization_fundamental.ipynb) |
+| [03_session3_streamlit_basics.md](materi_bootcamp/slides/03_session3_streamlit_basics.md) | Sesi 3 – Dasar Streamlit | Aplikasi [app_part1.py](materi_bootcamp/day2/session3_streamlit_basics/app_part1.py) |
+| [04_session4_streamlit_complete.md](materi_bootcamp/slides/04_session4_streamlit_complete.md) | Sesi 4 – Dashboard Lengkap | Aplikasi [app_complete.py](materi_bootcamp/day2/session4_streamlit_complete/app_complete.py) |
 
 ---
 
@@ -123,35 +129,49 @@ Seluruh materi presentasi tersedia di folder `slides/`. Gunakan [Marp](https://m
 git clone <repository-url>
 cd data-science
 
-# Instalasi dependensi dengan uv
+# Instalasi dependensi dengan uv (recommended)
 uv sync
 
 # Atau dengan pip
-pip install pandas numpy duckdb streamlit plotly matplotlib seaborn jupyter openpyxl pyarrow
+pip install pandas duckdb plotly streamlit jupyter
 ```
 
-### 2. Jalankan Jupyter Notebook
+### 2. Verifikasi Instalasi
 
 ```bash
+# Verifikasi semua library terinstall
+python -c "import pandas, duckdb, plotly, streamlit; print('✅ Semua library berhasil terinstall!')"
+```
+
+### 3. Jalankan Jupyter Notebook (Hari 1)
+
+```bash
+# Dengan uv
 uv run jupyter notebook
 
-# Buka notebook: day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb
+# Atau langsung
+jupyter notebook
+
+# Buka notebook di folder materi_bootcamp/day1/
 ```
 
-### 3. Jalankan Aplikasi Streamlit
+**Notebook yang tersedia:**
+- [01_pandas_fundamental.ipynb](materi_bootcamp/day1/session1_pandas_basics/notebooks/01_pandas_fundamental.ipynb) - Sesi 1
+- [02_duckdb_fundamental.ipynb](materi_bootcamp/day1/session2_duckdb_basics/notebooks/02_duckdb_fundamental.ipynb) - Sesi 2
+- [03_visualization_fundamental.ipynb](materi_bootcamp/day1/session3_visualization_basics/notebooks/03_visualization_fundamental.ipynb) - Sesi 2
+
+### 4. Jalankan Aplikasi Streamlit (Hari 2)
 
 ```bash
-# LAB 10: Hello Streamlit (Dasar)
-uv run streamlit run day2/session5_streamlit/apps/01_hello_streamlit.py
+# Sesi 3: Dasar Streamlit
+uv run streamlit run materi_bootcamp/day2/session3_streamlit_basics/app_part1.py
+# Atau
+streamlit run materi_bootcamp/day2/session3_streamlit_basics/app_part1.py
 
-# LAB 11: Komponen Interaktif
-uv run streamlit run day2/session5_streamlit/apps/02_components_demo.py
-
-# LAB 12: Penjelajah Data
-uv run streamlit run day2/session5_streamlit/apps/03_data_explorer.py
-
-# Dashboard Produksi - Analisis RUP
-uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
+# Sesi 4: Dashboard Lengkap
+uv run streamlit run materi_bootcamp/day2/session4_streamlit_complete/app_complete.py
+# Atau
+streamlit run materi_bootcamp/day2/session4_streamlit_complete/app_complete.py
 ```
 
 ---
@@ -160,30 +180,30 @@ uv run streamlit run day2/session5_streamlit/apps/rup_dashboard.py
 
 ```
 data-science/
-├── day1/
-│   ├── session1_python_pandas/
-│   │   └── notebooks/
-│   │       └── 01_exploratory_data_analysis_rup.ipynb  ✅
-│   ├── session2_duckdb/
-│   │   └── notebooks/
-│   │       └── 01_duckdb_intro.ipynb  ✅
-│   └── session3_visualization/
-│       └── notebooks/
-│           ├── 01_matplotlib_seaborn.ipynb  ✅
-│           └── 02_plotly_interactive.ipynb  ✅
-│
-├── day2/
-│   ├── session4_advanced_analysis/
-│   │   └── notebooks/
-│   │       ├── 01_data_cleaning.ipynb  ✅
-│   │       ├── 02_time_series.ipynb  ✅
-│   │       └── 03_statistical_analysis.ipynb  ✅
-│   └── session5_streamlit/
-│       └── apps/
-│           ├── 01_hello_streamlit.py  ✅
-│           ├── 02_components_demo.py  ✅
-│           ├── 03_data_explorer.py  ✅
-│           └── rup_dashboard.py  ✅
+├── materi_bootcamp/
+│   ├── slides/                              # 📑 Slides presentasi (Marp format)
+│   │   ├── 00_bootcamp_overview.md          # Overview & agenda bootcamp
+│   │   ├── 01_session1_pandas.md            # Sesi 1: Pandas Fundamental
+│   │   ├── 02_session2_duckdb_visualization.md  # Sesi 2: DuckDB & Visualisasi
+│   │   ├── 03_session3_streamlit_basics.md  # Sesi 3: Dasar Streamlit
+│   │   └── 04_session4_streamlit_complete.md    # Sesi 4: Dashboard Lengkap
+│   │
+│   ├── day1/                                # 📊 Hari 1: Dasar Data Science
+│   │   ├── session1_pandas_basics/
+│   │   │   └── notebooks/
+│   │   │       └── 01_pandas_fundamental.ipynb  ✅
+│   │   ├── session2_duckdb_basics/
+│   │   │   └── notebooks/
+│   │   │       └── 02_duckdb_fundamental.ipynb  ✅
+│   │   └── session3_visualization_basics/
+│   │       └── notebooks/
+│   │           └── 03_visualization_fundamental.ipynb  ✅
+│   │
+│   └── day2/                                # 📱 Hari 2: Dashboard Streamlit
+│       ├── session3_streamlit_basics/
+│       │   └── app_part1.py  ✅
+│       └── session4_streamlit_complete/
+│           └── app_complete.py  ✅
 │
 ├── datasets/
 │   └── rup/
@@ -195,529 +215,152 @@ data-science/
 
 ---
 
-# 📚 HARI 1: Fundamental Analisis Data
-
-## Sesi 1: Python & Pandas untuk Analisis Data (08:00 - 12:00)
-
-**Durasi:** 4 jam
-**Format Pembelajaran:** Praktikum dengan Jupyter Notebook
-**Kumpulan Data:** RUP 2025
-**Notebook:** `day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb`
-**Slides:** `slides/01_session1_pandas.md`
-
-### ⏰ Agenda Ringkas
-- 08:00 – 08:15 · Kick-off & tujuan sesi
-- 08:15 – 09:00 · Persiapan environment & loading data
-- 09:00 – 10:00 · EDA fundamentals dengan Pandas
-- 10:00 – 11:00 · Data cleaning & handling missing values
-- 11:00 – 11:45 · Aggregasi & GroupBy lanjutan
-- 11:45 – 12:00 · Visualisasi cepat & wrap-up
-
-### 🎯 Tujuan Sesi
-
-Peserta akan menguasai teknik Exploratory Data Analysis (EDA) menggunakan Pandas untuk:
-- Memahami struktur dan karakteristik dataset
-- Mengidentifikasi pola, tren, dan anomali dalam data
-- Melakukan data cleaning dan preprocessing
-- Membuat insight bisnis dari data pengadaan pemerintah
-
-### 📚 Materi Pembelajaran
-
-#### 1.1 Kick-off & Setup Lingkungan (08:00 - 09:00)
-- Sinkronisasi tujuan sesi, aturan main, dan struktur dataset RUP 2025
-- Menyiapkan environment dengan `uv` atau `venv`, instalasi library wajib
-- Membuka notebook `01_exploratory_data_analysis_rup.ipynb`
-- Quick tour data dictionary & pemetaan kebutuhan analisis
-
-#### 1.2 EDA Fundamentals dengan Pandas (09:00 - 10:00)
-- Membaca file Parquet dan memahami struktur dengan `.head()`, `.info()`, `.describe()`
-- Seleksi kolom/baris via `.loc[]`, `.iloc[]`, serta `query()` untuk filter cepat
-- Teknik eksplorasi awal: distribusi, unique values, spotting missing data
-- Hands-on: filter paket dengan pagu > 1 miliar & satker tertentu
-
-#### 1.3 Data Cleaning & Quality Checks (10:00 - 11:00)
-- Deteksi missing values (`isnull`, visual cues) dan strategi `dropna`/`fillna`
-- Normalisasi tipe data (datetime, numerik, kategorikal) serta operasi string
-- Penanganan duplikasi, trimming whitespace, dan validasi business rules
-- Dokumentasi asumsi & temuan kualitas data sebelum analisis lanjut
-
-#### 1.4 Aggregasi, Visualisasi Cepat & Wrap-up (11:00 - 12:00)
-- GroupBy + agregasi untuk pagu per metode, satker, dan kategori
-- Statistik deskriptif, deteksi outlier sederhana, dan korelasi cepat
-- Visualisasi kilat dengan `DataFrame.plot()` untuk tren & komposisi
-- Mini challenge + recap insight sebagai persiapan sesi DuckDB
-
-#### 📓 Notebook:
-`day1/session1_python_pandas/notebooks/01_exploratory_data_analysis_rup.ipynb`
-
-**Praktik yang Dilakukan:**
-- Analisis distribusi pagu pengadaan
-- Identifikasi satker dengan pengadaan terbanyak
-- Analisis metode pengadaan yang paling umum digunakan
-- Trend pengumuman pengadaan dari waktu ke waktu
-- Identifikasi outliers dan data quality issues
-
----
-
-## BREAK / ISHOMA (12:00 - 13:00)
-
----
-
-## Sesi 2: DuckDB untuk Query Analitik (13:00 - 15:00)
-
-**Durasi:** 2 jam
-**Format Pembelajaran:** Praktikum dengan Jupyter Notebook
-**Kumpulan Data:** RUP 2025
-**Slides:** `slides/02_session2_duckdb.md`
-
-### ⏰ Agenda Ringkas
-- 13:00 – 13:15 · Kick-off DuckDB & setup environment
-- 13:15 – 13:45 · DuckDB fundamentals & storage concepts
-- 13:45 – 14:15 · SELECT, FILTER, ORDER BY
-- 14:15 – 14:45 · Aggregations & window functions
-- 14:45 – 15:00 · Integrasi DuckDB + Pandas & wrap-up
-
-### Materi Pembelajaran
-
-#### 2.1 Kick-off DuckDB & Setup (13:00 - 13:15)
-- Perbandingan OLAP vs OLTP dan alasan memilih DuckDB untuk analitik lokal
-- Instalasi, import, dan membuat koneksi in-memory/persistent
-- Demo cepat membaca file Parquet langsung tanpa load penuh ke RAM
-
-#### 2.2 Fundamentals & Storage Concepts (13:15 - 13:45)
-- Arsitektur columnar storage, vectorized execution, dan implikasi performa
-- Struktur tabel, tipe data, dan cara memetakan dataset RUP
-- Praktik terbaik menyusun skema/VIew sementara untuk eksplorasi
-
-#### 2.3 Query Essentials (13:45 - 14:15)
-- SELECT, WHERE, ORDER BY, LIMIT, DISTINCT untuk eksplorasi dasar
-- Agregasi inti: COUNT, SUM, AVG, MIN, MAX plus GROUP BY/HAVING
-- Contoh nyata: Top satker berdasarkan pagu, filter kombinasi kondisi
-
-#### 2.4 Aggregations & Window Functions (14:15 - 14:45)
-- Common Table Expressions (CTE) untuk menyusun query modular
-- Window functions: ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD
-- Penggabungan dengan Pandas DataFrame register untuk analisis hibrida
-- Benchmark singkat Pandas GroupBy vs DuckDB query
-
-#### 2.5 Integrasi Workflow & Wrap-up (14:45 - 15:00)
-- Copy/Export hasil query ke Parquet/CSV
-- Mengubah hasil query menjadi DataFrame (`.df()`) untuk visualisasi lanjut
-- Checklist kapan memilih DuckDB dibanding Pandas
-- Hands-on mini challenge & Q&A menjelang coffee break
-
-#### 📓 Notebook:
-`day1/session2_duckdb/notebooks/01_duckdb_intro.ipynb`
-
-**Praktik yang Dilakukan:**
-- Query top satker berdasarkan pagu menggunakan SQL
-- Hitung running totals dengan window functions
-- Analisis pivot: metode pengadaan vs kategori
-- Agregasi time series per bulan/kuartal
-- Benchmarking performa vs Pandas
-
----
-
-## Coffee Break (15:00 - 15:30)
-
----
-
-## Sesi 3: Visualisasi Data (15:30 - 17:00)
-
-**Durasi:** 1 jam 30 menit
-**Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
-**Kumpulan Data:** RUP 2025
-**Slides:** `slides/03_session3_visualization.md`
-
-### ⏰ Agenda Ringkas
-- 15:30 – 15:40 · Kick-off & visual story goals
-- 15:40 – 16:05 · Matplotlib fundamentals
-- 16:05 – 16:30 · Seaborn statistical plots
-- 16:30 – 16:50 · Plotly interaktif & dashboard mini
-- 16:50 – 17:00 · Data storytelling & Q&A
-
-### Materi Pembelajaran
-
-#### 3.1 Kick-off & Visual Story Goals (15:30 - 15:40)
-- Menyelaraskan tujuan sesi, konteks insight RUP, dan alur cerita yang ingin dibangun
-- Checklist penilaian kualitas grafik (readability, warna, fokus insight)
-
-#### 3.2 Matplotlib Fundamentals (15:40 - 16:05)
-- Struktur Figure/Axes, konfigurasi tema, dan pengaturan ukuran
-- Line, bar, scatter, serta histogram untuk highlight tren & distribusi
-- Subplots dan anotasi untuk menaruh beberapa grafik dalam satu kanvas
-- Export cepat ke PNG/PDF untuk laporan
-
-#### 3.3 Seaborn Statistical Plots (16:05 - 16:30)
-- Histogram, box, violin, dan kde plot untuk memotret distribusi pagu
-- Categorical plots (countplot/barplot) untuk metode pengadaan dan satker
-- Heatmap korelasi dan color palette ramah color-blind
-- Styling cepat via `sns.set_theme` dan context manager
-
-#### 📓 Notebook:
-`day1/session3_visualization/notebooks/01_matplotlib_seaborn.ipynb`
-
-#### 3.4 Plotly Mini Dashboard (16:30 - 16:50)
-- Plotly Express vs Graph Objects dan kapan memakai masing-masing
-- Interaktivitas default: hover, zoom, select, range slider
-- Sunburst, treemap, bubble chart untuk multi-dimensi insight RUP
-- Menyusun mini dashboard multi-tab + export ke HTML standalone
-
-#### 📓 Notebook:
-`day1/session3_visualization/notebooks/02_plotly_interactive.ipynb`
-
-#### 3.5 Data Storytelling & Q&A (16:50 - 17:00)
-- Prinsip memilih chart (comparison, distribution, relationship, composition, trend)
-- Tips warna, hierarki visual, dan menghindari chartjunk
-- Checklist final storytelling + sesi tanya jawab menjelang wrap-up
-
----
-
-## Penutup Hari 1 (17:00 - 17:15)
-
-- Rekap: Pandas, DuckDB, Visualisasi
-- Sesi Tanya Jawab
-- Pratinjau Hari 2: Analisis Lanjutan & Dashboard Streamlit
-- Tugas opsional: Eksplorasi dataset RUP lebih lanjut
-
----
-
-# 📊 HARI 2: Analisis Lanjutan & Dashboard Interaktif
-
-## Sesi 4: Teknik Analisis Data Lanjutan (08:00 - 12:00)
-
-**Durasi:** 4 jam
-**Format Pembelajaran:** Praktikum dengan Jupyter Notebooks
-**Kumpulan Data:** RUP 2025
-**Slides:** `slides/04_session4_advanced.md`
-
-### ⏰ Agenda Ringkas
-- 08:00 – 08:15 · Kick-off & problem framing
-- 08:15 – 09:00 · Data cleaning & transformation
-- 09:00 – 09:45 · Feature engineering & outliers
-- 09:45 – 10:30 · Time series analysis
-- 10:30 – 11:15 · Forecasting mini lab
-- 11:15 – 12:00 · Statistical analysis & wrap-up
-
-### Materi Pembelajaran
-
-#### 4.1 Kick-off & Problem Framing (08:00 - 08:15)
-- Menetapkan objective analisis lanjutan dan metrik keberhasilan
-- Mengidentifikasi tantangan data nyata (missing, outliers, bias)
-
-#### 4.2 Data Cleaning & Transformation (08:15 - 09:00)
-- Audit kualitas data: duplicates, missing pattern, tipe data
-- Strategi `dropna`, `fillna`, forward/backward fill, interpolation
-- Normalisasi/standarisasi, log transform, serta export dataset bersih
-
-#### 4.3 Feature Engineering & Outliers (09:00 - 09:45)
-- Deteksi outlier (IQR, Z-score) + treatment (capping, winsorization)
-- Encoding kategorikal (label, one-hot, frequency, target)
-- Feature engineering tanggal, rasio, dan teks pendek
-
-#### 📓 Notebook:
-`day2/session4_advanced_analysis/notebooks/01_data_cleaning.ipynb`
-
-#### 4.4 Time Series Foundations (09:45 - 10:30)
-- Parsing tanggal, DateTime indexing, dan resampling multi-granular
-- Rolling/expanding windows, EMA/SMA, cumulative metrics
-- Growth rate (DoD, MoM, YoY) dan analisis seasonality
-
-#### 4.5 Forecasting Mini Lab (10:30 - 11:15)
-- Dekomposisi tren-musiman, moving average forecast, dan baseline modeling
-- Kombinasi DuckDB + Pandas untuk pipeline analitik waktu
-
-#### 📓 Notebook:
-`day2/session4_advanced_analysis/notebooks/02_time_series.ipynb`
-
-#### 4.6 Statistical Analysis & Experimentation (11:15 - 12:00)
-- Statistik deskriptif lanjut (skewness, kurtosis, percentiles)
-- Korelasi Pearson & Spearman + heatmap interpretasi
-- Pengujian hipotesis (t-test, ANOVA, chi-square) dan dasar A/B testing
-- Interpretasi p-value, signifikansi, dan rekomendasi keputusan
-
-#### 📓 Notebook:
-`day2/session4_advanced_analysis/notebooks/03_statistical_analysis.ipynb`
-
----
-
-## BREAK / ISHOMA (12:00 - 13:00)
-
----
-
-## Sesi 5: Dashboard Interaktif dengan Streamlit (13:00 - 17:00)
-
-**Durasi:** 4 jam (termasuk istirahat)
-**Format Pembelajaran:** Praktikum Lab
-**Aplikasi:** 4 aplikasi Streamlit
-**Slides:** `slides/05_session5_streamlit.md`
-
-### ⏰ Agenda Ringkas
-- 13:00 – 13:20 · Kick-off & agenda (`01_hello_streamlit.py`)
-- 13:20 – 14:00 · Layout & text components (`01_hello_streamlit.py`)
-- 14:00 – 14:45 · Input widgets & session state (`02_components_demo.py`)
-- 14:45 – 15:00 · Data display & caching (`02_components_demo.py`)
-- 15:00 – 15:30 · **Break / Ishoma**
-- 15:30 – 16:15 · Data explorer build & metrics (`03_data_explorer.py`)
-- 16:15 – 17:00 · Dashboard architecture, deployment & Q&A (`rup_dashboard.py`)
-
-### 5.1 Kick-off & Dasar-dasar Streamlit - LAB 10 (13:00 - 14:00)
-
-**Aplikasi:** `01_hello_streamlit.py`
-
-**Topik yang Dipelajari:**
-
-**A. Text Elements**
-- `st.title()`, `st.header()`, `st.subheader()`
-- `st.text()` vs `st.markdown()` vs `st.write()`
-- `st.code()` untuk syntax highlighting
-- `st.latex()` untuk mathematical expressions
-- `st.divider()` untuk separators
-
-**B. Displaying Data**
-- `st.dataframe()` - interactive sortable table
-- `st.table()` - static table
-- `st.metric()` - KPI cards dengan delta
-- `st.json()` - formatted JSON display
-
-**C. Status Messages**
-- `st.success()`, `st.info()`, `st.warning()`, `st.error()`
-- `st.spinner()` untuk loading states
-- `st.progress()` untuk progress bars
-
-**D. Basic Charts**
-- `st.line_chart()`, `st.bar_chart()`, `st.area_chart()`
-- Simple data visualization
-
-**E. Layout**
-- `st.columns()` untuk column layout
-- `st.container()` untuk grouping
-- `st.expander()` untuk collapsible sections
-- `st.tabs()` untuk tabbed interface
+## 📚 Ringkasan Materi Per Sesi
+
+### 📊 HARI 1: Dasar Data Science
+
+#### Sesi 1: Pandas Fundamental (08:00 - 10:00)
+
+**Durasi:** 120 menit
+**Notebook:** [01_pandas_fundamental.ipynb](materi_bootcamp/day1/session1_pandas_basics/notebooks/01_pandas_fundamental.ipynb)
+**Slides:** [01_session1_pandas.md](materi_bootcamp/slides/01_session1_pandas.md)
+
+**Objektif:**
+- ✅ Memuat & mengeksplorasi data dengan Pandas
+- ✅ Menyeleksi kolom & baris
+- ✅ Memfilter data dengan boolean indexing
+- ✅ Melakukan agregasi dengan `groupby`
+- ✅ Menangani missing values
+- ✅ Membuat statistik ringkasan
+
+**Materi:**
+1. **Memuat Data** - Parquet, CSV, Excel
+2. **Eksplorasi Data** - `head()`, `info()`, `describe()`
+3. **Seleksi Data** - `.loc[]`, `.iloc[]`
+4. **Filter Data** - Boolean indexing, query kompleks
+5. **Agregasi Data** - `groupby()`, agregasi functions
+6. **Missing Values** - `isnull()`, `dropna()`, `fillna()`
 
 **Praktik:**
-- Buat halaman welcome dengan berbagai text elements
-- Tampilkan dataset RUP dengan tabel interaktif
-- Tampilkan KPI menggunakan metrik
-- Buat grafik sederhana
-- Implementasikan layout responsif dengan kolom
+- Analisis data RUP 2025
+- Eksplorasi pagu pengadaan per satker
+- Analisis metode pengadaan
 
 ---
 
-### 5.2 Komponen Interaktif & Session State - LAB 11 (14:00 - 15:00)
+#### Sesi 2: DuckDB & Visualisasi (10:15 - 15:00)
 
-**Aplikasi:** `02_components_demo.py`
+**Durasi:** 105 menit (DuckDB) + 120 menit (Visualisasi)
+**Notebook:**
+- [02_duckdb_fundamental.ipynb](materi_bootcamp/day1/session2_duckdb_basics/notebooks/02_duckdb_fundamental.ipynb)
+- [03_visualization_fundamental.ipynb](materi_bootcamp/day1/session3_visualization_basics/notebooks/03_visualization_fundamental.ipynb)
 
-**Topik yang Dipelajari:**
+**Slides:** [02_session2_duckdb_visualization.md](materi_bootcamp/slides/02_session2_duckdb_visualization.md)
 
-**A. Input Widgets**
-- Buttons: `st.button()`, `st.download_button()`, `st.link_button()`
-- Selection: `st.checkbox()`, `st.toggle()`, `st.radio()`, `st.selectbox()`, `st.multiselect()`
-- Sliders: `st.slider()`, `st.select_slider()`
-- Text input: `st.text_input()`, `st.text_area()`, `st.number_input()`
-- Date & time: `st.date_input()`, `st.time_input()`
-- File: `st.file_uploader()`
+##### Bagian A: DuckDB Fundamental
 
-**B. Formulir**
-- `st.form()` untuk batch input submission
-- Tombol submit formulir
-- Validasi
+**Objektif:**
+- ✅ Setup DuckDB & koneksi
+- ✅ Query dasar SQL
+- ✅ Agregasi & window functions
+- ✅ Integrasi DuckDB + Pandas
 
-**C. Session State**
-- Memahami model eksekusi Streamlit
-- `st.session_state` untuk persist data
-- Callbacks dan penanganan event
-- Contoh counter
-- Contoh keranjang belanja
-
-**D. Sidebar**
-- `st.sidebar` untuk navigasi dan filter
-- Mengatur kontrol
+**Materi:**
+1. **Setup DuckDB** - In-memory database, register DataFrame
+2. **Query Dasar** - SELECT, WHERE, ORDER BY, LIMIT
+3. **Agregasi** - COUNT, SUM, AVG, GROUP BY
+4. **Window Functions** - ROW_NUMBER, RANK, LAG, LEAD
+5. **Integrasi Pandas** - Convert hasil query ke DataFrame
+6. **Best Practices** - Kapan pakai DuckDB vs Pandas
 
 **Praktik:**
-- Bangun penghitung interaktif dengan tombol
-- Buat daftar tugas dengan kotak centang
-- Implementasikan sistem filter dengan berbagai widget
-- Buat formulir pendaftaran
-- Pengunggah file dengan pratinjau
-- Penyaringan grafik dinamis
+- Query top satker berdasarkan pagu
+- Analisis pivot metode pengadaan
+- Running totals dengan window functions
 
----
+##### Bagian B: Visualisasi Fundamental
 
-## Coffee Break (15:00 - 15:30)
+**Objektif:**
+- ✅ Membuat visualisasi dengan Plotly
+- ✅ Chart interaktif (bar, line, pie, scatter)
+- ✅ Customization & styling
+- ✅ Export hasil visualisasi
 
----
-
-### 5.3 Penjelajah Data - LAB 12 (15:30 - 16:15)
-
-**Aplikasi:** `03_data_explorer.py`
-
-**Topik yang Dipelajari:**
-
-**A. Alur Kerja Analisis Data Lengkap**
-- Unggah file (CSV, Excel, Parquet)
-- Pratinjau data dan statistik ringkasan
-- Sistem penyaringan interaktif
-- Berbagai tab analisis
-
-**B. Integrasi DuckDB**
-- `@st.cache_resource` untuk koneksi DuckDB
-- `@st.cache_data` untuk caching data
-- Pembangunan query SQL dinamis dari filter
-- Eksekusi query dan tampilan hasil
-
-**C. Filter Interaktif**
-- Filter kategorikal (multiselect)
-- Filter numerik (range slider)
-- Filter rentang tanggal
-- Tombol terapkan filter
-- Penyaringan waktu-nyata
-
-**D. Berbagai Tampilan Analisis**
-- Tab 1: Analisis Distribusi
-  - Histogram untuk kolom numerik
-  - Pie chart untuk kolom kategorikal
-- Tab 2: Analisis Tren
-  - Grafik garis time series
-  - Rata-rata bergerak
-  - Perhitungan pertumbuhan
-- Tab 3: Analisis Hubungan
-  - Scatter plots
-  - Heatmap korelasi
-- Tab 4: Agregasi
-  - Operasi groupBy kustom
-  - Tabel pivot
-  - Statistik ringkasan per grup
-
-**E. Playground SQL**
-- Editor query SQL kustom
-- Eksekusi query pengguna
-- Tampilkan hasil
-- Penanganan error
-
-**F. Fungsi Ekspor**
-- Unduh data terfilter sebagai CSV
-- Unduh ke Excel
-- Unduh hasil query
+**Materi:**
+1. **Plotly Express** - Quick plotting
+2. **Chart Types** - Bar, line, pie, scatter, histogram
+3. **Interaktivity** - Hover, zoom, filter
+4. **Customization** - Colors, labels, layout
+5. **Export** - Save to HTML/PNG
 
 **Praktik:**
-- Unggah dataset RUP atau data kustom
-- Terapkan berbagai filter
-- Jelajahi data dengan berbagai tampilan
-- Tulis query SQL kustom
-- Ekspor hasil
+- Visualisasi distribusi pagu
+- Chart metode pengadaan
+- Time series analisis
+- Multi-chart dashboard mini
 
 ---
 
-### 5.4 Dashboard Produksi - Analisis RUP (16:15 - 17:00)
+### 📱 HARI 2: Dashboard Streamlit
 
-**Aplikasi:** `rup_dashboard.py`
+#### Sesi 3: Dasar Streamlit (08:00 - 10:00)
 
-**Topik yang Dipelajari:**
+**Durasi:** 120 menit
+**Aplikasi:** [app_part1.py](materi_bootcamp/day2/session3_streamlit_basics/app_part1.py)
+**Slides:** [03_session3_streamlit_basics.md](materi_bootcamp/slides/03_session3_streamlit_basics.md)
 
-**A. Dashboard Siap Produksi**
-- Desain UI/UX profesional
-- Branding dan styling
-- Konfigurasi halaman (`st.set_page_config()`)
-- CSS kustom
+**Objektif:**
+- ✅ Setup aplikasi Streamlit
+- ✅ Membuat layout dengan columns & containers
+- ✅ Memakai widgets interaktif
+- ✅ Menampilkan metrics & KPI
+- ✅ Menampilkan data table
+- ✅ Mengelola input pengguna
 
-**B. Pemrosesan Data Kompleks**
-- Pipeline pemuatan data
-- Strategi caching untuk performa
-- Penanganan error
-- Validasi data
-
-**C. Visualisasi Lanjutan**
-- Berbagai grafik terkoordinasi
-- Fitur lanjutan Plotly
-- Skema warna kustom
-- Desain responsif
-
-**D. KPI dan Metrik**
-- Indikator kinerja utama
-- Indikator tren dengan delta
-- Kartu ringkasan statistik
-- Metrik perbandingan
-
-**E. Filter Interaktif**
-- Filter sidebar
-- Filter bertingkat
-- Fungsi reset
-- Manajemen status filter
-
-**F. Praktik Terbaik**
-- Organisasi kode
-- Optimasi performa
-- Pertimbangan pengalaman pengguna
-- Persiapan deployment
+**Materi:**
+1. **Setup & Hello World** - `st.write()`, `st.title()`
+2. **Text Elements** - Headers, markdown, code
+3. **Data Display** - `st.dataframe()`, `st.table()`, `st.metric()`
+4. **Layout** - `st.columns()`, `st.container()`, `st.tabs()`
+5. **Input Widgets** - Buttons, sliders, selectbox, multiselect
+6. **Charts** - `st.line_chart()`, `st.bar_chart()`
 
 **Praktik:**
-- Pelajari struktur dashboard lengkap
-- Analisis pola kode
-- Pahami optimasi performa
-- Pelajari praktik terbaik untuk produksi
-- Kustomisasi dashboard
+- Aplikasi hello world
+- Layout responsif
+- Dashboard sederhana dengan metrics
+- Interactive filters
 
 ---
 
-## Penutup Hari 2 (17:00 - 17:15)
+#### Sesi 4: Dashboard Lengkap (10:15 - 14:45)
 
-### Tinjauan & Langkah Selanjutnya
+**Durasi:** 75 menit + 105 menit
+**Aplikasi:** [app_complete.py](materi_bootcamp/day2/session4_streamlit_complete/app_complete.py)
+**Slides:** [04_session4_streamlit_complete.md](materi_bootcamp/slides/04_session4_streamlit_complete.md)
 
-**Poin-poin Penting:**
-- Teknik pembersihan dan preprocessing data
-- Analisis time series dan statistik
-- Membangun dashboard interaktif dengan Streamlit
-- Integrasi Pandas + DuckDB + Streamlit
+**Objektif:**
+- ✅ Membangun dashboard production-ready
+- ✅ Integrasi Pandas + DuckDB + Plotly
+- ✅ Advanced filtering & interactivity
+- ✅ Caching untuk performa
+- ✅ Deploy ke Streamlit Cloud
 
-**Sumber Belajar Lebih Lanjut:**
-- [Dokumentasi Pandas](https://pandas.pydata.org/docs/)
-- [Dokumentasi DuckDB](https://duckdb.org/docs/)
-- [Dokumentasi Streamlit](https://docs.streamlit.io/)
-- [Plotly Python](https://plotly.com/python/)
+**Materi:**
+1. **Dashboard Architecture** - Page config, sidebar, main area
+2. **Data Loading** - `@st.cache_data` untuk optimasi
+3. **Advanced Filters** - Multi-select, date range, numeric range
+4. **Interactive Charts** - Plotly integration, linked charts
+5. **KPI Metrics** - Cards, delta indicators
+6. **Export Features** - Download CSV, Excel
+7. **Deployment** - Streamlit Cloud setup & deploy
 
-**Langkah Selanjutnya:**
-- Berlatih dengan dataset lain
-- Bangun dashboard kustom untuk kasus penggunaan sendiri
-- Jelajahi fitur-fitur lanjutan Streamlit
-- Terapkan dashboard ke Streamlit Cloud
-
-**Sesi Tanya Jawab**
-
----
-
-## 📚 Sumber Belajar & Materi
-
-### Dokumentasi Resmi
-- **Pandas:** [https://pandas.pydata.org/docs/](https://pandas.pydata.org/docs/)
-- **DuckDB:** [https://duckdb.org/docs/](https://duckdb.org/docs/)
-- **Streamlit:** [https://docs.streamlit.io/](https://docs.streamlit.io/)
-- **Plotly:** [https://plotly.com/python/](https://plotly.com/python/)
-- **Seaborn:** [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
-- **Matplotlib:** [https://matplotlib.org/](https://matplotlib.org/)
-
-### Lembar Contekan
-- [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
-- [Referensi SQL DuckDB](https://duckdb.org/docs/sql/introduction)
-- [Streamlit Cheat Sheet](https://docs.streamlit.io/library/cheatsheet)
-- [Galeri Grafik Python](https://python-graph-gallery.com/)
-
-### Buku yang Direkomendasikan
-- **"Python for Data Analysis"** karya Wes McKinney (Pembuat Pandas)
-- **"Streamlit for Data Science: Create Interactive Data Apps in Python"** karya Tyler Richards
-- **"DuckDB in Action"** karya Mark Needham & Simon Aubury (MotherDuck)
-
-### Platform Pembelajaran Online
-- **Kaggle Learn** - Kursus interaktif gratis
-- **DataCamp** - Kursus data science praktis
-- **Real Python** - Tutorial dan artikel Python
-- **Towards Data Science** - Publikasi Medium untuk data science
-
-### Dataset untuk Latihan
-- **Kaggle Datasets** - Ribuan dataset untuk latihan
-- **UCI Machine Learning Repositori** - Dataset klasik
-- **Data.gov** - Data terbuka pemerintah AS
-- **Google Dataset Search** - Mesin pencari untuk dataset
+**Praktik:**
+- Dashboard RUP lengkap
+- Multi-page filtering
+- Real-time data exploration
+- Export & sharing
+- Deploy to cloud
 
 ---
 
@@ -810,29 +453,57 @@ df = duckdb.query("SELECT * FROM 'large_file.parquet' LIMIT 10000").df()
 
 ---
 
+## 📚 Sumber Belajar & Materi
+
+### Dokumentasi Resmi
+- **Pandas:** [https://pandas.pydata.org/docs/](https://pandas.pydata.org/docs/)
+- **DuckDB:** [https://duckdb.org/docs/](https://duckdb.org/docs/)
+- **Streamlit:** [https://docs.streamlit.io/](https://docs.streamlit.io/)
+- **Plotly:** [https://plotly.com/python/](https://plotly.com/python/)
+
+### Lembar Contekan
+- [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+- [Referensi SQL DuckDB](https://duckdb.org/docs/sql/introduction)
+- [Streamlit Cheat Sheet](https://docs.streamlit.io/library/cheatsheet)
+- [Galeri Grafik Python](https://python-graph-gallery.com/)
+
+### Platform Pembelajaran Online
+- **Kaggle Learn** - Kursus interaktif gratis
+- **DataCamp** - Kursus data science praktis
+- **Real Python** - Tutorial dan artikel Python
+- **Towards Data Science** - Publikasi Medium untuk data science
+
+### Dataset untuk Latihan
+- **Kaggle Datasets** - Ribuan dataset untuk latihan
+- **UCI Machine Learning Repository** - Dataset klasik
+- **Data.gov** - Data terbuka pemerintah
+- **Google Dataset Search** - Mesin pencari untuk dataset
+
+---
+
 ## 🚀 Langkah Selanjutnya
 
 ### Setelah Bootcamp
 1. **Bangun portofolio proyek** - Tunjukkan kemampuan Anda
-2. **Terapkan dashboard Anda** - Gunakan Streamlit Cloud (gratis)
-3. **Berkontribusi ke sumber terbuka** - Belajar dari yang lain
+2. **Deploy dashboard Anda** - Gunakan Streamlit Cloud (gratis)
+3. **Berkontribusi ke open source** - Belajar dari yang lain
 4. **Jelajahi topik lanjutan:**
-   - Pembelajaran Mesin dengan scikit-learn
-   - Pembelajaran Mendalam dengan TensorFlow/PyTorch
+   - Machine Learning dengan scikit-learn
+   - Deep Learning dengan TensorFlow/PyTorch
    - Big Data dengan Apache Spark
    - Platform Cloud (AWS, GCP, Azure)
 
 ### Pilihan Jalur Karir
-- **Data Analyst** - Wawasan bisnis dan pelaporan
+- **Data Analyst** - Business insights dan pelaporan
 - **Business Intelligence** - Dashboard dan visualisasi
 - **Data Engineer** - Pipeline data dan infrastruktur
-- **Data Scientist** - Pembelajaran mesin dan model prediktif
+- **Data Scientist** - Machine learning dan model prediktif
 - **Analytics Engineer** - dbt, SQL, pemodelan data
 
 ### Lanjutkan Belajar
 - Bergabung dengan komunitas data science (Kaggle, Reddit, Discord)
 - Ikuti blog dan newsletter data science
-- Hadiri pertemuan dan konferensi
+- Hadiri meetup dan konferensi
 - Bangun proyek pribadi dan portofolio
 - Jalin relasi dengan profesional di industri
 
